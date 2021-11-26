@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class level_return : MonoBehaviour
 {
-    [SerializeField] private GameObject camera, player, secondperson;
+    [SerializeField] private GameObject camera, player, secondperson, dialogue_panel, invisi_button;
 
     [SerializeField] private CharacterController2D c2d ;
     [SerializeField] private PlayerMovement pmove ;
+    [SerializeField] private finished_level_check finish_level ;
     private List<string> door_lists;
     private float camx, player_x, rotate_y_second_person, second_person_x;
     private bool can_return = true;
@@ -21,10 +22,7 @@ public class level_return : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        for (int i = 0; i < door_lists.Count; i++) {
-            int num = i + 1;
-            Debug.Log("Door " + num + ": " + door_lists[i]);
-        }
+        
     }
     public void set_return_door(string ret_door) {
         this.door_return_name = ret_door;
@@ -45,7 +43,7 @@ public class level_return : MonoBehaviour
     }
     public void start_return() {
         add_door(this.door_return_name);
-        
+        finish_level.completed_count();
         StartCoroutine(interval());
     }
     public bool get_can_return(string door_type) {
@@ -70,10 +68,15 @@ public class level_return : MonoBehaviour
         this.secondperson.transform.position = new Vector2(second_person_x, this.secondperson.transform.position.y);
         
         this.player.transform.position = new Vector2(player_x, this.player.transform.position.y);
+        hide_dialogue();
         enable_movement();
     }
+    void hide_dialogue() {
+        this.dialogue_panel.SetActive(false);
+        this.invisi_button.SetActive(false);
+    }
     IEnumerator interval() {
-        yield return new WaitForSeconds(3.0f);
+        yield return new WaitForSeconds(2.0f);
         return_objects();
     }
     

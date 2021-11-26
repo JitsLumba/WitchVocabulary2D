@@ -13,6 +13,9 @@ public class Dialogue_Manager : MonoBehaviour
     {
         sentences = new Queue<string>();
         nameq = new Queue<string>();
+
+        //DELETE ONCE CLEARED GET BACK TO THIS LATER
+        
     }
 
     // Update is called once per frame
@@ -37,7 +40,8 @@ public class Dialogue_Manager : MonoBehaviour
         //Debug.Log("Player " + dial_1.name);
 
         if (sentences.Count == 0) {
-            Debug.Log("End of sentence queue");
+            //Debug.Log("End of sentence queue");
+            StartDialogue(dial_1);
         }
         else {
             string sentence = sentences.Dequeue(), name = nameq.Dequeue();

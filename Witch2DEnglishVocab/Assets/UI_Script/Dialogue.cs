@@ -16,6 +16,12 @@ public class Dialogue
 
       Debug.Log(sentence_list[0]);
   }
+  public void start_list() {
+      sentence_list = new List<string>();
+      name_list = new List<string>();
+      sentence_list.Add("SAMPLE");
+      name_list.Add("Player");
+  }
   public void clear_sentences() {
       sentence_list.Clear();
       name_list.Clear();
