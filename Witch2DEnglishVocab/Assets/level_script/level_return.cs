@@ -5,6 +5,9 @@ using UnityEngine;
 public class level_return : MonoBehaviour
 {
     [SerializeField] private GameObject camera, player, secondperson;
+
+    [SerializeField] private CharacterController2D c2d ;
+    [SerializeField] private PlayerMovement pmove ;
     private List<string> door_lists;
     private float camx, player_x, rotate_y_second_person, second_person_x;
     private bool can_return = true;
@@ -25,6 +28,10 @@ public class level_return : MonoBehaviour
     }
     public void set_return_door(string ret_door) {
         this.door_return_name = ret_door;
+    }
+    void enable_movement() {
+        c2d.enabled = true;
+        pmove.enabled = true;
     }
     public void set_coordinates(float camera_x, float play_x, float second_ps_x, float second_ps_y_rot) {
         camx = camera_x;
@@ -63,6 +70,7 @@ public class level_return : MonoBehaviour
         this.secondperson.transform.position = new Vector2(second_person_x, this.secondperson.transform.position.y);
         
         this.player.transform.position = new Vector2(player_x, this.player.transform.position.y);
+        enable_movement();
     }
     IEnumerator interval() {
         yield return new WaitForSeconds(3.0f);

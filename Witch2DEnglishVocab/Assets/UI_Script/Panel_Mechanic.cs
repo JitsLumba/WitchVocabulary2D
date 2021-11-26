@@ -43,6 +43,7 @@ public class Panel_Mechanic : MonoBehaviour
                     panel.color = panelcolor;
                     ison = true;
                     words = original.Trim().Split(' ');
+                    counter = 0;
                     set_dialogue_box(words, counter);
                     
                    

@@ -18,6 +18,9 @@ public class input_transport : MonoBehaviour
     [SerializeField] private bool canchangediag;
     
     [SerializeField] private level_return lreturn ;
+
+    [SerializeField] private CharacterController2D c2d ;
+    [SerializeField] private PlayerMovement pmove ;
     bool cantransp = false;
     void Start()
     {
@@ -42,13 +45,17 @@ public class input_transport : MonoBehaviour
            rotateVect.y = this.second_char_y_rot;
            second_char.transform.rotation = Quaternion.Euler(rotateVect);
            second_char.transform.position = new Vector3(second_char_x_transf ,second_char.transform.position.y, second_char.transform.position.z);
-           
+           disable_movement();
            if (canchangediag) {
               
                set_script();
            }
            
         }
+    }
+    void disable_movement() {
+        this.c2d.enabled = false;
+        this.pmove.enabled = false;
     }
     void set_script() {
         subscrpt.set_definition();
