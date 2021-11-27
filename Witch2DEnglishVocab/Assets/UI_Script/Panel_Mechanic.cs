@@ -25,6 +25,8 @@ public class Panel_Mechanic : MonoBehaviour
     void Update()
     {
         string[] words;
+        char[] delimiterChars = { ' ', '.', ':', '\t', '!', '?' };
+
         if (Input.GetKeyDown(KeyCode.Z) && cantrigger)
         {
             if (canfreeze)
