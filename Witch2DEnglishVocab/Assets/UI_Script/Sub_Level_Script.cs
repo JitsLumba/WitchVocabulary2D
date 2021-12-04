@@ -5,12 +5,14 @@ using UnityEngine;
 public class Sub_Level_Script : MonoBehaviour
 {
     [TextArea(3, 10)]
-    [SerializeField] private List<string> sentences;
-    [SerializeField] private List<string> names;
+    [SerializeField] private List<string> sentences, choices, results, remarks;
+    [SerializeField] private List<string> names, names_result;
     [SerializeField] private Dialogue_Trigger dtrigger ;
   
     [SerializeField] private string answer;
+    [SerializeField] private int stop_at;
     [SerializeField] private definition_check dcheck ;
+    [SerializeField] private int mult = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,7 +29,10 @@ public class Sub_Level_Script : MonoBehaviour
     }
     public void set_dialogues() {
         dtrigger.set_freeze(true);
-        dtrigger.change_dial_vals(sentences, names);
+        dtrigger.set_stop_at(sentences.Count);
+
+        dtrigger.change_dial_vals(sentences, names, choices, results, remarks, names_result, mult);
+        
     }
     
 }

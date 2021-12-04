@@ -124,7 +124,7 @@ public class Panel_Mechanic : MonoBehaviour
 
         if (answer.Equals(highlighted_word))
         {
-            Debug.Log("Correct");
+           
             canfreeze = false;
             change_panel_color("#FFFFFF", false);
             text_dialogue.text = original;
@@ -135,7 +135,7 @@ public class Panel_Mechanic : MonoBehaviour
         }
         else
         {
-            Debug.Log("Incorrect");
+            
             show_result_panel("Incorrect", false);
 
         }
@@ -178,7 +178,7 @@ public class Panel_Mechanic : MonoBehaviour
     {
         yield return new WaitForSeconds(1.0f);
         cantrigger = true;
-        Debug.Log("CAN GO");
+       
     }
     IEnumerator erase_result(bool can_return)
     {

@@ -25,7 +25,7 @@ public class interval_door : MonoBehaviour
     }
     IEnumerator Doorintervene() {
         yield return new WaitForSeconds(0.25f);
-        Debug.Log("Boing");
+        
         interv = true;
     }
 }

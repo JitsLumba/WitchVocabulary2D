@@ -35,7 +35,7 @@ public class input_transport : MonoBehaviour
         
         //Debug.Log("Ryan " + cantransp + " cango " + cango + " samp " + samp);
         if (Input.GetKeyDown(KeyCode.F) && cantransp && cango) {
-           Debug.Log("Entero " + samp);
+         
            invdsy.setFalseInterv();
            lreturn.set_return_door(this.door_num);
            lreturn.set_coordinates(return_camera_x, return_player_x, return_scnd_char_x_transf, return_scnd_char_y_rot);

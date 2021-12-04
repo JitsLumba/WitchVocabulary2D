@@ -37,12 +37,12 @@ public class finished_level_check : MonoBehaviour
         int diff = needed_complete - counter;
         can_press = false;
         if (diff == 0) {
-            Debug.Log("Completed");
+           
             is_not_complete = false;
             result_n = "Completed";
         }
         else {
-            Debug.Log("Not yet");
+          
             
             result_n = diff + " tasks unfinished";
         }
