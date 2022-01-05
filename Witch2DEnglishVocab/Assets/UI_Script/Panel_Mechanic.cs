@@ -10,9 +10,10 @@ public class Panel_Mechanic : MonoBehaviour
     [SerializeField] private Text text_dialogue, result_text;
     [SerializeField] private definition_check dcheck;
     [SerializeField] private level_return lreturn;
+    [SerializeField] private Dialogue_Trigger dtrigger ;
     private bool ison = false, canfreeze = false, hashighlight = false, cantrigger = true;
     private string original = "";
-    int counter = 0;
+    int counter = 0, clue_count = 0;
     private string highlighted_word = "";
     Color panelcolor;
     // Start is called before the first frame update
@@ -105,6 +106,9 @@ public class Panel_Mechanic : MonoBehaviour
             compare_answers();
         }
     }
+    public void set_can_freeze(bool freeze) {
+        canfreeze = freeze;
+    }
     void change_panel_color(string color, bool oncheck)
     {
         ColorUtility.TryParseHtmlString(color, out panelcolor);
@@ -120,31 +124,44 @@ public class Panel_Mechanic : MonoBehaviour
     }
     void compare_answers()
     {
-        string answer = dcheck.get_answer();
+        bool not_found = true, can_choice = false;
+        string show_res = "";
+        int list_num = dcheck.get_count();
+        for (int i = 0; i < list_num; i++) {
+            string answer = dcheck.get_answer(i);
 
         if (answer.Equals(highlighted_word))
         {
-           
-            canfreeze = false;
-            change_panel_color("#FFFFFF", false);
-            text_dialogue.text = original;
-            show_result_panel("Correct", true);
-
-
-
-        }
-        else
-        {
             
-            show_result_panel("Incorrect", false);
+            //canfreeze = false;
+            
+            text_dialogue.text = original;
+            show_res = "Correct";
+            clue_count++;
+            not_found = false;
+            break;
 
         }
+        
+        
+        }
+        if (not_found) {
+            show_res = "Incorrect";
+        }
+        int clue_counter = dcheck.get_count();
+        if (clue_count == clue_counter) {
+            can_choice = true;
+        }
+        Debug.Log("RESULT IS " + show_res);
+        show_result_panel(show_res, can_choice);
+        
 
     }
     void show_result_panel(string result, bool resultcond)
     {
         this.result_text.text = result;
         this.result_panel.SetActive(true);
+        //return or no
         StartCoroutine(erase_result(resultcond));
     }
     public void set_dialogue_box(string[] words, int beforecounter)
@@ -180,13 +197,29 @@ public class Panel_Mechanic : MonoBehaviour
         cantrigger = true;
        
     }
-    IEnumerator erase_result(bool can_return)
+    public void chang_to_choice() {
+        int list_num = dcheck.get_count();
+        List<string> clue_words = new List<string>();
+        for (int i = 0; i < list_num; i++) {
+            clue_words.Add(dcheck.get_answer(i));
+        }
+        dtrigger.choice_trigger(clue_words);
+    }
+    IEnumerator erase_result(bool can_choice)
     {
+        //return to the original place
         yield return new WaitForSeconds(1.0f);
         this.result_panel.SetActive(false);
-        if (can_return)
+        
+        if (can_choice)
         {
-            lreturn.start_return();
+            //have this be on 
+            change_panel_color("#FFFFFF", false);
+            dtrigger.set_freeze(false);
+            dtrigger.set_canproc(true);
+            clue_count = 0;
+            canfreeze = false;
+            chang_to_choice();
         }
     }
 

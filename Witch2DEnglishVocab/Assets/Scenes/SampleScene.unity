@@ -6048,6 +6048,7 @@ MonoBehaviour:
   result_text: {fileID: 1109959757}
   dcheck: {fileID: 37001804}
   lreturn: {fileID: 1176567194}
+  dtrigger: {fileID: 5964338167536592338}
 --- !u!1 &488272854
 GameObject:
   m_ObjectHideFlags: 0
@@ -7018,10 +7019,12 @@ MonoBehaviour:
   - Hey there...
   - Oh hey Fox! What's wrong?
   - I haven't eaten in weeks...I need something to assuage my stomach
+  - If only I have something to please my hungry stomach ...
+  - My stomach will be delighted ...
   choices:
   - Give bandage(to relieve)
   - Give food(to satisfy)
-  - Comfort him(to calm)
+  - Comfort him(to soothe)
   results:
   - Would bandage help to relieve your hunger?
   - No it does not.
@@ -7036,9 +7039,17 @@ MonoBehaviour:
   - Incorrect
   - Correct
   - Incorrect
+  clues:
+  - please
+  - delighted
+  clue_type:
+  - synonym
+  - synonym
   names:
   - Fox
   - Elaina
+  - Fox
+  - Fox
   - Fox
   names_result:
   - Elaina
@@ -7051,8 +7062,9 @@ MonoBehaviour:
   - Fox
   - Fox
   dtrigger: {fileID: 5964338167536592338}
+  pmech: {fileID: 0}
   answer: calmed
-  stop_at: 0
+  context_no: 0
   dcheck: {fileID: 37001804}
   mult: 3
 --- !u!114 &1016988639
@@ -7252,10 +7264,12 @@ MonoBehaviour:
   - Hey Fox, what's wrong?
   - My friends have told me that they don't see me as a friend...
   - They have hurled a lot of hurtful words towards me...
+  - ( Poor Fox ... I need to find a way to calm him down ... )
+  - ( What can I possibly do to settle his sadness ... ? )
   choices:
   - Give him bandages(to relieve)
   - Give him food(to satisfy)
-  - Comfort him(to calm)
+  - Comfort him(to soothe)
   results:
   - Would bandages help to relieve your sadness?
   - If bandages are only to heal sadness...
@@ -7270,11 +7284,19 @@ MonoBehaviour:
   - Kinda correct
   - Incorrect
   - Correct
+  clues:
+  - settle
+  - calm
+  clue_type:
+  - synonym
+  - synonym
   names:
   - Fox
   - Elaina
   - Fox
   - Fox
+  - Elaina
+  - Elaina
   names_result:
   - Elaina
   - Fox
@@ -7286,8 +7308,9 @@ MonoBehaviour:
   - Fox
   - Elaina
   dtrigger: {fileID: 5964338167536592338}
+  pmech: {fileID: 0}
   answer: satisfied!
-  stop_at: 0
+  context_no: 0
   dcheck: {fileID: 37001804}
   mult: 3
 --- !u!114 &1102547174
@@ -8838,11 +8861,14 @@ MonoBehaviour:
   choices: []
   results: []
   remarks: []
+  clues: []
+  clue_type: []
   names: []
   names_result: []
   dtrigger: {fileID: 0}
+  pmech: {fileID: 0}
   answer: 
-  stop_at: 0
+  context_no: 0
   dcheck: {fileID: 0}
   mult: 0
 --- !u!1 &489639078281007749
@@ -8931,15 +8957,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sentences:
   - Ouch! Ouch! Ouch!
-  - Hey fox! Why are you hurt?
-  - I got scraped by a rock.
-  - Hey can you give me something to assuage my wounds?
+  - Hey fox! What's wrong?
+  - I got scraped by a rock ...
+  - I need something to assuage this wound of mine....
+  - Traveler ... do you have something to ease this wound of mine ... ?
+  - I need to have my wounds dampened in order to move ....
   choices:
   - Give him bandage(to relieve)
   - 'Give him food(to satisfy)
 
 '
-  - 'Comfort him(to calm)
+  - 'Comfort him(to soothe)
 
 '
   results:
@@ -8948,17 +8976,25 @@ MonoBehaviour:
   - And you got that answer correct!
   - Would food help satisfy your wounds?
   - No it does not.
-  - Sadly you got that answer incorrect
+  - Sadly you got that answer incorrect. Try again.
   - Can I give you a hug to calm your wounds?
   - That helps, but does not much.
-  - And your answer is kinda correct.
+  - And your answer is kinda correct. Try again.
   remarks:
   - Correct
   - Incorrect
   - Kinda correct
+  clues:
+  - ease
+  - dampened
+  clue_type:
+  - synonym
+  - synonym
   names:
   - Fox
   - Elaina
+  - Fox
+  - Fox
   - Fox
   - Fox
   names_result:
@@ -8972,8 +9008,9 @@ MonoBehaviour:
   - Fox
   - Fox
   dtrigger: {fileID: 5964338167536592338}
+  pmech: {fileID: 413066109}
   answer: relieved!
-  stop_at: 0
+  context_no: 0
   dcheck: {fileID: 37001804}
   mult: 3
 --- !u!114 &1072641671365501637
@@ -9281,8 +9318,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: 101.50342}
-  m_SizeDelta: {x: -248.6964, y: 203.0034}
+  m_AnchoredPosition: {x: 0, y: 130.27}
+  m_SizeDelta: {x: -248.6964, y: 260.54}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &5964338167528885885
 GameObject:
@@ -9326,6 +9363,8 @@ MonoBehaviour:
     remark_list: []
     name_list: []
     name_list_result: []
+    clues: []
+    clue_type: []
     result: 
     result_name: 
     name: Elaina
@@ -9412,9 +9451,9 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 23
+    m_FontSize: 25
     m_FontStyle: 1
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 0
@@ -9440,8 +9479,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -372.17136, y: -29.618011}
-  m_SizeDelta: {x: -784.3365, y: 29.1941}
+  m_AnchoredPosition: {x: -372.17133, y: -40.303223}
+  m_SizeDelta: {x: -784.3365, y: 50.5655}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &5964338168625143581
 GameObject:
@@ -9611,7 +9650,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 397.12537, y: -86.481}
+  m_AnchoredPosition: {x: 421.78, y: -115.25}
   m_SizeDelta: {x: 187.7493, y: 30.042}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &5964338168966012065
@@ -9721,18 +9760,18 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 33
+    m_FontSize: 42
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 3
-    m_MaxSize: 40
+    m_MaxSize: 44
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: SAMPLE
+  m_Text: 
 --- !u!224 &5964338169371179236
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9749,8 +9788,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -7.043518, y: -6.4256}
-  m_SizeDelta: {x: -54.087, y: -89.5845}
+  m_AnchoredPosition: {x: 0.4381714, y: -25.113998}
+  m_SizeDelta: {x: -39.1175, y: -110.31}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &5964338169371179237
 GameObject:

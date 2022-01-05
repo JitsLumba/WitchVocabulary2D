@@ -10,7 +10,7 @@ public class Dialogue
    [TextArea(3, 10)]
     public List<string> sentence_list, result_list, remark_list;
     
-    public List<string> name_list, name_list_result;
+    public List<string> name_list, name_list_result, clues, clue_type;
     public string result = "";
     public string result_name = "";
   public string name;
@@ -19,12 +19,17 @@ public class Dialogue
 
       Debug.Log(sentence_list[0]);
   }
+  public int get_clue_num() {
+      return clues.Count;
+  }
   public void start_list() {
       sentence_list = new List<string>();
       name_list = new List<string>();
       result_list = new List<string>();
       name_list_result = new List<string>();
       remark_list = new List<string>();
+      clues = new List<string>();
+      clue_type = new List<string>();
       sentence_list.Add("SAMPLE");
       name_list.Add("Player");
   }
@@ -34,6 +39,8 @@ public class Dialogue
       result_list.Clear();
       name_list_result.Clear();
       remark_list.Clear();
+      clues.Clear();
+      clue_type.Clear();
   }
   public void set_result(int num) {
       this.result = result_list[num];
@@ -44,6 +51,21 @@ public class Dialogue
           remark_list.Add(remarks[i]);
       }
   }
+  public string get_clues(int num) {
+      return clues[num];
+  }
+  public void add_clues(List<string> cluewords, List<string> type_clue) {
+
+      for (int i = 0; i < cluewords.Count; i++) {
+      
+          clues.Add(cluewords[i]);
+          clue_type.Add(type_clue[i]);
+      }
+      Debug.Log("JOG");
+  }
+  public string get_remark(int num) {
+      return remark_list[num];
+  }
   public void add_result_dialogues(List<string> senten, List<string> names) {
       for (int i = 0; i < senten.Count; i++) {
           result_list.Add(senten[i]);
@@ -52,6 +74,7 @@ public class Dialogue
   }
   public void add_dialogues(List<string> senten, List<string> names) {
       for (int i = 0; i < senten.Count; i++) {
+          
           sentence_list.Add(senten[i]);
           name_list.Add(names[i]);
       }

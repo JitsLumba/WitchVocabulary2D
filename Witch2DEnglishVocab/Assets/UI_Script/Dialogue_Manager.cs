@@ -76,6 +76,23 @@ public class Dialogue_Manager : MonoBehaviour
         choice2.text = choices[1];
         choice3.text = choices[2];
     }
+    public void indicate_context(List<string> clues, string speaker) {
+       
+        string dialog_text = "The context clues for this dialogue are";
+        int stopper = clues.Count - 1;
+        for (int i = 0; i < clues.Count; i++) {
+            if (i == stopper) {
+                dialog_text = dialog_text + " and " +  clues[i];
+            }
+            else {
+                dialog_text = dialog_text + " " + clues[i] + ","; 
+            }
+        }
+        dialog_text = dialog_text + ". Choose one of the definitions that is correct.";
+      
+        name_text.text = speaker;
+        dial_text.text = dialog_text;
+    }
     public void Display_Next_Sentence() {
         //Debug.Log("Player " + dial_1.name);
         counter++;
@@ -97,7 +114,7 @@ public class Dialogue_Manager : MonoBehaviour
             name_text.text = name;
             dial_text.text = sentence;
         }
-        Debug.Log("DISPLAY " + sentences.Count);
+        
     }
     public void set_start_end(int st, int ed) {
         this.start = st;
@@ -108,24 +125,32 @@ public class Dialogue_Manager : MonoBehaviour
         panel.SetActive(dialogue_active);
         choicepanel.SetActive(choice_active);
     }
-    public void show_result(string result) {
+    public void show_result(string result, bool can_return) {
         //set_active_dialogue(true);
         mode = 1;
         this.result.text = result;
         result_obj.SetActive(true);
-        StartCoroutine(result_pop());
-        Debug.Log(result);
+        
+        StartCoroutine(result_pop(can_return));
+        
     }
     public void set_mode(int num) {
         this.mode = num;
     }
-    public void return_level() {
+    public void return_level(bool can_return) {
         result_obj.SetActive(false);
-        lreturn.start_return();
+        if (can_return) {
+            lreturn.start_return();
+        }
+        
     }
-    IEnumerator result_pop() {
+    IEnumerator result_pop(bool can_return) {
         yield return new WaitForSeconds(1.0f);
-        return_level();
+     
+        
+        return_level(can_return);
+        
+        
     }
     
     
