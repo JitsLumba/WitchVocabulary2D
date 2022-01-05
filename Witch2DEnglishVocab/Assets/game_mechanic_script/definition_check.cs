@@ -21,6 +21,10 @@ public class definition_check : MonoBehaviour
     public int get_count() {
         return list_num;
     }
+    public void clear_lists() {
+        answers.Clear();
+        type_clue.Clear();
+    }
     public void set_answer(List<string> clues, List<string> type) {
         list_num = clues.Count;
         
@@ -31,5 +35,8 @@ public class definition_check : MonoBehaviour
     }
     public string get_answer(int ind) {
         return answers[ind];
+    }
+    public string get_clue(int ind) {
+        return type_clue[ind];
     }
 }

@@ -26,6 +26,7 @@ public class Sub_Level_Script : MonoBehaviour
         
     }
     public void set_definition() {
+       dcheck.clear_lists();
        dcheck.set_answer(clues, clue_type);
     }
     public void set_dialogues() {

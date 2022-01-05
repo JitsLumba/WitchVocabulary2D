@@ -11,9 +11,12 @@ public class Panel_Mechanic : MonoBehaviour
     [SerializeField] private definition_check dcheck;
     [SerializeField] private level_return lreturn;
     [SerializeField] private Dialogue_Trigger dtrigger ;
+    [SerializeField] private bool has_antonym = false; 
     private bool ison = false, canfreeze = false, hashighlight = false, cantrigger = true;
     private string original = "";
-    int counter = 0, clue_count = 0;
+    private string color_type = "<color=#09FF00>";
+    private string current_type = "synonym";
+    int counter = 0, clue_count = 0, light_counter = 0;
     private string highlighted_word = "";
     Color panelcolor;
     // Start is called before the first frame update
@@ -100,10 +103,39 @@ public class Panel_Mechanic : MonoBehaviour
             this.set_dialogue_box(words, counter);
 
         }
-
+        if (Input.GetKeyDown(KeyCode.Tab) && ison) {
+            change_context_highlighter();
+        }
         if (Input.GetKeyDown(KeyCode.L) && ison)
         {
             compare_answers();
+        }
+    }
+    void change_context_highlighter() {
+        light_counter++;
+        if (light_counter == 1 && has_antonym) {
+
+        }
+        else {
+            light_counter = 0;
+            
+            
+        }
+        highlighter_context(light_counter);
+        
+        string[] words = original.Trim().Split(' ');
+        
+        this.set_dialogue_box(words , counter);
+    }
+    void highlighter_context(int hlight) {
+        Debug.Log("HLIGHT " + hlight);
+        if (hlight == 0) {
+            current_type = "synonym";
+            color_type = "<color=#09FF00>";
+        }
+        else if (hlight == 1) {
+            current_type = "antonym";
+            color_type = "<color=#E90000>";
         }
     }
     public void set_can_freeze(bool freeze) {
@@ -124,28 +156,36 @@ public class Panel_Mechanic : MonoBehaviour
     }
     void compare_answers()
     {
-        bool not_found = true, can_choice = false;
+        bool not_found = true, can_choice = false, is_not_close = true;
         string show_res = "";
         int list_num = dcheck.get_count();
         for (int i = 0; i < list_num; i++) {
             string answer = dcheck.get_answer(i);
-
+            string clue = dcheck.get_clue(i);
+            //Debug.Log("COMPARE " + answer + " HIGHLIGHT " + highlighted_word);
         if (answer.Equals(highlighted_word))
         {
             
             //canfreeze = false;
             
-            text_dialogue.text = original;
-            show_res = "Correct";
+            
+            if (current_type.Equals(clue)) {
+                show_res = "Correct";
             clue_count++;
             not_found = false;
-            break;
+            
 
+            }
+            else {
+                is_not_close = false; 
+                show_res = "Close...";
+            }
+            break;
         }
         
         
         }
-        if (not_found) {
+        if (not_found && is_not_close) {
             show_res = "Incorrect";
         }
         int clue_counter = dcheck.get_count();
@@ -166,8 +206,9 @@ public class Panel_Mechanic : MonoBehaviour
     }
     public void set_dialogue_box(string[] words, int beforecounter)
     {
+        Debug.Log("HIGHLIGHT TIME " + color_type + " COUNTER " + beforecounter);
         highlighted_word = words[beforecounter];
-        string highlight = "<color=#09FF00>" + highlighted_word + "</color>";
+        string highlight = color_type + highlighted_word + "</color>";
 
         string new_word = "";
         int reduce = words.Length - 1;
@@ -188,7 +229,7 @@ public class Panel_Mechanic : MonoBehaviour
             }
 
         }
-
+        Debug.Log(new_word);
         text_dialogue.text = new_word;
     }
     IEnumerator Freeze_Interv()

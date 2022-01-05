@@ -6049,6 +6049,7 @@ MonoBehaviour:
   dcheck: {fileID: 37001804}
   lreturn: {fileID: 1176567194}
   dtrigger: {fileID: 5964338167536592338}
+  has_antonym: 0
 --- !u!1 &488272854
 GameObject:
   m_ObjectHideFlags: 0
@@ -7266,6 +7267,7 @@ MonoBehaviour:
   - They have hurled a lot of hurtful words towards me...
   - ( Poor Fox ... I need to find a way to calm him down ... )
   - ( What can I possibly do to settle his sadness ... ? )
+  - ( I need to assuage him since he is so emotionally hurt ... )
   choices:
   - Give him bandages(to relieve)
   - Give him food(to satisfy)
@@ -7295,6 +7297,7 @@ MonoBehaviour:
   - Elaina
   - Fox
   - Fox
+  - Elaina
   - Elaina
   - Elaina
   names_result:
