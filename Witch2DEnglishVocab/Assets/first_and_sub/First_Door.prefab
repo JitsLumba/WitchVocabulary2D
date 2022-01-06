@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1072641671443531454
+--- !u!1 &954655928728026536
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,11 +8,11 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1072641671443531440}
-  - component: {fileID: 1072641671443531455}
-  - component: {fileID: 1072641671443531441}
-  - component: {fileID: 1072641671443531442}
-  - component: {fileID: 1072641671443531443}
+  - component: {fileID: 954655928728026534}
+  - component: {fileID: 954655928728026537}
+  - component: {fileID: 954655928728026535}
+  - component: {fileID: 954655928728026532}
+  - component: {fileID: 954655928728026533}
   m_Layer: 0
   m_Name: First_Door
   m_TagString: Untagged
@@ -20,13 +20,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1072641671443531440
+--- !u!4 &954655928728026534
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1072641671443531454}
+  m_GameObject: {fileID: 954655928728026536}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 18.21, y: -35.13, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 1}
@@ -34,13 +34,13 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &1072641671443531455
+--- !u!212 &954655928728026537
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1072641671443531454}
+  m_GameObject: {fileID: 954655928728026536}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -85,64 +85,125 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1072641671443531441
+--- !u!114 &954655928728026535
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1072641671443531454}
+  m_GameObject: {fileID: 954655928728026536}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c39e6f5c70f77da459ee6107062a7b5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraX: 49.53
-  playerX: 43.27
-  scnd_char_x_transf: 46
-  scnd_char_y_rot: 180
   camera: {fileID: 0}
   player: {fileID: 0}
-  door: {fileID: 1072641671443531454}
+  door: {fileID: 954655928728026536}
   checl: first_door
-  inp_transpy: {fileID: 1072641671443531442}
---- !u!114 &1072641671443531442
+  door_num: door_1
+  lreturn: {fileID: 0}
+  inp_transpy: {fileID: 954655928728026532}
+--- !u!114 &954655928728026532
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1072641671443531454}
+  m_GameObject: {fileID: 954655928728026536}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bcaf63ed26c747045a2c766d1e1723dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  camera_x: 49.53
+  camera_y: 0
+  player_x: 43.27
+  player_y: 0
+  second_char_x_transf: 46
+  second_char_y_rot: 180
+  return_camera_x: 21.79
+  return_player_x: 18.24
+  return_scnd_char_x_transf: 14.12
+  return_scnd_char_y_rot: 0
   camdest: {fileID: 0}
   playerdest: {fileID: 0}
   second_char: {fileID: 0}
   samp: first_door
-  subscrpt: {fileID: 1072641671443531443}
+  door_num: door_1
+  subscrpt: {fileID: 954655928728026533}
   invdsy: {fileID: 0}
   canchangediag: 1
---- !u!114 &1072641671443531443
+  lreturn: {fileID: 0}
+  c2d: {fileID: 0}
+  pmove: {fileID: 0}
+--- !u!114 &954655928728026533
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1072641671443531454}
+  m_GameObject: {fileID: 954655928728026536}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: baa8037f1210cae428199553c65de089, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sentences:
-  - Hello <i>Fox</i>
-  - Hi <color=#57DE23>Elaina</color>
-  - How are you?
+  - Ouch! Ouch! Ouch!
+  - Hey fox! What's wrong?
+  - I got scraped by a rock ...
+  - I need something to assuage this wound of mine....
+  - Traveler ... do you have something to ease this wound of mine ... ?
+  - I need to have my wounds dampened in order to move ....
+  choices:
+  - Give him bandage(to relieve)
+  - 'Give him food(to satisfy)
+
+'
+  - 'Comfort him(to soothe)
+
+'
+  results:
+  - Here, a bandage to relieve your wounds.
+  - Oh goodness, thank you so much!
+  - And you got that answer correct!
+  - Would food help satisfy your wounds?
+  - No it does not.
+  - Sadly you got that answer incorrect. Try again.
+  - Can I give you a hug to calm your wounds?
+  - That helps, but does not much.
+  - And your answer is kinda correct. Try again.
+  remarks:
+  - Correct
+  - Incorrect
+  - Kinda correct
+  clues:
+  - ease
+  - dampened
+  clue_type:
+  - synonym
+  - synonym
   names:
-  - Elaina
   - Fox
   - Elaina
+  - Fox
+  - Fox
+  - Fox
+  - Fox
+  names_result:
+  - Elaina
+  - Fox
+  - Fox
+  - Elaina
+  - Fox
+  - Fox
+  - Elaina
+  - Fox
+  - Fox
   dtrigger: {fileID: 0}
+  pmech: {fileID: 0}
+  answer: relieved!
+  context_no: 0
+  dcheck: {fileID: 0}
+  mult: 3

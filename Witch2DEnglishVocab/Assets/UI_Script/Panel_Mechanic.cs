@@ -11,7 +11,8 @@ public class Panel_Mechanic : MonoBehaviour
     [SerializeField] private definition_check dcheck;
     [SerializeField] private level_return lreturn;
     [SerializeField] private Dialogue_Trigger dtrigger ;
-    [SerializeField] private bool has_antonym = false; 
+    [SerializeField] private bool has_antonym = false, has_example = false; 
+    private List<string> clue_listed;
     private bool ison = false, canfreeze = false, hashighlight = false, cantrigger = true;
     private string original = "";
     private string color_type = "<color=#09FF00>";
@@ -22,7 +23,7 @@ public class Panel_Mechanic : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        clue_listed = new List<string>();
     }
 
     // Update is called once per frame
@@ -108,12 +109,18 @@ public class Panel_Mechanic : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.L) && ison)
         {
-            compare_answers();
+            check_listed();
         }
+    }
+    void clue_list_clear() {
+        clue_listed.Clear();
     }
     void change_context_highlighter() {
         light_counter++;
         if (light_counter == 1 && has_antonym) {
+
+        }
+        else if(light_counter == 2 && has_example) {
 
         }
         else {
@@ -137,6 +144,10 @@ public class Panel_Mechanic : MonoBehaviour
             current_type = "antonym";
             color_type = "<color=#E90000>";
         }
+        else if (hlight == 2) {
+            current_type = "example";
+            color_type = "<color=#A42BE0>";
+        }
     }
     public void set_can_freeze(bool freeze) {
         canfreeze = freeze;
@@ -153,6 +164,19 @@ public class Panel_Mechanic : MonoBehaviour
     }
     public bool get_can_freeze() {
         return canfreeze;
+    }
+    void check_listed() {
+        bool not_found = true;
+        for (int i = 0; i < clue_listed.Count; i++) {
+            if (highlighted_word.Equals(clue_listed[i])) {
+                not_found = false;
+                show_result_panel("Already found", false);
+                break;
+            }
+        }
+        if (not_found) {
+            compare_answers();
+        }
     }
     void compare_answers()
     {
@@ -173,7 +197,8 @@ public class Panel_Mechanic : MonoBehaviour
                 show_res = "Correct";
             clue_count++;
             not_found = false;
-            
+            clue_listed.Add(highlighted_word);
+
 
             }
             else {
@@ -191,12 +216,14 @@ public class Panel_Mechanic : MonoBehaviour
         int clue_counter = dcheck.get_count();
         if (clue_count == clue_counter) {
             can_choice = true;
+            clue_list_clear();
         }
         Debug.Log("RESULT IS " + show_res);
         show_result_panel(show_res, can_choice);
         
 
     }
+    
     void show_result_panel(string result, bool resultcond)
     {
         this.result_text.text = result;

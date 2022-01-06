@@ -7,6 +7,7 @@ public class finished_level_check : MonoBehaviour
     // Start is called before the first frame update
     [SerializeField] private GameObject player, door, result_panel;
     [SerializeField] private Text result_text;
+    [SerializeField] private Witch_Scene_Manager wscenemanager ;
 
     [SerializeField] private int needed_complete;
     
@@ -40,6 +41,7 @@ public class finished_level_check : MonoBehaviour
            
             is_not_complete = false;
             result_n = "Completed";
+            StartCoroutine(next_level());
         }
         else {
           
@@ -59,5 +61,9 @@ public class finished_level_check : MonoBehaviour
         
         yield return new WaitForSeconds(1.5f);
         remove_panel();
+    }
+    IEnumerator next_level() {
+        yield return new WaitForSeconds(2.0f);
+        wscenemanager.change_scene();
     }
 }

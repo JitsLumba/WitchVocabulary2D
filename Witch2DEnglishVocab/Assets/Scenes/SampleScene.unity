@@ -253,6 +253,49 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &107798083
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 107798085}
+  - component: {fileID: 107798084}
+  m_Layer: 0
+  m_Name: WitchManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &107798084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 107798083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e594a4800ed2f14bb1463554171103f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &107798085
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 107798083}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.6086736, y: -2.8515759, z: -0.932611}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 23
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &128942267
 GameObject:
   m_ObjectHideFlags: 0
@@ -6050,6 +6093,7 @@ MonoBehaviour:
   lreturn: {fileID: 1176567194}
   dtrigger: {fileID: 5964338167536592338}
   has_antonym: 0
+  has_example: 0
 --- !u!1 &488272854
 GameObject:
   m_ObjectHideFlags: 0
@@ -6228,6 +6272,7 @@ MonoBehaviour:
   door: {fileID: 488438977}
   result_panel: {fileID: 365151684}
   result_text: {fileID: 1109959757}
+  wscenemanager: {fileID: 1949488932}
   needed_complete: 3
 --- !u!1 &519420028
 GameObject:
@@ -7264,7 +7309,8 @@ MonoBehaviour:
   - .....*crying*
   - Hey Fox, what's wrong?
   - My friends have told me that they don't see me as a friend...
-  - They have hurled a lot of hurtful words towards me...
+  - They have hurled a lot of hurtful words towards me...I need to be assuaged of
+    my sadness...
   - ( Poor Fox ... I need to find a way to calm him down ... )
   - ( What can I possibly do to settle his sadness ... ? )
   - ( I need to assuage him since he is so emotionally hurt ... )
@@ -8654,6 +8700,51 @@ MonoBehaviour:
   m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
+--- !u!1 &1949488931
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1949488933}
+  - component: {fileID: 1949488932}
+  m_Layer: 0
+  m_Name: Next_Scene
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1949488932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1949488931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4db3d625ed2eb2840b1e969788417e15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  next_level: level2
+  can_go: 1
+--- !u!4 &1949488933
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1949488931}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.6086736, y: -2.8515759, z: -0.932611}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 24
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2065253365
 GameObject:
   m_ObjectHideFlags: 0
