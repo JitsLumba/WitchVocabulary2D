@@ -153,7 +153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   next_level: final_test
-  can_go: 0
+  can_go: 1
 --- !u!4 &386342923
 Transform:
   m_ObjectHideFlags: 0

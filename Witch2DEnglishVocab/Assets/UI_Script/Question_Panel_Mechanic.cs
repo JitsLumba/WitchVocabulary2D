@@ -2,24 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-public class Panel_Mechanic : MonoBehaviour
+public class Question_Panel_Mechanic : MonoBehaviour
 {
-    [SerializeField] private GameObject result_panel;
-    [SerializeField] private Image panel;
-
-    [SerializeField] private Text text_dialogue, result_text;
-    [SerializeField] private definition_check dcheck;
-    [SerializeField] private level_return lreturn;
-    [SerializeField] private Dialogue_Trigger dtrigger ;
-    [SerializeField] private bool has_antonym = false, has_example = false; 
+    
+    [SerializeField] private Text dialogue_text, result_text;
+    [SerializeField] private GameObject dialogue_box, choice_panel, result_panel;
+    [SerializeField] private Image diag_panel;
+    [SerializeField] private Question_Dialogue_Trigger qtrigger ;
     private List<string> clue_listed;
-    private bool ison = false, canfreeze = false, hashighlight = false, cantrigger = true;
+    private int num_of_clues = 0;
+    private bool canfreeze = true;
+    private bool cantrigger = true;
+    private bool is_freeze = false;
     private string original = "";
+    private string highlighted_word = "";
+    private int counter = 0;
+    private int light_counter = 0;
+    private int clue_count = 0;
+    Color panelcolor;
     private string color_type = "<color=#09FF00>";
     private string current_type = "synonym";
-    int counter = 0, clue_count = 0, light_counter = 0;
-    private string highlighted_word = "";
-    Color panelcolor;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,38 +32,31 @@ public class Panel_Mechanic : MonoBehaviour
     void Update()
     {
         string[] words;
-        char[] delimiterChars = { ' ', '.', ':', '\t', '!', '?' };
-
-        if (Input.GetKeyDown(KeyCode.Z) && cantrigger)
-        {
-            if (canfreeze)
-            {
-                if (ison)
-                {
-                    change_panel_color("#FFFFFF", false);
-
-                    text_dialogue.text = original;
-                }
-                else
-                {
-                    change_panel_color("#00F8FA", true);
-
-                    original = text_dialogue.text;
-                    words = original.Trim().Split(' ');
-                    counter = 0;
-                    set_dialogue_box(words, counter);
-
-
-                }
+        if (Input.GetKeyDown(KeyCode.Z) && canfreeze) {
+            if (cantrigger) {
+                
                 cantrigger = false;
-                StartCoroutine(Freeze_Interv());
+                
+
+                words = original.Trim().Split(' ');
+                if (is_freeze) {
+                    dialogue_text.text = original;
+                }
+                else {
+                    original = dialogue_text.text;
+                    words = original.Trim().Split(' ');
+                    this.set_dialogue_box(words, counter);
+                }
+                freeze_panel();
+                
+                
+                
+
             }
-
+            
         }
-
-        if (Input.GetKeyDown(KeyCode.P) && ison)
-        {
-
+        //HIGHLIGHTING WORDS
+        if (Input.GetKeyDown(KeyCode.P) && is_freeze) {
             words = original.Trim().Split(' ');
             int num = words.Length - 1;
 
@@ -79,15 +74,12 @@ public class Panel_Mechanic : MonoBehaviour
 
             }
             this.set_dialogue_box(words, counter);
-            int beforecounter = counter - 1;
-
-
         }
-        else if (Input.GetKeyDown(KeyCode.O) && ison)
-        {
-
+        else if (Input.GetKeyDown(KeyCode.O) && is_freeze) {
             words = original.Trim().Split(' ');
-            int num = words.Length;
+            int num = words.Length - 1;
+
+
             if (counter > 0)
             {
 
@@ -98,35 +90,20 @@ public class Panel_Mechanic : MonoBehaviour
 
 
             }
-
-
-
             this.set_dialogue_box(words, counter);
-
         }
-        if (Input.GetKeyDown(KeyCode.Tab) && ison) {
+        if (Input.GetKeyDown(KeyCode.Tab) && is_freeze) {
             change_context_highlighter();
         }
-        if (Input.GetKeyDown(KeyCode.L) && ison)
+        if (Input.GetKeyDown(KeyCode.L) && is_freeze)
         {
             check_listed();
         }
     }
-    void clue_list_clear() {
-        clue_listed.Clear();
-    }
     void change_context_highlighter() {
         light_counter++;
-        if (light_counter == 1 && has_antonym) {
-
-        }
-        else if(light_counter == 2 && has_example) {
-
-        }
-        else {
+        if (light_counter > 2) {
             light_counter = 0;
-            
-            
         }
         highlighter_context(light_counter);
         
@@ -149,21 +126,60 @@ public class Panel_Mechanic : MonoBehaviour
             color_type = "<color=#A42BE0>";
         }
     }
-    public void set_can_freeze(bool freeze) {
-        canfreeze = freeze;
+    void freeze_panel() {
+        if (is_freeze) {
+            counter = 0;
+            change_panel_color("#FFFFFF", false);
+            string[] words = original.Trim().Split(' ');
+        }
+        else {
+            change_panel_color("#00F8FA", true);
+        }
+        StartCoroutine(Freeze_Interv());
+    }
+    void dialogue_switch(bool trigger) {
+
+    }
+    void choice_panel_switch(bool trigger) {
+
     }
     void change_panel_color(string color, bool oncheck)
     {
         ColorUtility.TryParseHtmlString(color, out panelcolor);
 
-        ison = oncheck;
-        panel.color = panelcolor;
+        is_freeze = oncheck;
+        diag_panel.color = panelcolor;
     }
-    public void set_freeze(bool freeze) {
-        this.canfreeze = freeze;
+    public void set_num_of_clues (int num) {
+        num_of_clues = num;
     }
-    public bool get_can_freeze() {
-        return canfreeze;
+    public void set_dialogue_box(string[] words, int beforecounter)
+    {
+        
+        highlighted_word = words[beforecounter];
+        string highlight = color_type + highlighted_word + "</color>";
+
+        string new_word = "";
+        int reduce = words.Length - 1;
+        for (int i = 0; i < words.Length; i++)
+        {
+            if (i != beforecounter)
+            {
+                new_word = new_word + words[i];
+            }
+            else
+            {
+                new_word = new_word + highlight;
+            }
+
+            if (i != reduce)
+            {
+                new_word = new_word + " ";
+            }
+
+        }
+        
+        dialogue_text.text = new_word;
     }
     void check_listed() {
         bool not_found = true;
@@ -182,10 +198,10 @@ public class Panel_Mechanic : MonoBehaviour
     {
         bool not_found = true, can_choice = false, is_not_close = true;
         string show_res = "";
-        int list_num = dcheck.get_count();
+        int list_num = qtrigger.get_clue_num();
         for (int i = 0; i < list_num; i++) {
-            string answer = dcheck.get_answer(i);
-            string clue = dcheck.get_clue(i);
+            string answer = qtrigger.get_clue(i);
+            string clue = qtrigger.get_clue_type(i);
             //Debug.Log("COMPARE " + answer + " HIGHLIGHT " + highlighted_word);
         if (answer.Equals(highlighted_word))
         {
@@ -213,7 +229,7 @@ public class Panel_Mechanic : MonoBehaviour
         if (not_found && is_not_close) {
             show_res = "Incorrect";
         }
-        int clue_counter = dcheck.get_count();
+        int clue_counter = qtrigger.get_clue_num();
         if (clue_count == clue_counter) {
             can_choice = true;
             clue_list_clear();
@@ -223,7 +239,17 @@ public class Panel_Mechanic : MonoBehaviour
         
 
     }
-    
+    void clue_list_clear() {
+        clue_listed.Clear();
+    }
+    public void chang_to_choice() {
+        int list_num = qtrigger.get_clue_num();
+        List<string> clue_words = new List<string>();
+        for (int i = 0; i < list_num; i++) {
+            clue_words.Add(qtrigger.get_clue(i));
+        }
+        qtrigger.choice_trigger(clue_words);
+    }
     void show_result_panel(string result, bool resultcond)
     {
         this.result_text.text = result;
@@ -231,47 +257,9 @@ public class Panel_Mechanic : MonoBehaviour
         //return or no
         StartCoroutine(erase_result(resultcond));
     }
-    public void set_dialogue_box(string[] words, int beforecounter)
-    {
-        Debug.Log("HIGHLIGHT TIME " + color_type + " COUNTER " + beforecounter);
-        highlighted_word = words[beforecounter];
-        string highlight = color_type + highlighted_word + "</color>";
-
-        string new_word = "";
-        int reduce = words.Length - 1;
-        for (int i = 0; i < words.Length; i++)
-        {
-            if (i != beforecounter)
-            {
-                new_word = new_word + words[i];
-            }
-            else
-            {
-                new_word = new_word + highlight;
-            }
-
-            if (i != reduce)
-            {
-                new_word = new_word + " ";
-            }
-
-        }
-        Debug.Log(new_word);
-        text_dialogue.text = new_word;
-    }
-    IEnumerator Freeze_Interv()
-    {
+    IEnumerator Freeze_Interv() {
         yield return new WaitForSeconds(1.0f);
         cantrigger = true;
-       
-    }
-    public void chang_to_choice() {
-        int list_num = dcheck.get_count();
-        List<string> clue_words = new List<string>();
-        for (int i = 0; i < list_num; i++) {
-            clue_words.Add(dcheck.get_answer(i));
-        }
-        dtrigger.choice_trigger(clue_words);
     }
     IEnumerator erase_result(bool can_choice)
     {
@@ -283,12 +271,11 @@ public class Panel_Mechanic : MonoBehaviour
         {
             //have this be on 
             change_panel_color("#FFFFFF", false);
-            dtrigger.set_freeze(false);
-            dtrigger.set_canproc(true);
+            
+            qtrigger.set_can_proc(true);
             clue_count = 0;
             canfreeze = false;
             chang_to_choice();
         }
     }
-
 }
