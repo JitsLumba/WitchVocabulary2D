@@ -14,7 +14,7 @@ public class Dialogue_Trigger : MonoBehaviour
     private int stop_at = 0;
     private string play_name = "Elaina";
     bool canproc = true;
-    bool cantrigger = true;
+    bool cantrigger = false;
     bool canfreeze = false;
     bool is_on_choice = false;
     bool is_bef_choice = false;
@@ -109,6 +109,7 @@ public class Dialogue_Trigger : MonoBehaviour
                         //show result
                         bool can_return = false;
                         after_result = false;
+                        cantrigger = false;
                         canproc = false;
                         counter = 0;
                         if (is_correct) {
@@ -162,6 +163,7 @@ public class Dialogue_Trigger : MonoBehaviour
     {
         
         this.canproc = true;
+        this.cantrigger = true;
         this.multiple = mult;
         dialogue.clear_sentences();
         dialogue.add_remarks(remarks);
