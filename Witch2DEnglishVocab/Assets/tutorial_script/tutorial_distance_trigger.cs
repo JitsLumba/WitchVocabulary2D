@@ -26,7 +26,17 @@ public class tutorial_distance_trigger : MonoBehaviour
         }
     }
     void disable_movement() {
-        play_move.enabled = false;
-        controller_character.enabled = false;
+        CharacterController2D charsub2d;
+        PlayerMovement pmovement ;
+        GameObject player_search = GameObject.Find("Player");
+        if (player_search != null) {
+            Debug.Log("JUN");
+            charsub2d = player_search.GetComponent<CharacterController2D>();
+            pmovement = player_search.GetComponent<PlayerMovement>();
+            charsub2d.enabled = false;
+            pmovement.enabled = false;
+        }
+        /*play_move.enabled = false;
+        controller_character.enabled = false;*/
     }
 }

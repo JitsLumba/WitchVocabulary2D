@@ -11,6 +11,13 @@ public class tutorial_script : MonoBehaviour
     [TextArea(3, 10)]
     [SerializeField] private List<string> dialogues;
     [SerializeField] private List<string> names ;
+    [TextArea(3, 10)]
+    [SerializeField] private List<string> result_dialogues;
+
+    [SerializeField] private string result_name;
+    [TextArea(3, 10)]
+    [SerializeField] private List<string> after_dialogue ; 
+    [SerializeField] private List<string> after_names ;  
     [SerializeField] private string answer ;
     [SerializeField] private string type_clue;
     void Start()
@@ -25,6 +32,8 @@ public class tutorial_script : MonoBehaviour
     }
     public void send_scripts() {
         tut_def_check.set_values(answer, type_clue);
+        tut_diag_trig.store_result_diag(result_dialogues, result_name);
+        tut_diag_trig.store_after_diag(after_dialogue, after_names);
         tut_diag_trig.initialize_dialogue(dialogues, names);
     }
 }

@@ -72,6 +72,7 @@ public class Panel_Mechanic : MonoBehaviour
                 if (counter < num)
                 {
                     counter++;
+                   
                 }
 
 
@@ -186,11 +187,11 @@ public class Panel_Mechanic : MonoBehaviour
         for (int i = 0; i < list_num; i++) {
             string answer = dcheck.get_answer(i);
             string clue = dcheck.get_clue(i);
-            //Debug.Log("COMPARE " + answer + " HIGHLIGHT " + highlighted_word);
+     
         if (answer.Equals(highlighted_word))
         {
             
-            //canfreeze = false;
+           
             
             
             if (current_type.Equals(clue)) {
@@ -218,7 +219,7 @@ public class Panel_Mechanic : MonoBehaviour
             can_choice = true;
             clue_list_clear();
         }
-        Debug.Log("RESULT IS " + show_res);
+      
         show_result_panel(show_res, can_choice);
         
 
@@ -233,7 +234,7 @@ public class Panel_Mechanic : MonoBehaviour
     }
     public void set_dialogue_box(string[] words, int beforecounter)
     {
-        Debug.Log("HIGHLIGHT TIME " + color_type + " COUNTER " + beforecounter);
+       
         highlighted_word = words[beforecounter];
         string highlight = color_type + highlighted_word + "</color>";
 
@@ -256,7 +257,7 @@ public class Panel_Mechanic : MonoBehaviour
             }
 
         }
-        Debug.Log(new_word);
+        
         text_dialogue.text = new_word;
     }
     IEnumerator Freeze_Interv()

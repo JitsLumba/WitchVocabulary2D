@@ -7265,6 +7265,17 @@ MonoBehaviour:
   names:
   - Sensei
   - Sensei
+  result_dialogues:
+  - Correct
+  - Incorrect
+  - Kinda Correct
+  result_name: Sensei
+  after_dialogue:
+  - That's it
+  - Go for it
+  after_names:
+  - Sensei
+  - Sensei
   answer: funny
   type_clue: synonym
 --- !u!61 &999130467
@@ -8229,6 +8240,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1429215951}
+  - component: {fileID: 1429215952}
   m_Layer: 5
   m_Name: Tutorial_Panel_Mechanic
   m_TagString: Untagged
@@ -8255,6 +8267,23 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1429215952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1429215950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c28d646a0f58aa741a0535891c687faa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue_image: {fileID: 1316825081}
+  dialogue_text: {fileID: 1495289514}
+  tut_def_check: {fileID: 350037593}
+  can_antonym: 0
+  can_example: 0
 --- !u!1 &1429252923
 GameObject:
   m_ObjectHideFlags: 0
@@ -8559,6 +8588,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tut_diag_manager: {fileID: 940912591}
+  tut_panel_mech: {fileID: 1429215952}
 --- !u!1 &1463292745
 GameObject:
   m_ObjectHideFlags: 0
@@ -9067,7 +9097,7 @@ GameObject:
   - component: {fileID: 1831273406}
   - component: {fileID: 1831273407}
   m_Layer: 6
-  m_Name: Player_Witch
+  m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
