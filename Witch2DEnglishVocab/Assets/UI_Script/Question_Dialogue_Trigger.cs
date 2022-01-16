@@ -8,12 +8,14 @@ public class Question_Dialogue_Trigger : MonoBehaviour
     [SerializeField] private List<Question_Script> question_list ;
     [SerializeField] private definition_check dcheck;
     [SerializeField] private Question_Dialogue_Manager question_manager ;
+    [SerializeField] private Question_Panel_Mechanic qpanel_mech ;
     private List<string> choices, clues, clue_typing;
+    private string orig_question = "", orig_speaker = "";
     private bool canproc = false;
     private int button_select = 0;
     private bool after_result = false;
     private string play_name = "Elaina";
-    int counter = -1;
+    int counter = 0;
     
     void Start()
     {
@@ -22,9 +24,18 @@ public class Question_Dialogue_Trigger : MonoBehaviour
         clue_typing = new List<string>();
         initialize_script();
     }
+    void clear_lists() {
+        choices.Clear();
+        clues.Clear();
+        clue_typing.Clear();
+    }
     void initialize_script() {
-        counter++;
+        clear_lists();
+        qpanel_mech.set_can_freeze(true);
+        
         add_definitions();
+        qpanel_mech.set_clue_number(clues.Count);
+        qpanel_mech.set_clue_panel_active(true);
         choice_button_edit();
         trigger_dialogue();
     }
@@ -70,9 +81,11 @@ public class Question_Dialogue_Trigger : MonoBehaviour
                 canproc = false;
                 after_result = false;
                 question_manager.show_result(question_list[counter].get_result_diag(button_select));
+                StartCoroutine(Result_Interv());
             }
             else {
-               question_manager.set_active_dialogue(false, true);
+                new_dialogue(orig_question, orig_speaker);
+               question_manager.set_active_dialogue(true, true);
                canproc = false;
             }
         }
@@ -81,8 +94,9 @@ public class Question_Dialogue_Trigger : MonoBehaviour
     public void choice_trigger(List<string> clues) {
         //trigger dialogue
         canproc = true;
-        
+        qpanel_mech.set_clue_panel_active(false);
         question_manager.indicate_context(clues, play_name);
+        
         
     }
     public int get_counter() {
@@ -94,16 +108,43 @@ public class Question_Dialogue_Trigger : MonoBehaviour
         string question = question_list[counter].get_main_script();
         
         string speaker = question_list[counter].get_speaker();
+        orig_question = question;
+        orig_speaker = speaker ;
+        new_dialogue(question, speaker);
+    }
+    void new_dialogue(string question, string speaker) {
         question_manager.new_dialogue(question, speaker);
     }
     public void choice_click_event(int num) {
+        qpanel_mech.set_can_freeze(false);
         button_select = num;
         after_result = true;
         canproc = true;
         string result_diag = question_list[counter].get_remark_diag(num);
-        Debug.Log(result_diag);
+       
         string talker = question_list[counter].get_speaker();
         question_manager.set_active_dialogue(true, false);
         question_manager.new_dialogue(result_diag, talker);
+    }
+    void next_question() {
+        counter++;
+        Debug.Log("JUMPERS " + counter);
+        int max_count = question_list.Count;
+        if (counter == max_count) {
+            Debug.Log("END");
+            end_of_question();
+        }
+        else {
+             Debug.Log("NEW");
+            initialize_script();
+        }
+    }
+    void end_of_question() {
+
+    }
+    IEnumerator Result_Interv() {
+        yield return new WaitForSeconds(1.5f);
+        
+        next_question();
     }
 }

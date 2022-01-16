@@ -5,13 +5,13 @@ using UnityEngine.UI;
 public class Question_Panel_Mechanic : MonoBehaviour
 {
     
-    [SerializeField] private Text dialogue_text, result_text;
-    [SerializeField] private GameObject dialogue_box, choice_panel, result_panel;
+    [SerializeField] private Text dialogue_text, result_text, clue_text;
+    [SerializeField] private GameObject dialogue_box, choice_panel, result_panel, clue_panel;
     [SerializeField] private Image diag_panel;
     [SerializeField] private Question_Dialogue_Trigger qtrigger ;
     private List<string> clue_listed;
     private int num_of_clues = 0;
-    private bool canfreeze = true;
+    private bool canfreeze = false;
     private bool cantrigger = true;
     private bool is_freeze = false;
     private string original = "";
@@ -100,6 +100,9 @@ public class Question_Panel_Mechanic : MonoBehaviour
             check_listed();
         }
     }
+    public void set_can_freeze(bool freeze) {
+        canfreeze = freeze;
+    }
     void change_context_highlighter() {
         light_counter++;
         if (light_counter > 2) {
@@ -157,7 +160,7 @@ public class Question_Panel_Mechanic : MonoBehaviour
     {
         
         highlighted_word = words[beforecounter];
-        string highlight = color_type + highlighted_word + "</color>";
+        string highlight = color_type + "[" +  highlighted_word + "]</color>";
 
         string new_word = "";
         int reduce = words.Length - 1;
@@ -199,6 +202,7 @@ public class Question_Panel_Mechanic : MonoBehaviour
         bool not_found = true, can_choice = false, is_not_close = true;
         string show_res = "";
         int list_num = qtrigger.get_clue_num();
+        int clue_counter = qtrigger.get_clue_num();
         for (int i = 0; i < list_num; i++) {
             string answer = qtrigger.get_clue(i);
             string clue = qtrigger.get_clue_type(i);
@@ -213,6 +217,8 @@ public class Question_Panel_Mechanic : MonoBehaviour
                 show_res = "Correct";
             clue_count++;
             not_found = false;
+            int remain = clue_counter - clue_count;
+            set_clue_number(remain);
             clue_listed.Add(highlighted_word);
 
 
@@ -229,8 +235,10 @@ public class Question_Panel_Mechanic : MonoBehaviour
         if (not_found && is_not_close) {
             show_res = "Incorrect";
         }
-        int clue_counter = qtrigger.get_clue_num();
+        
         if (clue_count == clue_counter) {
+            counter = 0;
+            clue_count = 0;
             can_choice = true;
             clue_list_clear();
         }
@@ -238,6 +246,12 @@ public class Question_Panel_Mechanic : MonoBehaviour
         show_result_panel(show_res, can_choice);
         
 
+    }
+    public void set_clue_number(int num) {
+        clue_text.text = "Clues: " + num;
+    }
+    public void set_clue_panel_active(bool active) {
+        clue_panel.SetActive(active);
     }
     void clue_list_clear() {
         clue_listed.Clear();

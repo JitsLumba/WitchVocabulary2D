@@ -12,7 +12,7 @@ public class Question_Script : MonoBehaviour
     [SerializeField] private List<string> choices, results;
     [TextArea(3, 10)]
     [SerializeField] private List<string> remarks;
-    [SerializeField] private Question_Panel_Mechanic qpanelmech ;
+   
     void Start()
     {
         

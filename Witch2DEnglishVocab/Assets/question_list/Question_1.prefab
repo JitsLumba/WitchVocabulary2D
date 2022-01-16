@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4965885318873468153
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4965885318873468158}
+  - component: {fileID: 4965885318873468159}
+  m_Layer: 0
+  m_Name: Question_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4965885318873468158
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4965885318873468153}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 6.755303, y: -26.561096, z: -10.810429}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4965885318873468159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4965885318873468153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e5cf0b98a3e71d48b6a74857b0bee7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  main_script: A wounded person getting assuaged by a bandage feels _____ after feeling
+    at ease because bandages dampens their pain.
+  speaker: Fox
+  clues:
+  - dampens
+  - ease
+  type_clue:
+  - synonym
+  - synonym
+  choices:
+  - Satisfy
+  - Soothe
+  - Relieve
+  results:
+  - Incorrect
+  - Kinda Correct
+  - Correct
+  remarks:
+  - Sadly it is incorrect. Assuaging someone's wounds means you relieve their pain.
+  - Close but not correct. Assuaging someone's wounds, you relieve their pain is
+    the correct answer.
+  - Correct traveler! To assuage here means to relieve a person's wounds.
+  qpanelmech: {fileID: 0}
