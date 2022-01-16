@@ -66,6 +66,7 @@ public class tutorial_dialogue_trigger : MonoBehaviour
         }
     }
     void check_answer() {
+        tut_panel_mech.change_freeze_panel_color("#FFFFFF");
         tut_panel_mech.set_freeze_panel_obj_active(false);
         tut_panel_mech.change_panel_color("#FFFFFF", false);
         tut_panel_mech.compare_answers();

@@ -15,7 +15,7 @@ public class tutorial_panel_mechanic : MonoBehaviour
     private string original = "";
     private string highlighted_word = "";
     private string color_type = "<color=#09FF00>";
-    private bool can_freeze = false;
+    private bool can_freeze = false, cantrigger = true;
     private int counter = 0;
     private int correct_counter = 0;
     private bool ison = false;
@@ -76,7 +76,10 @@ public class tutorial_panel_mechanic : MonoBehaviour
     }
     public void freeze_or_defreeze() {
         string[] words;
-        if (can_freeze) {
+        if (cantrigger) {
+            
+            if (can_freeze) {
+                cantrigger = false;
                 if (ison) {
                     change_panel_color("#FFFFFF", false);
                     change_freeze_panel_color("#FFFFFF");
@@ -92,10 +95,14 @@ public class tutorial_panel_mechanic : MonoBehaviour
                     set_dialogue_box(words, counter);
                     Debug.Log(original);
                 }
+                StartCoroutine(Freeze_Interv());
                 
             }
+            
+        }
+        
     }
-    void change_freeze_panel_color(string color) {
+    public void change_freeze_panel_color(string color) {
         ColorUtility.TryParseHtmlString(color, out panelcolor);
         freeze_panel_image.color = panelcolor;
     }
@@ -107,11 +114,11 @@ public class tutorial_panel_mechanic : MonoBehaviour
         bool not_found = true, can_choice = false, is_not_close = true;
         string show_res = "";
         
-       Debug.Log("SOAM1");
+      
             string answer = tut_def_check.get_answer();
-            Debug.Log("SOAMMID");
+         
             string clue = tut_def_check.get_type();
-      Debug.Log("SOAM2");
+ 
         if (answer.Equals(highlighted_word))
         {
             
@@ -191,5 +198,9 @@ public class tutorial_panel_mechanic : MonoBehaviour
         }
      
         dialogue_text.text = new_word;
+    }
+    IEnumerator Freeze_Interv() {
+        yield return new WaitForSeconds(1.0f);
+        cantrigger = true;
     }
 }

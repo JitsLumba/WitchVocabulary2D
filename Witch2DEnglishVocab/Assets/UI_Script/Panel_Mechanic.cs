@@ -4,8 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 public class Panel_Mechanic : MonoBehaviour
 {
-    [SerializeField] private GameObject result_panel;
-    [SerializeField] private Image panel;
+    [SerializeField] private GameObject result_panel, freeze_panel ;
+    [SerializeField] private Image panel, freeze_image;
 
     [SerializeField] private Text text_dialogue, result_text;
     [SerializeField] private definition_check dcheck;
@@ -32,30 +32,9 @@ public class Panel_Mechanic : MonoBehaviour
         string[] words;
         char[] delimiterChars = { ' ', '.', ':', '\t', '!', '?' };
 
-        if (Input.GetKeyDown(KeyCode.Z) && cantrigger)
+        if (Input.GetKeyDown(KeyCode.Z))
         {
-            if (canfreeze)
-            {
-                if (ison)
-                {
-                    change_panel_color("#FFFFFF", false);
-
-                    text_dialogue.text = original;
-                }
-                else
-                {
-                    change_panel_color("#00F8FA", true);
-
-                    original = text_dialogue.text;
-                    words = original.Trim().Split(' ');
-                    counter = 0;
-                    set_dialogue_box(words, counter);
-
-
-                }
-                cantrigger = false;
-                StartCoroutine(Freeze_Interv());
-            }
+            freeze_or_not();
 
         }
 
@@ -113,6 +92,35 @@ public class Panel_Mechanic : MonoBehaviour
             check_listed();
         }
     }
+    public void freeze_or_not() {
+        string[] words;
+        if (cantrigger) {
+            if (canfreeze)
+            {
+                if (ison)
+                {
+                    change_panel_color("#FFFFFF", false);
+                    change_freeze_panel_color("#FFFFFF");
+                    text_dialogue.text = original;
+                }
+                else
+                {
+                    change_panel_color("#00F8FA", true);
+                    change_freeze_panel_color("#40EDF6");
+                    original = text_dialogue.text;
+                    words = original.Trim().Split(' ');
+                    counter = 0;
+                    set_dialogue_box(words, counter);
+
+
+                }
+                cantrigger = false;
+                StartCoroutine(Freeze_Interv());
+            }
+        }
+        
+    }
+    
     void clue_list_clear() {
         clue_listed.Clear();
     }
@@ -136,7 +144,7 @@ public class Panel_Mechanic : MonoBehaviour
         this.set_dialogue_box(words , counter);
     }
     void highlighter_context(int hlight) {
-        Debug.Log("HLIGHT " + hlight);
+      
         if (hlight == 0) {
             current_type = "synonym";
             color_type = "<color=#09FF00>";
@@ -152,6 +160,10 @@ public class Panel_Mechanic : MonoBehaviour
     }
     public void set_can_freeze(bool freeze) {
         canfreeze = freeze;
+    }
+    void change_freeze_panel_color(string color) {
+       ColorUtility.TryParseHtmlString(color, out panelcolor); 
+       freeze_image.color = panelcolor;
     }
     void change_panel_color(string color, bool oncheck)
     {
@@ -216,7 +228,9 @@ public class Panel_Mechanic : MonoBehaviour
         }
         int clue_counter = dcheck.get_count();
         if (clue_count == clue_counter) {
+            
             can_choice = true;
+            canfreeze = false;
             clue_list_clear();
         }
       
@@ -236,7 +250,7 @@ public class Panel_Mechanic : MonoBehaviour
     {
        
         highlighted_word = words[beforecounter];
-        string highlight = color_type + highlighted_word + "</color>";
+        string highlight = color_type + "[" +  highlighted_word + "]</color>";
 
         string new_word = "";
         int reduce = words.Length - 1;
@@ -266,6 +280,9 @@ public class Panel_Mechanic : MonoBehaviour
         cantrigger = true;
        
     }
+    public void set_freeze_panel_active(bool active) {
+        freeze_panel.SetActive(active);
+    }
     public void chang_to_choice() {
         int list_num = dcheck.get_count();
         List<string> clue_words = new List<string>();
@@ -284,6 +301,8 @@ public class Panel_Mechanic : MonoBehaviour
         {
             //have this be on 
             change_panel_color("#FFFFFF", false);
+            change_freeze_panel_color("#FFFFFF");
+            set_freeze_panel_active(false);
             dtrigger.set_freeze(false);
             dtrigger.set_canproc(true);
             clue_count = 0;

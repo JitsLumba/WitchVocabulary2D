@@ -6399,7 +6399,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   result_panel: {fileID: 365151684}
+  freeze_panel: {fileID: 698751839}
   panel: {fileID: 5964338167528885883}
+  freeze_image: {fileID: 1704392459}
   text_dialogue: {fileID: 5964338169371179235}
   result_text: {fileID: 1109959757}
   dcheck: {fileID: 37001804}
@@ -7020,7 +7022,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 698751842}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5964338167536592338}
+        m_TargetAssemblyTypeName: Dialogue_Trigger, Assembly-CSharp
+        m_MethodName: freeze_command
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 413066109}
+        m_TargetAssemblyTypeName: Panel_Mechanic, Assembly-CSharp
+        m_MethodName: freeze_or_not
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &698751842
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8022,7 +8048,7 @@ MonoBehaviour:
   - Fox
   - Fox
   dtrigger: {fileID: 5964338167536592338}
-  pmech: {fileID: 0}
+  pmech: {fileID: 413066109}
   answer: calmed
   context_no: 0
   dcheck: {fileID: 37001804}
@@ -8271,7 +8297,7 @@ MonoBehaviour:
   - Fox
   - Elaina
   dtrigger: {fileID: 5964338167536592338}
-  pmech: {fileID: 0}
+  pmech: {fileID: 413066109}
   answer: satisfied!
   context_no: 0
   dcheck: {fileID: 37001804}

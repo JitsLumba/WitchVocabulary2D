@@ -42,27 +42,36 @@ public class Dialogue_Trigger : MonoBehaviour
 
 
         }
-        else if (Input.GetKeyDown(KeyCode.Z) && cantrigger)
+        else if (Input.GetKeyDown(KeyCode.Z))
         {
+            
+            freeze_command();
 
+        }
+    }
+    public void freeze_command() {
+        if (cantrigger) {
             if (canfreeze)
             {
 
                 if (canproc)
                 {
-
+                    
 
                     canproc = false;
+                    Debug.Log("STOP ");
                 }
                 else
                 {
                     canproc = true;
                 }
                 cantrigger = false;
+                
                 StartCoroutine(Freeze_Interv());
             }
-
         }
+        
+           
     }
     public void set_canproc(bool proc) {
         canproc = proc;
@@ -161,7 +170,7 @@ public class Dialogue_Trigger : MonoBehaviour
     }
     public void change_dial_vals(List<string> sentences, List<string> names, List<string> choices, List<string> results, List<string> remarks, List<string> name_res, int mult)
     {
-        
+        set_freeze(true);
         this.canproc = true;
         this.cantrigger = true;
         this.multiple = mult;
@@ -224,5 +233,6 @@ public class Dialogue_Trigger : MonoBehaviour
     {
         yield return new WaitForSeconds(1.0f);
         cantrigger = true;
+        Debug.Log("Canproc " + canproc);
     }
 }
