@@ -66,6 +66,7 @@ public class tutorial_dialogue_trigger : MonoBehaviour
         }
     }
     void check_answer() {
+        tut_panel_mech.set_freeze_panel_obj_active(false);
         tut_panel_mech.change_panel_color("#FFFFFF", false);
         tut_panel_mech.compare_answers();
         int cor_counter = tut_panel_mech.get_correct_counter();
@@ -86,6 +87,7 @@ public class tutorial_dialogue_trigger : MonoBehaviour
             counter++;
             if (max_count == counter) {
                 tut_panel_mech.set_can_freeze(true);
+                tut_panel_mech.set_freeze_panel_obj_active(true);
             }
             int index = counter - 1;
             tut_diag_manager.next_dialogue(index);

@@ -5,7 +5,8 @@ using UnityEngine.UI;
 public class tutorial_panel_mechanic : MonoBehaviour
 {
     // Start is called before the first frame update
-    [SerializeField] private Image dialogue_image ;
+    [SerializeField] private GameObject freeze_panel_obj ;
+    [SerializeField] private Image dialogue_image, freeze_panel_image ;
     [SerializeField] private Text dialogue_text ;
     [SerializeField] private tutorial_definition_check tut_def_check ;
     [SerializeField] private bool can_antonym = false, can_example = false;
@@ -21,7 +22,7 @@ public class tutorial_panel_mechanic : MonoBehaviour
 
     void Start()
     {
-        
+        //#40EDF6
     }
 
     // Update is called once per frame
@@ -29,22 +30,7 @@ public class tutorial_panel_mechanic : MonoBehaviour
     {
         string[] words;
         if (Input.GetKeyDown(KeyCode.Z)) {
-            if (can_freeze) {
-                if (ison) {
-                    change_panel_color("#FFFFFF", false);
-
-                    dialogue_text.text = original;
-                }
-                else {
-                    change_panel_color("#00F8FA", true);
-                    original = dialogue_text.text;
-                    words = original.Trim().Split(' ');
-                    counter = 0;
-                    set_dialogue_box(words, counter);
-                    Debug.Log(original);
-                }
-                
-            }
+            freeze_or_defreeze();
         }
         if (Input.GetKeyDown(KeyCode.P) && ison) {
             words = original.Trim().Split(' ');
@@ -87,6 +73,34 @@ public class tutorial_panel_mechanic : MonoBehaviour
         }
 
         
+    }
+    public void freeze_or_defreeze() {
+        string[] words;
+        if (can_freeze) {
+                if (ison) {
+                    change_panel_color("#FFFFFF", false);
+                    change_freeze_panel_color("#FFFFFF");
+                    dialogue_text.text = original;
+                }
+                else {
+                    change_panel_color("#00F8FA", true);
+                    change_freeze_panel_color("#40EDF6");
+                    
+                    original = dialogue_text.text;
+                    words = original.Trim().Split(' ');
+                    counter = 0;
+                    set_dialogue_box(words, counter);
+                    Debug.Log(original);
+                }
+                
+            }
+    }
+    void change_freeze_panel_color(string color) {
+        ColorUtility.TryParseHtmlString(color, out panelcolor);
+        freeze_panel_image.color = panelcolor;
+    }
+    public void set_freeze_panel_obj_active(bool active) {
+        freeze_panel_obj.SetActive(active);
     }
     public void compare_answers()
     {
@@ -152,9 +166,9 @@ public class tutorial_panel_mechanic : MonoBehaviour
     }
     public void set_dialogue_box(string[] words, int beforecounter)
     {
-        Debug.Log("HIGHLIGHT TIME " + color_type + " COUNTER " + beforecounter);
+       
         highlighted_word = words[beforecounter];
-        string highlight = color_type + highlighted_word + "</color>";
+        string highlight = color_type + "[" + highlighted_word + "]</color>";
 
         string new_word = "";
         int reduce = words.Length - 1;
@@ -175,7 +189,7 @@ public class tutorial_panel_mechanic : MonoBehaviour
             }
 
         }
-        Debug.Log(new_word);
+     
         dialogue_text.text = new_word;
     }
 }
