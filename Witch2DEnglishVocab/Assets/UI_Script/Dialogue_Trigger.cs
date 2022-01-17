@@ -165,7 +165,10 @@ public class Dialogue_Trigger : MonoBehaviour
 
     }
     public void clues_add(List<string> clues, List<string> clue_type) {
-        
+        int num = clues.Count;
+        pmech.set_clue_number(num);
+        pmech.set_clue_panel_active(true);
+        pmech.set_highlighter_panel_active(true);
         dialogue.add_clues(clues, clue_type);
     }
     public void change_dial_vals(List<string> sentences, List<string> names, List<string> choices, List<string> results, List<string> remarks, List<string> name_res, int mult)
@@ -174,6 +177,7 @@ public class Dialogue_Trigger : MonoBehaviour
         this.canproc = true;
         this.cantrigger = true;
         this.multiple = mult;
+        
         dialogue.clear_sentences();
         dialogue.add_remarks(remarks);
         dialogue.add_dialogues(sentences, names);

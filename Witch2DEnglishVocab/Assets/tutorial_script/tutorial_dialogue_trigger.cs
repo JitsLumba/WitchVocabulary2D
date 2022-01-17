@@ -8,16 +8,21 @@ public class tutorial_dialogue_trigger : MonoBehaviour
     [SerializeField] private tutorial_dialogue_manager tut_diag_manager ;
     [SerializeField] private tutorial_panel_mechanic tut_panel_mech ;
     private List<string> result_dialogue;
+    private List<int> special_numbers_list;
     private int counter = 1;
     private int after_counter = 0;
     private int after_counter_max = 0;
+    
     private int max_count = 0;
     private bool cango = false;
     private bool after_choose = false;
     private bool is_correct = false;
+    private bool has_special_numbers = false;
+    private int special_num_type = 0;
     void Start()
     {
         result_dialogue = new List<string>();
+        special_numbers_list = new List<int>();
     }
 
     // Update is called once per frame
@@ -47,6 +52,10 @@ public class tutorial_dialogue_trigger : MonoBehaviour
                    else {
                        //last dialogue
                        tut_panel_mech.set_can_freeze(true);
+                       
+                       tut_panel_mech.set_highlighter_panel_active(true);
+                        tut_panel_mech.set_freeze_panel_obj_active(true);
+                        
                        tut_diag_manager.next_dialogue(counter - 1);
                        after_choose = false;
                    }
@@ -67,6 +76,8 @@ public class tutorial_dialogue_trigger : MonoBehaviour
     }
     void check_answer() {
         tut_panel_mech.change_freeze_panel_color("#FFFFFF");
+        tut_panel_mech.change_highlighter_panel_color("#FFFFFF");
+        tut_panel_mech.set_highlighter_panel_active(false);
         tut_panel_mech.set_freeze_panel_obj_active(false);
         tut_panel_mech.change_panel_color("#FFFFFF", false);
         tut_panel_mech.compare_answers();
@@ -81,14 +92,27 @@ public class tutorial_dialogue_trigger : MonoBehaviour
         tut_panel_mech.set_can_freeze(false);
         tut_diag_manager.next_result(cor_counter);
     }
+    public void set_special_numbers(List<int> special_numbers, int type_num) {
+       
+        has_special_numbers = true;
+        for (int i = 0; i < special_numbers.Count; i++) {
+            special_numbers_list.Add(special_numbers[i]);
+        }
+    }
     public void next_dialogue() {
         
         if (max_count > counter) {
             
             counter++;
+            //special number case
+
+            //last dialogue
             if (max_count == counter) {
                 tut_panel_mech.set_can_freeze(true);
                 tut_panel_mech.set_freeze_panel_obj_active(true);
+                tut_panel_mech.set_clue_number(1);
+                tut_panel_mech.set_highlighter_panel_active(true);
+                tut_panel_mech.set_clue_panel_active(true);
             }
             int index = counter - 1;
             tut_diag_manager.next_dialogue(index);
@@ -104,6 +128,7 @@ public class tutorial_dialogue_trigger : MonoBehaviour
         tut_diag_manager.initialize_after_dialogues(aft_diag, aft_name);
     }
     public void initialize_dialogue(List<string> dialogue, List<string> names) {
+        has_special_numbers = false;
         cango = true;
         is_correct = false;
         counter = 1;

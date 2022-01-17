@@ -9,9 +9,13 @@ public class tutorial_distance_trigger : MonoBehaviour
     [SerializeField] private PlayerMovement play_move ;
     [SerializeField] private GameObject player, tutor_talker ;
     [SerializeField] private tutorial_script tut_script;
+    [SerializeField] private bool has_tutorial = false;
+    
     void Start()
     {
-        
+        if (has_tutorial) {
+            start_sequence();
+        }
     }
 
     // Update is called once per frame
@@ -20,17 +24,20 @@ public class tutorial_distance_trigger : MonoBehaviour
         float player_x_dist = player.transform.position.x, tutor_x_dist = tutor_talker.transform.position.x;
         float diff = player_x_dist - tutor_x_dist;
         if (diff >= -1.0f && diff <= 1.0f && Input.GetKeyDown(KeyCode.F)) {
-            disable_movement();
-            tut_script.send_scripts();
             
+            start_sequence();
         }
+    }
+    void start_sequence() {
+        disable_movement();
+        tut_script.send_scripts();
     }
     void disable_movement() {
         CharacterController2D charsub2d;
         PlayerMovement pmovement ;
         GameObject player_search = GameObject.Find("Player");
         if (player_search != null) {
-            Debug.Log("JUN");
+            
             charsub2d = player_search.GetComponent<CharacterController2D>();
             pmovement = player_search.GetComponent<PlayerMovement>();
             charsub2d.enabled = false;

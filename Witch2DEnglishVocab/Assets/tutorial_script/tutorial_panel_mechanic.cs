@@ -5,11 +5,11 @@ using UnityEngine.UI;
 public class tutorial_panel_mechanic : MonoBehaviour
 {
     // Start is called before the first frame update
-    [SerializeField] private GameObject freeze_panel_obj ;
-    [SerializeField] private Image dialogue_image, freeze_panel_image ;
-    [SerializeField] private Text dialogue_text ;
+    [SerializeField] private GameObject freeze_panel_obj, clue_panel, highlighter_panel ;
+    [SerializeField] private Image dialogue_image, freeze_panel_image, highlighter_image ;
+    [SerializeField] private Text dialogue_text, clue_text, a_text, context_type_text ;
     [SerializeField] private tutorial_definition_check tut_def_check ;
-    [SerializeField] private bool can_antonym = false, can_example = false;
+    [SerializeField] private bool has_antonym = false, has_example = false;
     Color panelcolor;
     private string current_type = "synonym";
     private string original = "";
@@ -17,8 +17,10 @@ public class tutorial_panel_mechanic : MonoBehaviour
     private string color_type = "<color=#09FF00>";
     private bool can_freeze = false, cantrigger = true;
     private int counter = 0;
+    private int clue_num = 0;
     private int correct_counter = 0;
     private bool ison = false;
+    private int light_counter = 0;
 
     void Start()
     {
@@ -71,8 +73,72 @@ public class tutorial_panel_mechanic : MonoBehaviour
 
             this.set_dialogue_box(words, counter);
         }
+        if (Input.GetKeyDown(KeyCode.Tab)) {
+            change_context_highlighter();
+        }
+        
 
         
+    }
+    public void change_context_highlighter() {
+        if (ison) {
+            light_counter++;
+        if (light_counter == 1 && has_antonym) {
+
+        }
+        else if(light_counter == 2 && has_example) {
+
+        }
+        else {
+            light_counter = 0;
+            
+            
+        }
+        highlighter_context(light_counter);
+        
+        string[] words = original.Trim().Split(' ');
+        change_highlighter_text_color();
+        this.set_dialogue_box(words , counter);
+        }
+        
+    }
+    void change_highlighter_text_color() {
+        string a_word = "";
+        string type_word =  color_type;
+        if (light_counter == 0) {
+            
+            type_word = type_word + "Synonym";
+        }
+        else if (light_counter == 1) {
+          
+            type_word = type_word + "Antonym";
+        }
+        else {
+            a_word = "<color=#A42BE0>[A]";
+            type_word = type_word + "Example";
+        }
+        a_word = color_type + "[A]</color>";
+        type_word = type_word + "</color>";
+        a_text.text = a_word;
+        context_type_text.text = type_word;
+    }
+    void highlighter_context(int hlight) {
+      
+        if (hlight == 0) {
+            current_type = "synonym";
+            color_type = "<color=#09FF00>";
+        }
+        else if (hlight == 1) {
+            current_type = "antonym";
+            color_type = "<color=#E90000>";
+        }
+        else if (hlight == 2) {
+            current_type = "example";
+            color_type = "<color=#A42BE0>";
+        }
+    }
+    public void set_clue_panel_active(bool active) {
+        this.clue_panel.SetActive(active);
     }
     public void freeze_or_defreeze() {
         string[] words;
@@ -83,18 +149,20 @@ public class tutorial_panel_mechanic : MonoBehaviour
                 if (ison) {
                     change_panel_color("#FFFFFF", false);
                     change_freeze_panel_color("#FFFFFF");
+                    change_highlighter_panel_color("#FFFFFF");
                     dialogue_text.text = original;
                 }
                 else {
                     change_panel_color("#00F8FA", true);
                     change_freeze_panel_color("#40EDF6");
-                    
+                    change_highlighter_panel_color("#40EDF6");
                     original = dialogue_text.text;
                     words = original.Trim().Split(' ');
                     counter = 0;
                     set_dialogue_box(words, counter);
                     Debug.Log(original);
                 }
+           
                 StartCoroutine(Freeze_Interv());
                 
             }
@@ -102,9 +170,20 @@ public class tutorial_panel_mechanic : MonoBehaviour
         }
         
     }
+    public void change_highlighter_panel_color(string color) {
+        ColorUtility.TryParseHtmlString(color, out panelcolor); 
+       highlighter_image.color = panelcolor;
+    }
+    public void set_clue_number(int num) {
+        clue_num = num;
+        clue_text.text = "Clues: " + num;
+    }
     public void change_freeze_panel_color(string color) {
         ColorUtility.TryParseHtmlString(color, out panelcolor);
         freeze_panel_image.color = panelcolor;
+    }
+    public void set_highlighter_panel_active(bool active) {
+        highlighter_panel.SetActive(active);
     }
     public void set_freeze_panel_obj_active(bool active) {
         freeze_panel_obj.SetActive(active);
@@ -126,9 +205,14 @@ public class tutorial_panel_mechanic : MonoBehaviour
             
             
             if (current_type.Equals(clue)) {
+                clue_num--;
+
+                set_clue_number(clue_num);
+                set_clue_panel_active(false);
                 show_res = "Correct";
                 correct_counter = 0;
-            not_found = false;
+                not_found = false;
+
           
 
 

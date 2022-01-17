@@ -36,6 +36,8 @@ public class Question_Dialogue_Trigger : MonoBehaviour
         add_definitions();
         qpanel_mech.set_clue_number(clues.Count);
         qpanel_mech.set_clue_panel_active(true);
+        qpanel_mech.set_freeze_panel_active(true);
+        qpanel_mech.set_highlighter_panel_active(true);
         choice_button_edit();
         trigger_dialogue();
     }
