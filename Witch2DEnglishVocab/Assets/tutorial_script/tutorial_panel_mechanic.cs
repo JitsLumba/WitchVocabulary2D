@@ -5,8 +5,8 @@ using UnityEngine.UI;
 public class tutorial_panel_mechanic : MonoBehaviour
 {
     // Start is called before the first frame update
-    [SerializeField] private GameObject freeze_panel_obj, clue_panel, highlighter_panel ;
-    [SerializeField] private Image dialogue_image, freeze_panel_image, highlighter_image ;
+    [SerializeField] private GameObject freeze_panel_obj, clue_panel, highlighter_panel, dialogue_panel ;
+    [SerializeField] private Image dialogue_image, freeze_panel_image, highlighter_image, vocabulary_image ;
     [SerializeField] private Text dialogue_text, clue_text, a_text, context_type_text ;
     [SerializeField] private tutorial_definition_check tut_def_check ;
     [SerializeField] private bool has_antonym = false, has_example = false;
@@ -102,6 +102,10 @@ public class tutorial_panel_mechanic : MonoBehaviour
         }
         
     }
+    public void change_vocab_color(string color) {
+        ColorUtility.TryParseHtmlString(color, out panelcolor); 
+       vocabulary_image.color = panelcolor;
+    }
     void change_highlighter_text_color() {
         string a_word = "";
         string type_word =  color_type;
@@ -150,12 +154,14 @@ public class tutorial_panel_mechanic : MonoBehaviour
                     change_panel_color("#FFFFFF", false);
                     change_freeze_panel_color("#FFFFFF");
                     change_highlighter_panel_color("#FFFFFF");
+                    change_vocab_color("#FFFFFF");
                     dialogue_text.text = original;
                 }
                 else {
                     change_panel_color("#00F8FA", true);
                     change_freeze_panel_color("#40EDF6");
                     change_highlighter_panel_color("#40EDF6");
+                    change_vocab_color("#00F8FA");
                     original = dialogue_text.text;
                     words = original.Trim().Split(' ');
                     counter = 0;
@@ -254,6 +260,9 @@ public class tutorial_panel_mechanic : MonoBehaviour
 
         ison = oncheck;
         dialogue_image.color = panelcolor;
+    }
+    public void set_dialogue_active(bool active) {
+        dialogue_panel.SetActive(active);
     }
     public void set_dialogue_box(string[] words, int beforecounter)
     {

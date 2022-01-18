@@ -21,6 +21,7 @@ public class Dialogue_Manager : MonoBehaviour
         nameq = new Queue<string>();
         sentences.Enqueue("Hello");
         nameq.Enqueue("Elaina");
+       
         //DELETE ONCE CLEARED GET BACK TO THIS LATER
         
     }
@@ -37,8 +38,9 @@ public class Dialogue_Manager : MonoBehaviour
         Debug.Log(dial.sentence_list.Count);
     }
     public void StartDialogue(Dialogue dialogue) {
-       
+          
             sentences.Clear();
+          
             nameq.Clear();
       
         

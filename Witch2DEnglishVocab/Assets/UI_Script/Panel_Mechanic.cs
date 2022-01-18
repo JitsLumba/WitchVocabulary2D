@@ -5,9 +5,9 @@ using UnityEngine.UI;
 public class Panel_Mechanic : MonoBehaviour
 {
     [SerializeField] private GameObject result_panel, freeze_panel, clue_panel, highlighter_panel ;
-    [SerializeField] private Image panel, freeze_image, highlighter_image;
+    [SerializeField] private Image panel, freeze_image, highlighter_image, vocabulary_image;
 
-    [SerializeField] private Text text_dialogue, result_text, clue_text, a_text, context_type_text;
+    [SerializeField] private Text text_dialogue, result_text, clue_text, a_text, context_type_text ;
     [SerializeField] private definition_check dcheck;
     [SerializeField] private level_return lreturn;
     [SerializeField] private Dialogue_Trigger dtrigger ;
@@ -92,6 +92,10 @@ public class Panel_Mechanic : MonoBehaviour
             check_listed();
         }
     }
+    void change_vocab_color(string color) {
+        ColorUtility.TryParseHtmlString(color, out panelcolor); 
+       vocabulary_image.color = panelcolor;
+    }
     public void set_clue_panel_active(bool active) {
         this.clue_panel.SetActive(active);
     }
@@ -112,6 +116,7 @@ public class Panel_Mechanic : MonoBehaviour
                     change_panel_color("#FFFFFF", false);
                     change_freeze_panel_color("#FFFFFF");
                     change_highlighter_panel_color("#FFFFFF");
+                    change_vocab_color("#FFFFFF");
                     text_dialogue.text = original;
                 }
                 else
@@ -119,6 +124,7 @@ public class Panel_Mechanic : MonoBehaviour
                     change_panel_color("#00F8FA", true);
                     change_freeze_panel_color("#40EDF6");
                     change_highlighter_panel_color("#40EDF6");
+                    change_vocab_color("#00F8FA");
                     original = text_dialogue.text;
                     words = original.Trim().Split(' ');
                     counter = 0;
@@ -171,7 +177,7 @@ public class Panel_Mechanic : MonoBehaviour
             type_word = type_word + "Antonym";
         }
         else {
-            a_word = "<color=#A42BE0>[A]";
+           
             type_word = type_word + "Example";
         }
         a_word = color_type + "[A]</color>";
@@ -345,9 +351,10 @@ public class Panel_Mechanic : MonoBehaviour
             set_clue_panel_active(false);
             change_panel_color("#FFFFFF", false);
             change_freeze_panel_color("#FFFFFF");
-            
+            change_vocab_color("#FFFFFF");
             change_highlighter_panel_color("#FFFFFF");
             set_freeze_panel_active(false);
+            set_highlighter_panel_active(false);
             dtrigger.set_freeze(false);
             dtrigger.set_canproc(true);
             clue_count = 0;

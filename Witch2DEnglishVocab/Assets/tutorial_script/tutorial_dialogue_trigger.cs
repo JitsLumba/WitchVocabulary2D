@@ -7,6 +7,7 @@ public class tutorial_dialogue_trigger : MonoBehaviour
     // Start is called before the first frame update
     [SerializeField] private tutorial_dialogue_manager tut_diag_manager ;
     [SerializeField] private tutorial_panel_mechanic tut_panel_mech ;
+    [SerializeField] private tutorial_image_show tut_img_show ;
     private List<string> result_dialogue;
     private List<int> special_numbers_list;
     private int counter = 1;
@@ -17,7 +18,8 @@ public class tutorial_dialogue_trigger : MonoBehaviour
     private bool cango = false;
     private bool after_choose = false;
     private bool is_correct = false;
-    private bool has_special_numbers = false;
+    private bool is_marked = false;
+    private bool is_diag_hidden = false;
     private int special_num_type = 0;
     void Start()
     {
@@ -41,6 +43,10 @@ public class tutorial_dialogue_trigger : MonoBehaviour
                            after_choose = false;
                            is_correct = false;
                            tut_diag_manager.set_active_dialogue_box(false);
+                           tut_img_show.set_is_not_on_dialogue(true);
+                           //tut_img_show.set_can_browse(true);
+                           tut_img_show.set_image_counter(0);
+                           tut_img_show.set_counter(0);
                            enable_movement();
                        }
                        else {
@@ -62,7 +68,25 @@ public class tutorial_dialogue_trigger : MonoBehaviour
                    
                }
                else {
-                   next_dialogue();
+                   if (is_marked) {
+                       is_diag_hidden = true;
+                       is_marked = false;
+                       tut_panel_mech.set_dialogue_active(false);
+                       tut_img_show.set_vocabulary_active(false);
+                       tut_img_show.show_images_within();
+                   }
+                   else {
+                       if (is_diag_hidden) {
+
+                           is_diag_hidden = false;
+                           tut_img_show.remove_last_image();
+                           tut_img_show.set_is_showing_image(false);
+                           tut_img_show.set_vocabulary_active(true);
+                           tut_panel_mech.set_dialogue_active(true);
+                       }
+                       next_dialogue();
+                   }
+                   
                }
                 
             }
@@ -77,6 +101,7 @@ public class tutorial_dialogue_trigger : MonoBehaviour
     void check_answer() {
         tut_panel_mech.change_freeze_panel_color("#FFFFFF");
         tut_panel_mech.change_highlighter_panel_color("#FFFFFF");
+        tut_panel_mech.change_vocab_color("#FFFFFF");
         tut_panel_mech.set_highlighter_panel_active(false);
         tut_panel_mech.set_freeze_panel_obj_active(false);
         tut_panel_mech.change_panel_color("#FFFFFF", false);
@@ -92,16 +117,12 @@ public class tutorial_dialogue_trigger : MonoBehaviour
         tut_panel_mech.set_can_freeze(false);
         tut_diag_manager.next_result(cor_counter);
     }
-    public void set_special_numbers(List<int> special_numbers, int type_num) {
-       
-        has_special_numbers = true;
-        for (int i = 0; i < special_numbers.Count; i++) {
-            special_numbers_list.Add(special_numbers[i]);
-        }
-    }
+    
     public void next_dialogue() {
         
         if (max_count > counter) {
+            
+            is_marked = tut_img_show.return_is_on_marked_diag(counter);
             
             counter++;
             //special number case
@@ -116,6 +137,8 @@ public class tutorial_dialogue_trigger : MonoBehaviour
             }
             int index = counter - 1;
             tut_diag_manager.next_dialogue(index);
+            
+            
         }
        
     }
@@ -128,7 +151,8 @@ public class tutorial_dialogue_trigger : MonoBehaviour
         tut_diag_manager.initialize_after_dialogues(aft_diag, aft_name);
     }
     public void initialize_dialogue(List<string> dialogue, List<string> names) {
-        has_special_numbers = false;
+        tut_img_show.set_is_not_on_dialogue(false);
+       is_marked = false;
         cango = true;
         is_correct = false;
         counter = 1;

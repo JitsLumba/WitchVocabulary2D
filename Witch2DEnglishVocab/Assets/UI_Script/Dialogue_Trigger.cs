@@ -17,6 +17,7 @@ public class Dialogue_Trigger : MonoBehaviour
     bool cantrigger = false;
     bool canfreeze = false;
     bool is_on_choice = false;
+    bool can_browse = false;
     bool is_bef_choice = false;
     bool after_result = false;
     bool is_correct = false;
@@ -173,6 +174,7 @@ public class Dialogue_Trigger : MonoBehaviour
     }
     public void change_dial_vals(List<string> sentences, List<string> names, List<string> choices, List<string> results, List<string> remarks, List<string> name_res, int mult)
     {
+        can_browse = true;
         set_freeze(true);
         this.canproc = true;
         this.cantrigger = true;
