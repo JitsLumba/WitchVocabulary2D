@@ -44,6 +44,7 @@ public class tutorial_dialogue_trigger : MonoBehaviour
                            is_correct = false;
                            tut_diag_manager.set_active_dialogue_box(false);
                            tut_img_show.set_is_not_on_dialogue(true);
+                           cango = false;
                            //tut_img_show.set_can_browse(true);
                            tut_img_show.set_image_counter(0);
                            tut_img_show.set_counter(0);
@@ -72,13 +73,22 @@ public class tutorial_dialogue_trigger : MonoBehaviour
                        is_diag_hidden = true;
                        is_marked = false;
                        tut_panel_mech.set_dialogue_active(false);
+                       tut_panel_mech.set_can_browse(false);
                        tut_img_show.set_vocabulary_active(false);
+                       tut_img_show.set_can_browse(false);
                        tut_img_show.show_images_within();
                    }
                    else {
                        if (is_diag_hidden) {
+                           bool has_passed = tut_img_show.get_is_passed();
+                           Debug.Log(has_passed + " US IT");
+                           if (has_passed) {
+                               tut_img_show.set_can_browse(true);
+                               tut_panel_mech.set_can_browse(true);
 
+                           }
                            is_diag_hidden = false;
+                           
                            tut_img_show.remove_last_image();
                            tut_img_show.set_is_showing_image(false);
                            tut_img_show.set_vocabulary_active(true);
@@ -125,6 +135,7 @@ public class tutorial_dialogue_trigger : MonoBehaviour
             is_marked = tut_img_show.return_is_on_marked_diag(counter);
             
             counter++;
+            //check if it is past the tutorial max
             //special number case
 
             //last dialogue
@@ -134,6 +145,7 @@ public class tutorial_dialogue_trigger : MonoBehaviour
                 tut_panel_mech.set_clue_number(1);
                 tut_panel_mech.set_highlighter_panel_active(true);
                 tut_panel_mech.set_clue_panel_active(true);
+                
             }
             int index = counter - 1;
             tut_diag_manager.next_dialogue(index);

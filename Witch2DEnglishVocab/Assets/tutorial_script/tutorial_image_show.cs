@@ -6,14 +6,14 @@ public class tutorial_image_show : MonoBehaviour
 {
     [SerializeField] private List<GameObject> tutorial_images;
     [SerializeField] private List<tutorial_change_direction> tut_change_dir ;
-    [SerializeField] private GameObject image_spawn, vocabulary_panel, dialogue_panel, choice_panel;
+    [SerializeField] private GameObject image_spawn, vocabulary_panel;
     [SerializeField] private bool has_tutorial_image;
     [SerializeField] private List<string> directional_tut_img ;
     [SerializeField] private List<int> dialogue_counts, image_marker ;
     
     
     private GameObject tut_image_object;
-    private bool is_not_on_dialogue = true, can_browse = true;
+    private bool is_not_on_dialogue = true, can_browse = false, is_passed = false;
     private bool is_showing_image = false;
     private int counter = 0, image_counter = 0, duration = 0;
     // Start is called before the first frame update
@@ -25,7 +25,7 @@ public class tutorial_image_show : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.X) && is_not_on_dialogue && can_browse) {
+        if (Input.GetKeyDown(KeyCode.X) && can_browse) {
             if (is_showing_image) {
                 exit_images();
             }
@@ -38,7 +38,7 @@ public class tutorial_image_show : MonoBehaviour
             
             Debug.Log("TUTORIAL IMAGES");
         }
-        else if (Input.GetKeyDown(KeyCode.Escape) && is_not_on_dialogue && can_browse) {
+        else if (Input.GetKeyDown(KeyCode.Escape) && can_browse) {
             if (is_showing_image) {
                 exit_images();
             }
@@ -70,12 +70,7 @@ public class tutorial_image_show : MonoBehaviour
                 movement_change(true);
                 remove_last_image();
     }
-    void set_dialogue_active(bool active) {
-        dialogue_panel.SetActive(active);
-    }
-    void set_choice_active(bool active) {
-        choice_panel.SetActive(active);
-    }
+    
     public void set_vocabulary_active(bool active) {
         vocabulary_panel.SetActive(active);
     }
@@ -107,11 +102,21 @@ public class tutorial_image_show : MonoBehaviour
     }
     public void show_images_within() {
         int num = image_marker[image_counter];
+        int max = tutorial_images.Count;
         set_counter(num);
         instantiate_new_image(num);
         is_showing_image = true;
         change_dir_text(num, "Press G to proceed");
         image_counter++;
+        if (image_counter == max) {
+            set_is_passed(true);
+        }
+    }
+    void set_is_passed(bool pass) {
+        is_passed = pass;
+    }
+    public bool get_is_passed() {
+        return is_passed;
     }
     void show_tutorial_images() {
        

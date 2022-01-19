@@ -15,7 +15,7 @@ public class tutorial_panel_mechanic : MonoBehaviour
     private string original = "";
     private string highlighted_word = "";
     private string color_type = "<color=#09FF00>";
-    private bool can_freeze = false, cantrigger = true;
+    private bool can_freeze = false, cantrigger = true, can_browse = false, is_img_on = false;
     private int counter = 0;
     private int clue_num = 0;
     private int correct_counter = 0;
@@ -25,6 +25,35 @@ public class tutorial_panel_mechanic : MonoBehaviour
     void Start()
     {
         //#40EDF6
+        /*if (Input.GetKeyDown(KeyCode.X)) {
+            Debug.Log(can_browse + " CHECK");
+            if (can_browse) {
+                Debug.Log("CAN BROWSE PANEL " + is_img_on);
+                if (is_img_on) {
+                    is_img_on = false;
+                    Debug.Log("REOPEN DIALOGUE");
+                    change_dialogue_active(true);
+                    if (can_freeze) {
+                        change_freeze_panel_active(true);
+                        change_highlighter_panel_active(true);
+                    }
+                    
+                }
+                else {
+                    
+                    is_img_on = true;
+                    
+                    change_dialogue_active(false);
+                    if (can_freeze) {
+                        change_freeze_panel_active(false);
+                        change_highlighter_panel_active(false);
+                    }
+                    
+                    Debug.Log("CLOSE DIALOGUE " + is_img_on + " " + can_browse);
+                }
+            }
+        }
+        */
     }
 
     // Update is called once per frame
@@ -33,6 +62,34 @@ public class tutorial_panel_mechanic : MonoBehaviour
         string[] words;
         if (Input.GetKeyDown(KeyCode.Z)) {
             freeze_or_defreeze();
+        }
+        if (Input.GetKeyDown(KeyCode.X)) {
+            Debug.Log(can_browse + " CHECK");
+            if (can_browse) {
+                Debug.Log("CAN BROWSE PANEL " + is_img_on);
+                if (is_img_on) {
+                    is_img_on = false;
+                    Debug.Log("REOPEN DIALOGUE");
+                    change_dialogue_active(true);
+                    if (can_freeze) {
+                        change_freeze_panel_active(true);
+                        change_highlighter_panel_active(true);
+                    }
+                    
+                }
+                else {
+                    
+                    is_img_on = true;
+                    
+                    change_dialogue_active(false);
+                    if (can_freeze) {
+                        change_freeze_panel_active(false);
+                        change_highlighter_panel_active(false);
+                    }
+                    
+                    Debug.Log("CLOSE DIALOGUE " + is_img_on + " " + can_browse);
+                }
+            }
         }
         if (Input.GetKeyDown(KeyCode.P) && ison) {
             words = original.Trim().Split(' ');
@@ -79,6 +136,19 @@ public class tutorial_panel_mechanic : MonoBehaviour
         
 
         
+        
+    }
+    void change_highlighter_panel_active(bool active) {
+        highlighter_panel.SetActive(active);
+    }
+    void change_freeze_panel_active(bool active) {
+        freeze_panel_obj.SetActive(active);
+    }
+    void change_dialogue_active(bool active) {
+        dialogue_panel.SetActive(active);
+    }
+    public void set_can_browse(bool browse) {
+        can_browse = browse;
     }
     public void change_context_highlighter() {
         if (ison) {
@@ -146,7 +216,9 @@ public class tutorial_panel_mechanic : MonoBehaviour
     }
     public void freeze_or_defreeze() {
         string[] words;
-        if (cantrigger) {
+        bool is_not_img = !is_img_on;
+        if (is_not_img) {
+            if (cantrigger) {
             
             if (can_freeze) {
                 cantrigger = false;
@@ -174,6 +246,8 @@ public class tutorial_panel_mechanic : MonoBehaviour
             }
             
         }
+        }
+        
         
     }
     public void change_highlighter_panel_color(string color) {
