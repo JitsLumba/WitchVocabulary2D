@@ -11,6 +11,7 @@ public class Question_Panel_Mechanic : MonoBehaviour
     [SerializeField] private Question_Dialogue_Trigger qtrigger ;
     private List<string> clue_listed;
     private int num_of_clues = 0;
+    private bool can_l = true, can_o = true , can_p = true, can_z = true;
     private bool canfreeze = false;
     private bool cantrigger = true;
     private bool is_freeze = false;
@@ -37,7 +38,7 @@ public class Question_Panel_Mechanic : MonoBehaviour
             
         }
         //HIGHLIGHTING WORDS
-        if (Input.GetKeyDown(KeyCode.P) && is_freeze) {
+        if (Input.GetKeyDown(KeyCode.P) && is_freeze && can_p) {
             words = original.Trim().Split(' ');
             int num = words.Length - 1;
 
@@ -56,7 +57,7 @@ public class Question_Panel_Mechanic : MonoBehaviour
             }
             this.set_dialogue_box(words, counter);
         }
-        else if (Input.GetKeyDown(KeyCode.O) && is_freeze) {
+        else if (Input.GetKeyDown(KeyCode.O) && is_freeze && can_o) {
             words = original.Trim().Split(' ');
             int num = words.Length - 1;
 
@@ -73,17 +74,36 @@ public class Question_Panel_Mechanic : MonoBehaviour
             }
             this.set_dialogue_box(words, counter);
         }
-        if (Input.GetKeyDown(KeyCode.Tab) && is_freeze) {
+        if (Input.GetKeyDown(KeyCode.Tab)) {
             change_context_highlighter();
         }
-        if (Input.GetKeyDown(KeyCode.L) && is_freeze)
+        if (Input.GetKeyDown(KeyCode.L) && is_freeze && can_l)
         {
             check_listed();
         }
     }
+    public void set_can_l(bool can) {
+        can_l = can;
+    }
+    public void set_can_o(bool can) {
+        can_o = can;
+    }
+    public void set_can_p(bool can) {
+        can_p = can;
+    }
+    public void set_can_z(bool can) {
+        can_z = can;
+    }
+    public void set_dialogue_active(bool active) {
+        dialogue_box.SetActive(active);
+    }
+    public void set_choice_active(bool active) {
+        choice_panel.SetActive(active);
+    }
     public void freeze_or_defreeze() {
         string[] words;
-        if (canfreeze) {
+        if (can_z) {
+            if (canfreeze) {
             if (cantrigger) {
                 
                 cantrigger = false;
@@ -106,12 +126,15 @@ public class Question_Panel_Mechanic : MonoBehaviour
             }
         }
         
+        }
+        
     }
     public void set_can_freeze(bool freeze) {
         canfreeze = freeze;
     }
     public void change_context_highlighter() {
-        light_counter++;
+        if (is_freeze) {
+            light_counter++;
         if (light_counter > 2) {
             light_counter = 0;
         }
@@ -120,6 +143,8 @@ public class Question_Panel_Mechanic : MonoBehaviour
         string[] words = original.Trim().Split(' ');
         change_highlighter_text_color();
         this.set_dialogue_box(words , counter);
+        }
+        
     }
     public void set_freeze_panel_active(bool active) {
         freeze_panel_obj.SetActive(active);

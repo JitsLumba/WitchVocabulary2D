@@ -40,6 +40,12 @@ public class Question_Dialogue_Manager : MonoBehaviour
         dialogue_panel.SetActive(dialogue_active);
         choice_panel.SetActive(choice_active);
     }
+    public void set_dialogue_active(bool active) {
+        dialogue_panel.SetActive(active);
+    }
+    public void set_choice_active(bool active) {
+        choice_panel.SetActive(active);
+    }
     public void set_orig_question(string question) {
         orig_question = question;
     }

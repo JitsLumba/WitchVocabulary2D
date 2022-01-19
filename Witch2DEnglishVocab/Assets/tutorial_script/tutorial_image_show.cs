@@ -63,10 +63,12 @@ public class tutorial_image_show : MonoBehaviour
     }
     public void show_img_sequence() {
         if (can_browse) {
+            Debug.Log("CLOSE");
             if (is_showing_image) {
                 exit_images();
             }
             else {
+                Debug.Log("SHOW");
                 is_showing_image = true;
                 movement_change(false);
                 change_all_direction_texts();

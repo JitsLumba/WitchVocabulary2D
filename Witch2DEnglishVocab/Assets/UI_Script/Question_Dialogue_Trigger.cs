@@ -9,9 +9,14 @@ public class Question_Dialogue_Trigger : MonoBehaviour
     [SerializeField] private definition_check dcheck;
     [SerializeField] private Question_Dialogue_Manager question_manager ;
     [SerializeField] private Question_Panel_Mechanic qpanel_mech ;
+    [SerializeField] private tutorial_image_show tut_img_show;
     private List<string> choices, clues, clue_typing;
     private string orig_question = "", orig_speaker = "";
     private bool canproc = false;
+    private bool can_g = true, can_tab = true, can_x = true ;
+    private bool is_showing_img = false;
+    private bool is_on_choice = false;
+    private bool is_on_question = false;
     private int button_select = 0;
     private bool after_result = false;
     private string play_name = "Elaina";
@@ -32,6 +37,7 @@ public class Question_Dialogue_Trigger : MonoBehaviour
     void initialize_script() {
         clear_lists();
         qpanel_mech.set_can_freeze(true);
+        tut_img_show.set_is_not_on_dialogue(false);
         
         add_definitions();
         qpanel_mech.set_clue_number(clues.Count);
@@ -78,23 +84,64 @@ public class Question_Dialogue_Trigger : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.G) && canproc) {
+        if (Input.GetKeyDown(KeyCode.G) && canproc && can_g) {
             if (after_result) {
                 canproc = false;
                 after_result = false;
                 question_manager.show_result(question_list[counter].get_result_diag(button_select));
+                can_x = false;
+                Debug.Log("is_choice " + is_on_choice);
                 StartCoroutine(Result_Interv());
             }
             else {
                 new_dialogue(orig_question, orig_speaker);
+                is_on_choice = true;
                question_manager.set_active_dialogue(true, true);
                canproc = false;
             }
         }
+        if (Input.GetKeyDown(KeyCode.X)) {
+            show_tut_images();
+        }
+    }
+    public void show_tut_images() {
+        bool activate = true;
+        Debug.Log("KUNA");
+        if (can_x) {
+            if (is_showing_img) {
+            is_showing_img = false;
+            
+            //disable other keys
+            
+            
+        }
+        else {
+            is_showing_img = true;
+            activate = false;
+        }
+        can_g = activate;
+            qpanel_mech.set_can_l(activate);
+            qpanel_mech.set_can_o(activate);
+            qpanel_mech.set_can_p(activate);
+            qpanel_mech.set_can_z(activate);
+            if (is_on_choice) {
+                qpanel_mech.set_choice_active(activate);
+            }
+            qpanel_mech.set_can_freeze(activate);
+            qpanel_mech.set_dialogue_active(activate);
+            if (is_on_question) {
+                qpanel_mech.set_freeze_panel_active(activate);
+                qpanel_mech.set_highlighter_panel_active(activate);
+                
+            }
+        tut_img_show.show_img_sequence();
+        }
+        
     }
   
     public void choice_trigger(List<string> clues) {
         //trigger dialogue
+        is_on_question = false;
         canproc = true;
         qpanel_mech.set_clue_panel_active(false);
         question_manager.indicate_context(clues, play_name);
@@ -106,7 +153,7 @@ public class Question_Dialogue_Trigger : MonoBehaviour
     }
     
     public void trigger_dialogue() {
-        
+        is_on_question = true;
         string question = question_list[counter].get_main_script();
         
         string speaker = question_list[counter].get_speaker();
@@ -119,6 +166,7 @@ public class Question_Dialogue_Trigger : MonoBehaviour
     }
     public void choice_click_event(int num) {
         qpanel_mech.set_can_freeze(false);
+        is_on_choice = false;
         button_select = num;
         after_result = true;
         canproc = true;
@@ -133,6 +181,7 @@ public class Question_Dialogue_Trigger : MonoBehaviour
         Debug.Log("JUMPERS " + counter);
         int max_count = question_list.Count;
         if (counter == max_count) {
+            can_x = false;
             Debug.Log("END");
             end_of_question();
         }
@@ -142,11 +191,13 @@ public class Question_Dialogue_Trigger : MonoBehaviour
         }
     }
     void end_of_question() {
-
+        string end_words = "Well done my student. You have finally completed all the trials!";
+        string talker = "Sensei";
+        new_dialogue(end_words, talker);
     }
     IEnumerator Result_Interv() {
         yield return new WaitForSeconds(1.5f);
-        
+        can_x = true;
         next_question();
     }
 }
