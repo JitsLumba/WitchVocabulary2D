@@ -8,12 +8,13 @@ public class Dialogue_Trigger : MonoBehaviour
     [SerializeField] private GameObject dialogue_panel, invisi_button;
     [SerializeField] private Dialogue dialogue;
     [SerializeField] private Dialogue_Manager dialogue_Manager;
+    [SerializeField] private tutorial_image_show tut_img_show ;
 
     [SerializeField] private Panel_Mechanic pmech;
     
     private int stop_at = 0;
     private string play_name = "Elaina";
-    bool canproc = true;
+    bool canproc = false;
     bool cantrigger = false;
     bool canfreeze = false;
     bool is_on_choice = false;
@@ -42,6 +43,18 @@ public class Dialogue_Trigger : MonoBehaviour
 
 
 
+        }
+        if (Input.GetKeyDown(KeyCode.X) && canproc) {
+            Debug.Log("SHOWSX");
+            tut_img_show.show_img_sequence();
+            pmech.dialogue_show();
+        }
+        else if (Input.GetKeyDown(KeyCode.Escape) && canproc) {
+            bool is_showing = tut_img_show.return_is_showing_image();
+            if (is_showing) {
+                tut_img_show.exit_images();
+            }
+            pmech.dialogue_show();
         }
         else if (Input.GetKeyDown(KeyCode.Z))
         {

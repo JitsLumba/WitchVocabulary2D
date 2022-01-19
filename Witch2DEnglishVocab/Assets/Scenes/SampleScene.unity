@@ -7523,6 +7523,7 @@ MonoBehaviour:
   freeze_panel: {fileID: 1873761556}
   clue_panel: {fileID: 2063841279}
   highlighter_panel: {fileID: 88504419}
+  dialogue_panel: {fileID: 5964338167528885885}
   panel: {fileID: 5964338167528885883}
   freeze_image: {fileID: 1585794915}
   highlighter_image: {fileID: 406371079}
@@ -10773,7 +10774,7 @@ RectTransform:
   m_Children:
   - {fileID: 1682772906}
   m_Father: {fileID: 1316825080}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -10850,8 +10851,8 @@ RectTransform:
   - {fileID: 133059248}
   - {fileID: 1495289512}
   - {fileID: 1773556916}
-  - {fileID: 1429215951}
   - {fileID: 1271354256}
+  - {fileID: 1429215951}
   m_Father: {fileID: 5964338167515404413}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -10922,12 +10923,12 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1429215950}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1316825080}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -14547,7 +14548,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1762817420665445965
 Transform:
   m_ObjectHideFlags: 0
@@ -16466,7 +16467,7 @@ MonoBehaviour:
   player: {fileID: 1831273399}
   tutor_talker: {fileID: 5482241809715015921}
   tut_script: {fileID: 5482241809715015923}
-  has_tutorial: 0
+  has_tutorial: 1
 --- !u!114 &5482241809715015923
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16492,7 +16493,8 @@ MonoBehaviour:
   - Here's how the Freeze magic works.
   - Now that you have known how the Freeze magic works, here is how the Synonym highlighter
     works.
-  - Now then, since we are at it, why don't you give it a try?
+  - You can remember them by pressing the X button. Now then, since we are at it,
+    why don't you give it a try?
   - Find the context clue that is synonymous to the word, "humorous"!
   - '" The joke of the guy was so humorous that people find the joke funny " '
   names:
@@ -16519,8 +16521,6 @@ MonoBehaviour:
   - Sensei
   answer: funny
   type_clue: synonym
-  has_special_numbers: 0
-  special_numbers: 
   type_number: 0
 --- !u!114 &5964338167515404400
 MonoBehaviour:
@@ -16752,6 +16752,7 @@ MonoBehaviour:
     result_name: 
     name: Elaina
   dialogue_Manager: {fileID: 5964338169378564250}
+  tut_img_show: {fileID: 1068987967}
   pmech: {fileID: 413066109}
 --- !u!224 &5964338167536592339
 RectTransform:

@@ -82,14 +82,15 @@ public class tutorial_dialogue_trigger : MonoBehaviour
                        if (is_diag_hidden) {
                            bool has_passed = tut_img_show.get_is_passed();
                            Debug.Log(has_passed + " US IT");
-                           if (has_passed) {
-                               tut_img_show.set_can_browse(true);
-                               tut_panel_mech.set_can_browse(true);
-
-                           }
+                           
                            is_diag_hidden = false;
                            
                            tut_img_show.remove_last_image();
+                           if (has_passed) {
+                               tut_img_show.set_can_browse(true);
+                               tut_panel_mech.set_can_browse(true);
+                                tut_img_show.set_counter(0);
+                           }
                            tut_img_show.set_is_showing_image(false);
                            tut_img_show.set_vocabulary_active(true);
                            tut_panel_mech.set_dialogue_active(true);
@@ -107,7 +108,20 @@ public class tutorial_dialogue_trigger : MonoBehaviour
                 check_answer();
             }
         }
+        if (Input.GetKeyDown(KeyCode.X) && cango) {
+            tut_img_show.show_img_sequence();
+            tut_panel_mech.tutorial_dialogue_show();
+            
+        }
+        else if (Input.GetKeyDown(KeyCode.Escape) && cango) {
+            bool is_showing = tut_img_show.return_is_showing_image();
+            if (is_showing) {
+                tut_img_show.exit_images();
+            }
+            tut_panel_mech.tutorial_dialogue_show();
+        }
     }
+    
     void check_answer() {
         tut_panel_mech.change_freeze_panel_color("#FFFFFF");
         tut_panel_mech.change_highlighter_panel_color("#FFFFFF");

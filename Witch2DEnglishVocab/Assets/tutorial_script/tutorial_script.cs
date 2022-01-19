@@ -20,8 +20,8 @@ public class tutorial_script : MonoBehaviour
     [SerializeField] private List<string> after_names ;  
     [SerializeField] private string answer ;
     [SerializeField] private string type_clue;
-    [SerializeField] private bool has_special_numbers = false;
-    [SerializeField] private List<int> special_numbers;
+  
+
     [SerializeField] private int type_number ;
     void Start()
     {

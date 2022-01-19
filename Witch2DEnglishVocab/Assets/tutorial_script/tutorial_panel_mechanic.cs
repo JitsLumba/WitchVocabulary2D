@@ -63,34 +63,7 @@ public class tutorial_panel_mechanic : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Z)) {
             freeze_or_defreeze();
         }
-        if (Input.GetKeyDown(KeyCode.X)) {
-            Debug.Log(can_browse + " CHECK");
-            if (can_browse) {
-                Debug.Log("CAN BROWSE PANEL " + is_img_on);
-                if (is_img_on) {
-                    is_img_on = false;
-                    Debug.Log("REOPEN DIALOGUE");
-                    change_dialogue_active(true);
-                    if (can_freeze) {
-                        change_freeze_panel_active(true);
-                        change_highlighter_panel_active(true);
-                    }
-                    
-                }
-                else {
-                    
-                    is_img_on = true;
-                    
-                    change_dialogue_active(false);
-                    if (can_freeze) {
-                        change_freeze_panel_active(false);
-                        change_highlighter_panel_active(false);
-                    }
-                    
-                    Debug.Log("CLOSE DIALOGUE " + is_img_on + " " + can_browse);
-                }
-            }
-        }
+        
         if (Input.GetKeyDown(KeyCode.P) && ison) {
             words = original.Trim().Split(' ');
             int num = words.Length - 1;
@@ -137,6 +110,34 @@ public class tutorial_panel_mechanic : MonoBehaviour
 
         
         
+    }
+    public void tutorial_dialogue_show() {
+        if (can_browse) {
+                
+                if (is_img_on) {
+                    is_img_on = false;
+                    Debug.Log("REOPEN DIALOGUE");
+                    change_dialogue_active(true);
+                    if (can_freeze) {
+                        change_freeze_panel_active(true);
+                        change_highlighter_panel_active(true);
+                        
+                    }
+                    
+                }
+                else {
+                    
+                    is_img_on = true;
+                    
+                    change_dialogue_active(false);
+                    if (can_freeze) {
+                        change_freeze_panel_active(false);
+                        change_highlighter_panel_active(false);
+                    }
+                    
+                    Debug.Log("CLOSE DIALOGUE " + is_img_on + " " + can_browse);
+                }
+        }
     }
     void change_highlighter_panel_active(bool active) {
         highlighter_panel.SetActive(active);

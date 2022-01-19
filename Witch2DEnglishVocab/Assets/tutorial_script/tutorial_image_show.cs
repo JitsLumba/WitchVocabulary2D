@@ -12,6 +12,7 @@ public class tutorial_image_show : MonoBehaviour
     [SerializeField] private List<int> dialogue_counts, image_marker ;
     
     
+    
     private GameObject tut_image_object;
     private bool is_not_on_dialogue = true, can_browse = false, is_passed = false;
     private bool is_showing_image = false;
@@ -25,24 +26,12 @@ public class tutorial_image_show : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.X) && can_browse) {
+       /*if (Input.GetKeyDown(KeyCode.Escape)) {
             if (is_showing_image) {
                 exit_images();
             }
-            else {
-                is_showing_image = true;
-                movement_change(false);
-                change_all_direction_texts();
-                instantiate_new_image(counter);
-            }
-            
-            Debug.Log("TUTORIAL IMAGES");
-        }
-        else if (Input.GetKeyDown(KeyCode.Escape) && can_browse) {
-            if (is_showing_image) {
-                exit_images();
-            }
-        }
+             
+        }*/
         if (Input.GetKeyDown(KeyCode.P) && is_showing_image) {
             int max = tutorial_images.Count - 1;
             if (max > counter) {
@@ -53,12 +42,29 @@ public class tutorial_image_show : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.O) && is_showing_image) {
             int max = tutorial_images.Count - 1;
-            if (max > 0) {
+            if (counter > 0) {
                 remove_last_image();
                 counter--;
                 instantiate_new_image(counter);
             }
         }
+    }
+    public void show_img_sequence() {
+        if (can_browse) {
+            if (is_showing_image) {
+                exit_images();
+            }
+            else {
+                is_showing_image = true;
+                movement_change(false);
+                change_all_direction_texts();
+                instantiate_new_image(counter);
+            }
+        }
+        
+    }
+    public bool return_is_showing_image() {
+        return is_showing_image;
     }
     void change_all_direction_texts() {
         for (int i = 0 ; i < tutorial_images.Count; i++) {
@@ -67,7 +73,10 @@ public class tutorial_image_show : MonoBehaviour
     }
     public void exit_images() {
         is_showing_image = false;
-                movement_change(true);
+        if (is_not_on_dialogue) {
+            movement_change(true);
+        }
+                
                 remove_last_image();
     }
     
@@ -109,6 +118,7 @@ public class tutorial_image_show : MonoBehaviour
         change_dir_text(num, "Press G to proceed");
         image_counter++;
         if (image_counter == max) {
+          
             set_is_passed(true);
         }
     }

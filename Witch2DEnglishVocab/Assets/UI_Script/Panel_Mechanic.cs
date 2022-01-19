@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 public class Panel_Mechanic : MonoBehaviour
 {
-    [SerializeField] private GameObject result_panel, freeze_panel, clue_panel, highlighter_panel ;
+    [SerializeField] private GameObject result_panel, freeze_panel, clue_panel, highlighter_panel, dialogue_panel ;
     [SerializeField] private Image panel, freeze_image, highlighter_image, vocabulary_image;
 
     [SerializeField] private Text text_dialogue, result_text, clue_text, a_text, context_type_text ;
@@ -13,7 +13,7 @@ public class Panel_Mechanic : MonoBehaviour
     [SerializeField] private Dialogue_Trigger dtrigger ;
     [SerializeField] private bool has_antonym = false, has_example = false; 
     private List<string> clue_listed;
-    private bool ison = false, canfreeze = false, hashighlight = false, cantrigger = true;
+    private bool ison = false, canfreeze = false, hashighlight = false, cantrigger = true, is_img_on = false;
     private string original = "";
     private string color_type = "<color=#09FF00>";
     private string current_type = "synonym";
@@ -92,6 +92,36 @@ public class Panel_Mechanic : MonoBehaviour
             check_listed();
         }
     }
+    public void dialogue_show() {
+        if (is_img_on) {
+                    is_img_on = false;
+                 
+                    change_dialogue_active(true);
+              
+                        set_freeze_panel_active(true);
+                        set_highlighter_panel_active(true);
+                        
+                    
+                    
+                }
+                else {
+                    
+                    is_img_on = true;
+                    
+                    change_dialogue_active(false);
+                   
+                        set_freeze_panel_active(false);
+                        set_highlighter_panel_active(false);
+                    
+                    
+                  
+                }
+    }
+    void change_dialogue_active(bool active) {
+        this.dialogue_panel.SetActive(active);
+    }
+  
+    
     void change_vocab_color(string color) {
         ColorUtility.TryParseHtmlString(color, out panelcolor); 
        vocabulary_image.color = panelcolor;
