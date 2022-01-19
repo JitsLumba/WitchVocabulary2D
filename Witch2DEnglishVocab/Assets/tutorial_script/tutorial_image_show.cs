@@ -7,14 +7,14 @@ public class tutorial_image_show : MonoBehaviour
     [SerializeField] private List<GameObject> tutorial_images;
     [SerializeField] private List<tutorial_change_direction> tut_change_dir ;
     [SerializeField] private GameObject image_spawn, vocabulary_panel;
-    [SerializeField] private bool has_tutorial_image;
+    [SerializeField] private bool has_tutorial_image = false, can_browse = false;
     [SerializeField] private List<string> directional_tut_img ;
     [SerializeField] private List<int> dialogue_counts, image_marker ;
     
     
     
     private GameObject tut_image_object;
-    private bool is_not_on_dialogue = true, can_browse = false, is_passed = false;
+    private bool is_not_on_dialogue = true, is_passed = false;
     private bool is_showing_image = false;
     private int counter = 0, image_counter = 0, duration = 0;
     // Start is called before the first frame update
@@ -47,6 +47,18 @@ public class tutorial_image_show : MonoBehaviour
                 counter--;
                 instantiate_new_image(counter);
             }
+        }
+        if (Input.GetKeyDown(KeyCode.X) && is_not_on_dialogue) {
+            show_img_sequence();
+            
+            
+        }
+        else if (Input.GetKeyDown(KeyCode.Escape) && is_not_on_dialogue) {
+            bool is_showing = return_is_showing_image();
+            if (is_showing) {
+                exit_images();
+            }
+           
         }
     }
     public void show_img_sequence() {
@@ -109,9 +121,12 @@ public class tutorial_image_show : MonoBehaviour
     public bool get_has_tutorial_image() {
         return has_tutorial_image;
     }
+    public bool get_can_browse() {
+        return can_browse;
+    }
     public void show_images_within() {
         int num = image_marker[image_counter];
-        int max = tutorial_images.Count;
+        int max = dialogue_counts.Count;
         set_counter(num);
         instantiate_new_image(num);
         is_showing_image = true;

@@ -31,8 +31,14 @@ public class tutorial_dialogue_trigger : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.G)) {
+            bool allowed = true;
+            bool browse_can = tut_img_show.get_can_browse();
+            bool is_showing_img = tut_img_show.return_is_showing_image();
+            if (browse_can && is_showing_img) {
+                allowed = false;
+            }
             
-            if (cango) {
+            if (cango && allowed) {
                if (after_choose) {
                    if (is_correct) {
                        //proceed to the next dialogues
@@ -87,6 +93,7 @@ public class tutorial_dialogue_trigger : MonoBehaviour
                            
                            tut_img_show.remove_last_image();
                            if (has_passed) {
+                               Debug.Log("has_passed");
                                tut_img_show.set_can_browse(true);
                                tut_panel_mech.set_can_browse(true);
                                 tut_img_show.set_counter(0);

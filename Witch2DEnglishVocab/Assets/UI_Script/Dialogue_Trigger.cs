@@ -15,6 +15,8 @@ public class Dialogue_Trigger : MonoBehaviour
     private int stop_at = 0;
     private string play_name = "Elaina";
     bool canproc = false;
+    bool is_active = false;
+    
     bool cantrigger = false;
     bool canfreeze = false;
     bool is_on_choice = false;
@@ -38,32 +40,52 @@ public class Dialogue_Trigger : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.G) && cantrigger)
         {
 
-            
+            Debug.Log("canproc " + canproc);
             Trigger_Dialogue();
 
 
 
         }
-        if (Input.GetKeyDown(KeyCode.X) && canproc) {
-            Debug.Log("SHOWSX");
+        if (Input.GetKeyDown(KeyCode.X) && can_browse && is_active) {
+            
+            bool is_showing = tut_img_show.return_is_showing_image();
+            bool result = false;
+            Debug.Log("X goes here " + is_showing + " canfreeze " + canfreeze);
+            if (is_showing) {
+                result = true;
+                cantrigger = true;
+            }
+            else {
+                cantrigger = false;
+            }
+            set_freeze(result);
+            Debug.Log("FREEZE " + canfreeze);
             tut_img_show.show_img_sequence();
+            pmech.set_can_move(is_showing);
             pmech.dialogue_show();
         }
-        else if (Input.GetKeyDown(KeyCode.Escape) && canproc) {
+        else if (Input.GetKeyDown(KeyCode.Escape) && can_browse && is_active) {
             bool is_showing = tut_img_show.return_is_showing_image();
             if (is_showing) {
                 tut_img_show.exit_images();
+                canfreeze = true;
+                pmech.set_can_move(true);
             }
+            
             pmech.dialogue_show();
         }
         else if (Input.GetKeyDown(KeyCode.Z))
         {
+            Debug.Log("canfreezeZZZ " + canfreeze);
             
             freeze_command();
+            Debug.Log("cantrigger2 " + cantrigger);
+            
 
         }
     }
     public void freeze_command() {
+        Debug.Log("FREEZERICE " + canfreeze);
         if (cantrigger) {
             if (canfreeze)
             {
@@ -80,7 +102,7 @@ public class Dialogue_Trigger : MonoBehaviour
                     canproc = true;
                 }
                 cantrigger = false;
-                
+                can_browse = false;
                 StartCoroutine(Freeze_Interv());
             }
         }
@@ -143,6 +165,9 @@ public class Dialogue_Trigger : MonoBehaviour
                         }
                         
                         Debug.Log("END OF SENTENCE");
+                        tut_img_show.set_can_browse(false);
+                        can_browse = false;
+                        is_active = false;
                         StartCoroutine(Dialogue_Interv(can_return));
                         dialogue_Manager.show_result(dialogue.remark_list[button_select], can_return);
 
@@ -187,8 +212,11 @@ public class Dialogue_Trigger : MonoBehaviour
     }
     public void change_dial_vals(List<string> sentences, List<string> names, List<string> choices, List<string> results, List<string> remarks, List<string> name_res, int mult)
     {
+        is_active = true;
         can_browse = true;
+        tut_img_show.set_is_not_on_dialogue(false);
         set_freeze(true);
+        pmech.set_has_all_clues(false);
         this.canproc = true;
         this.cantrigger = true;
         this.multiple = mult;
@@ -236,8 +264,10 @@ public class Dialogue_Trigger : MonoBehaviour
     IEnumerator Dialogue_Interv(bool can_return)
     {
         yield return new WaitForSeconds(1.0f);
-        
+        can_browse = true;
+        tut_img_show.set_can_browse(true);
         canproc = true;
+        is_active = true;
         if (!can_return) {
             List<string> clue_list = new List<string>();
             int clue_num = dialogue.get_clue_num();
@@ -247,11 +277,16 @@ public class Dialogue_Trigger : MonoBehaviour
             }
             choice_trigger(clue_list);
         }
+        else {
+            is_active = false;
+            tut_img_show.set_is_not_on_dialogue(true);
+        }
     }
     IEnumerator Freeze_Interv()
     {
         yield return new WaitForSeconds(1.0f);
         cantrigger = true;
+        can_browse = true;
         Debug.Log("Canproc " + canproc);
     }
 }

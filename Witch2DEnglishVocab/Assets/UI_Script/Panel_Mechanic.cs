@@ -13,7 +13,7 @@ public class Panel_Mechanic : MonoBehaviour
     [SerializeField] private Dialogue_Trigger dtrigger ;
     [SerializeField] private bool has_antonym = false, has_example = false; 
     private List<string> clue_listed;
-    private bool ison = false, canfreeze = false, hashighlight = false, cantrigger = true, is_img_on = false;
+    private bool ison = false, canfreeze = false, hashighlight = false, cantrigger = true, is_img_on = false, can_move = true, has_all_clues = false;
     private string original = "";
     private string color_type = "<color=#09FF00>";
     private string current_type = "synonym";
@@ -38,7 +38,7 @@ public class Panel_Mechanic : MonoBehaviour
 
         }
 
-        if (Input.GetKeyDown(KeyCode.P) && ison)
+        if (Input.GetKeyDown(KeyCode.P) && ison && can_move)
         {
 
             words = original.Trim().Split(' ');
@@ -63,7 +63,7 @@ public class Panel_Mechanic : MonoBehaviour
 
 
         }
-        else if (Input.GetKeyDown(KeyCode.O) && ison)
+        else if (Input.GetKeyDown(KeyCode.O) && ison && can_move)
         {
 
             words = original.Trim().Split(' ');
@@ -97,9 +97,12 @@ public class Panel_Mechanic : MonoBehaviour
                     is_img_on = false;
                  
                     change_dialogue_active(true);
-              
+                    bool should_show = !has_all_clues;
+                    if (should_show) {
                         set_freeze_panel_active(true);
                         set_highlighter_panel_active(true);
+                    }
+                        
                         
                     
                     
@@ -120,7 +123,12 @@ public class Panel_Mechanic : MonoBehaviour
     void change_dialogue_active(bool active) {
         this.dialogue_panel.SetActive(active);
     }
-  
+    public void set_has_all_clues(bool all) {
+        has_all_clues = all;
+    }
+    public void set_can_move(bool move) {
+        can_move = move;
+    }
     
     void change_vocab_color(string color) {
         ColorUtility.TryParseHtmlString(color, out panelcolor); 
@@ -306,7 +314,7 @@ public class Panel_Mechanic : MonoBehaviour
         }
         int clue_counter = dcheck.get_count();
         if (clue_count == clue_counter) {
-            
+            has_all_clues = true;
             can_choice = true;
             canfreeze = false;
             clue_list_clear();
@@ -321,6 +329,7 @@ public class Panel_Mechanic : MonoBehaviour
     {
         this.result_text.text = result;
         this.result_panel.SetActive(true);
+        cantrigger = false;
         //return or no
         StartCoroutine(erase_result(resultcond));
     }
@@ -374,7 +383,7 @@ public class Panel_Mechanic : MonoBehaviour
         //return to the original place
         yield return new WaitForSeconds(1.0f);
         this.result_panel.SetActive(false);
-        
+        cantrigger = true;
         if (can_choice)
         {
             //have this be on 
