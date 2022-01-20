@@ -17,9 +17,13 @@ public class tutorial_dialogue_trigger : MonoBehaviour
     private int max_count = 0;
     private bool cango = false;
     private bool after_choose = false;
+    private bool can_z = true, can_l = true;
     private bool is_correct = false;
     private bool is_marked = false;
     private bool is_diag_hidden = false;
+    private bool is_img_on = false, is_passed = false ;
+    private bool is_active = false;
+ 
     private int special_num_type = 0;
     void Start()
     {
@@ -30,10 +34,11 @@ public class tutorial_dialogue_trigger : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.G)) {
+        if (Input.GetKeyDown(KeyCode.G) && can_z) {
             bool allowed = true;
             bool browse_can = tut_img_show.get_can_browse();
             bool is_showing_img = tut_img_show.return_is_showing_image();
+            is_passed = tut_img_show.get_is_passed();
             if (browse_can && is_showing_img) {
                 allowed = false;
             }
@@ -51,6 +56,7 @@ public class tutorial_dialogue_trigger : MonoBehaviour
                            tut_diag_manager.set_active_dialogue_box(false);
                            tut_img_show.set_is_not_on_dialogue(true);
                            cango = false;
+                           is_active = false;
                            //tut_img_show.set_can_browse(true);
                            tut_img_show.set_image_counter(0);
                            tut_img_show.set_counter(0);
@@ -109,26 +115,47 @@ public class tutorial_dialogue_trigger : MonoBehaviour
                 
             }
         }
-        if (Input.GetKeyDown(KeyCode.L)) {
+        if (Input.GetKeyDown(KeyCode.L) && can_l) {
             bool is_on = tut_panel_mech.get_ison();
             if (is_on) {
                 check_answer();
             }
         }
-        if (Input.GetKeyDown(KeyCode.X) && cango) {
-            tut_img_show.show_img_sequence();
-            tut_panel_mech.tutorial_dialogue_show();
+        if (Input.GetKeyDown(KeyCode.X) && is_passed && is_active) {
+            
+           
+                key_change_active();
+                tut_img_show.show_img_sequence();
+                tut_panel_mech.tutorial_dialogue_show();
+         
+            
             
         }
-        else if (Input.GetKeyDown(KeyCode.Escape) && cango) {
+        else if (Input.GetKeyDown(KeyCode.Escape) && is_passed && is_active) {
+            
             bool is_showing = tut_img_show.return_is_showing_image();
             if (is_showing) {
+                key_change_active();
                 tut_img_show.exit_images();
+                tut_panel_mech.tutorial_dialogue_show();
             }
-            tut_panel_mech.tutorial_dialogue_show();
+            
         }
     }
-    
+    void key_change_active() {
+        bool activate = true;
+        if (is_img_on) {
+            is_img_on = false;
+           
+        }
+        else {
+            is_img_on = true;
+            activate = false;
+        }
+        can_l = activate;
+        can_z = activate;
+        tut_panel_mech.key_actives(activate);
+    }
     void check_answer() {
         tut_panel_mech.change_freeze_panel_color("#FFFFFF");
         tut_panel_mech.change_highlighter_panel_color("#FFFFFF");
@@ -185,6 +212,7 @@ public class tutorial_dialogue_trigger : MonoBehaviour
     }
     public void initialize_dialogue(List<string> dialogue, List<string> names) {
         tut_img_show.set_is_not_on_dialogue(false);
+        is_active = true;
        is_marked = false;
         cango = true;
         is_correct = false;

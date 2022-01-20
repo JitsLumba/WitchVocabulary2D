@@ -19,6 +19,7 @@ public class tutorial_panel_mechanic : MonoBehaviour
     private int counter = 0;
     private int clue_num = 0;
     private int correct_counter = 0;
+    private bool can_o = true, can_p = true, can_l = true, can_tab = false, can_f = true;
     private bool ison = false;
     private int light_counter = 0;
 
@@ -64,7 +65,7 @@ public class tutorial_panel_mechanic : MonoBehaviour
             freeze_or_defreeze();
         }
         
-        if (Input.GetKeyDown(KeyCode.P) && ison) {
+        if (Input.GetKeyDown(KeyCode.P) && ison && can_p) {
             words = original.Trim().Split(' ');
             int num = words.Length - 1;
 
@@ -85,7 +86,7 @@ public class tutorial_panel_mechanic : MonoBehaviour
             int beforecounter = counter - 1;
 
         }
-        else if (Input.GetKeyDown(KeyCode.O) && ison) {
+        else if (Input.GetKeyDown(KeyCode.O) && ison && can_o) {
             words = original.Trim().Split(' ');
             int num = words.Length;
             if (counter > 0)
@@ -110,6 +111,13 @@ public class tutorial_panel_mechanic : MonoBehaviour
 
         
         
+    }
+    public void key_actives(bool active) {
+        can_tab = active;
+        can_l = active;
+        can_o = active;
+        can_p = active;
+        can_f = active;
     }
     public void tutorial_dialogue_show() {
         if (can_browse) {
@@ -152,7 +160,8 @@ public class tutorial_panel_mechanic : MonoBehaviour
         can_browse = browse;
     }
     public void change_context_highlighter() {
-        if (ison) {
+        if (can_tab) {
+            if (ison) {
             light_counter++;
         if (light_counter == 1 && has_antonym) {
 
@@ -171,6 +180,8 @@ public class tutorial_panel_mechanic : MonoBehaviour
         change_highlighter_text_color();
         this.set_dialogue_box(words , counter);
         }
+        }
+        
         
     }
     public void change_vocab_color(string color) {
@@ -217,7 +228,8 @@ public class tutorial_panel_mechanic : MonoBehaviour
     }
     public void freeze_or_defreeze() {
         string[] words;
-        bool is_not_img = !is_img_on;
+        if (can_f) {
+            bool is_not_img = !is_img_on;
         if (is_not_img) {
             if (cantrigger) {
             
@@ -248,6 +260,8 @@ public class tutorial_panel_mechanic : MonoBehaviour
             
         }
         }
+        }
+        
         
         
     }

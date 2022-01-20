@@ -13,6 +13,7 @@ public class Dialogue_Trigger : MonoBehaviour
     [SerializeField] private Panel_Mechanic pmech;
     
     private int stop_at = 0;
+    private bool can_z = true, can_f = true;
     private string play_name = "Elaina";
     bool canproc = false;
     bool is_active = false;
@@ -24,6 +25,7 @@ public class Dialogue_Trigger : MonoBehaviour
     bool is_bef_choice = false;
     bool after_result = false;
     bool is_correct = false;
+    bool is_img_on = false;
     int counter = 0;
     int multiple = 0, button_select = 0;
     void Start()
@@ -51,6 +53,7 @@ public class Dialogue_Trigger : MonoBehaviour
             bool is_showing = tut_img_show.return_is_showing_image();
             bool result = false;
             Debug.Log("X goes here " + is_showing + " canfreeze " + canfreeze);
+            key_change_active();
             if (is_showing) {
                 result = true;
                 cantrigger = true;
@@ -65,11 +68,14 @@ public class Dialogue_Trigger : MonoBehaviour
             pmech.dialogue_show();
         }
         else if (Input.GetKeyDown(KeyCode.Escape) && can_browse && is_active) {
+
             bool is_showing = tut_img_show.return_is_showing_image();
             if (is_showing) {
+                key_change_active();
                 tut_img_show.exit_images();
                 canfreeze = true;
                 pmech.set_can_move(true);
+                
             }
             
             pmech.dialogue_show();
@@ -83,6 +89,20 @@ public class Dialogue_Trigger : MonoBehaviour
             
 
         }
+    }
+    void key_change_active() {
+        bool activate = true;
+        if (is_img_on) {
+            is_img_on = false;
+           
+        }
+        else {
+            is_img_on = true;
+            activate = false;
+        }
+        can_f = activate;
+        can_z = activate;
+        pmech.key_actives(activate);
     }
     public void freeze_command() {
         Debug.Log("FREEZERICE " + canfreeze);

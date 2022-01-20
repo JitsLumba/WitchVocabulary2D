@@ -18,6 +18,7 @@ public class Panel_Mechanic : MonoBehaviour
     private string color_type = "<color=#09FF00>";
     private string current_type = "synonym";
     int counter = 0, clue_count = 0, light_counter = 0, clue_num = 0;
+    private bool can_f = true, can_tab = true, can_l = true, can_o = true, can_p = true;
     private string highlighted_word = "";
     Color panelcolor;
     // Start is called before the first frame update
@@ -84,13 +85,20 @@ public class Panel_Mechanic : MonoBehaviour
             this.set_dialogue_box(words, counter);
 
         }
-        if (Input.GetKeyDown(KeyCode.Tab)) {
+        if (Input.GetKeyDown(KeyCode.Tab) && can_tab) {
             change_context_highlighter();
         }
-        if (Input.GetKeyDown(KeyCode.L) && ison)
+        if (Input.GetKeyDown(KeyCode.L) && ison && can_l)
         {
             check_listed();
         }
+    }
+    public void key_actives(bool active) {
+        can_tab = active;
+        can_l = active;
+        can_o = active;
+        can_p = active;
+        can_f = active;
     }
     public void dialogue_show() {
         if (is_img_on) {
@@ -145,7 +153,8 @@ public class Panel_Mechanic : MonoBehaviour
         highlighter_panel.SetActive(active);
     }
     public void freeze_or_not() {
-        string[] words;
+        if (can_tab) {
+            string[] words;
         if (cantrigger) {
             if (canfreeze)
             {
@@ -174,6 +183,8 @@ public class Panel_Mechanic : MonoBehaviour
                 StartCoroutine(Freeze_Interv());
             }
         }
+        }
+        
         
     }
     
@@ -181,6 +192,7 @@ public class Panel_Mechanic : MonoBehaviour
         clue_listed.Clear();
     }
     public void change_context_highlighter() {
+        
         if (ison) {
             light_counter++;
         if (light_counter == 1 && has_antonym) {
