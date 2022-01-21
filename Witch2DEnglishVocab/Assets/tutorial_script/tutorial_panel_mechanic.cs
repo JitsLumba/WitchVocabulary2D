@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class tutorial_panel_mechanic : MonoBehaviour
 {
     // Start is called before the first frame update
-    [SerializeField] private GameObject freeze_panel_obj, clue_panel, highlighter_panel, dialogue_panel ;
+    [SerializeField] private GameObject freeze_panel_obj, clue_panel, highlighter_panel, dialogue_panel, vocabulary_panel ;
     [SerializeField] private Image dialogue_image, freeze_panel_image, highlighter_image, vocabulary_image ;
     [SerializeField] private Text dialogue_text, clue_text, a_text, context_type_text ;
     [SerializeField] private tutorial_definition_check tut_def_check ;
@@ -128,6 +128,7 @@ public class tutorial_panel_mechanic : MonoBehaviour
                     is_img_on = false;
                     Debug.Log("REOPEN DIALOGUE");
                     change_dialogue_active(true);
+                    change_vocab_panel_active(true);
                     if (can_freeze) {
                         change_freeze_panel_active(true);
                         change_highlighter_panel_active(true);
@@ -140,6 +141,7 @@ public class tutorial_panel_mechanic : MonoBehaviour
                     is_img_on = true;
                     
                     change_dialogue_active(false);
+                    change_vocab_panel_active(false);
                     if (can_freeze) {
                         change_freeze_panel_active(false);
                         change_highlighter_panel_active(false);
@@ -185,6 +187,9 @@ public class tutorial_panel_mechanic : MonoBehaviour
         }
         
         
+    }
+    void change_vocab_panel_active(bool active) {
+        vocabulary_panel.SetActive(active);
     }
     public void change_vocab_color(bool oncheck) {
        if (oncheck) {

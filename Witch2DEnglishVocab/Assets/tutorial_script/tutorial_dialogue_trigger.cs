@@ -130,6 +130,7 @@ public class tutorial_dialogue_trigger : MonoBehaviour
                 key_change_active();
                 tut_img_show.show_img_sequence();
                 tut_panel_mech.tutorial_dialogue_show();
+            
          
             
             

@@ -8323,7 +8323,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 1
     m_MaxSize: 100
-    m_Alignment: 1
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -11084,6 +11084,7 @@ MonoBehaviour:
   clue_panel: {fileID: 2054535488}
   highlighter_panel: {fileID: 1890247686}
   dialogue_panel: {fileID: 1316825079}
+  vocabulary_panel: {fileID: 675524871}
   dialogue_image: {fileID: 1316825081}
   freeze_panel_image: {fileID: 363166252}
   highlighter_image: {fileID: 1461093974}
