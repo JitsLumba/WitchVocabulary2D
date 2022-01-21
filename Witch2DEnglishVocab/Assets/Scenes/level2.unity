@@ -9467,7 +9467,7 @@ MonoBehaviour:
   camera: {fileID: 4294687184866853893}
   player: {fileID: 201767530}
   secondperson: {fileID: 132281857383583802}
-  dialogue_panel: {fileID: 0}
+  dialogue_panel: {fileID: 853381616}
   invisi_button: {fileID: 8022526436824637260}
   c2d: {fileID: 201767536}
   pmove: {fileID: 201767532}
