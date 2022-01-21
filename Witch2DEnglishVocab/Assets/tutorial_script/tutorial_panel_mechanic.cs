@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+
 public class tutorial_panel_mechanic : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -9,6 +10,7 @@ public class tutorial_panel_mechanic : MonoBehaviour
     [SerializeField] private Image dialogue_image, freeze_panel_image, highlighter_image, vocabulary_image ;
     [SerializeField] private Text dialogue_text, clue_text, a_text, context_type_text ;
     [SerializeField] private tutorial_definition_check tut_def_check ;
+    [SerializeField] private Sprite  normal_dialogue_sprite, freeze_dialogue_spirte, system_sprite;
     [SerializeField] private bool has_antonym = false, has_example = false;
     Color panelcolor;
     private string current_type = "synonym";
@@ -184,8 +186,13 @@ public class tutorial_panel_mechanic : MonoBehaviour
         
         
     }
-    public void change_vocab_color(string color) {
-        ColorUtility.TryParseHtmlString(color, out panelcolor); 
+    public void change_vocab_color(bool oncheck) {
+       if (oncheck) {
+           vocabulary_image.sprite = freeze_dialogue_spirte;
+       }
+       else {
+           vocabulary_image.sprite = system_sprite;
+       }
        vocabulary_image.color = panelcolor;
     }
     void change_highlighter_text_color() {
@@ -236,17 +243,17 @@ public class tutorial_panel_mechanic : MonoBehaviour
             if (can_freeze) {
                 cantrigger = false;
                 if (ison) {
-                    change_panel_color("#FFFFFF", false);
+                    change_panel_sprite(false);
                     change_freeze_panel_color("#FFFFFF");
                     change_highlighter_panel_color("#FFFFFF");
-                    change_vocab_color("#FFFFFF");
+                    change_vocab_color(false);
                     dialogue_text.text = original;
                 }
                 else {
-                    change_panel_color("#00F8FA", true);
+                    change_panel_sprite(true);
                     change_freeze_panel_color("#40EDF6");
                     change_highlighter_panel_color("#40EDF6");
-                    change_vocab_color("#00F8FA");
+                    change_vocab_color(true);
                     original = dialogue_text.text;
                     words = original.Trim().Split(' ');
                     counter = 0;
@@ -343,12 +350,17 @@ public class tutorial_panel_mechanic : MonoBehaviour
     public void set_can_freeze(bool freeze) {
         can_freeze = freeze;
     }
-    public void change_panel_color(string color, bool oncheck)
+    public void change_panel_sprite(bool oncheck)
     {
-        ColorUtility.TryParseHtmlString(color, out panelcolor);
+        if (oncheck) {
+            dialogue_image.sprite = freeze_dialogue_spirte;
+        }
+        else {
+            dialogue_image.sprite = normal_dialogue_sprite;
+        }
 
         ison = oncheck;
-        dialogue_image.color = panelcolor;
+      
     }
     public void set_dialogue_active(bool active) {
         dialogue_panel.SetActive(active);

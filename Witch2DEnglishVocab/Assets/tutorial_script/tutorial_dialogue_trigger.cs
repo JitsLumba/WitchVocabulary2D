@@ -27,6 +27,9 @@ public class tutorial_dialogue_trigger : MonoBehaviour
     private int special_num_type = 0;
     void Start()
     {
+
+        //pink
+        //FF0FAB
         result_dialogue = new List<string>();
         special_numbers_list = new List<int>();
     }
@@ -159,10 +162,10 @@ public class tutorial_dialogue_trigger : MonoBehaviour
     void check_answer() {
         tut_panel_mech.change_freeze_panel_color("#FFFFFF");
         tut_panel_mech.change_highlighter_panel_color("#FFFFFF");
-        tut_panel_mech.change_vocab_color("#FFFFFF");
+        tut_panel_mech.change_vocab_color(false);
         tut_panel_mech.set_highlighter_panel_active(false);
         tut_panel_mech.set_freeze_panel_obj_active(false);
-        tut_panel_mech.change_panel_color("#FFFFFF", false);
+        tut_panel_mech.change_panel_sprite(false);
         tut_panel_mech.compare_answers();
         int cor_counter = tut_panel_mech.get_correct_counter();
         if (cor_counter == 0) {

@@ -12,6 +12,7 @@ public class Panel_Mechanic : MonoBehaviour
     [SerializeField] private level_return lreturn;
     [SerializeField] private Dialogue_Trigger dtrigger ;
     [SerializeField] private bool has_antonym = false, has_example = false; 
+    
     private List<string> clue_listed;
     private bool ison = false, canfreeze = false, hashighlight = false, cantrigger = true, is_img_on = false, can_move = true, has_all_clues = false;
     private string original = "";
