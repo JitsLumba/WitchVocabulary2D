@@ -6,11 +6,13 @@ public class Panel_Mechanic : MonoBehaviour
 {
     [SerializeField] private GameObject result_panel, freeze_panel, clue_panel, highlighter_panel, dialogue_panel ;
     [SerializeField] private Image panel, freeze_image, highlighter_image, vocabulary_image;
+    [SerializeField] private Sprite dialogue_sprite, system_sprite, freeze_sprite, synonym_sprite, antonym_sprite, definition_sprite, example_sprite;
 
-    [SerializeField] private Text text_dialogue, result_text, clue_text, a_text, context_type_text ;
+    [SerializeField] private Text text_dialogue, result_text, clue_text ;
     [SerializeField] private definition_check dcheck;
     [SerializeField] private level_return lreturn;
     [SerializeField] private Dialogue_Trigger dtrigger ;
+    
     [SerializeField] private bool has_antonym = false, has_example = false; 
     
     private List<string> clue_listed;
@@ -139,9 +141,13 @@ public class Panel_Mechanic : MonoBehaviour
         can_move = move;
     }
     
-    void change_vocab_color(string color) {
-        ColorUtility.TryParseHtmlString(color, out panelcolor); 
-       vocabulary_image.color = panelcolor;
+    void change_vocab_color() {
+        if (ison) {
+            vocabulary_image.sprite = freeze_sprite;
+        }
+        else {
+            vocabulary_image.sprite = system_sprite;
+        }
     }
     public void set_clue_panel_active(bool active) {
         this.clue_panel.SetActive(active);
@@ -161,18 +167,18 @@ public class Panel_Mechanic : MonoBehaviour
             {
                 if (ison)
                 {
-                    change_panel_color("#FFFFFF", false);
-                    change_freeze_panel_color("#FFFFFF");
-                    change_highlighter_panel_color("#FFFFFF");
-                    change_vocab_color("#FFFFFF");
+                   
+                   Debug.Log("IS CURRENTLY ON");
+                    ison = false;
+                    
                     text_dialogue.text = original;
                 }
                 else
                 {
-                    change_panel_color("#00F8FA", true);
-                    change_freeze_panel_color("#40EDF6");
-                    change_highlighter_panel_color("#40EDF6");
-                    change_vocab_color("#00F8FA");
+                    Debug.Log("IS CURRENTLY OFF");
+                   ison = true;
+               
+                    
                     original = text_dialogue.text;
                     words = original.Trim().Split(' ');
                     counter = 0;
@@ -180,6 +186,8 @@ public class Panel_Mechanic : MonoBehaviour
 
 
                 }
+                change_panel_color();
+                change_vocab_color();
                 cantrigger = false;
                 StartCoroutine(Freeze_Interv());
             }
@@ -212,29 +220,26 @@ public class Panel_Mechanic : MonoBehaviour
         string[] words = original.Trim().Split(' ');
         
         this.set_dialogue_box(words , counter);
-        change_highlighter_text_color();
+        change_highlighter_panel_color();
         }
         
     }
-    void change_highlighter_text_color() {
-        string a_word = "";
-        string type_word =  color_type;
+    void change_highlighter_panel_color() {
+       
         if (light_counter == 0) {
             
-            type_word = type_word + "Synonym";
+            highlighter_image.sprite = synonym_sprite;
         }
         else if (light_counter == 1) {
           
-            type_word = type_word + "Antonym";
+            highlighter_image.sprite = antonym_sprite;
         }
         else {
            
-            type_word = type_word + "Example";
+            highlighter_image.sprite = example_sprite;
         }
-        a_word = color_type + "[A]</color>";
-        type_word = type_word + "</color>";
-        a_text.text = a_word;
-        context_type_text.text = type_word;
+       
+        
     }
     void highlighter_context(int hlight) {
       
@@ -254,20 +259,16 @@ public class Panel_Mechanic : MonoBehaviour
     public void set_can_freeze(bool freeze) {
         canfreeze = freeze;
     }
-    void change_freeze_panel_color(string color) {
-       ColorUtility.TryParseHtmlString(color, out panelcolor); 
-       freeze_image.color = panelcolor;
-    }
-    void change_highlighter_panel_color(string color) {
-        ColorUtility.TryParseHtmlString(color, out panelcolor); 
-       highlighter_image.color = panelcolor;
-    }
-    void change_panel_color(string color, bool oncheck)
+  
+    
+    void change_panel_color()
     {
-        ColorUtility.TryParseHtmlString(color, out panelcolor);
-
-        ison = oncheck;
-        panel.color = panelcolor;
+        if (ison) {
+            panel.sprite = freeze_sprite;
+        }
+        else {
+            panel.sprite = dialogue_sprite;
+        }
     }
     public void set_freeze(bool freeze) {
         this.canfreeze = freeze;
@@ -401,10 +402,11 @@ public class Panel_Mechanic : MonoBehaviour
         {
             //have this be on 
             set_clue_panel_active(false);
-            change_panel_color("#FFFFFF", false);
-            change_freeze_panel_color("#FFFFFF");
-            change_vocab_color("#FFFFFF");
-            change_highlighter_panel_color("#FFFFFF");
+            ison = false;
+            change_panel_color();
+           
+            change_vocab_color();
+            
             set_freeze_panel_active(false);
             set_highlighter_panel_active(false);
             dtrigger.set_freeze(false);

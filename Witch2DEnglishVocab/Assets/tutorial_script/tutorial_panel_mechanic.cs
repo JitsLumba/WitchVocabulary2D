@@ -8,9 +8,9 @@ public class tutorial_panel_mechanic : MonoBehaviour
     // Start is called before the first frame update
     [SerializeField] private GameObject freeze_panel_obj, clue_panel, highlighter_panel, dialogue_panel, vocabulary_panel ;
     [SerializeField] private Image dialogue_image, freeze_panel_image, highlighter_image, vocabulary_image ;
-    [SerializeField] private Text dialogue_text, clue_text, a_text, context_type_text ;
+    [SerializeField] private Text dialogue_text, clue_text ;
     [SerializeField] private tutorial_definition_check tut_def_check ;
-    [SerializeField] private Sprite  normal_dialogue_sprite, freeze_dialogue_spirte, system_sprite;
+    [SerializeField] private Sprite  normal_dialogue_sprite, freeze_dialogue_spirte, system_sprite, synonym_image, antonym_image, definition_image, example_image;
     [SerializeField] private bool has_antonym = false, has_example = false;
     Color panelcolor;
     private string current_type = "synonym";
@@ -115,10 +115,10 @@ public class tutorial_panel_mechanic : MonoBehaviour
         
     }
     public void set_can_tab(bool active) {
-        can_tab = true;
+        can_tab = active;
     }
     public void key_actives(bool active) {
-        set_can_tab(true);
+        set_can_tab(active);
         can_l = active;
         can_o = active;
         can_p = active;
@@ -185,7 +185,7 @@ public class tutorial_panel_mechanic : MonoBehaviour
         highlighter_context(light_counter);
         
         string[] words = original.Trim().Split(' ');
-        change_highlighter_text_color();
+        change_highlighter_panel_color();
         this.set_dialogue_box(words , counter);
         }
         }
@@ -202,27 +202,25 @@ public class tutorial_panel_mechanic : MonoBehaviour
        else {
            vocabulary_image.sprite = system_sprite;
        }
-       vocabulary_image.color = panelcolor;
+       
     }
-    void change_highlighter_text_color() {
-        string a_word = "";
-        string type_word =  color_type;
+    public void change_highlighter_panel_color() {
+      
         if (light_counter == 0) {
-            
-            type_word = type_word + "Synonym";
+            highlighter_image.sprite = synonym_image;
+         
         }
         else if (light_counter == 1) {
-          
-            type_word = type_word + "Antonym";
+          highlighter_image.sprite = antonym_image;
+           
         }
         else {
-            a_word = "<color=#A42BE0>[A]";
-            type_word = type_word + "Example";
+            highlighter_image.sprite = example_image;
         }
-        a_word = color_type + "[A]</color>";
-        type_word = type_word + "</color>";
-        a_text.text = a_word;
-        context_type_text.text = type_word;
+        
+        //change color
+        /*a_text.text = a_word;
+        context_type_text.text = type_word;*/
     }
     void highlighter_context(int hlight) {
       
@@ -253,15 +251,15 @@ public class tutorial_panel_mechanic : MonoBehaviour
                 cantrigger = false;
                 if (ison) {
                     change_panel_sprite(false);
-                    change_freeze_panel_color("#FFFFFF");
-                    change_highlighter_panel_color("#FFFFFF");
+                    
+                   
                     change_vocab_color(false);
                     dialogue_text.text = original;
                 }
                 else {
                     change_panel_sprite(true);
-                    change_freeze_panel_color("#40EDF6");
-                    change_highlighter_panel_color("#40EDF6");
+                   
+                   
                     change_vocab_color(true);
                     original = dialogue_text.text;
                     words = original.Trim().Split(' ');
@@ -281,10 +279,7 @@ public class tutorial_panel_mechanic : MonoBehaviour
         
         
     }
-    public void change_highlighter_panel_color(string color) {
-        ColorUtility.TryParseHtmlString(color, out panelcolor); 
-       highlighter_image.color = panelcolor;
-    }
+    
     public void set_clue_number(int num) {
         clue_num = num;
         clue_text.text = "Clues: " + num;
