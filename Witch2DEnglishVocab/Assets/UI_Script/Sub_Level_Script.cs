@@ -31,6 +31,7 @@ public class Sub_Level_Script : MonoBehaviour
     }
     public void set_dialogues() {
         pmech.set_can_freeze(true);
+        pmech.set_highlighter_panel_active(true);
         pmech.set_freeze_panel_active(true);
         dtrigger.set_freeze(true);
         dtrigger.set_stop_at(sentences.Count);

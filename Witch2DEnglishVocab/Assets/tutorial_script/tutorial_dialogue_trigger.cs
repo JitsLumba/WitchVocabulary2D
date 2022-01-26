@@ -197,7 +197,7 @@ public class tutorial_dialogue_trigger : MonoBehaviour
                 tut_panel_mech.set_clue_number(1);
                 tut_panel_mech.set_highlighter_panel_active(true);
                 tut_panel_mech.set_clue_panel_active(true);
-                
+                tut_panel_mech.set_can_tab(true);
             }
             int index = counter - 1;
             tut_diag_manager.next_dialogue(index);
@@ -216,6 +216,7 @@ public class tutorial_dialogue_trigger : MonoBehaviour
     }
     public void initialize_dialogue(List<string> dialogue, List<string> names) {
         tut_img_show.set_is_not_on_dialogue(false);
+        tut_panel_mech.set_can_tab(false);
         is_active = true;
        is_marked = false;
         cango = true;

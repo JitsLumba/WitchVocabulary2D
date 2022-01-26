@@ -4292,7 +4292,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
-  m_EffectDistance: {x: 2, y: 2}
+  m_EffectDistance: {x: 3, y: 3}
   m_UseGraphicAlpha: 1
 --- !u!114 &1141158768
 MonoBehaviour:
@@ -4307,7 +4307,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8113208, g: 0.7441519, b: 0.14083302, a: 1}
+  m_Color: {r: 1, g: 0.9103387, b: 0.09811318, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -4316,7 +4316,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: c2cff028cda29384f89c7883e2c3c6ea, type: 3}
-    m_FontSize: 42
+    m_FontSize: 40
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 3
@@ -5027,7 +5027,7 @@ MonoBehaviour:
   result_panel: {fileID: 4436090424588003254}
   freeze_panel: {fileID: 4436090423688623974}
   clue_panel: {fileID: 1988347456}
-  highlighter_panel: {fileID: 4436090424384231798}
+  highlighter_panel: {fileID: 4436090424327789073}
   dialogue_panel: {fileID: 853381616}
   panel: {fileID: 853381618}
   freeze_image: {fileID: 4436090423400918289}

@@ -114,8 +114,11 @@ public class tutorial_panel_mechanic : MonoBehaviour
         
         
     }
+    public void set_can_tab(bool active) {
+        can_tab = true;
+    }
     public void key_actives(bool active) {
-        can_tab = active;
+        set_can_tab(true);
         can_l = active;
         can_o = active;
         can_p = active;
@@ -178,6 +181,7 @@ public class tutorial_panel_mechanic : MonoBehaviour
             
             
         }
+        Debug.Log("light_counter " + light_counter);
         highlighter_context(light_counter);
         
         string[] words = original.Trim().Split(' ');
