@@ -249,11 +249,11 @@ public class Panel_Mechanic : MonoBehaviour
         }
         else if (hlight == 1) {
             current_type = "antonym";
-            color_type = "<color=#E90000>";
+            color_type = "<color=#FB7E4F>";
         }
         else if (hlight == 2) {
             current_type = "example";
-            color_type = "<color=#A42BE0>";
+            color_type = "<color=#CE64FF>";
         }
     }
     public void set_can_freeze(bool freeze) {
@@ -353,7 +353,7 @@ public class Panel_Mechanic : MonoBehaviour
         highlighted_word = words[beforecounter];
         string highlight = color_type + "[" +  highlighted_word + "]</color>";
 
-        string new_word = "";
+        string new_word = "<color=#88FFF8>";
         int reduce = words.Length - 1;
         for (int i = 0; i < words.Length; i++)
         {
@@ -372,7 +372,7 @@ public class Panel_Mechanic : MonoBehaviour
             }
 
         }
-        
+        new_word = new_word + "</color>";
         text_dialogue.text = new_word;
     }
     IEnumerator Freeze_Interv()

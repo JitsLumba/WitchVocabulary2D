@@ -27,6 +27,7 @@ public class tutorial_panel_mechanic : MonoBehaviour
 
     void Start()
     {
+        //purple FF3EF7
         //#40EDF6
         /*if (Input.GetKeyDown(KeyCode.X)) {
             Debug.Log(can_browse + " CHECK");
@@ -230,11 +231,11 @@ public class tutorial_panel_mechanic : MonoBehaviour
         }
         else if (hlight == 1) {
             current_type = "antonym";
-            color_type = "<color=#E90000>";
+            color_type = "<color=#FB7E4F>"; 
         }
         else if (hlight == 2) {
             current_type = "example";
-            color_type = "<color=#A42BE0>";
+            color_type = "<color=#CE64FF>";
         }
     }
     public void set_clue_panel_active(bool active) {
@@ -375,7 +376,7 @@ public class tutorial_panel_mechanic : MonoBehaviour
         highlighted_word = words[beforecounter];
         string highlight = color_type + "[" + highlighted_word + "]</color>";
 
-        string new_word = "";
+        string new_word = "<color=#88FFF8>";
         int reduce = words.Length - 1;
         for (int i = 0; i < words.Length; i++)
         {
@@ -394,7 +395,7 @@ public class tutorial_panel_mechanic : MonoBehaviour
             }
 
         }
-     
+        new_word = new_word + "</color>";
         dialogue_text.text = new_word;
     }
     IEnumerator Freeze_Interv() {

@@ -30,6 +30,10 @@ public class Dialogue_Trigger : MonoBehaviour
     int multiple = 0, button_select = 0;
     void Start()
     {
+        //red
+        //E90000
+        //pink
+        //E900E3
         dialogue.start_list();
     }
 
@@ -37,8 +41,8 @@ public class Dialogue_Trigger : MonoBehaviour
     void Update()
     {
 
-        canfreeze = pmech.get_can_freeze();
-
+        //canfreeze = pmech.get_can_freeze();
+     
         if (Input.GetKeyDown(KeyCode.G) && cantrigger)
         {
 
@@ -104,6 +108,7 @@ public class Dialogue_Trigger : MonoBehaviour
         can_z = activate;
         pmech.key_actives(activate);
     }
+    
     public void freeze_command() {
         Debug.Log("FREEZERICE " + canfreeze);
         if (cantrigger) {
@@ -152,7 +157,7 @@ public class Dialogue_Trigger : MonoBehaviour
     public void Trigger_Dialogue()
     {
 
-     
+        Debug.Log("canproceed " + canproc + " is before choice " + is_bef_choice);
         if (canproc)
         {
             if (is_on_choice)
@@ -233,6 +238,7 @@ public class Dialogue_Trigger : MonoBehaviour
     public void change_dial_vals(List<string> sentences, List<string> names, List<string> choices, List<string> results, List<string> remarks, List<string> name_res, int mult)
     {
         is_active = true;
+        canfreeze = true;
         can_browse = true;
         tut_img_show.set_is_not_on_dialogue(false);
         set_freeze(true);
@@ -290,11 +296,13 @@ public class Dialogue_Trigger : MonoBehaviour
         is_active = true;
         if (!can_return) {
             List<string> clue_list = new List<string>();
+            canproc = true;
             int clue_num = dialogue.get_clue_num();
             for (int i = 0; i < clue_num; i++) {
                 string clue_word = dialogue.get_clues(i);
                 clue_list.Add(clue_word);
             }
+            cantrigger = true;
             choice_trigger(clue_list);
         }
         else {
