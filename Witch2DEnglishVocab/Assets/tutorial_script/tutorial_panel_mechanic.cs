@@ -11,7 +11,7 @@ public class tutorial_panel_mechanic : MonoBehaviour
     [SerializeField] private Text dialogue_text, clue_text ;
     [SerializeField] private tutorial_definition_check tut_def_check ;
     [SerializeField] private Sprite  normal_dialogue_sprite, freeze_dialogue_spirte, system_sprite, synonym_image, antonym_image, definition_image, example_image;
-    [SerializeField] private bool has_antonym = false, has_example = false;
+    [SerializeField] private bool has_antonym = false, has_explain = false, has_example = false;
     Color panelcolor;
     private string current_type = "synonym";
     private string original = "";
@@ -29,35 +29,7 @@ public class tutorial_panel_mechanic : MonoBehaviour
     {
         //purple FF3EF7
         //#40EDF6
-        /*if (Input.GetKeyDown(KeyCode.X)) {
-            Debug.Log(can_browse + " CHECK");
-            if (can_browse) {
-                Debug.Log("CAN BROWSE PANEL " + is_img_on);
-                if (is_img_on) {
-                    is_img_on = false;
-                    Debug.Log("REOPEN DIALOGUE");
-                    change_dialogue_active(true);
-                    if (can_freeze) {
-                        change_freeze_panel_active(true);
-                        change_highlighter_panel_active(true);
-                    }
-                    
-                }
-                else {
-                    
-                    is_img_on = true;
-                    
-                    change_dialogue_active(false);
-                    if (can_freeze) {
-                        change_freeze_panel_active(false);
-                        change_highlighter_panel_active(false);
-                    }
-                    
-                    Debug.Log("CLOSE DIALOGUE " + is_img_on + " " + can_browse);
-                }
-            }
-        }
-        */
+       
     }
 
     // Update is called once per frame
@@ -174,7 +146,10 @@ public class tutorial_panel_mechanic : MonoBehaviour
         if (light_counter == 1 && has_antonym) {
 
         }
-        else if(light_counter == 2 && has_example) {
+        else if(light_counter == 2 && has_explain) {
+
+        }
+        else if(light_counter == 3 && has_example) {
 
         }
         else {
@@ -215,7 +190,11 @@ public class tutorial_panel_mechanic : MonoBehaviour
           highlighter_image.sprite = antonym_image;
            
         }
+        else if (light_counter == 2) {
+            highlighter_image.sprite = definition_image;
+        }
         else {
+           
             highlighter_image.sprite = example_image;
         }
         
@@ -234,6 +213,10 @@ public class tutorial_panel_mechanic : MonoBehaviour
             color_type = "<color=#FB7E4F>"; 
         }
         else if (hlight == 2) {
+            current_type = "definition";
+            color_type = "<color=#FFFFFF>";
+        }
+        else if (hlight == 3) {
             current_type = "example";
             color_type = "<color=#CE64FF>";
         }

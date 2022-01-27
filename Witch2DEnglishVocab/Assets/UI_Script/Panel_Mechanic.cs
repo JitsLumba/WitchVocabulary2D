@@ -13,7 +13,7 @@ public class Panel_Mechanic : MonoBehaviour
     [SerializeField] private level_return lreturn;
     [SerializeField] private Dialogue_Trigger dtrigger ;
     
-    [SerializeField] private bool has_antonym = false, has_example = false; 
+    [SerializeField] private bool has_antonym = false, has_explain = false, has_example = false; 
     
     private List<string> clue_listed;
     private bool ison = false, canfreeze = false, hashighlight = false, cantrigger = true, is_img_on = false, can_move = true, has_all_clues = false;
@@ -207,7 +207,10 @@ public class Panel_Mechanic : MonoBehaviour
         if (light_counter == 1 && has_antonym) {
 
         }
-        else if(light_counter == 2 && has_example) {
+        else if(light_counter == 2 && has_explain) {
+
+        }
+        else if(light_counter == 3 && has_example) {
 
         }
         else {
@@ -234,6 +237,9 @@ public class Panel_Mechanic : MonoBehaviour
           
             highlighter_image.sprite = antonym_sprite;
         }
+        else if (light_counter == 1) {
+            highlighter_image.sprite = definition_sprite;
+        }
         else {
            
             highlighter_image.sprite = example_sprite;
@@ -252,6 +258,10 @@ public class Panel_Mechanic : MonoBehaviour
             color_type = "<color=#FB7E4F>";
         }
         else if (hlight == 2) {
+            current_type = "definition";
+            color_type = "<color=#FFFFFF>";
+        }
+        else if (hlight == 3) {
             current_type = "example";
             color_type = "<color=#CE64FF>";
         }

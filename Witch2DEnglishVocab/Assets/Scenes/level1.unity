@@ -7284,6 +7284,7 @@ MonoBehaviour:
   lreturn: {fileID: 1176567194}
   dtrigger: {fileID: 5964338167536592338}
   has_antonym: 1
+  has_explain: 0
   has_example: 0
 --- !u!1 &445373976
 GameObject:
@@ -10887,7 +10888,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1316825080
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11018,6 +11019,7 @@ MonoBehaviour:
   definition_image: {fileID: 21300000, guid: ae8e093526c43584ea217f07dbcab092, type: 3}
   example_image: {fileID: 21300000, guid: 30dd5699619596a4ca2f6afb109bdf1a, type: 3}
   has_antonym: 1
+  has_explain: 1
   has_example: 1
 --- !u!1 &1429252923
 GameObject:
