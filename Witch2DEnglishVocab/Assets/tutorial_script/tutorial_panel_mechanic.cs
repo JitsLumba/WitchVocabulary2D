@@ -29,6 +29,7 @@ public class tutorial_panel_mechanic : MonoBehaviour
     {
         //purple FF3EF7
         //#40EDF6
+        //text color CFBE24
        
     }
 
@@ -214,7 +215,7 @@ public class tutorial_panel_mechanic : MonoBehaviour
         }
         else if (hlight == 2) {
             current_type = "definition";
-            color_type = "<color=#FFFFFF>";
+            color_type = "<color=#FFA0D2>";
         }
         else if (hlight == 3) {
             current_type = "example";
@@ -359,7 +360,7 @@ public class tutorial_panel_mechanic : MonoBehaviour
         highlighted_word = words[beforecounter];
         string highlight = color_type + "[" + highlighted_word + "]</color>";
 
-        string new_word = "<color=#88FFF8>";
+        string new_word = "<color=#00D9FF>";
         int reduce = words.Length - 1;
         for (int i = 0; i < words.Length; i++)
         {

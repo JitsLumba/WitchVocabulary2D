@@ -237,7 +237,7 @@ public class Panel_Mechanic : MonoBehaviour
           
             highlighter_image.sprite = antonym_sprite;
         }
-        else if (light_counter == 1) {
+        else if (light_counter == 2) {
             highlighter_image.sprite = definition_sprite;
         }
         else {
@@ -259,7 +259,7 @@ public class Panel_Mechanic : MonoBehaviour
         }
         else if (hlight == 2) {
             current_type = "definition";
-            color_type = "<color=#FFFFFF>";
+            color_type = "<color=#FFA0D2>";
         }
         else if (hlight == 3) {
             current_type = "example";
@@ -359,11 +359,11 @@ public class Panel_Mechanic : MonoBehaviour
     }
     public void set_dialogue_box(string[] words, int beforecounter)
     {
-       
+        int index = beforecounter;
         highlighted_word = words[beforecounter];
         string highlight = color_type + "[" +  highlighted_word + "]</color>";
 
-        string new_word = "<color=#88FFF8>";
+        string new_word = "<color=#00D9FF>";
         int reduce = words.Length - 1;
         for (int i = 0; i < words.Length; i++)
         {

@@ -3657,7 +3657,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Animosity
+  m_Text: Congenial
 --- !u!222 &680926348
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5106,7 +5106,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Welcome traveler where hope's and dreams are sleeping here.
+  m_Text: Welcome traveler where <color=#FFA0D2>hope's</color> and dreams are sleeping
+    here.
 --- !u!222 &892844957
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5148,10 +5149,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sentences:
-  - Do you remember Mina?
-  - Yeah. What about her?
-  - Lately she has a lot of animosity towards me.
-  - She is always aggressive when we encounter each other.
+  - Traveler do you have a moment ?
+  - Yeah what is it ?
+  - I was thinking as to what exactly should be congenial to my customers .
+  - My
   - '" I don''t remember you bossing me around with your way of things! " Is what
     she always says.'
   - What's with that attitude? It feels like she is combative whenever I ask her
@@ -8151,7 +8152,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 748c9542bb94a4241ac8c7449255d4fe, type: 3}
+  m_Sprite: {fileID: 21300000, guid: af1413bea86ef664b8ec16bbf0977332, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -9851,53 +9852,63 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sentences:
-  - Hey do you remember when we were immature kids back then?
-  - Yes I remember. We have animosity towards each other when talking about food.
-  - I remember being on disagreement to your thought on liking pineapples on pizza.
-  - Our mother really got mad at us that she forced us to eat the pizza she gave
-    us on the table.
-  - After eating the pizza, it eventually grew on to me that I have come to an agreement
-    with you.
+  - What is it like being a mechanic ?
+  - Really rough . This kind of job is not very congenial towards an average human
+    .
+  - This is a cruel workplace where you can easily get injured if you are not careful
+    .
+  - I once got my hand heavily injured for working on a machine that is hard to fix
+    .
+  - Oh , sorry to hear that ...
+  - Yeah ... currently I am taking a break from this workload .... this kind of feeling
+    ... how should I say this ?
+  - I feel refreshed ... but it is not the word that I am looking for ...
   choices:
-  - '"You no longer oppose my thought right?"(oppose)'
-  - '"You initially disliked my thought"(dislike)'
-  - '"You were hostile against my thought"(hostile)'
+  - '"Breaks are gracious"(gracious)'
+  - '"Breaks are pleasant"(pleasant)'
+  - '"Breaks are enjoyable"(enjoyable)'
   results:
-  - You no longer oppose my thought of liking pineapples on pizza right?
-  - More or less. It's actually decent pizza.
-  - You answered that precisely correct.
-  - You started off with disliking the thought of pineapples on pizza.
-  - Indeed. But the idea here is not precise.
-  - I will still give you credit but you have to try again.
-  - You were hostile against the thought of pineapples on pizza.
-  - Who me? Heh. It's not like I had intense feeling against that.
-  - That's not the correct definition as well so please try again.
+  - It is really really gracious when you take breaks.
+  - Hmmm , it's getting there but it's not exactly what I am looking for.
+  - Try to pinpoint exactly what I am feeling at the moment and try again.
+  - It feels so pleasant when you take a break from your work.
+  - Ah that is the word that I am looking for! Thank you! Well I actually know it
+    but...
+  - I decided to have you guess on what am I feeling here. Well done!
+  - It is really enjoyable when you take breaks.
+  - Nah, while you may be true with that, I do not imply that I am actually enjoying
+    breaks.
+  - Well of course I do but that definition is not what I am feeling here.
   remarks:
-  - Correct
   - Kinda Correct
-  - Kinda correct
+  - Correct
+  - Incorrect
   clues:
-  - agreement
-  - disagreement
+  - cruel
+  - rough
+  - refreshed
   clue_type:
+  - antonym
   - antonym
   - synonym
   names:
   - Elaina
-  - Iroha
-  - Iroha
+  - Yu
+  - Yu
+  - Yu
   - Elaina
-  - Iroha
+  - Yu
+  - Yu
   names_result:
   - Elaina
-  - Iroha
-  - Iroha
+  - Yu
+  - Yu
   - Elaina
-  - Iroha
-  - Iroha
+  - Yu
+  - Yu
   - Elaina
-  - Iroha
-  - Iroha
+  - Yu
+  - Yu
   dtrigger: {fileID: 1880291885}
   pmech: {fileID: 807838898}
   answer: relieved!
@@ -10702,9 +10713,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: b07bd51e77405934693ce2e4716fb78f, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 9ecd69ffe99d9ed419013f5f21e97eda, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.199
+  m_Volume: 0.25
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -16316,17 +16327,15 @@ MonoBehaviour:
     gotten a liking to you!
   - Heh! Never mind what I have said, it's time for you to learn another unfamiliar
     word!
-  - And for that, I will introduce you to Iroha.
-  - Iroha really is a sharp thinker of teaching unfamiliar words through examples.
-  - For that, I will teach you one last magic you can use for you to learn the unfamiliar
+  - And for that, I will introduce you to Yu.
+  - Yu is a mechanic here who tells definitions of the unfamiliar word.
+  - For that, I will teach you another magic you can use for you to learn the unfamiliar
     word.
-  - And that is the Example highlighter. Here's how it works.
-  - Alrighty, it's time for you to test you on how you will know the meaning of the
-    word through examples.
-  - For this case, it will be only one as usual. You will have to find the meaning
-    of the word resent.
-  - '" The feelings of resent of max such as his hatred towards his brother has intensified
-    by a lot. "'
+  - And that is the Definition highlighter. Here's how it works.
+  - Alrighty, it's time for you to test you on this example to know the definition
+    of a word!
+  - Find the definition of the word amiable!
+  - '" The act of being amiable towards others is being friendly with them . "'
   names:
   - Sensei
   - Sensei
@@ -16348,8 +16357,8 @@ MonoBehaviour:
   after_names:
   - Sensei
   - Sensei
-  answer: hatred
-  type_clue: example
+  answer: friendly
+  type_clue: definition
   type_number: 0
 --- !u!4 &398638468193488674
 Transform:
@@ -16551,56 +16560,55 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sentences:
-  - Why are our fathers always fighting against each other?
-  - Right Iroha? They have been doing this for 3 days straight ...
-  - Their animosity such as their hatred of each other ...
-  - ... their feeling of bitterness ...
-  - ... and acts of loathing whenever they meet eye to eye ...
-  - I am sick and tired of this roundabout already!
+  - Man , these customers need to be more neighborly when talking to me .
+  - What happened Yu ?
+  - These customers a rude bunch . They always talk like they are the boss of this
+    store .
+  - They need to be at least congenial when talking to me .
+  - And by being congenial , that means you have to be friendly with me !
   choices:
-  - '"Our fathers are two opposing forces"(oppose)'
-  - '"Our fathers really don''t like each other"(dislike)'
-  - '"Our fathers are really aggressive of each other"(hostile)'
+  - '"They are an unpleasant bunch"(pleasant)'
+  - '"They don''t find you agreeable"(aggreable)'
+  - '"They need to learn on how to be sociable"(sociable)'
   results:
-  - Our fathers are forces that oppose each other.
-  - I don't think that fits the mood of what we have talked.
-  - Traveler, you have that incorrect. Please do try again.
-  - '*Sigh* Our fathers really dislike each other.'
-  - Indeed. They are always busy disliking each other like no tomorrow.
-  - That definition is precisely correct!
-  - They are always hostile towards each other aren't they?
-  - Hmmm ... you are right on that but in terms of feeling and mood ... it is not
-    fitting.
-  - I will give you some credit for that but you will have to try again.
+  - I am sorry to hear that you had to deal with an unpleasant bunch...
+  - It's all good. However, the definition does not fit in as to how my customers
+    should act.
+  - You are gonna be needing to try again sadly.
+  - I am sorry to hear that you had customers who don't find you agreeable.
+  - 'Uhhh, I wasn''t implying that they don''t find me agreeable. '
+  - You need to know on how my customers should act. Try again, traveler.
+  - I am sorry to hear that...they need to learn on how to be sociable with you.
+  - Yeah exactly! If they were sociable, I would easily accept their request!
+  - Greatly done traveler, you got that correct!
   remarks:
+  - Kinda correct
   - Incorrect
   - Correct
-  - Kinda correct
   clues:
-  - hatred
-  - bitterness
-  - loathing
+  - neighborly
+  - rude
+  - friendly
   clue_type:
-  - example
-  - example
-  - example
+  - synonym
+  - antonym
+  - definition
   names:
-  - Iroha
+  - Yu
   - Elaina
-  - Iroha
-  - Iroha
-  - Iroha
-  - Iroha
+  - Yu
+  - Yu
+  - Yu
   names_result:
   - Elaina
-  - Iroha
-  - Iroha
+  - Yu
+  - Yu
   - Elaina
-  - Iroha
-  - Iroha
+  - Yu
+  - Yu
   - Elaina
-  - Iroha
-  - Iroha
+  - Yu
+  - Yu
   dtrigger: {fileID: 1880291885}
   pmech: {fileID: 807838898}
   answer: relieved!
