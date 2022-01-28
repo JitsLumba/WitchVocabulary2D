@@ -9991,7 +9991,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: "The Freeze magic freezes the dialogue in order to highlight words that
     are the <color=#FF8100>context clues</color> of the word. \n\nPressing either
-    the <color=#FF8100>freeze button<color=#FF0F0F>[1]</color> or the F button</color>
+    the <color=#FF8100>freeze button<color=#FF0F0F>[1]</color> or the Z button</color>
     It will freeze the dialogue as shown in <color=#FF0F0F>[3]</color> with a <color=#FF8100>highlighted
     word. </color>\n\nThe Freeze magic <color=#FF8100>can be stopped by pressing
     F button again.</color>"
