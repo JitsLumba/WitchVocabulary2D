@@ -5151,53 +5151,57 @@ MonoBehaviour:
   sentences:
   - Traveler do you have a moment ?
   - Yeah what is it ?
-  - I was thinking as to what exactly should be congenial to my customers .
-  - My
-  - '" I don''t remember you bossing me around with your way of things! " Is what
-    she always says.'
-  - What's with that attitude? It feels like she is combative whenever I ask her
-    of something.
+  - Lately my boss has been making his own standards that are " congenial " to him
+    .
+  - And by congenial standards , he means that it must be an acceptable standard
+    for everyone .
+  - He is imposing overtime hours everyday and he makes his workers like me work
+    at 18 or more hours .
+  - My workmates and I are really against with his standards that we raised an objection
+    .
   choices:
-  - '"Are you in disagreements with each other?"(oppose)'
-  - '"Does she dislike you?"(dislike)'
-  - '"She is hostile towards you, doesn''t she?"(hostile)'
+  - '"No one finds them pleasant"(pleasant)'
+  - '"No one will be in an agreement with them"(agreeable)'
+  - '"Your boss is really not sociable"(sociable)'
   results:
-  - Are you in disagreements with each other?
-  - Confirmative. But that's not how to describe her here.
-  - Credits for some correctness but you have to try again.
-  - Does she dislike you?
-  - I don't think so. Plus that doesn't fit the situation here.
-  - Your definition is incorrect. Please try again.
-  - She has some hostility towards you, doesn't she?
-  - Precisely. Ah if only I can hit some sense to that knucklehead.
-  - You got that precisely correct traveler.
+  - Those standards...I don't think anyone will find them pleasant...
+  - True, but the main idea isn't about feeling here.
+  - You are going to need to know as to what exactly do we think about these standards.
+  - Those standards...it's a given that no one should be in agreement with them.
+  - Precisely! My boss really are pushing unrealistic standards!
+  - Suprebly done traveler! That is exactly the definition of congenial here.
+  - I don't find your boss really sociable towards you and your fellow workers.
+  - Well he is, but describing him here isn't the right definition here.
+  - You must know what exactly do we think about these standards. Try again.
   remarks:
   - Kinda Correct
-  - Incorrect
   - Correct
+  - Incorrect
   clues:
-  - aggressive
-  - combative
+  - acceptable
+  - against
+  - objection
   clue_type:
-  - synonym
-  - synonym
+  - definition
+  - antonym
+  - antonym
   names:
-  - Iroha
+  - Yu
   - Elaina
-  - Iroha
-  - Iroha
-  - Iroha
-  - Iroha
+  - Yu
+  - Yu
+  - Yu
+  - Yu
   names_result:
   - Elaina
-  - Iroha
-  - Iroha
+  - Yu
+  - Yu
   - Elaina
-  - Iroha
-  - Iroha
+  - Yu
+  - Yu
   - Elaina
-  - Iroha
-  - Iroha
+  - Yu
+  - Yu
   dtrigger: {fileID: 1880291885}
   pmech: {fileID: 807838898}
   answer: relieved!
@@ -8152,7 +8156,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: af1413bea86ef664b8ec16bbf0977332, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 748c9542bb94a4241ac8c7449255d4fe, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
