@@ -5,10 +5,12 @@ using UnityEngine.UI;
 public class Question_Panel_Mechanic : MonoBehaviour
 {
     
-    [SerializeField] private Text dialogue_text, result_text, clue_text, a_text, context_type_text ;
+    [SerializeField] private Text dialogue_text, result_text, clue_text ;
     [SerializeField] private GameObject dialogue_box, choice_panel, result_panel, clue_panel, freeze_panel_obj, highlighter_panel;
-    [SerializeField] private Image diag_panel, freeze_image, highlighter_image;
+    [SerializeField] private Image diag_panel,  highlighter_image;
+    [SerializeField] private Sprite dialogue_sprite, system_sprite, freeze_sprite, synonym_sprite, antonym_sprite, definition_sprite, example_sprite;
     [SerializeField] private Question_Dialogue_Trigger qtrigger ;
+    [SerializeField] private bool has_antonym = false, has_definition = false, has_example = false;
     private List<string> clue_listed;
     private int num_of_clues = 0;
     private bool can_l = true, can_o = true , can_p = true, can_z = true;
@@ -135,13 +137,22 @@ public class Question_Panel_Mechanic : MonoBehaviour
     public void change_context_highlighter() {
         if (is_freeze) {
             light_counter++;
-        if (light_counter > 2) {
+        if (light_counter == 1 && has_antonym) {
+
+        }
+        else if (light_counter == 2 && has_definition) {
+
+        }
+        else if (light_counter == 3 && has_example) {
+
+        }
+        else {
             light_counter = 0;
         }
         highlighter_context(light_counter);
-        
+        change_highlighter_panel_color();
         string[] words = original.Trim().Split(' ');
-        change_highlighter_text_color();
+      
         this.set_dialogue_box(words , counter);
         }
         
@@ -152,54 +163,40 @@ public class Question_Panel_Mechanic : MonoBehaviour
     public void set_highlighter_panel_active(bool active) {
         highlighter_panel.SetActive(active);
     }
-    void change_highlighter_text_color() {
-        string a_word = "";
-        string type_word =  color_type;
-        if (light_counter == 0) {
-            
-            type_word = type_word + "Synonym";
-        }
-        else if (light_counter == 1) {
-          
-            type_word = type_word + "Antonym";
-        }
-        else {
-            a_word = "<color=#A42BE0>[A]";
-            type_word = type_word + "Example";
-        }
-        a_word = color_type + "[A]</color>";
-        type_word = type_word + "</color>";
-        a_text.text = a_word;
-        context_type_text.text = type_word;
-    }
+    
     void highlighter_context(int hlight) {
-        Debug.Log("HLIGHT " + hlight);
+        
         if (hlight == 0) {
             current_type = "synonym";
             color_type = "<color=#09FF00>";
         }
         else if (hlight == 1) {
             current_type = "antonym";
-            color_type = "<color=#E90000>";
+            color_type = "<color=#FB7E4F>";
         }
         else if (hlight == 2) {
+            current_type = "definition";
+            color_type = "<color=#FFA0D2>";
+        }
+        else if (hlight == 3) {
             current_type = "example";
-            color_type = "<color=#A42BE0>";
+            color_type = "<color=#CE64FF>";
         }
     }
     void freeze_panel() {
         if (is_freeze) {
+            is_freeze = false;
             counter = 0;
-            change_panel_color("#FFFFFF", false);
-            change_freeze_panel_color("##FFFFFF");
-            change_highlighter_panel_color("#FFFFFF");
+            
             string[] words = original.Trim().Split(' ');
         }
         else {
-            change_panel_color("#00F8FA", true);
-            change_freeze_panel_color("#40EDF6");
-             change_highlighter_panel_color("#40EDF6");
+            is_freeze = true;
+            
         }
+        change_panel_color();
+            
+            
         StartCoroutine(Freeze_Interv());
     }
 
@@ -209,20 +206,29 @@ public class Question_Panel_Mechanic : MonoBehaviour
     void choice_panel_switch(bool trigger) {
 
     }
-    void change_freeze_panel_color(string color) {
-       ColorUtility.TryParseHtmlString(color, out panelcolor); 
-       freeze_image.color = panelcolor;
+    
+    void change_highlighter_panel_color() {
+        if (light_counter == 0) {
+            highlighter_image.sprite = synonym_sprite;
+        }
+        else if (light_counter == 1) {
+            highlighter_image.sprite = antonym_sprite;
+        }
+        else if (light_counter == 2) {
+            highlighter_image.sprite = definition_sprite;
+        }
+        else if (light_counter == 3) {
+            highlighter_image.sprite = example_sprite;
+        }
     }
-    void change_highlighter_panel_color(string color) {
-        ColorUtility.TryParseHtmlString(color, out panelcolor); 
-       highlighter_image.color = panelcolor;
-    }
-    void change_panel_color(string color, bool oncheck)
+    void change_panel_color()
     {
-        ColorUtility.TryParseHtmlString(color, out panelcolor);
-
-        is_freeze = oncheck;
-        diag_panel.color = panelcolor;
+        if (is_freeze) {
+            diag_panel.sprite = freeze_sprite;
+        }
+        else {
+            diag_panel.sprite = dialogue_sprite;
+        }
     }
     public void set_num_of_clues (int num) {
         num_of_clues = num;
@@ -355,9 +361,10 @@ public class Question_Panel_Mechanic : MonoBehaviour
         if (can_choice)
         {
             //have this be on 
-            change_panel_color("#FFFFFF", false);
-            change_freeze_panel_color("##FFFFFF");
-            change_highlighter_panel_color("#FFFFFF");
+            is_freeze = false;
+            change_panel_color();
+            
+            
             qtrigger.set_can_proc(true);
             
             set_freeze_panel_active(false);
