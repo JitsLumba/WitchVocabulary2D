@@ -262,6 +262,7 @@ public class Question_Panel_Mechanic : MonoBehaviour
         dialogue_text.text = new_word;
     }
     void check_listed() {
+        Debug.Log("Checking");
         bool not_found = true;
         for (int i = 0; i < clue_listed.Count; i++) {
             if (highlighted_word.Equals(clue_listed[i])) {
