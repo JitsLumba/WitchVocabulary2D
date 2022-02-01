@@ -11686,19 +11686,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sentences:
-  - No Mina, you must not do that!
-  - Huh!? Why the hell not!?
-  - By fighting the gangsters on the street, you will definitely get wounded more!
-  - But they exacerbated me! They angered me the hell off!
-  - Do you have any idea how they annoyed me when they provoked me to a battle?
+  - Mina ! Mina ! Sto-
+  - The gang lies in a pile knocked out
+  - Oh ? Traveler , what are you doing here?
+  - "That doesn\u2019t matter right now ! You need to stop doing stuff like this
+    \u2026"
+  - "Huh ? It wasn\u2019t even my fault\u2026 these guys are the ones that exacerbated
+    me !"
+  - "They were really annoying me \u2026 I was really angry with them when they messed
+    with me !"
+  - "Still \u2026"
   choices:
-  - '"I understand that you are irritated"(irritate)'
-  - '"No you are gonna make it worse"(worsen)
-
-'
-  - '"That''s gonna complicate things."(complicate)
-
-'
+  - "I understand that you\u2019re irritated but\u2026 (irritate)"
+  - You are making things worse! (worsen)
+  - "\u2026 (complicate)"
   results:
   - I understand that you are irritated. But they have numbers that can beat you
     up.
@@ -11715,19 +11716,18 @@ MonoBehaviour:
   - Incorrect
   - Incorrect
   clues:
-  - provoked
-  - angered
-  - annoyed
+  - annoying
+  - angry
   clue_type:
   - synonym
   - synonym
-  - synonym
   names:
+  - 
+  - Elaina
+  - 
   - Elaina
   - Mina
   - Elaina
-  - Mina
-  - Mina
   names_result:
   - Elaina
   - Mina
@@ -12214,65 +12214,86 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sentences:
-  - Hey traveler !
-  - Hello Mina! What's up?
-  - Have you heard of the fake doctor in town?
+  - "You spot a familiar face on your travels\u2026"
+  - Oi ! Traveler ! Over here !
+  - "Mina ? What\u2019s up ?"
+  - "Keep your wits about you when you\u2019re around here alright ?"
+  - "Why ? What\u2019s going on ?"
+  - I heard there was a fake doctor in town .
   - Fake doctor?
-  - Yeah! He is the self proclaimed doctor who claims to have assuaged people's sicknesses.
-  - Turns out instead of relieving the pain of people, he actually exacerbated them!
-  - Wow ... why did he became a doctor in the first place?
-  - I dunno, maybe to be ridiculed? Ha!
+  - Exactly how it sounds .
+  - "The guy parades around claiming to have assuaged whatever\u2019s bothering local
+    folk"
+  - "But it\u2019s all lies ! You can confirm it with the people residing here !"
+  - "Whatever\u2019s happening to them gets exacerbated instead of being relieved
+    !"
   choices:
-  - '"People would definitely be angry at him."(to irritate)'
-  - '"He made the problem even harder."(to complicate)'
-  - '"Yeah he made their pain even worse."(to worsen)'
+  - Wouldn't people be angry at him? (to irritate)
+  - "He made the problem more difficult\u2026 (to complicate)"
+  - "He made their pain worse\u2026 (to worsen)"
   results:
-  - The people he have met are definitely angry towards him.
-  - Uhhh ... you are not wrong ... but that one doesn't hit really the definition
-    of it.
-  - They are definitely angry at him but sadly your answer is incorrect. Redo!
-  - He made a problem more difficult I have to say.
-  - Well I mean ... you are not wrong but that statement is kinda off to what we
-    have discussed.
-  - It is correct but at the same time ... not correct. Redo!
-  - Yeah he made their even worse. What a quack doctor.
-  - Right? Hahahahaha!
-  - Well done traveler, your answer is correct!
+  - Considering that situation, wouldn't people be angry at him?
+  - "I dunno, we can\u2019t really go around bothering everyone in town like lunatics
+    can we?"
+  - Situation is already dire, we must tread carefully here.
+  - Yeah you are right.
+  - That was unfortunately the incorrect answer, try again
+  - He made the problem even more complicated.
+  - "I guess\u2026?"
+  - I honestly think you should try to take a look at what the result of the doings
+    of the quack doctor though...
+  - That's right my student. Although that definition may be correct.
+  - That isn't what it means here to be precise. Try again.
+  - He definitely made their pain even worse. He is not fitting to be a doctor with
+    his skills.
+  - 'Right? '
+  - "Makes your blood boil\u2026"
+  - "If I ever find him, he\u2019s getting a fist to the face!"
+  - That was the correct answer!
   remarks:
   - Incorrect
   - Kinda correct
   - Correct
   clues:
   - assuaged
-  - relieving
+  - relieved
   clue_type:
   - antonym
   - antonym
   names:
+  - 
   - Mina
   - Elaina
   - Mina
   - Elaina
   - Mina
-  - Mina
   - Elaina
+  - Mina
+  - Mina
+  - Mina
   - Mina
   names_result:
   - Elaina
   - Mina
   - Mina
   - Elaina
-  - Mina
-  - Mina
+  - 
   - Elaina
   - Mina
   - Mina
+  - 
+  - 
+  - Elaina
+  - Mina
+  - Mina
+  - Mina
+  - 
   dtrigger: {fileID: 8022526438039422880}
   pmech: {fileID: 1483944578}
   answer: relieved!
   context_no: 2
   dcheck: {fileID: 4436090424282789950}
-  mult: 3
+  mult: 5
 --- !u!4 &954655928450438410
 Transform:
   m_ObjectHideFlags: 0

@@ -10337,57 +10337,74 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sentences:
-  - Hey there...
-  - Oh hey Fox! What's wrong?
-  - I haven't eaten in weeks...I need something to assuage my stomach
-  - If only I have something to please my hungry stomach ...
-  - My stomach will be delighted ...
+  - You notice a fox sitting on the ground, slumped over.
+  - "Miss Fox! What\u2019s wrong?"
+  - "Ah \u2026 human \u2026 I have not eaten in some time \u2026 I \u2026 seem to
+    be close to collapsing from this hunger \u2026"
+  - I need to have my stomach assuaged before I pass out ...
+  - "If I just had something to please my hungry stomach \u2026"
+  - "A delight to my poor tummy \u2026"
   choices:
-  - Give bandage(to relieve)
-  - Give food(to satisfy)
-  - Comfort him(to soothe)
+  - Use a healing spell (to relieve)
+  - Give her some food (to satisfy)
+  - Comfort her (to soothe)
   results:
-  - Would bandage help to relieve your hunger?
-  - No it does not.
-  - Sadly your answer is incorrect
-  - Here are some food for you. I hope it will satisfy your hunger.
-  - Oh wow. Thank you! I am gonna eat these to fill my hungry stomach!
-  - Your answer is correct
-  - Would a hug help to comfort your hungry stomach?
-  - No it does not.
-  - Sadly your answer is incorrect
+  - Maybe some healing magic will get you back on your feet!
+  - ...
+  - The fox looks at you with questioning eyes.
+  - "(Oh that\u2019s right\u2026 being hungry isn\u2019t a wound I can heal)"
+  - That was unfortunately the incorrect answer, try again.
+  - "Oh! I have some extra food here\u2026I bought too much for lunch you see\u2026
+    haha\u2026"
+  - "\u2026"
+  - "Eh\u2026 I was going to eat it but\u2026 since you need it more, it\u2019s all
+    yours~"
+  - "That is\u2026 very kind of you\u2026Thank you human\u2026"
+  - That was the correct answer!
+  - "That\u2019s sad Miss Fox\u2026 do you want a hug?"
+  - ...
+  - "I\u2026 do not think that will be necessary, human\u2026"
+  - (Oh silly me...hugging here won't do for her hunger...)
+  - That was unfortunately the incorrect answer, try again
   remarks:
   - Incorrect
   - Correct
   - Incorrect
   clues:
   - please
-  - delighted
+  - delight
   clue_type:
   - synonym
   - synonym
   names:
-  - Fox
+  - 
   - Elaina
+  - Fox
   - Fox
   - Fox
   - Fox
   names_result:
   - Elaina
   - Fox
+  - 
+  - Elaina
+  - 
+  - Elaina
   - Fox
+  - Elaina
+  - Fox
+  - 
   - Elaina
   - Fox
   - Fox
   - Elaina
-  - Fox
   - Fox
   dtrigger: {fileID: 5964338167536592338}
   pmech: {fileID: 413066109}
   answer: calmed
   context_no: 0
   dcheck: {fileID: 37001804}
-  mult: 3
+  mult: 5
 --- !u!114 &1016988639
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10644,28 +10661,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sentences:
-  - .....*crying*
-  - Hey Fox, what's wrong?
-  - My friends have told me that they don't see me as a friend...
-  - They have hurled a lot of hurtful words towards me...I need to be assuaged of
-    my sadness...
-  - ( Poor Fox ... I need to find a way to calm him down ... )
-  - ( What can I possibly do to settle his sadness ... ? )
-  - ( I need to assuage him since he is so emotionally hurt ... )
+  - You notice a fox sitting on the ground, slumped over.
+  - Miss Fox ! Are you okay ?
+  - "\u2026 "
+  - "The fox seems unwilling to speak\u2026"
+  - "My sisters\u2026 they had thrown me out of the castle for taking interest in
+    the humans \u2026"
+  - "( Poor girl\u2026 what could I do to settle her sadness.. )"
+  - "( to calm her nerves\u2026 I need to assuage her hurt feelings ... ) "
   choices:
-  - Give him bandages(to relieve)
-  - Give him food(to satisfy)
-  - Comfort him(to soothe)
+  - Use a healing spell (to relieve)
+  - Give her some food (to satisfy)
+  - Comfort her (to soothe)
   results:
-  - Would bandages help to relieve your sadness?
-  - If bandages are only to heal sadness...
-  - Your answer is kinda correct
-  - Would food help you be satisfied?
-  - No it does not.
-  - Sadly your answer is incorrect
-  - There there fox, I am here for you. I will comfort you with my hug...
-  - Thank you...
-  - Your answer is correct!
+  - Maybe some healing magic will get you back on your feet!
+  - ...
+  - The Fox looks at you with questioning eyes.
+  - "(Oh\u2026 I can\u2019t use magic to heal emotional damage\u2026)"
+  - That was unfortunately the incorrect answer, try again
+  - I have a snack here, you want some, Miss Fox?
+  - ...
+  - Eh? But food can comfort you in times of being sadness. I can attest to that!
+  - '...my student, you may have merit with that but that isn''t usually the case. '
+  - Your answer is not correct here. Try again.
+  - Without saying a word, you approach the fox and hug her
+  - "\u2026?"
+  - "(Hm, I quite like this\u2026)"
+  - "(is this\u2026 kindness?)"
+  - That was the correct answer!
   remarks:
   - Kinda correct
   - Incorrect
@@ -10677,29 +10700,35 @@ MonoBehaviour:
   - synonym
   - synonym
   names:
-  - Fox
+  - 
   - Elaina
   - Fox
+  - 
   - Fox
-  - Elaina
   - Elaina
   - Elaina
   names_result:
   - Elaina
   - Fox
+  - 
   - Elaina
+  - 
   - Elaina
   - Fox
   - Elaina
-  - Elaina
+  - 
+  - 
+  - 
   - Fox
-  - Elaina
+  - Fox
+  - Fox
+  - 
   dtrigger: {fileID: 5964338167536592338}
   pmech: {fileID: 413066109}
   answer: satisfied!
   context_no: 0
   dcheck: {fileID: 37001804}
-  mult: 3
+  mult: 5
 --- !u!114 &1102547174
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15678,30 +15707,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sentences:
-  - Ouch! Ouch! Ouch!
-  - Hey fox! What's wrong?
-  - I got scraped by a rock ...
-  - I need something to assuage this wound of mine....
-  - Traveler ... do you have something to ease this wound of mine ... ?
-  - I need to have my wounds dampened in order to move ....
+  - You notice a fox that seems to be cradling a wound of some kind .
+  - "Hm ? What\u2019s wrong , Miss Fox?"
+  - "A human ? To be discovered like this \u2026"
+  - Eh ?
+  - "No matter \u2026 I\u2019ve simply scraped myself on a rock when I tripped \u2026"
+  - Human , might you have something to ease my wound ?
+  - "This wound must be dampened if I am to continue on \u2026"
   choices:
-  - Give him bandage(to relieve)
-  - 'Give him food(to satisfy)
-
-'
-  - 'Comfort him(to soothe)
-
-'
+  - Use a healing spell (to relieve)
+  - Give her some food (to satisfy)
+  - Comfort her (to soothe)
   results:
-  - Here, a bandage to relieve your wounds.
-  - Oh goodness, thank you so much!
-  - And you got that answer correct!
-  - Would food help satisfy your wounds?
-  - No it does not.
-  - Sadly you got that answer incorrect. Try again.
-  - Can I give you a hug to calm your wounds?
-  - That helps, but does not much.
-  - And your answer is kinda correct. Try again.
+  - Well, lucky for you Miss Fox, I know conjury healing magic!
+  - "How fortunate for me to have crossed paths with you\u2026Thank you, I shall
+    not forget this..."
+  - That was the correct answer!
+  - I have a snack here, you want some, Miss Fox?
+  - "\u2026"
+  - That was unfortunately the incorrect answer, try again
+  - "That\u2019s sad Miss Fox\u2026 do you want a hug?"
+  - "I\u2026 do not think that will be necessary, human\u2026"
+  - That was unfortunately the incorrect answer, try again.
   remarks:
   - Correct
   - Incorrect
@@ -15713,22 +15740,23 @@ MonoBehaviour:
   - synonym
   - synonym
   names:
-  - Fox
+  - 
   - Elaina
   - Fox
+  - Elaina
   - Fox
   - Fox
   - Fox
   names_result:
   - Elaina
   - Fox
-  - Fox
+  - 
   - Elaina
   - Fox
-  - Fox
+  - 
   - Elaina
   - Fox
-  - Fox
+  - 
   dtrigger: {fileID: 5964338167536592338}
   pmech: {fileID: 413066109}
   answer: relieved!
