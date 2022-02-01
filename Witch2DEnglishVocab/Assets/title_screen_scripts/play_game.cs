@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class play_game : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -14,5 +14,8 @@ public class play_game : MonoBehaviour
     void Update()
     {
         
+    }
+    public void start_game() {
+        SceneManager.LoadScene("level1");
     }
 }
