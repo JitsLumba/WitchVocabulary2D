@@ -670,8 +670,8 @@ MonoBehaviour:
     I normally do ..."
   - "I think the chipped edge is exacerbating my swinging\u2026\n"
   - "It\u2019s pretty difficult to swing when the blade doesn\u2019t cut the way
-    it should\u2026"
-  - "\rMaybe it\u2019ll ease up if I keep going at it\u2026"
+    it should \u2026"
+  - "\rMaybe it\u2019ll ease up if I keep going at it \u2026"
   choices:
   - "Looks like you\u2019re gonna have a hard time with jobs now\u2026 (to worsen)"
   - I know how to remove that difficulty! (to complicate)
@@ -689,7 +689,7 @@ MonoBehaviour:
   - "Hah! Ain\u2019t you a lifesaver?"
   - That was the correct answer.
   - "That looks like a pain to swing with\u2026"
-  - "No\u2026 I think\u2026"
+  - "No\u2026I think\u2026"
   - "It\u2019s getting better\u2026or maybe not..."
   - My student that isn't exactly the correct answer of what exacerbate means.
   - Try again for your answer is incorrect.
@@ -11708,8 +11708,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sentences:
-  - Mina ! Mina ! Sto-
-  - The gang lies in a pile knocked out
+  - Mina ! Mina ! Sto -
+  - The gang lies in a pile knocked out .
   - Oh ? Traveler , what are you doing here?
   - "That doesn\u2019t matter right now ! You need to stop doing stuff like this
     \u2026"
@@ -11726,8 +11726,8 @@ MonoBehaviour:
   - "I understand that you\u2019re irritated but\u2026you\u2019d also be attracting
     more danger to yourself.."
   - "Like other gang members, or even the local guards\u2026"
-  - "Mina seems to calm down and puts her hand on Elaine\u2019s head"
-  - "Alright, alright\u2026  I\u2019ll try to control myself\u2026Sorry for making
+  - Mina seems to calm down and puts her hand on your head
+  - "Alright, alright\u2026I\u2019ll try to control myself\u2026Sorry for making
     you worry\u2026"
   - That was the correct answer!
   - You are gonna make things worse here.
@@ -12250,7 +12250,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sentences:
-  - "You spot a familiar face on your travels\u2026"
+  - "You spot a familiar face on your travels \u2026"
   - Oi ! Traveler ! Over here !
   - "Mina ? What\u2019s up ?"
   - "Keep your wits about you when you\u2019re around here alright ?"
@@ -12259,7 +12259,7 @@ MonoBehaviour:
   - Fake doctor?
   - Exactly how it sounds .
   - "The guy parades around claiming to have assuaged whatever\u2019s bothering local
-    folk"
+    folk ."
   - "But it\u2019s all lies ! You can confirm it with the people residing here !"
   - "Whatever\u2019s happening to them gets exacerbated instead of being relieved
     !"
@@ -12278,7 +12278,7 @@ MonoBehaviour:
   - "I guess\u2026?"
   - I honestly think you should try to take a look at what the result of the doings
     of the quack doctor though...
-  - That's right my student. Although that definition may be correct.
+  - That's right, my student. Although that definition may be correct.
   - That isn't what it means here to be precise. Try again.
   - He definitely made their pain even worse. He is not fitting to be a doctor with
     his skills.
@@ -14128,14 +14128,17 @@ MonoBehaviour:
   - Sensei
   - Sensei
   result_dialogues:
-  - Correct
-  - Incorrect
-  - Kinda Correct
+  - Well done my student! That was the correct answer!
+  - That was the incorrect answer. Try again.
+  - You are getting closer...try again with the right highlighter.
   result_name: Sensei
   after_dialogue:
-  - That's it
-  - Go for it
+  - Now a hint for you to know if it's an antonym is sentences that implies opposites.
+  - '"But" and related words are key words for you to remember.'
+  - That's all I have for my tip. I believe it's time for you to do this on your
+    own now.
   after_names:
+  - Sensei
   - Sensei
   - Sensei
   answer: disappointed

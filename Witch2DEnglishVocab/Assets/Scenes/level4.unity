@@ -18342,14 +18342,21 @@ MonoBehaviour:
   - Sensei
   - Sensei
   result_dialogues:
-  - Correct
-  - Incorrect
-  - Kinda Correct
+  - Well done my student! That was the correct answer!
+  - That was the incorrect answer. Try again.
+  - You are getting closer...try again with the right highlighter.
   result_name: Sensei
   after_dialogue:
-  - That's it
-  - Go for it
+  - From here on, you will be on your own but not before I tell you one more hint
+    from me.
+  - '"Such as" , "for instance" , "example" and anything related to them are key
+    words for example context clues.'
+  - Sometimes the context clues are many, sometimes they are one when hinted by those
+    key words.
+  - That's all. Go forth my student!
   after_names:
+  - Sensei
+  - Sensei
   - Sensei
   - Sensei
   answer: hatred

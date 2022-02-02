@@ -16381,14 +16381,24 @@ MonoBehaviour:
   - Sensei
   - Sensei
   result_dialogues:
-  - Correct
-  - Incorrect
-  - Kinda Correct
+  - Well done my student! That was the correct answer!
+  - That was the incorrect answer. Try again.
+  - You are getting closer...try again with the right highlighter.
   result_name: Sensei
   after_dialogue:
-  - That's it
-  - Go for it
+  - With that, I will tell you one thing you need to be careful of.
+  - Sometimes people can confuse synonyms and definitions as the same thing.
+  - Where in fact, definitions are more of the explanatory means of a word.
+  - A giveaway word  in a sentence that that will tell you if it is a definition
+    context clue is the word "means"
+  - Along with similar words of it, as long as the sentence implies an explanation
+    of it, it is a definition context clue.
+  - That's all I have the explanation from me. Good luck!
   after_names:
+  - Sensei
+  - Sensei
+  - Sensei
+  - Sensei
   - Sensei
   - Sensei
   answer: friendly

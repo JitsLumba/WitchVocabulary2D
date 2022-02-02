@@ -10338,7 +10338,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sentences:
   - You notice a fox sitting on the ground, slumped over.
-  - "Miss Fox! What\u2019s wrong?"
+  - "Miss Fox ! What\u2019s wrong ?"
   - "Ah \u2026 human \u2026 I have not eaten in some time \u2026 I \u2026 seem to
     be close to collapsing from this hunger \u2026"
   - I need to have my stomach assuaged before I pass out ...
@@ -10661,14 +10661,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sentences:
-  - You notice a fox sitting on the ground, slumped over.
+  - You notice a fox sitting on the ground, slumped over .
   - Miss Fox ! Are you okay ?
   - "\u2026 "
-  - "The fox seems unwilling to speak\u2026"
+  - "The fox seems unwilling to speak \u2026"
   - "My sisters\u2026 they had thrown me out of the castle for taking interest in
     the humans \u2026"
-  - "( Poor girl\u2026 what could I do to settle her sadness.. )"
-  - "( to calm her nerves\u2026 I need to assuage her hurt feelings ... ) "
+  - "( Poor girl\u2026 What could I do to settle her sadness.. )"
+  - "( To calm her nerves\u2026 I need to assuage her hurt feelings ... ) "
   choices:
   - Use a healing spell (to relieve)
   - Give her some food (to satisfy)
@@ -10678,16 +10678,16 @@ MonoBehaviour:
   - ...
   - The Fox looks at you with questioning eyes.
   - "(Oh\u2026 I can\u2019t use magic to heal emotional damage\u2026)"
-  - That was unfortunately the incorrect answer, try again
+  - Your answer is not exactly the correct answer. Try again.
   - I have a snack here, you want some, Miss Fox?
   - ...
   - Eh? But food can comfort you in times of being sadness. I can attest to that!
   - '...my student, you may have merit with that but that isn''t usually the case. '
   - Your answer is not correct here. Try again.
-  - Without saying a word, you approach the fox and hug her
+  - Without saying a word, you approach the fox and hug her.
   - "\u2026?"
   - "(Hm, I quite like this\u2026)"
-  - "(is this\u2026 kindness?)"
+  - "(Is this\u2026 kindness?)"
   - That was the correct answer!
   remarks:
   - Kinda correct
@@ -15728,7 +15728,7 @@ MonoBehaviour:
   - That was unfortunately the incorrect answer, try again
   - "That\u2019s sad Miss Fox\u2026 do you want a hug?"
   - "I\u2026 do not think that will be necessary, human\u2026"
-  - That was unfortunately the incorrect answer, try again.
+  - You are close...but that isn't exactly the correct meaning. Try again.
   remarks:
   - Correct
   - Incorrect
@@ -16115,14 +16115,26 @@ MonoBehaviour:
   - Sensei
   - Sensei
   result_dialogues:
-  - Correct
-  - Incorrect
-  - Kinda Correct
+  - Well done my student! That was the correct answer!
+  - That was the incorrect answer. Try again.
+  - You are getting closer...try again with the right highlighter.
   result_name: Sensei
   after_dialogue:
-  - That's it
-  - Go for it
+  - Oh I forgot to mention there is also choices for you to choose.
+  - Each choices will have 1 correct answer, kinda correct answers, and incorrect
+    answers.
+  - From the context clues that you have gotten before, you are gonna choose as to
+    which one is the correct meaning...
+  - '...of the unfamiliar word that is used in the sentence. '
+  - Make sure you clear each door before proceeding to the green door here.
+  - Remember to press the F button to enter each door.
+  - Now go forth my student! Good luck learning the current unfamiliar word!
   after_names:
+  - Sensei
+  - Sensei
+  - Sensei
+  - Sensei
+  - Sensei
   - Sensei
   - Sensei
   answer: funny
