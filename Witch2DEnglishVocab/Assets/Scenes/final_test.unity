@@ -8003,7 +8003,7 @@ MonoBehaviour:
     m_Font: {fileID: 12800000, guid: c2cff028cda29384f89c7883e2c3c6ea, type: 3}
     m_FontSize: 40
     m_FontStyle: 1
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 3
     m_MaxSize: 44
     m_Alignment: 0
@@ -9783,7 +9783,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   next_level: level2
-  can_go: 1
+  can_go: 0
 --- !u!4 &1821344968
 Transform:
   m_ObjectHideFlags: 0
@@ -9796,7 +9796,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1830967755
 GameObject:
@@ -14995,140 +14995,6 @@ MonoBehaviour:
   m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
---- !u!1 &4965885319778478729
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4965885319778478734}
-  - component: {fileID: 4965885319778478735}
-  m_Layer: 0
-  m_Name: Question_2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4965885319778478734
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4965885319778478729}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.755303, y: -26.561096, z: -10.810429}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4965885319778478735
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4965885319778478729}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e5cf0b98a3e71d48b6a74857b0bee7c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  main_script: A fake doctor that exacerbates the pain ________ the pain instead
-    of assuaging and relieving it.
-  speaker: Mina
-  clues:
-  - assuaging
-  - relieving
-  type_clue:
-  - antonym
-  - antonym
-  choices:
-  - worsen
-  - irritate
-  - complicate
-  results:
-  - Correct
-  - Incorrect
-  - Kinda Correct
-  remarks:
-  - Well answered, traveler! To exacerbate wounds means to worsen the condition of
-    it.
-  - That's really off the mark traveler...to exacerbate wounds means to worsen the
-    condition of it.
-  - Close but that isn't exactly the definition of it...To exacerbate wounds means
-    to worsen the condition of it.
---- !u!1 &4965885320542297114
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4965885320542297117}
-  - component: {fileID: 4965885320542297116}
-  m_Layer: 0
-  m_Name: Question_3
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &4965885320542297116
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4965885320542297114}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e5cf0b98a3e71d48b6a74857b0bee7c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  main_script: A fake doctor that exacerbates the pain ________ the pain instead
-    of assuaging and relieving it.
-  speaker: Fox
-  clues:
-  - assuaging
-  - relieving
-  - relieving
-  type_clue:
-  - example
-  - example
-  - example
-  choices:
-  - Satisfy
-  - Soothe
-  - Relieve
-  results:
-  - Incorrect
-  - Kinda Correct
-  - Correct
-  remarks:
-  - Sadly it is incorrect. Assuaging someone's wounds means you relieve their pain.
-  - Close but not correct. Assuaging someone's wounds, you relieve their pain is
-    the correct answer.
-  - Correct traveler! To assuage here means to relieve a person's wounds.
---- !u!4 &4965885320542297117
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4965885320542297114}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.755303, y: -26.561096, z: -10.810429}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5334363828409815634
 GameObject:
   m_ObjectHideFlags: 0
@@ -15714,7 +15580,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   question_list:
   - {fileID: 4965885318873468159, guid: 8d6763e4e9fedcb4ab8f36830c8da451, type: 3}
-  - {fileID: 4965885319778478735}
+  - {fileID: 4893722898781042738, guid: ba39ca12e4e0b5f4e97f65e600d37041, type: 3}
+  - {fileID: 3584245979470034973, guid: c53480e60ce14e741b6aa3a1cad19832, type: 3}
+  - {fileID: 8336826673169896406, guid: ddd27e22b9f38634c95cf0a9a466bdd8, type: 3}
   dcheck: {fileID: 4325595470172263040}
   question_manager: {fileID: 7980958942010302545}
   qpanel_mech: {fileID: 823665827}
