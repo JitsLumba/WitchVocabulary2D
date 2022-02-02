@@ -5214,14 +5214,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sentences:
-  - "Traveler , you really won\u2019t believe this"
+  - "Traveler , you really won\u2019t believe this !"
   - "What\u2019s up ?"
   - My boss just gave us new work standards , and he expects us to just be congenial
     about it .
   - Why ? What are they ?
   - Literally just extra overtime . He said in the following lines of ...
   - '" You all should be congenial with these standards ... "'
-  - '" And what I mean by that is finding them acceptable .. "'
+  - '" And what I mean by that is finding them acceptable . "'
   - 'He also makes them unpaid , who wouldn''t be against that ? '
   - '" Just " ? Unbelievable ... has he no honor ?'
   - "He does not have any \u2026 we\u2019ve been objecting to it since he gave them
@@ -5280,7 +5280,7 @@ MonoBehaviour:
   - Elaina
   - Yuichi
   - Yuichi
-  - Yuichi
+  - 
   dtrigger: {fileID: 1880291885}
   pmech: {fileID: 807838898}
   answer: relieved!
@@ -16605,7 +16605,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sentences:
   - You see a disgruntled man walk out of what appears to be a garage of sorts .
-  - You decide to investigate as you peer into the establishment
+  - You decide to investigate as you peer into the establishment .
   - Yuichi ?!
   - "Eh ? Traveler ? You\u2019re here too ?"
   - "Yeah \u2026 it\u2019s just \u2026 What happened with that guy back there ?"
