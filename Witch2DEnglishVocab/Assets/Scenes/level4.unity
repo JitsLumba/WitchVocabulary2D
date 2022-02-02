@@ -5884,28 +5884,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sentences:
-  - Do you remember Mina?
-  - Yeah. What about her?
-  - Lately she has a lot of animosity towards me.
-  - She is always aggressive when we encounter each other.
-  - '" I don''t remember you bossing me around with your way of things! " Is what
-    she always says.'
-  - What's with that attitude? It feels like she is combative whenever I ask her
-    of something.
+  - You remember Mina , right ?
+  - I ran into her a couple days ago , why ?
+  - "She\u2019s been really aggressive towards me lately ."
+  - Eh ? She seemed the same last time I saw her .
+  - Well I sense an air of animosity whenever I lend her a hand in her jobs ...
+  - '" I don''t remember asking for your help ! " Is what she always says to me ...'
+  - I have the tools that she may need , yet she is combative towards my act of helping
+    her ...
   choices:
-  - '"Are you in disagreements with each other?"(oppose)'
-  - '"Does she dislike you?"(dislike)'
-  - '"She is hostile towards you, doesn''t she?"(hostile)'
+  - "You didn\u2019t beat her in some kind of competition did you? (oppose)"
+  - Strange for her to dislike you... (dislike)
+  - "I\u2019ll talk to her about her hostility against you. (hostile)"
   results:
-  - Are you in disagreements with each other?
-  - Confirmative. But that's not how to describe her here.
-  - Credits for some correctness but you have to try again.
-  - Does she dislike you?
-  - I don't think so. Plus that doesn't fit the situation here.
-  - Your definition is incorrect. Please try again.
-  - She has some hostility towards you, doesn't she?
-  - Precisely. Ah if only I can hit some sense to that knucklehead.
-  - You got that precisely correct traveler.
+  - "You didn\u2019t beat her in some kind of competition did you?"
+  - "No...this is the first time I\u2019ve seen her in years..."
+  - ...but I will let you know that opposing here isn't exactly what she has towards
+    me.
+  - Your answer is not precisely correct. Try again.
+  - "It\u2019s weird to hear her act that way, but I\u2019m sure it\u2019ll pass..."
+  - "I don\u2019t know, that knucklehead\u2019s always had a knack for\u2026overreacting..."
+  - And I don't think I sense a feeling of dislike from her...
+  - Your answer is incorrect. Try again.
+  - I sense some hostility against you when it comes to Mina. I will talk to her
+    before things go out of hand.
+  - Iroha sighs
+  - Thank you...I appreciate that...
+  - That was the correct answer!
   remarks:
   - Kinda Correct
   - Incorrect
@@ -5920,6 +5925,7 @@ MonoBehaviour:
   - Iroha
   - Elaina
   - Iroha
+  - Elaina
   - Iroha
   - Iroha
   - Iroha
@@ -5927,18 +5933,21 @@ MonoBehaviour:
   - Elaina
   - Iroha
   - Iroha
+  - 
   - Elaina
   - Iroha
   - Iroha
+  - 
   - Elaina
+  - 
   - Iroha
-  - Iroha
+  - 
   dtrigger: {fileID: 1880291885}
   pmech: {fileID: 807838898}
   answer: relieved!
   context_no: 0
   dcheck: {fileID: 888231758}
-  mult: 3
+  mult: 4
 --- !u!114 &914805274
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10843,27 +10852,46 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sentences:
-  - Hey do you remember when we were immature kids back then?
-  - Yes I remember. We have animosity towards each other when talking about food.
-  - I remember being on disagreement to your thought on liking pineapples on pizza.
-  - Our mother really got mad at us that she forced us to eat the pizza she gave
-    us on the table.
-  - After eating the pizza, it eventually grew on to me that I have come to an agreement
-    with you.
+  - You are joyfully remembering the past with Iroha .
+  - "Haha .. Ah \u2026 we were such brats back then \u2026"
+  - I remember when we had such animosity towards each other when it came to food
+    .
+  - Hahaha ... Is this about the pizza disagreement ?
+  - Of course , my mom got mad at me for not eating what your mom brought out for
+    us
+  - Mom was pretty chilled out about having cream cheese on pizza ~
+  - We reached an agreement of half and half that day right ?
+  - "Ah well, I\u2019m more traveled these days , it\u2019s not as bad as I thought
+    \u2026"
   choices:
-  - '"You no longer oppose my thought right?"(oppose)'
-  - '"You initially disliked my thought"(dislike)'
-  - '"You were hostile against my thought"(hostile)'
+  - "You\u2019re not against my taste of it anymore? (oppose)"
+  - "You really didn\u2019t like the extra on that pizza (dislike)"
+  - You were really against my tastes back then (hostile)
   results:
-  - You no longer oppose my thought of liking pineapples on pizza right?
-  - More or less. It's actually decent pizza.
-  - You answered that precisely correct.
-  - You started off with disliking the thought of pineapples on pizza.
-  - Indeed. But the idea here is not precise.
-  - I will still give you credit but you have to try again.
-  - You were hostile against the thought of pineapples on pizza.
-  - Who me? Heh. It's not like I had intense feeling against that.
-  - That's not the correct definition as well so please try again.
+  - "You\u2019re not against my taste of it anymore? "
+  - Yep, I found out there were way worse foods out there.
+  - "I even had to eat some of them just because there wasn\u2019t anything else
+    when I\u2019m out traveling like you~"
+  - Really? The great Iroha Kannagi can change her opinions?
+  - Hey, come on, people can change~
+  - While you two were laughing at Iroha's expense, you got the correct answer.
+  - "You really didn\u2019t like the extra on that pizza."
+  - Yeah, it was pretty mean of me to force a compromise out of your mom back then
+    .
+  - Hahaha, good times...
+  - Yeah good times...
+  - ...although traveler, that is not precisely what I mean by animosity here...
+  - You may be correct with your answer, but it does not fit the action or idea here.
+    Try again.
+  - You were really against my tastes back then.
+  - "Hey, I\u2019m sorry alright? It\u2019s really not so bad anymore\u2026"
+  - Yeah I forgive you for that. I let that slide since you are my friend.
+  - But for saying that I was hostile towards your likes when it comes to pizza,
+    I cannot let that slide for it is wrong.
+  - Although you may be right. It is just that, I am not exactly hostile against
+    you when it comes to that.
+  - Your answer may be correct, but you have to try again for it is not the exact
+    meaning of animosity.
   remarks:
   - Correct
   - Kinda Correct
@@ -10875,9 +10903,12 @@ MonoBehaviour:
   - antonym
   - synonym
   names:
+  - 
+  - Iroha
+  - Iroha
   - Elaina
   - Iroha
-  - Iroha
+  - Elaina
   - Elaina
   - Iroha
   names_result:
@@ -10886,16 +10917,25 @@ MonoBehaviour:
   - Iroha
   - Elaina
   - Iroha
+  - 
+  - Elaina
+  - Iroha
+  - Iroha
+  - Elaina
+  - Iroha
+  - 
+  - Elaina
   - Iroha
   - Elaina
   - Iroha
   - Iroha
+  - 
   dtrigger: {fileID: 1880291885}
   pmech: {fileID: 807838898}
   answer: relieved!
   context_no: 0
   dcheck: {fileID: 888231758}
-  mult: 3
+  mult: 6
 --- !u!114 &1580047549
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18515,27 +18555,39 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sentences:
-  - Why are our fathers always fighting against each other?
-  - Right Iroha? They have been doing this for 3 days straight ...
-  - Their animosity such as their hatred of each other ...
-  - ... their feeling of bitterness ...
-  - ... and acts of loathing whenever they meet eye to eye ...
-  - I am sick and tired of this roundabout already!
+  - You just heard news from Iroha that her father and your father were apprehended
+    .
+  - The cause of it was making a commotion at a market . Iroha sighs at the news
+  - Why do our fathers always fight ?
+  - "Right ? This isn\u2019t even the first time they\u2019ve made a public display
+    of their animosity \u2026"
+  - For three instances such as loathing each other in spite of distance ...
+  - "Their petty bitterness \u2026 and their hatred \u2026It\u2019s like they forget
+    their own families \u2026"
+  - "I\u2019m sick of this farce !"
   choices:
-  - '"Our fathers are two opposing forces"(oppose)'
-  - '"Our fathers really don''t like each other"(dislike)'
-  - '"Our fathers are really aggressive of each other"(hostile)'
+  - "I wonder when they\u2019ll butt heads next\u2026 (to oppose)"
+  - How far will they dislike each other? (to dislike)
+  - "I wonder how this hostility even started\u2026 (to be hostile)"
   results:
-  - Our fathers are forces that oppose each other.
-  - I don't think that fits the mood of what we have talked.
-  - Traveler, you have that incorrect. Please do try again.
-  - '*Sigh* Our fathers really dislike each other.'
-  - Indeed. They are always busy disliking each other like no tomorrow.
-  - That definition is precisely correct!
-  - They are always hostile towards each other aren't they?
-  - Hmmm ... you are right on that but in terms of feeling and mood ... it is not
-    fitting.
-  - I will give you some credit for that but you will have to try again.
+  - "I wonder when they\u2019ll butt heads next\u2026"
+  - Ugh...who knows...
+  - Moreover traveler, I think you should focus more on their feelings here.
+  - The main idea on what I am talking about here is emotions...
+  - That was unfortunately the incorrect answer, try again
+  - How far will they dislike each other?
+  - "I shudder to think\u2026 "
+  - "At least as far as I\u2019m aware, it\u2019s never anything more petty than
+    bragging about sales for the day"
+  - "They don\u2019t seem to be committing any actual crimes..."
+  - That was the correct answer!
+  - "I wonder how this hostility even started\u2026"
+  - Not even mom knows...
+  - "But dad always reassures her that it\u2019s nothing to be concerned about...as
+    if..."
+  - Though traveler, you may be correct with your answer but it is not the main idea
+    of animosity here.
+  - Your answer is not precisely correct. Try again.
   remarks:
   - Incorrect
   - Correct
@@ -18549,7 +18601,8 @@ MonoBehaviour:
   - example
   - example
   names:
-  - Iroha
+  - 
+  - 
   - Elaina
   - Iroha
   - Iroha
@@ -18559,18 +18612,24 @@ MonoBehaviour:
   - Elaina
   - Iroha
   - Iroha
+  - Iroha
+  - 
   - Elaina
   - Iroha
   - Iroha
+  - Iroha
+  - 
   - Elaina
   - Iroha
   - Iroha
+  - Iroha
+  - 
   dtrigger: {fileID: 1880291885}
   pmech: {fileID: 807838898}
   answer: relieved!
   context_no: 0
   dcheck: {fileID: 888231758}
-  mult: 3
+  mult: 5
 --- !u!114 &1007564714534547115
 MonoBehaviour:
   m_ObjectHideFlags: 0

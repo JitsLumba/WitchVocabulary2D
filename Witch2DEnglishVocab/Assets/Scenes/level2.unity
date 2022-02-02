@@ -660,27 +660,39 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sentences:
-  - Hmmmm ....
-  - Oh hey Mina what's wrong?
-  - This rust from my sword is exacerbating my swinging skills...
-  - It is so difficult to swing with this kind of rust.
-  - If only there is something to remove it so that I can have ease with swinging.
+  - You find Mina on a training field , swinging her sword at a dummy, albeit looking
+    uncomfortable .
+  - "Hm \u2026 hm \u2026"
+  - "Oh , Mina , what\u2019s up? You\u2019re usually better than this * smug *"
+  - 'Heh , shut up ~ '
+  - Just a little joke ~ heehee ~
+  - "If you\u2019re wondering , I can\u2019t seem to follow up my swings the way
+    I normally do ..."
+  - "I think the chipped edge is exacerbating my swinging\u2026\n"
+  - "It\u2019s pretty difficult to swing when the blade doesn\u2019t cut the way
+    it should\u2026"
+  - "\rMaybe it\u2019ll ease up if I keep going at it\u2026"
   choices:
-  - '"Yeah rust definitely makes it worse"(to worsen)'
-  - '"Here''s oil to remove that difficulty!"(to complicate)'
-  - '"It is so annoying to swing with that"(to irritiate)
-
-'
+  - "Looks like you\u2019re gonna have a hard time with jobs now\u2026 (to worsen)"
+  - I know how to remove that difficulty! (to complicate)
+  - "That looks like a pain to swing with\u2026 (to irritate)"
   results:
-  - Yeah swinging with rust on your sword can make your swinging worse.
-  - Definitely. Although, that definition is close but it is not the actual definition.
-  - I will give you some points for that. Redo again though.
-  - I have oil that will remove that difficulty. Here you go!
-  - Ah I have been wanting this so that I can swing more easily! Thank you so much!
-  - Well done traveler. That answer is correct!
-  - It can be annoying to swing with that.
-  - Yeah but that's not what I am talking about. Definition here is not about feeling.
-  - Redo again for your answer is incorrect!
+  - "Looks like you\u2019re gonna have a hard time with jobs now\u2026"
+  - The chip will worsen your swings after all.
+  - Oh come on, have a little more confidence in me, will you?
+  - Even without my sword I still have my fists!
+  - You may have the correct idea, but that isn't exactly the correct answer. Try
+    again.
+  - I know how to remove that difficulty of swinging!
+  - You know how to do that?
+  - Nah, I just ran into a blacksmith earlier that should be able to fix it up~
+  - "Hah! Ain\u2019t you a lifesaver?"
+  - That was the correct answer.
+  - "That looks like a pain to swing with\u2026"
+  - "No\u2026 I think\u2026"
+  - "It\u2019s getting better\u2026or maybe not..."
+  - My student that isn't exactly the correct answer of what exacerbate means.
+  - Try again for your answer is incorrect.
   remarks:
   - Kinda Correct
   - Correct
@@ -692,27 +704,37 @@ MonoBehaviour:
   - antonym
   - synonym
   names:
+  - 
   - Mina
   - Elaina
+  - Mina
+  - Elaina
+  - Mina
   - Mina
   - Mina
   - Mina
   names_result:
   - Elaina
-  - Mina
-  - Mina
   - Elaina
   - Mina
   - Mina
+  - 
+  - Elaina
+  - Mina
+  - Elaina
+  - Mina
+  - 
   - Elaina
   - Mina
   - Mina
+  - 
+  - 
   dtrigger: {fileID: 8022526438039422880}
   pmech: {fileID: 1483944578}
   answer: relieved!
   context_no: 0
   dcheck: {fileID: 4436090424282789950}
-  mult: 3
+  mult: 5
 --- !u!114 &133560207
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11699,18 +11721,25 @@ MonoBehaviour:
   choices:
   - "I understand that you\u2019re irritated but\u2026 (irritate)"
   - You are making things worse! (worsen)
-  - "\u2026 (complicate)"
+  - You are complicating things! (complicate)
   results:
-  - I understand that you are irritated. But they have numbers that can beat you
-    up.
-  - Yeah you are right...sorry for making you worry.
-  - You got that correct traveler!
-  - No. Stop. Please you are gonna make it worse.
-  - Like hell it would! You don't understand what I am going through!
-  - Sadly that definition is incorrect.
-  - Wouldn't that complicate things for both of you?
-  - Who? Us or them? I don't think you have read the air here!
-  - That one isn't the correct definition by the way.
+  - "I understand that you\u2019re irritated but\u2026you\u2019d also be attracting
+    more danger to yourself.."
+  - "Like other gang members, or even the local guards\u2026"
+  - "Mina seems to calm down and puts her hand on Elaine\u2019s head"
+  - "Alright, alright\u2026  I\u2019ll try to control myself\u2026Sorry for making
+    you worry\u2026"
+  - That was the correct answer!
+  - You are gonna make things worse here.
+  - What would you know?!
+  - You do not know what I am feeling here!
+  - Ah...sorry...
+  - That was the incorrect answer. Try to understand Mina's feelings and try again.
+  - You are gonna complicate things here!
+  - Ha?
+  - "What\u2019s that supposed to mean?"
+  - You do not know what I am feeling here!
+  - That was the incorrect answer. Try to understand Mina's feelings and try again.
   remarks:
   - Correct
   - Incorrect
@@ -11722,28 +11751,35 @@ MonoBehaviour:
   - synonym
   - synonym
   names:
-  - 
   - Elaina
   - 
+  - Mina
   - Elaina
+  - Mina
   - Mina
   - Elaina
   names_result:
   - Elaina
+  - Elaina
+  - 
   - Mina
-  - Mina
+  - 
   - Elaina
   - Mina
   - Mina
   - Elaina
+  - 
+  - Elaina
   - Mina
   - Mina
+  - Mina
+  - 
   dtrigger: {fileID: 8022526438039422880}
   pmech: {fileID: 1483944578}
   answer: relieved!
   context_no: 0
   dcheck: {fileID: 4436090424282789950}
-  mult: 3
+  mult: 5
 --- !u!114 &2112259948
 MonoBehaviour:
   m_ObjectHideFlags: 0
