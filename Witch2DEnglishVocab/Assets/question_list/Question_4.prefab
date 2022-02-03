@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   main_script: Feelings of animosity such as loathing , hatred , and bitterness are
-    what makes one dis_____s the other .
+    what makes one dis-_____ the other .
   speaker: Sensei
   clues:
   - loathing

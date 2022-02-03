@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   main_script: Standards that bosses expect to be congenial with no objections means
-    to be ______ and acceptable towards all .
+    to be ____-able and acceptable towards all .
   speaker: Sensei
   clues:
   - objections
@@ -53,9 +53,9 @@ MonoBehaviour:
   - antonym
   - definition
   choices:
-  - Acceptable
-  - Sociable
-  - Pleasant
+  - agree
+  - social
+  - pleasant
   results:
   - Correct
   - Incorrect
