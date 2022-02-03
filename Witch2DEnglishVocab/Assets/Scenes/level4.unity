@@ -6874,7 +6874,7 @@ MonoBehaviour:
     the <color=#FF8100>freeze button<color=#FF0F0F>[1]</color> or the Z button</color>
     It will freeze the dialogue as shown in <color=#FF0F0F>[3]</color> with a <color=#FF8100>highlighted
     word. </color>\n\nThe Freeze magic <color=#FF8100>can be stopped by pressing
-    F button again.</color>"
+    Z button again.</color>"
 --- !u!222 &1017737466
 CanvasRenderer:
   m_ObjectHideFlags: 0

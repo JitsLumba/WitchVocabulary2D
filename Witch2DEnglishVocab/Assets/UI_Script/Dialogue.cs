@@ -39,6 +39,9 @@ public class Dialogue
       result_list.Clear();
       name_list_result.Clear();
       remark_list.Clear();
+      
+  }
+  public void clear_clue_lists() {
       clues.Clear();
       clue_type.Clear();
   }

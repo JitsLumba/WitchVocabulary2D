@@ -233,6 +233,7 @@ public class Dialogue_Trigger : MonoBehaviour
         pmech.set_clue_number(num);
         pmech.set_clue_panel_active(true);
         pmech.set_highlighter_panel_active(true);
+        dialogue.clear_clue_lists();
         dialogue.add_clues(clues, clue_type);
     }
     public void change_dial_vals(List<string> sentences, List<string> names, List<string> choices, List<string> results, List<string> remarks, List<string> name_res, int mult)
@@ -257,7 +258,7 @@ public class Dialogue_Trigger : MonoBehaviour
         dialogue_Manager.set_mode(1);
         Debug.Log("CLEAR");
         this.dialogue_Manager.StartDialogue(dialogue);
-
+        Debug.Log("HELLO " + dialogue.get_clue_num());
     }
     
     public void set_trigger()
@@ -298,6 +299,7 @@ public class Dialogue_Trigger : MonoBehaviour
             List<string> clue_list = new List<string>();
             canproc = true;
             int clue_num = dialogue.get_clue_num();
+           
             for (int i = 0; i < clue_num; i++) {
                 string clue_word = dialogue.get_clues(i);
                 clue_list.Add(clue_word);
