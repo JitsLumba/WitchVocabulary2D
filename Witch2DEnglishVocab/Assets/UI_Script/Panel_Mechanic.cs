@@ -170,14 +170,14 @@ public class Panel_Mechanic : MonoBehaviour
                    
                    Debug.Log("IS CURRENTLY ON");
                     ison = false;
-                    
+                    dtrigger.set_canproc(true);
                     text_dialogue.text = original;
                 }
                 else
                 {
                     Debug.Log("IS CURRENTLY OFF");
                    ison = true;
-               
+                    dtrigger.set_canproc(false);
                     
                     original = text_dialogue.text;
                     words = original.Trim().Split(' ');
