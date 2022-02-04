@@ -57,6 +57,9 @@ public class Dialogue
   public string get_clues(int num) {
       return clues[num];
   }
+  public string get_clue_type(int num) {
+      return clue_type[num];
+  }
   public void add_clues(List<string> cluewords, List<string> type_clue) {
 
       for (int i = 0; i < cluewords.Count; i++) {

@@ -6,7 +6,7 @@ public class level_transport : MonoBehaviour
 {
     // Start is called before the first frame update
    
-    [SerializeField] private GameObject camera, player, door;
+    [SerializeField] private GameObject camera, player, door, f_button;
     [SerializeField] private string checl;
     [SerializeField] private string door_num;
     [SerializeField] private level_return lreturn;
@@ -29,12 +29,13 @@ public class level_transport : MonoBehaviour
         if ((diff <= 0.5f && diff >= -0.5f) && can_return)
         {
             inp_transpy.set_transp_bool(true);
-            
+            f_button.SetActive(true);
         }
         else
         {
             //transp_lp.set_false_transport();
             inp_transpy.set_transp_bool(false);
+            f_button.SetActive(false);
         }
     }
 }

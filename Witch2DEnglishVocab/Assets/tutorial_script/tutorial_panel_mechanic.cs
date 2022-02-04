@@ -6,11 +6,12 @@ using UnityEngine.UI;
 public class tutorial_panel_mechanic : MonoBehaviour
 {
     // Start is called before the first frame update
-    [SerializeField] private GameObject freeze_panel_obj, clue_panel, highlighter_panel, dialogue_panel, vocabulary_panel ;
-    [SerializeField] private Image dialogue_image, freeze_panel_image, highlighter_image, vocabulary_image ;
+    [SerializeField] private GameObject freeze_panel_obj, clue_panel, highlighter_panel, dialogue_panel, vocabulary_panel , press_g_panel , freeze_prompt_panel ;
+    [SerializeField] private Image dialogue_image, freeze_panel_image, highlighter_image, letter_image, vocabulary_image ;
     [SerializeField] private Text dialogue_text, clue_text ;
     [SerializeField] private tutorial_definition_check tut_def_check ;
     [SerializeField] private Sprite  normal_dialogue_sprite, freeze_dialogue_spirte, system_sprite, synonym_image, antonym_image, definition_image, example_image;
+    [SerializeField] private Sprite S_sprite, A_sprite, D_sprite, E_sprite;
     [SerializeField] private bool has_antonym = false, has_explain = false, has_example = false;
     Color panelcolor;
     private string current_type = "synonym";
@@ -41,7 +42,7 @@ public class tutorial_panel_mechanic : MonoBehaviour
             freeze_or_defreeze();
         }
         
-        if (Input.GetKeyDown(KeyCode.P) && ison && can_p) {
+        if (Input.GetKeyDown(KeyCode.D) && ison && can_p) {
             words = original.Trim().Split(' ');
             int num = words.Length - 1;
 
@@ -62,7 +63,7 @@ public class tutorial_panel_mechanic : MonoBehaviour
             int beforecounter = counter - 1;
 
         }
-        else if (Input.GetKeyDown(KeyCode.O) && ison && can_o) {
+        else if (Input.GetKeyDown(KeyCode.A) && ison && can_o) {
             words = original.Trim().Split(' ');
             int num = words.Length;
             if (counter > 0)
@@ -185,18 +186,22 @@ public class tutorial_panel_mechanic : MonoBehaviour
       
         if (light_counter == 0) {
             highlighter_image.sprite = synonym_image;
+            letter_image.sprite = S_sprite;
          
         }
         else if (light_counter == 1) {
           highlighter_image.sprite = antonym_image;
+          letter_image.sprite = A_sprite;
            
         }
         else if (light_counter == 2) {
             highlighter_image.sprite = definition_image;
+            letter_image.sprite = D_sprite;
         }
         else {
            
             highlighter_image.sprite = example_image;
+            letter_image.sprite = E_sprite;
         }
         
         //change color
@@ -234,24 +239,25 @@ public class tutorial_panel_mechanic : MonoBehaviour
             
             if (can_freeze) {
                 cantrigger = false;
+                bool switcher = false;
                 if (ison) {
-                    change_panel_sprite(false);
                     
-                   
-                    change_vocab_color(false);
                     dialogue_text.text = original;
                 }
                 else {
-                    change_panel_sprite(true);
-                   
-                   
-                    change_vocab_color(true);
+                    switcher = true;
+                    
                     original = dialogue_text.text;
                     words = original.Trim().Split(' ');
                     counter = 0;
                     set_dialogue_box(words, counter);
                     Debug.Log(original);
                 }
+                change_panel_sprite(switcher);
+                   
+                   
+                change_vocab_color(switcher);
+                freeze_prompt_show_or_hide(switcher);
            
                 StartCoroutine(Freeze_Interv());
                 
@@ -329,6 +335,18 @@ public class tutorial_panel_mechanic : MonoBehaviour
         
         
 
+    }
+    public void freeze_prompt_show_or_hide(bool is_on) {
+        bool g_text = false;
+        bool freeze_text = false;
+        if (is_on) {
+            freeze_text =  true;
+        }
+        else {
+            g_text = true;
+        }
+        press_g_panel.SetActive(g_text);
+        freeze_prompt_panel.SetActive(freeze_text);
     }
     public int get_correct_counter() {
         return correct_counter;

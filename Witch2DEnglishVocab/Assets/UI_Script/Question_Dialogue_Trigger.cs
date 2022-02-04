@@ -11,9 +11,12 @@ public class Question_Dialogue_Trigger : MonoBehaviour
     [SerializeField] private Question_Panel_Mechanic qpanel_mech;
     [SerializeField] private question_next_level qnext_level;
     [SerializeField] private tutorial_image_show tut_img_show;
+    [TextArea(3, 10)]
+    [SerializeField] private List<string> tutorial_cloze_diag ;
+    [SerializeField] private List<string> tutorial_cloze_speaker;
     private List<string> choices, clues, clue_typing;
     private string orig_question = "", orig_speaker = "";
-    private bool canproc = false;
+    private bool canproc = true;
     private bool can_g = true, can_tab = true, can_x = true;
     private bool is_showing_img = false;
     private bool is_on_choice = false;
@@ -21,15 +24,17 @@ public class Question_Dialogue_Trigger : MonoBehaviour
     private int button_select = 0;
     private bool after_result = false;
     private bool has_finished = false;
+    private bool is_on_tutorial = true;
     private string play_name = "Elaina";
-    int counter = 0;
+    private int counter = 0, tut_counter = 0;
 
     void Start()
     {
         choices = new List<string>();
         clues = new List<string>();
         clue_typing = new List<string>();
-        initialize_script();
+        tut_img_show.set_is_not_on_dialogue(false);
+        tutorial_trigger_dialogue();
     }
     void clear_lists()
     {
@@ -39,6 +44,7 @@ public class Question_Dialogue_Trigger : MonoBehaviour
     }
     void initialize_script()
     {
+        canproc = false;
         clear_lists();
         qpanel_mech.set_can_freeze(true);
         tut_img_show.set_is_not_on_dialogue(false);
@@ -99,7 +105,10 @@ public class Question_Dialogue_Trigger : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.G) && canproc && can_g)
         {
-            if (has_finished)
+            if (is_on_tutorial) {
+                tutorial_trigger_dialogue();
+            }
+            else if (has_finished)
             {
                 qnext_level.next_level_notify();
             }
@@ -194,6 +203,18 @@ public class Question_Dialogue_Trigger : MonoBehaviour
         orig_question = question;
         orig_speaker = speaker;
         new_dialogue(question, speaker);
+    }
+    public void tutorial_trigger_dialogue() {
+        if (tut_counter == tutorial_cloze_diag.Count) {
+            is_on_tutorial = false;
+            initialize_script();
+        }
+        else {
+            string dialogue = tutorial_cloze_diag[tut_counter];
+            string speaker = tutorial_cloze_speaker[tut_counter];
+            new_dialogue(dialogue, speaker);
+            tut_counter++;
+        }
     }
     void new_dialogue(string question, string speaker)
     {

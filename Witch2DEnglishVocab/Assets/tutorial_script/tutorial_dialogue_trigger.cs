@@ -118,7 +118,7 @@ public class tutorial_dialogue_trigger : MonoBehaviour
                 
             }
         }
-        if (Input.GetKeyDown(KeyCode.L) && can_l) {
+        if (Input.GetKeyDown(KeyCode.F) && can_l) {
             bool is_on = tut_panel_mech.get_ison();
             if (is_on) {
                 check_answer();
@@ -162,7 +162,7 @@ public class tutorial_dialogue_trigger : MonoBehaviour
     }
     void check_answer() {
         tut_panel_mech.change_freeze_panel_color("#FFFFFF");
-       
+        tut_panel_mech.freeze_prompt_show_or_hide(false);
         tut_panel_mech.change_vocab_color(false);
         tut_panel_mech.set_highlighter_panel_active(false);
         tut_panel_mech.set_freeze_panel_obj_active(false);

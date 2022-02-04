@@ -140,9 +140,9 @@ public class Dialogue_Trigger : MonoBehaviour
     public string get_play_name() {
         return play_name;
     }
-    public void choice_trigger(List<string> clues) {
+    public void choice_trigger(List<string> clues, List<string> clue_type) {
         
-        dialogue_Manager.indicate_context(clues, play_name);
+        dialogue_Manager.indicate_context(clues, clue_type, play_name);
         after_result = false;
         is_bef_choice = true;
     }
@@ -153,6 +153,9 @@ public class Dialogue_Trigger : MonoBehaviour
     }
     public void set_is_on_choice(bool choice) {
         is_on_choice = choice;
+    }
+    public void set_can_proc(bool proc) {
+        canproc = proc;
     }
     public void Trigger_Dialogue()
     {
@@ -168,7 +171,7 @@ public class Dialogue_Trigger : MonoBehaviour
                 //indicating context clues
                 is_on_choice = true;
                 is_bef_choice = false;
-                dialogue_Manager.set_active_dialogue(false, true);
+                dialogue_Manager.set_active_dialogue(true, true);
             }
             else
             {
@@ -297,15 +300,18 @@ public class Dialogue_Trigger : MonoBehaviour
         is_active = true;
         if (!can_return) {
             List<string> clue_list = new List<string>();
+            List<string> clue_type = new List<string>();
             canproc = true;
             int clue_num = dialogue.get_clue_num();
            
             for (int i = 0; i < clue_num; i++) {
                 string clue_word = dialogue.get_clues(i);
+                string type_clue = dialogue.get_clue_type(i);
                 clue_list.Add(clue_word);
+                clue_type.Add(type_clue);
             }
             cantrigger = true;
-            choice_trigger(clue_list);
+            choice_trigger(clue_list, clue_type);
         }
         else {
             is_active = false;

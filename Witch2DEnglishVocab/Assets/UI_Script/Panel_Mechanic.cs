@@ -4,9 +4,10 @@ using UnityEngine;
 using UnityEngine.UI;
 public class Panel_Mechanic : MonoBehaviour
 {
-    [SerializeField] private GameObject result_panel, freeze_panel, clue_panel, highlighter_panel, dialogue_panel ;
-    [SerializeField] private Image panel, freeze_image, highlighter_image, vocabulary_image;
+    [SerializeField] private GameObject result_panel, freeze_panel, clue_panel, highlighter_panel, dialogue_panel , press_g_panel, freeze_prompt_panel ;
+    [SerializeField] private Image panel, freeze_image, highlighter_image, vocabulary_image, letter_image ;
     [SerializeField] private Sprite dialogue_sprite, system_sprite, freeze_sprite, synonym_sprite, antonym_sprite, definition_sprite, example_sprite;
+    [SerializeField] private Sprite S_sprite, A_sprite, D_sprite, E_sprite ;
 
     [SerializeField] private Text text_dialogue, result_text, clue_text ;
     [SerializeField] private definition_check dcheck;
@@ -42,7 +43,7 @@ public class Panel_Mechanic : MonoBehaviour
 
         }
 
-        if (Input.GetKeyDown(KeyCode.P) && ison && can_move)
+        if (Input.GetKeyDown(KeyCode.D) && ison && can_move)
         {
 
             words = original.Trim().Split(' ');
@@ -67,7 +68,7 @@ public class Panel_Mechanic : MonoBehaviour
 
 
         }
-        else if (Input.GetKeyDown(KeyCode.O) && ison && can_move)
+        else if (Input.GetKeyDown(KeyCode.A) && ison && can_move)
         {
 
             words = original.Trim().Split(' ');
@@ -91,7 +92,7 @@ public class Panel_Mechanic : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Tab) && can_tab) {
             change_context_highlighter();
         }
-        if (Input.GetKeyDown(KeyCode.L) && ison && can_l)
+        if (Input.GetKeyDown(KeyCode.F) && ison && can_l)
         {
             check_listed();
         }
@@ -165,6 +166,7 @@ public class Panel_Mechanic : MonoBehaviour
         if (cantrigger) {
             if (canfreeze)
             {
+                bool switcher = false;
                 if (ison)
                 {
                    
@@ -175,6 +177,7 @@ public class Panel_Mechanic : MonoBehaviour
                 }
                 else
                 {
+                    switcher = true;
                     Debug.Log("IS CURRENTLY OFF");
                    ison = true;
                     dtrigger.set_canproc(false);
@@ -188,6 +191,7 @@ public class Panel_Mechanic : MonoBehaviour
                 }
                 change_panel_color();
                 change_vocab_color();
+                freeze_prompt_show_or_hide(switcher);
                 cantrigger = false;
                 StartCoroutine(Freeze_Interv());
             }
@@ -232,17 +236,21 @@ public class Panel_Mechanic : MonoBehaviour
         if (light_counter == 0) {
             
             highlighter_image.sprite = synonym_sprite;
+            letter_image.sprite = S_sprite;
         }
         else if (light_counter == 1) {
           
             highlighter_image.sprite = antonym_sprite;
+            letter_image.sprite = A_sprite;
         }
         else if (light_counter == 2) {
             highlighter_image.sprite = definition_sprite;
+            letter_image.sprite = D_sprite;
         }
         else {
            
             highlighter_image.sprite = example_sprite;
+            letter_image.sprite = E_sprite;
         }
        
         
@@ -385,6 +393,18 @@ public class Panel_Mechanic : MonoBehaviour
         new_word = new_word + "</color>";
         text_dialogue.text = new_word;
     }
+    public void freeze_prompt_show_or_hide(bool is_on) {
+        bool g_text = false;
+        bool freeze_text = false;
+        if (is_on) {
+            freeze_text =  true;
+        }
+        else {
+            g_text = true;
+        }
+        press_g_panel.SetActive(g_text);
+        freeze_prompt_panel.SetActive(freeze_text);
+    }
     IEnumerator Freeze_Interv()
     {
         yield return new WaitForSeconds(1.0f);
@@ -397,10 +417,12 @@ public class Panel_Mechanic : MonoBehaviour
     public void chang_to_choice() {
         int list_num = dcheck.get_count();
         List<string> clue_words = new List<string>();
+        List<string> clue_type = new List<string>();
         for (int i = 0; i < list_num; i++) {
             clue_words.Add(dcheck.get_answer(i));
+            clue_type.Add(dcheck.get_clue(i));
         }
-        dtrigger.choice_trigger(clue_words);
+        dtrigger.choice_trigger(clue_words, clue_type);
     }
     IEnumerator erase_result(bool can_choice)
     {
@@ -416,7 +438,7 @@ public class Panel_Mechanic : MonoBehaviour
             change_panel_color();
            
             change_vocab_color();
-            
+            freeze_prompt_show_or_hide(false);
             set_freeze_panel_active(false);
             set_highlighter_panel_active(false);
             dtrigger.set_freeze(false);

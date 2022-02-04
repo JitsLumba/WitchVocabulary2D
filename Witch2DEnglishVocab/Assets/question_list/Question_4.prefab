@@ -43,13 +43,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e5cf0b98a3e71d48b6a74857b0bee7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  main_script: Feelings of animosity such as loathing , hatred , and bitterness are
-    what makes one dis-_____ the other .
+  main_script: Feelings of animosity such as fury , conflict , and need for fighting
+    are what makes one dis-_____ the other .
   speaker: Sensei
   clues:
-  - loathing
-  - hatred
-  - bitterness
+  - fury
+  - conflict
+  - fighting
   type_clue:
   - example
   - example

@@ -78,16 +78,31 @@ public class Dialogue_Manager : MonoBehaviour
         choice2.text = choices[1];
         choice3.text = choices[2];
     }
-    public void indicate_context(List<string> clues, string speaker) {
+    public void indicate_context(List<string> clues, List<string> clue_type, string speaker) {
        
         string dialog_text = "The context clues for this dialogue are";
         int stopper = clues.Count - 1;
         for (int i = 0; i < clues.Count; i++) {
-            if (i == stopper) {
-                dialog_text = dialog_text + " and " +  clues[i];
+            string color = "";
+            string type_clue = clue_type[i];
+            if (type_clue.Equals("synonym")) {
+                color = "<color=#09FF00>";
+            }
+            else if (type_clue.Equals("antonym")) {
+                color = "<color=#FB7E4F>";
+            }
+            else if (type_clue.Equals("definition")) {
+                color = "<color=#FFA0D2>";
             }
             else {
-                dialog_text = dialog_text + " " + clues[i] + ","; 
+                color = "<color=#CE64FF>";
+            }
+            string clue_colored = color + clues[i] + "</color>";
+            if (i == stopper) {
+                dialog_text = dialog_text + " and " +  clue_colored;
+            }
+            else {
+                dialog_text = dialog_text + " " + clue_colored + ","; 
             }
         }
         dialog_text = dialog_text + ". Choose one of the definitions that is correct.";

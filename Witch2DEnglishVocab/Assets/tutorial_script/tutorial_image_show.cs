@@ -32,7 +32,7 @@ public class tutorial_image_show : MonoBehaviour
             }
              
         }*/
-        if (Input.GetKeyDown(KeyCode.P) && is_showing_image) {
+        if (Input.GetKeyDown(KeyCode.D) && is_showing_image) {
             int max = tutorial_images.Count - 1;
             if (max > counter) {
                 remove_last_image();
@@ -40,7 +40,7 @@ public class tutorial_image_show : MonoBehaviour
                 instantiate_new_image(counter);
             }
         }
-        else if (Input.GetKeyDown(KeyCode.O) && is_showing_image) {
+        else if (Input.GetKeyDown(KeyCode.A) && is_showing_image) {
             int max = tutorial_images.Count - 1;
             if (counter > 0) {
                 remove_last_image();
@@ -82,9 +82,10 @@ public class tutorial_image_show : MonoBehaviour
     }
     void change_all_direction_texts() {
         for (int i = 0 ; i < tutorial_images.Count; i++) {
-            change_dir_text(i, "<-Previous(O)    ->Next(P)");
+            change_dir_text(i, "<-Previous(A)    ->Next(D)");
         }
     }
+    
     public void exit_images() {
         is_showing_image = false;
         if (is_not_on_dialogue) {

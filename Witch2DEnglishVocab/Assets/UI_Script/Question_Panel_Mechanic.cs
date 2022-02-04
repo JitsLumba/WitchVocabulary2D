@@ -7,8 +7,10 @@ public class Question_Panel_Mechanic : MonoBehaviour
     
     [SerializeField] private Text dialogue_text, result_text, clue_text ;
     [SerializeField] private GameObject dialogue_box, choice_panel, result_panel, clue_panel, freeze_panel_obj, highlighter_panel;
-    [SerializeField] private Image diag_panel,  highlighter_image;
+    [SerializeField] private GameObject press_g_panel , freeze_prompt_panel ;
+    [SerializeField] private Image diag_panel,  highlighter_image, letter_image ;
     [SerializeField] private Sprite dialogue_sprite, system_sprite, freeze_sprite, synonym_sprite, antonym_sprite, definition_sprite, example_sprite;
+    [SerializeField] private Sprite S_sprite, A_sprite, D_sprite, E_sprite;
     [SerializeField] private Question_Dialogue_Trigger qtrigger ;
     [SerializeField] private bool has_antonym = false, has_definition = false, has_example = false;
     private List<string> clue_listed;
@@ -40,7 +42,7 @@ public class Question_Panel_Mechanic : MonoBehaviour
             
         }
         //HIGHLIGHTING WORDS
-        if (Input.GetKeyDown(KeyCode.P) && is_freeze && can_p) {
+        if (Input.GetKeyDown(KeyCode.D) && is_freeze && can_p) {
             words = original.Trim().Split(' ');
             int num = words.Length - 1;
 
@@ -59,7 +61,7 @@ public class Question_Panel_Mechanic : MonoBehaviour
             }
             this.set_dialogue_box(words, counter);
         }
-        else if (Input.GetKeyDown(KeyCode.O) && is_freeze && can_o) {
+        else if (Input.GetKeyDown(KeyCode.A) && is_freeze && can_o) {
             words = original.Trim().Split(' ');
             int num = words.Length - 1;
 
@@ -79,7 +81,7 @@ public class Question_Panel_Mechanic : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Tab)) {
             change_context_highlighter();
         }
-        if (Input.GetKeyDown(KeyCode.L) && is_freeze && can_l)
+        if (Input.GetKeyDown(KeyCode.F) && is_freeze && can_l)
         {
             check_listed();
         }
@@ -112,14 +114,17 @@ public class Question_Panel_Mechanic : MonoBehaviour
                 
 
                 words = original.Trim().Split(' ');
+                bool switcher = false;
                 if (is_freeze) {
                     dialogue_text.text = original;
                 }
                 else {
+                    switcher = true;
                     original = dialogue_text.text;
                     words = original.Trim().Split(' ');
                     this.set_dialogue_box(words, counter);
                 }
+                freeze_prompt_show_or_hide(switcher);
                 freeze_panel();
                 
                 
@@ -210,15 +215,19 @@ public class Question_Panel_Mechanic : MonoBehaviour
     void change_highlighter_panel_color() {
         if (light_counter == 0) {
             highlighter_image.sprite = synonym_sprite;
+            letter_image.sprite = S_sprite;
         }
         else if (light_counter == 1) {
             highlighter_image.sprite = antonym_sprite;
+            letter_image.sprite = A_sprite;
         }
         else if (light_counter == 2) {
             highlighter_image.sprite = definition_sprite;
+            letter_image.sprite = D_sprite;
         }
         else if (light_counter == 3) {
             highlighter_image.sprite = example_sprite;
+            letter_image.sprite = E_sprite;
         }
     }
     void change_panel_color()
@@ -325,6 +334,18 @@ public class Question_Panel_Mechanic : MonoBehaviour
         
 
     }
+    public void freeze_prompt_show_or_hide(bool is_on) {
+        bool g_text = false;
+        bool freeze_text = false;
+        if (is_on) {
+            freeze_text =  true;
+        }
+        else {
+            g_text = true;
+        }
+        press_g_panel.SetActive(g_text);
+        freeze_prompt_panel.SetActive(freeze_text);
+    }
     public void set_clue_number(int num) {
         clue_text.text = "Clues: " + num;
     }
@@ -367,7 +388,7 @@ public class Question_Panel_Mechanic : MonoBehaviour
             
             
             qtrigger.set_can_proc(true);
-            
+            freeze_prompt_show_or_hide(false);
             set_freeze_panel_active(false);
             set_highlighter_panel_active(false);
             set_highlighter_panel_active(false);

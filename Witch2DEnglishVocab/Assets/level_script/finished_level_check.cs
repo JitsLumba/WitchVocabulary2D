@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class finished_level_check : MonoBehaviour
 {
     // Start is called before the first frame update
-    [SerializeField] private GameObject player, door, result_panel;
+    [SerializeField] private GameObject player, door, result_panel, f_button;
     [SerializeField] private Text result_text;
     [SerializeField] private Witch_Scene_Manager wscenemanager ;
 
@@ -23,6 +23,12 @@ public class finished_level_check : MonoBehaviour
     {
         float playerdist = player.transform.position.x, door_dist = door.transform.position.x;
         float dist = playerdist - door_dist;
+        if (dist >= -0.5 && dist <= 0.5) {
+                f_button.SetActive(true);
+            }
+        else {
+            f_button.SetActive(false);
+        }
         if (Input.GetKeyDown(KeyCode.F) && can_press && is_not_complete) {
             
             if (dist >= -0.5 && dist <= 0.5) {
