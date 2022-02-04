@@ -3944,7 +3944,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 746432265}
         m_TargetAssemblyTypeName: tutorial_panel_mechanic, Assembly-CSharp
         m_MethodName: freeze_or_defreeze
         m_Mode: 1
@@ -5259,7 +5259,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1481302474}
         m_TargetAssemblyTypeName: Panel_Mechanic, Assembly-CSharp
         m_MethodName: change_context_highlighter
         m_Mode: 1
@@ -9456,7 +9456,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1481302474}
         m_TargetAssemblyTypeName: Panel_Mechanic, Assembly-CSharp
         m_MethodName: freeze_or_not
         m_Mode: 1
@@ -12154,7 +12154,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 746432265}
         m_TargetAssemblyTypeName: tutorial_panel_mechanic, Assembly-CSharp
         m_MethodName: change_context_highlighter
         m_Mode: 1
