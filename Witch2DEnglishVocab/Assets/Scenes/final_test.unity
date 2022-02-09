@@ -9723,8 +9723,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db3d625ed2eb2840b1e969788417e15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  next_level: level2
-  can_go: 0
+  next_level: title_screen
+  can_go: 1
 --- !u!4 &1821344968
 Transform:
   m_ObjectHideFlags: 0
