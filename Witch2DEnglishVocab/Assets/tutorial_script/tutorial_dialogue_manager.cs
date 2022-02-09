@@ -12,7 +12,7 @@ public class tutorial_dialogue_manager : MonoBehaviour
 
     int counter = 0;
     private string resultspeaker = "";
-    private List<string> dialogue_list, names_list, result_dialogues , after_dialogues , after_names ;
+    private List<string> dialogue_list, names_list, result_dialogues , after_dialogues , after_names, confirm_diag, confirm_name ;
     void Start()
     {
         dialogue_list = new List<string>();
@@ -20,6 +20,8 @@ public class tutorial_dialogue_manager : MonoBehaviour
         result_dialogues = new List<string>();
         after_dialogues = new List<string>();
         after_names = new List<string>();
+        confirm_diag = new List<string>();
+        confirm_name = new List<string>();
     }
 
     // Update is called once per frame
@@ -39,6 +41,10 @@ public class tutorial_dialogue_manager : MonoBehaviour
         dialogue_list.Clear();
         names_list.Clear();
     }
+    void clear_confirm_lists() {
+        confirm_diag.Clear();
+        confirm_name.Clear();
+    }
     void add_result_dialogues(List<string> res_diag) {
         for (int i = 0; i < res_diag.Count; i++) {
             result_dialogues.Add(res_diag[i]);
@@ -48,6 +54,12 @@ public class tutorial_dialogue_manager : MonoBehaviour
         for (int i = 0; i < aft_diag.Count; i++) {
             after_names.Add(aft_name[i]);
             after_dialogues.Add(aft_diag[i]);
+        }
+    }
+    void add_confirm_dialogues(List<string> conf_diag, List<string> conf_names) {
+        for (int i = 0; i < conf_diag.Count; i++) {
+            confirm_name.Add(conf_names[i]);
+            confirm_diag.Add(conf_diag[i]);
         }
     }
     
@@ -92,6 +104,10 @@ public class tutorial_dialogue_manager : MonoBehaviour
         string name = after_names[count];
         string dialogue = after_dialogues[count];
         set_dialogue_boxes(dialogue, name);
+    }
+    public void confirmation_dialogue(List<string> conf_diag, List<string> conf_names) {
+        clear_confirm_lists();
+        add_confirm_dialogues(conf_diag, conf_names);
     }
     void set_dialogue_boxes(string dialogue, string name) {
         name_text.text =name;

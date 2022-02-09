@@ -170,7 +170,7 @@ public class tutorial_panel_mechanic : MonoBehaviour
         
         
     }
-    void change_vocab_panel_active(bool active) {
+    public void change_vocab_panel_active(bool active) {
         vocabulary_panel.SetActive(active);
     }
     public void change_vocab_color(bool oncheck) {

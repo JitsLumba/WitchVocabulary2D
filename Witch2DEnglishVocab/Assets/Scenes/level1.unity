@@ -8958,7 +8958,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &675524872
 RectTransform:
   m_ObjectHideFlags: 0
@@ -16629,7 +16629,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d5665a54db99de4d853c18098d2ba1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tut_diag_trig: {fileID: 1449817659}
+  tu_adapt: {fileID: 0}
   tut_def_check: {fileID: 350037593}
   dialogues:
   - Welcome my student!
@@ -16680,6 +16680,8 @@ MonoBehaviour:
   - Sensei
   - Sensei
   - Sensei
+  confirm_dialogue: []
+  confirm_names: []
   answer: funny
   type_clue: synonym
   type_number: 0
