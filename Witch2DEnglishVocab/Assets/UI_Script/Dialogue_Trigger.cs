@@ -126,9 +126,9 @@ public class Dialogue_Trigger : MonoBehaviour
                 {
                     canproc = true;
                 }
-                cantrigger = false;
+                /*cantrigger = false;
                 can_browse = false;
-                StartCoroutine(Freeze_Interv());
+                StartCoroutine(Freeze_Interv());*/
             }
         }
         

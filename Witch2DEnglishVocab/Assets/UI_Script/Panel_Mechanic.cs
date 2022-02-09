@@ -192,8 +192,8 @@ public class Panel_Mechanic : MonoBehaviour
                 change_panel_color();
                 change_vocab_color();
                 freeze_prompt_show_or_hide(switcher);
-                cantrigger = false;
-                StartCoroutine(Freeze_Interv());
+                /*cantrigger = false;
+                StartCoroutine(Freeze_Interv());*/
             }
         }
         }

@@ -238,7 +238,7 @@ public class tutorial_panel_mechanic : MonoBehaviour
             if (cantrigger) {
             
             if (can_freeze) {
-                cantrigger = false;
+               
                 bool switcher = false;
                 if (ison) {
                     
@@ -259,7 +259,7 @@ public class tutorial_panel_mechanic : MonoBehaviour
                 change_vocab_color(switcher);
                 freeze_prompt_show_or_hide(switcher);
            
-                StartCoroutine(Freeze_Interv());
+            
                 
             }
             
