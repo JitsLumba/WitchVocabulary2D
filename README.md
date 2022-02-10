@@ -28,6 +28,7 @@ Steps to Run
 * Example - Purple
  
 
+# Credits
 ```
 Game developed for the purpose to reach the thesis requirement during undergraduate. 
 ```
