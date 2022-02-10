@@ -12549,6 +12549,7 @@ MonoBehaviour:
   tut_diag_manager: {fileID: 940912591}
   tut_panel_mech: {fileID: 1429215952}
   tut_img_show: {fileID: 1068987967}
+  tut_dist_trigger: {fileID: 5482241809715015922}
 --- !u!1 &1461093971
 GameObject:
   m_ObjectHideFlags: 0

@@ -10,6 +10,7 @@ public class tutorial_distance_trigger : MonoBehaviour
     [SerializeField] private GameObject player, tutor_talker ;
     [SerializeField] private tutorial_script tut_script;
     [SerializeField] private bool has_tutorial = false;
+    private bool can_interact = true;
     
     void Start()
     {
@@ -23,12 +24,16 @@ public class tutorial_distance_trigger : MonoBehaviour
     {
         float player_x_dist = player.transform.position.x, tutor_x_dist = tutor_talker.transform.position.x;
         float diff = player_x_dist - tutor_x_dist;
-        if (diff >= -1.0f && diff <= 1.0f && Input.GetKeyDown(KeyCode.F)) {
+        if (diff >= -1.0f && diff <= 1.0f && Input.GetKeyDown(KeyCode.F) && can_interact) {
             
             start_sequence();
         }
     }
+    public void set_can_interact(bool interact) {
+        can_interact = interact;
+    }
     void start_sequence() {
+        set_can_interact(false);
         disable_movement();
         tut_script.send_scripts();
     }

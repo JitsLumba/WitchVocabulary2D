@@ -8,6 +8,7 @@ public class tutorial_dialogue_trigger : MonoBehaviour
     [SerializeField] private tutorial_dialogue_manager tut_diag_manager ;
     [SerializeField] private tutorial_panel_mechanic tut_panel_mech ;
     [SerializeField] private tutorial_image_show tut_img_show ;
+    [SerializeField] private tutorial_distance_trigger tut_dist_trigger ;
     private List<string> result_dialogue;
     private List<int> special_numbers_list;
     private int counter = 1;
@@ -63,6 +64,7 @@ public class tutorial_dialogue_trigger : MonoBehaviour
                            //tut_img_show.set_can_browse(true);
                            tut_img_show.set_image_counter(0);
                            tut_img_show.set_counter(0);
+                           tut_dist_trigger.set_can_interact(true);
                            enable_movement();
                        }
                        else {

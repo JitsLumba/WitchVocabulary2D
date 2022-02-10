@@ -12070,6 +12070,7 @@ MonoBehaviour:
   tut_diag_manager: {fileID: 1879974491}
   tut_panel_mech: {fileID: 746432265}
   tut_img_show: {fileID: 1039764212}
+  tut_dist_trigger: {fileID: 289680617787608050}
 --- !u!1 &1899072459
 GameObject:
   m_ObjectHideFlags: 0
@@ -17050,8 +17051,8 @@ MonoBehaviour:
   tut_diag_trig: {fileID: 1881288317}
   tut_def_check: {fileID: 1468274135}
   dialogues:
-  - Well done my student. You are learning the unfamiliar words well that Mina has
-    gotten a liking to you!
+  - Well done my student. You are learning unfamiliar words well that Mina has gotten
+    a liking to you!
   - Heh! Never mind what I have said, it's time for you to learn another unfamiliar
     word!
   - And for that, I will introduce you to Yuichi.
