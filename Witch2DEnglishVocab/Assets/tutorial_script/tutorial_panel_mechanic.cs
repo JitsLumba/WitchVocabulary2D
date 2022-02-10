@@ -6,9 +6,9 @@ using UnityEngine.UI;
 public class tutorial_panel_mechanic : MonoBehaviour
 {
     // Start is called before the first frame update
-    [SerializeField] private GameObject freeze_panel_obj, clue_panel, highlighter_panel, dialogue_panel, vocabulary_panel , press_g_panel , freeze_prompt_panel ;
+    [SerializeField] private GameObject freeze_panel_obj, clue_panel, highlighter_panel, dialogue_panel, vocabulary_panel , press_g_panel , freeze_prompt_panel, press_z_panel ;
     [SerializeField] private Image dialogue_image, freeze_panel_image, highlighter_image, letter_image, vocabulary_image ;
-    [SerializeField] private Text dialogue_text, clue_text ;
+    [SerializeField] private Text dialogue_text, clue_text, vocabulary_text ;
     [SerializeField] private tutorial_definition_check tut_def_check ;
     [SerializeField] private Sprite  normal_dialogue_sprite, freeze_dialogue_spirte, system_sprite, synonym_image, antonym_image, definition_image, example_image;
     [SerializeField] private Sprite S_sprite, A_sprite, D_sprite, E_sprite;
@@ -22,7 +22,7 @@ public class tutorial_panel_mechanic : MonoBehaviour
     private int counter = 0;
     private int clue_num = 0;
     private int correct_counter = 0;
-    private bool can_o = true, can_p = true, can_l = true, can_tab = false, can_f = true;
+    private bool can_a = true, can_d = true, can_f = true, can_tab = false, can_z = true;
     private bool ison = false;
     private int light_counter = 0;
 
@@ -38,11 +38,11 @@ public class tutorial_panel_mechanic : MonoBehaviour
     void Update()
     {
         string[] words;
-        if (Input.GetKeyDown(KeyCode.Z)) {
+        /*if (Input.GetKeyDown(KeyCode.Z)) {
             freeze_or_defreeze();
-        }
+        }*/
         
-        if (Input.GetKeyDown(KeyCode.D) && ison && can_p) {
+        if ((Input.GetKeyDown(KeyCode.D)  || Input.GetKeyDown(KeyCode.RightArrow)) && ison && can_d) {
             words = original.Trim().Split(' ');
             int num = words.Length - 1;
 
@@ -63,7 +63,7 @@ public class tutorial_panel_mechanic : MonoBehaviour
             int beforecounter = counter - 1;
 
         }
-        else if (Input.GetKeyDown(KeyCode.A) && ison && can_o) {
+        else if ((Input.GetKeyDown(KeyCode.A) || (Input.GetKeyDown(KeyCode.LeftArrow))) && ison && can_a) {
             words = original.Trim().Split(' ');
             int num = words.Length;
             if (counter > 0)
@@ -89,15 +89,31 @@ public class tutorial_panel_mechanic : MonoBehaviour
         
         
     }
+    public void set_counter(int num) {
+        this.counter = num;
+    }
     public void set_can_tab(bool active) {
         can_tab = active;
     }
     public void key_actives(bool active) {
         set_can_tab(active);
-        can_l = active;
-        can_o = active;
-        can_p = active;
-        can_f = active;
+        set_can_f(active);
+        set_can_a(active);
+        set_can_d(active);
+        set_can_z(active);
+    }
+   
+    public void set_can_f(bool can) {
+        can_f = can;
+    }
+    public void set_can_z(bool can) {
+        can_z = can;
+    }
+    public void set_can_d(bool can) {
+        can_d = can;
+    }
+    public void set_can_a(bool can) {
+        can_a = can;
     }
     public void tutorial_dialogue_show() {
         if (can_browse) {
@@ -129,10 +145,10 @@ public class tutorial_panel_mechanic : MonoBehaviour
                 }
         }
     }
-    void change_highlighter_panel_active(bool active) {
+    public void change_highlighter_panel_active(bool active) {
         highlighter_panel.SetActive(active);
     }
-    void change_freeze_panel_active(bool active) {
+    public void change_freeze_panel_active(bool active) {
         freeze_panel_obj.SetActive(active);
     }
     void change_dialogue_active(bool active) {
@@ -232,7 +248,7 @@ public class tutorial_panel_mechanic : MonoBehaviour
     }
     public void freeze_or_defreeze() {
         string[] words;
-        if (can_f) {
+        if (can_z) {
             bool is_not_img = !is_img_on;
         if (is_not_img) {
             if (cantrigger) {
@@ -346,7 +362,13 @@ public class tutorial_panel_mechanic : MonoBehaviour
             g_text = true;
         }
         press_g_panel.SetActive(g_text);
+        freeze_prompt_panel_switch(freeze_text);
+    }
+    public void freeze_prompt_panel_switch(bool freeze_text) {
         freeze_prompt_panel.SetActive(freeze_text);
+    }
+    public void press_z_panel_switch(bool active) {
+        press_z_panel.SetActive(active);
     }
     public int get_correct_counter() {
         return correct_counter;
@@ -369,7 +391,11 @@ public class tutorial_panel_mechanic : MonoBehaviour
         ison = oncheck;
       
     }
+    public void change_vocab_text(string text) {
+        vocabulary_text.text = text;
+    }
     public void set_dialogue_active(bool active) {
+        Debug.Log("TURNING " + active);
         dialogue_panel.SetActive(active);
     }
     public void set_dialogue_box(string[] words, int beforecounter)

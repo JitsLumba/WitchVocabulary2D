@@ -9,6 +9,7 @@ public class tutorial_distance_trigger : MonoBehaviour
     [SerializeField] private PlayerMovement play_move ;
     [SerializeField] private GameObject player, tutor_talker ;
     [SerializeField] private tutorial_script tut_script;
+    [SerializeField] private tutorial_adaptor tut_adapt ;
     [SerializeField] private bool has_tutorial = false;
     private bool can_interact = true;
     
@@ -31,12 +32,21 @@ public class tutorial_distance_trigger : MonoBehaviour
     }
     public void set_can_interact(bool interact) {
         can_interact = interact;
+
+        if (interact) {
+            bool negate_interact = !interact;
+            tut_adapt.switch_empty_tutorials(negate_interact);
+        }
     }
     void start_sequence() {
         set_can_interact(false);
         disable_movement();
         tut_script.send_scripts();
     }
+    public void activate_game_level_tut(bool activate) {
+
+    }
+    
     void disable_movement() {
         CharacterController2D charsub2d;
         PlayerMovement pmovement ;

@@ -19,7 +19,7 @@ public class tutorial_dialogue_trigger : MonoBehaviour
     private int max_count = 0;
     private bool cango = false;
     private bool after_choose = false;
-    private bool can_z = false, can_l = true;
+    private bool can_g = false, can_f = true;
     private bool is_correct = false;
     private bool is_marked = false;
     private bool is_diag_hidden = false;
@@ -39,120 +39,32 @@ public class tutorial_dialogue_trigger : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.G) && can_z) {
+        if (Input.GetKeyDown(KeyCode.G) && can_g) {
 
         }
-        /*
-        if (Input.GetKeyDown(KeyCode.G) && can_z) {
-            bool allowed = true;
-            bool browse_can = tut_img_show.get_can_browse();
-            bool is_showing_img = tut_img_show.return_is_showing_image();
-            is_passed = tut_img_show.get_is_passed();
-            if (browse_can && is_showing_img) {
-                allowed = false;
-            }
-            
-            if (cango && allowed) {
-               if (after_choose) {
-                   if (is_correct) {
-                       //proceed to the next dialogues
+       
+    }
+    public void panel_mechanic_dialogue_pane_active(bool active) {
+        tut_panel_mech.set_dialogue_active(active);
+    }
+    public void after_diag_trigger(int after_num) {
+        tut_diag_manager.next_after_dialogue(after_num);
+    }
+    public void incorrect_return(int counter_num) {
+        tut_panel_mech.set_can_freeze(true);
                        
-                       if (after_counter == after_counter_max) {
-                           //end it here
-                           after_counter = 0;
-                           after_choose = false;
-                           is_correct = false;
-                           tut_diag_manager.set_active_dialogue_box(false);
-                           tut_img_show.set_is_not_on_dialogue(true);
-                           cango = false;
-                           is_active = false;
-                           //tut_img_show.set_can_browse(true);
-                           tut_img_show.set_image_counter(0);
-                           tut_img_show.set_counter(0);
-                           tut_dist_trigger.set_can_interact(true);
-                           enable_movement();
-                       }
-                       else {
-                           
-                           tut_diag_manager.next_after_dialogue(after_counter);
-                           after_counter++;
-                       }
-                   }
-                   else {
-                       //last dialogue
-                       tut_panel_mech.set_can_freeze(true);
-                       
-                       tut_panel_mech.set_highlighter_panel_active(true);
-                        tut_panel_mech.set_freeze_panel_obj_active(true);
+        tut_panel_mech.set_highlighter_panel_active(true);
+        tut_panel_mech.set_freeze_panel_obj_active(true);
                         
-                       tut_diag_manager.next_dialogue(counter - 1);
-                       after_choose = false;
-                   }
-                   
-               }
-               else {
-                   if (is_marked) {
-                       is_diag_hidden = true;
-                       is_marked = false;
-                       tut_panel_mech.set_dialogue_active(false);
-                       tut_panel_mech.set_can_browse(false);
-                       tut_img_show.set_vocabulary_active(false);
-                       tut_img_show.set_can_browse(false);
-                       tut_img_show.show_images_within();
-                   }
-                   else {
-                       if (is_diag_hidden) {
-                           bool has_passed = tut_img_show.get_is_passed();
-                           Debug.Log(has_passed + " US IT");
-                           
-                           is_diag_hidden = false;
-                           
-                           tut_img_show.remove_last_image();
-                           if (has_passed) {
-                               Debug.Log("has_passed");
-                               tut_img_show.set_can_browse(true);
-                               tut_panel_mech.set_can_browse(true);
-                                tut_img_show.set_counter(0);
-                           }
-                           tut_img_show.set_is_showing_image(false);
-                           tut_img_show.set_vocabulary_active(true);
-                           tut_panel_mech.set_dialogue_active(true);
-                       }
-                       next_dialogue();
-                   }
-                   
-               }
-                
-            }
-        }
-        if (Input.GetKeyDown(KeyCode.F) && can_l) {
-            bool is_on = tut_panel_mech.get_ison();
-            if (is_on) {
-                check_answer();
-            }
-        }
-        if (Input.GetKeyDown(KeyCode.X) && is_passed && is_active) {
-            
-           
-                key_change_active();
-                tut_img_show.show_img_sequence();
-                tut_panel_mech.tutorial_dialogue_show();
-            
-         
-            
-            
-        }
-        else if (Input.GetKeyDown(KeyCode.Escape) && is_passed && is_active) {
-            
-            bool is_showing = tut_img_show.return_is_showing_image();
-            if (is_showing) {
-                key_change_active();
-                tut_img_show.exit_images();
-                tut_panel_mech.tutorial_dialogue_show();
-            }
-            
-        }
-        */
+        tut_diag_manager.next_dialogue(counter_num - 1);
+        after_choose = false;
+    }
+    public void freeze_prompt_switch(bool active) {
+        tut_panel_mech.freeze_prompt_panel_switch(active);
+    }
+    public void press_z_panel_switch(bool active) {
+        Debug.Log("WALLOWS " + active);
+        tut_panel_mech.press_z_panel_switch(active);
     }
     void key_change_active() {
         bool activate = true;
@@ -164,11 +76,35 @@ public class tutorial_dialogue_trigger : MonoBehaviour
             is_img_on = true;
             activate = false;
         }
-        can_l = activate;
-        can_z = activate;
+        set_can_f(activate);
+        set_can_g(activate);
         tut_panel_mech.key_actives(activate);
     }
-    void check_answer() {
+    public void answer_trigger() {
+        bool is_on = tut_panel_mech.get_ison();
+            if (is_on) {
+                check_answer();
+            }
+    }
+    public void set_can_f(bool can) {
+        can_f = can;
+    }
+    public void set_can_g(bool can) {
+        can_g = can;
+    }
+    public void panel_mech_freeze_button_switch(bool active) {
+        tut_panel_mech.change_freeze_panel_active(active);
+    }
+    public void panel_mech_highlighter_button_switch(bool active) {
+        tut_panel_mech.change_highlighter_panel_active(active);
+    }
+    public void panel_mech_vocabulary_panel_switch(bool active) {
+        tut_panel_mech.change_vocab_panel_active(active);
+    }
+    public void panel_mech_change_vocab_word(string word) {
+        tut_panel_mech.change_vocab_text(word);
+    }
+    public void check_answer() {
         tut_panel_mech.change_freeze_panel_color("#FFFFFF");
         tut_panel_mech.freeze_prompt_show_or_hide(false);
         tut_panel_mech.change_vocab_color(false);
@@ -187,6 +123,30 @@ public class tutorial_dialogue_trigger : MonoBehaviour
         tut_panel_mech.set_can_freeze(false);
         tut_diag_manager.next_result(cor_counter);
     }
+    public void set_after_choose(bool choose) {
+        after_choose = choose;
+    }
+    public void set_is_correct(bool correct) {
+
+    }
+    public bool get_after_choose() {
+        return after_choose;
+    }
+    public bool get_is_correct() {
+        return is_correct;
+    }
+    public void set_panel_mech_can_z(bool can) {
+        tut_panel_mech.set_can_z(can);
+    }
+    public void freeze_or_defreeze() {
+        tut_panel_mech.freeze_or_defreeze();
+    }
+    public void set_panel_mech_can_a(bool can) {
+        tut_panel_mech.set_can_a(can);
+    }
+    public void set_panel_mech_can_d(bool can) {
+        tut_panel_mech.set_can_d(can);
+    }
     
     public void next_dialogue() {
         
@@ -200,6 +160,7 @@ public class tutorial_dialogue_trigger : MonoBehaviour
 
             //last dialogue
             if (max_count == counter) {
+              
                 tut_panel_mech.set_can_freeze(true);
                 tut_panel_mech.set_freeze_panel_obj_active(true);
                 tut_panel_mech.set_clue_number(1);
@@ -214,26 +175,32 @@ public class tutorial_dialogue_trigger : MonoBehaviour
         }
        
     }
+    public void set_panel_mech_can_freeze(bool active) {
+        tut_panel_mech.set_can_freeze(active);
+    }
     public void store_result_diag(List<string> result_diag , string speaker) {
         tut_diag_manager.initialize_result_dialogues(result_diag, speaker);
     }
     public void store_after_diag(List<string> aft_diag, List<string> aft_name) {
         after_counter = 0;
         after_counter_max = aft_diag.Count;
+
         tut_diag_manager.initialize_after_dialogues(aft_diag, aft_name);
     }
     public void confirmation_dialogue(List<string> conf_diag, List<string> conf_name) {
         confirm_counter = 0;
         after_counter_max = conf_diag.Count;
-        tut_diag_manager.initialize_after_dialogues(conf_diag, conf_name);
+        tut_diag_manager.confirmation_dialogue(conf_diag, conf_name);
     }
-    public void set_can_z(bool can) {
-        can_z = can;
-    }
+   
     public void initialize_dialogue(List<string> dialogue, List<string> names) {
         
         tut_img_show.set_is_not_on_dialogue(false);
         tut_panel_mech.set_can_tab(false);
+        tut_panel_mech.set_can_f(false);
+        tut_panel_mech.set_can_a(false);
+        tut_panel_mech.set_can_d(false);
+        tut_panel_mech.set_counter(0);
         is_active = true;
        is_marked = false;
         cango = true;
@@ -243,11 +210,26 @@ public class tutorial_dialogue_trigger : MonoBehaviour
         tut_diag_manager.start_dialogue(dialogue, names);
 
     }
+    public void change_context_highlighter() {
+        tut_panel_mech.change_context_highlighter();
+    }
+    public void set_normal_counter(int count) {
+        counter = count;
+    }
+    public void change_highlight_counter(int count) {
+        tut_panel_mech.set_counter(count);
+    }
     public void set_vocab_panel_active(bool active) {
         tut_panel_mech.change_vocab_panel_active(active);
     }
-    void trigger_dialogue() {
-
+    public void confirm_trigger_dialogue(int counter) {
+        tut_diag_manager.next_confirm(counter);
+    }
+    public void after_confirm_trigger_dialogue(int counter) {
+        tut_diag_manager.next_after_confirm(counter);
+    }
+    public void initialize_after_confirm_diag(List<string> dialogues, List<string> names) {
+        tut_diag_manager.initialize_after_confirm_diag(dialogues, names);
     }
     void enable_movement() {
         CharacterController2D charsub2d;

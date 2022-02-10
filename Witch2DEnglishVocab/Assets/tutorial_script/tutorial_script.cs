@@ -37,13 +37,17 @@ public class tutorial_script : MonoBehaviour
         
     }
     public void send_scripts() {
+        
         tut_def_check.set_values(answer, type_clue);
         tu_adapt.set_tut_diag_trigger_empty_active(true);
+        tu_adapt.activate_tutorial_empty(true);
         tu_adapt.store_result_diag(result_dialogues, result_name);
         tu_adapt.store_after_diag(after_dialogue, after_names);
         tu_adapt.initialize_dialogue(dialogues, names);
+        
         /*tut_diag_trig.store_result_diag(result_dialogues, result_name);
         tut_diag_trig.store_after_diag(after_dialogue, after_names);
         tut_diag_trig.initialize_dialogue(dialogues, names);*/
     }
+    
 }
