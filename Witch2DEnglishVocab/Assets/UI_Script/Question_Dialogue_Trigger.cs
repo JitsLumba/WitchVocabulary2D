@@ -133,10 +133,7 @@ public class Question_Dialogue_Trigger : MonoBehaviour
             }
 
         }
-        if (Input.GetKeyDown(KeyCode.X))
-        {
-            show_tut_images();
-        }
+        
     }
     public void show_tut_images()
     {

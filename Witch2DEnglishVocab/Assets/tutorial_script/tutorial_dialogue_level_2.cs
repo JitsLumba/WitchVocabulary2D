@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class tutorial_dialogue_level_1 : MonoBehaviour
+public class tutorial_dialogue_level_2 : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField] private tutorial_dialogue_trigger tut_dtrigger ;
@@ -17,18 +17,13 @@ public class tutorial_dialogue_level_1 : MonoBehaviour
     [SerializeField] private GameObject yes_or_no_panel;
     [SerializeField] private GameObject arrow_pic ;
 
-    [TextArea(3, 10)]
-    [SerializeField] private List<string> confirm_dialogues;
-
-    [SerializeField] private List<string> confirm_names;
-    [TextArea(3, 10)]
-    [SerializeField] private List<string> after_confirm_dialogues;
-    [SerializeField] private List<string> after_confirm_names;
+   
     [SerializeField] private List<int> dialogue_counters, after_counters;
     [SerializeField] private int num_go_back;
     [SerializeField] private int conf_mult;
     [SerializeField] private bool has_confirmation = true;
     [SerializeField] private int tutorial_num ;
+    [SerializeField] private string sample_word, vocab_word;
     private List<string> result_dialogue;
     private List<int> special_numbers_list;
     private int counter = 1;
@@ -75,111 +70,49 @@ public class tutorial_dialogue_level_1 : MonoBehaviour
     {
 
         if (Input.GetKeyDown(KeyCode.G) && can_g) {
-            if (arrow_on) {
-                this.set_arrow_active(false);
-            }
-            if (is_on_conf_diag) {
-                if (conf_mult == confirm_counter) {
-                    if (has_confirmed) {
-                        this.set_can_g(false);
-                         enable_movement();
-                    
-                        confirm_counter = 0;
-                        tut_dtrigger.panel_mechanic_dialogue_pane_active(false);
-                        tut_dist_trigger.set_can_interact(true);
-
-                    }
-                    else {
-                      
-                        tut_dtrigger.panel_mech_vocabulary_panel_switch(false);
-                        is_on_conf_diag = false;
-                        next_dialogue();
-                    }
-                    set_is_on_conf_diag(false);
-
-                    confirm_counter = 0;
-                }
-                else {
-
-                    
-                    int conf_num = conf_start + confirm_counter;
-                    tut_dtrigger.confirm_trigger_dialogue(conf_num);
-                    confirm_counter++;
-                }
-            }
-            else if (is_after_conf) {
-                if (after_confirm_counter == after_confirm_max) {
-                    //end it here
-                    
-                    is_after_conf = false;
-                    enable_movement();
-                    
-                    after_confirm_counter = 0;
-                    tut_dtrigger.panel_mechanic_dialogue_pane_active(false);
-                    tut_char_transp.transport();
-                    tut_dist_trigger.set_can_interact(true);
-                }
-                else {
-                    
-                    after_confirm_sequence();
-                    after_confirm_counter++;
-                }
-            }
-            else {
-                bool after_choose = tut_dtrigger.get_after_choose();
+            bool after_choose = tut_dtrigger.get_after_choose();
 
             if (after_choose) {
                 bool is_correct = tut_dtrigger.get_is_correct();
                 if (is_correct) {
-                    
                     if (after_counter == after_counter_max) {
-                        //before the yes or no selection
+                        Debug.Log("CORREC");
                         this.set_can_g(false);
                         after_counter = 0;
                         tut_dtrigger.set_after_choose(false);
-                        if (has_confirmation) {
-                            this.show_yes_or_no_choice_activate(true);
-                            
-                        }
-                        else {
-                            tut_dtrigger.reset_highlighter();
-                            tut_dtrigger.panel_mechanic_dialogue_pane_active(false);
-                             enable_movement();
+                        tut_dtrigger.reset_highlighter();
+                        tut_dtrigger.panel_mechanic_dialogue_pane_active(false);
+                        enable_movement();
                     
-                  
-                 
-                 
-                            tut_dist_trigger.set_can_interact(true);
 
-                        }
+                        
+                 
+                        tut_dist_trigger.set_can_interact(true);
                         
                     }
                     else {
-                     
-                        
                         tut_dtrigger.after_diag_trigger(after_counter);
-                        if (tutorial_num == 2) {
-                            this.after_choose_effects();
-                        }
                         after_counter++;
+                        if (after_counter == after_counter_max) {
+                            this.tut_dtrigger.panel_mech_change_vocab_word(vocab_word);
+                        }
                     }
                 }
                 else {
-                    //last dialogue
-                    tut_dtrigger.set_panel_mech_can_a(true);
-                    tut_dtrigger.set_panel_mech_can_freeze(true);
-                    tut_dtrigger.set_panel_mech_can_d(true);
-                    tut_dtrigger.set_panel_mech_can_tab(true);
-                    this.set_can_tab(true);
-                    this.set_can_z(true);
-                    tut_dtrigger.incorrect_return(counter);
+                    
+                    Debug.Log("INCORREC");
+                        tut_dtrigger.set_panel_mech_can_a(true);
+                        tut_dtrigger.set_panel_mech_can_freeze(true);
+                        tut_dtrigger.set_panel_mech_can_d(true);
+                        tut_dtrigger.set_panel_mech_can_tab(true);
+                        this.set_can_tab(true);
+                        this.set_can_z(true);
+                        this.set_can_g(false);
+                        tut_dtrigger.incorrect_return(counter);
                 }
-
             }
             else {
                 next_dialogue();
-                
-            }
             }
             
         }
@@ -190,18 +123,10 @@ public class tutorial_dialogue_level_1 : MonoBehaviour
             check_answer();
             
             set_can_g(true);
-            
-
-            
         }
-
         if (Input.GetKeyDown(KeyCode.Tab) && can_tab) {
-            //if it's on freeze and doing the demo
-            change_highlighter_trigger();
+            this.change_highlighter_trigger();
         }
-
-        
-
         
     }
     public void after_choose_effects() {
@@ -324,8 +249,20 @@ public class tutorial_dialogue_level_1 : MonoBehaviour
         if (max_count > counter) {
             
             //is_marked = tut_img_show.return_is_on_marked_diag(counter);
-            check_if_on_diag_counter();
             counter++;
+            if (max_count == counter) {
+                check_if_on_diag_counter();
+            this.set_can_f(true);
+            this.set_can_tab(true);
+            this.set_can_z(true);
+            tut_dtrigger.set_panel_mech_can_z(true);
+            tut_dtrigger.set_panel_mech_can_a(true);
+            tut_dtrigger.set_panel_mech_can_d(true);
+            tut_dtrigger.panel_mech_change_vocab_word(sample_word);
+            tut_dtrigger.panel_mech_vocabulary_panel_switch(true);
+            }
+            
+            
             tut_dtrigger.next_dialogue();
             
         }
@@ -509,7 +446,7 @@ public class tutorial_dialogue_level_1 : MonoBehaviour
     }
     public void initialize_dialogue(List<string> dialogue, List<string> names) {
         //tut_img_show.set_is_not_on_dialogue(false);
-        after_confirm_max = after_confirm_dialogues.Count;
+        
     
         counter = 1;
         max_count = dialogue.Count ;
@@ -517,8 +454,8 @@ public class tutorial_dialogue_level_1 : MonoBehaviour
         tut_dtrigger.set_after_choose(false);
         tut_dtrigger.set_is_correct(false);
         this.set_can_z(false);
-        tut_dtrigger.confirmation_dialogue(confirm_dialogues, confirm_names);
-        tut_dtrigger.initialize_after_confirm_diag(after_confirm_dialogues, after_confirm_names);
+      
+       
         //main dialogue codes
         tut_dtrigger.set_can_f(false);
         tut_dtrigger.set_can_g(true);
@@ -538,10 +475,7 @@ public class tutorial_dialogue_level_1 : MonoBehaviour
     public void change_active_of_tutorial_diag_trigger(bool active) {
         tut_dtrigger_empty.SetActive(active);
     }
-    public void confirmation_dialogue(List<string> dialogues, List<string> names) {
-        
-        tut_dtrigger.confirmation_dialogue(dialogues, names);
-    }
+    
 
     void enable_movement() {
         CharacterController2D charsub2d;
@@ -570,5 +504,9 @@ public class tutorial_dialogue_level_1 : MonoBehaviour
         after_confirm_sequence();
         tut_dtrigger.panel_mechanic_dialogue_pane_active(true);
         after_confirm_counter++;
+    }
+    public void confirmation_dialogue(List<string> dialogues, List<string> names) {
+        
+        tut_dtrigger.confirmation_dialogue(dialogues, names);
     }
 }

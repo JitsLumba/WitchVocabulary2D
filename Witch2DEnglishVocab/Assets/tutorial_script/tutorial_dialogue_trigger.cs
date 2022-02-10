@@ -59,6 +59,9 @@ public class tutorial_dialogue_trigger : MonoBehaviour
         tut_diag_manager.next_dialogue(counter_num - 1);
         after_choose = false;
     }
+    public void reset_highlighter() {
+        tut_panel_mech.reset_highlighter();
+    }
     public void freeze_prompt_switch(bool active) {
         tut_panel_mech.freeze_prompt_panel_switch(active);
     }
@@ -212,6 +215,12 @@ public class tutorial_dialogue_trigger : MonoBehaviour
     }
     public void change_context_highlighter() {
         tut_panel_mech.change_context_highlighter();
+    }
+    public bool get_ison_panel_mech() {
+        return tut_panel_mech.get_ison();
+    }
+    public void set_panel_mech_can_tab(bool can) {
+        tut_panel_mech.set_can_tab(can);
     }
     public void set_normal_counter(int count) {
         counter = count;

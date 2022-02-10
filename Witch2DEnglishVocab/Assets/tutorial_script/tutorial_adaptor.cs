@@ -6,9 +6,10 @@ public class tutorial_adaptor : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField] private tutorial_dialogue_level_1 tut_dialogue_level_1 ;
+    [SerializeField] private tutorial_dialogue_level_2 tut_dialogue_level_2 ;
 
     [SerializeField] private GameObject tut_diag_trigger_empty;
-    [SerializeField] private GameObject tut_diag_lvl_1;
+    [SerializeField] private GameObject tut_diag_lvl_1, tut_diag_lvl_2;
     
     [SerializeField] private int level_type ;
     void Start()
@@ -29,7 +30,7 @@ public class tutorial_adaptor : MonoBehaviour
             tut_diag_lvl_1.SetActive(active);
         }
         else {
-
+            tut_diag_lvl_2.SetActive(active);
         }
     }
     public void switch_empty_tutorials(bool activate) {
@@ -41,7 +42,7 @@ public class tutorial_adaptor : MonoBehaviour
             tut_dialogue_level_1.store_result_diag(result_dialogues, result_name);
         }
         else {
-
+            tut_dialogue_level_2.store_result_diag(result_dialogues, result_name);
         }
     }
     public void store_after_diag(List<string> after_dialogue, List<string> after_names) {
@@ -51,7 +52,8 @@ public class tutorial_adaptor : MonoBehaviour
             tut_dialogue_level_1.store_after_diag(after_dialogue, after_names);
         }
         else {
-            
+            tut_dialogue_level_2.change_vocab_panel_active(false);
+            tut_dialogue_level_2.store_after_diag(after_dialogue, after_names);
         }
     }
     public void initialize_dialogue(List<string> dialogues, List<string> names) {
@@ -59,7 +61,7 @@ public class tutorial_adaptor : MonoBehaviour
             tut_dialogue_level_1.initialize_dialogue(dialogues, names);
         }
         else {
-            
+            tut_dialogue_level_2.initialize_dialogue(dialogues, names);
         }
     }
     public void confirmation_dialogue(List<string> dialogues, List<string> names) {
@@ -67,7 +69,10 @@ public class tutorial_adaptor : MonoBehaviour
             tut_dialogue_level_1.confirmation_dialogue(dialogues, names);
         }
         else {
-            
+            tut_dialogue_level_2.confirmation_dialogue(dialogues, names);
         }
+    }
+    public void play_dialogues_on_door() {
+        tut_dialogue_level_1.start_dialogue_on_door();
     }
 }

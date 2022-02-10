@@ -81,9 +81,7 @@ public class tutorial_panel_mechanic : MonoBehaviour
 
             this.set_dialogue_box(words, counter);
         }
-        if (Input.GetKeyDown(KeyCode.Tab)) {
-            change_context_highlighter();
-        }
+        
         
 
         
@@ -158,6 +156,7 @@ public class tutorial_panel_mechanic : MonoBehaviour
         can_browse = browse;
     }
     public void change_context_highlighter() {
+        Debug.Log("is_on " + ison + " can_tab " + can_tab);
         if (can_tab) {
             if (ison) {
             light_counter++;
@@ -185,6 +184,11 @@ public class tutorial_panel_mechanic : MonoBehaviour
         }
         
         
+    }
+    public void reset_highlighter() {
+        light_counter = 0;
+        highlighter_context(light_counter);
+        change_highlighter_panel_color();
     }
     public void change_vocab_panel_active(bool active) {
         vocabulary_panel.SetActive(active);
@@ -248,6 +252,7 @@ public class tutorial_panel_mechanic : MonoBehaviour
     }
     public void freeze_or_defreeze() {
         string[] words;
+        Debug.Log("CAN Z " + can_z + " can freeze" + can_freeze);
         if (can_z) {
             bool is_not_img = !is_img_on;
         if (is_not_img) {
