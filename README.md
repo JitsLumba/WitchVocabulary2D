@@ -10,6 +10,7 @@ Steps to Run
 
 # Controls
 ``A`` - Left
+
 ``D`` - Right
 ``F`` - Interact (doors)
 ``Z`` - Freeze
