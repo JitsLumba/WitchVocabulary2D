@@ -9,18 +9,17 @@ Steps to Run
 2. Open ``Witch2DEnglishVocab.exe``
 
 # Controls
-``A`` - Left
-
-``D`` - Right
-``F`` - Interact (doors)
-``Z`` - Freeze
-``L`` - Select Word
-``O`` - (Move word to the left during freeze)
-``P`` - (Move word to the right during freeze)
-``X`` - Bring up tutorial (only after tutorial has ended)
-``G`` - Next dialogue
-``Space`` - Jump
-``Tab`` - Change highlighter
+* A - Left
+* D - Right
+* F - Interact (doors)
+* Z - Freeze
+* L - Select Word
+* O - (Move word to the left during freeze)
+* P - (Move word to the right during freeze)
+* X - Bring up tutorial (only after tutorial has ended)
+* G - Next dialogue
+* Space - Jump
+* Tab - Change highlighter
 
 # Highlighters
 * Synonym - Green
