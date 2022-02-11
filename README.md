@@ -13,10 +13,9 @@ Steps to Run
 * D - Right
 * F - Interact (doors)
 * Z - Freeze
-* L - Select Word
-* O - (Move word to the left during freeze)
-* P - (Move word to the right during freeze)
-* X - Bring up tutorial (only after tutorial has ended)
+* Enter - Select Word
+* Left Arrow Key - (Move word to the left during freeze)
+* Right Arrow Key - (Move word to the right during freeze)
 * G - Next dialogue
 * Space - Jump
 * Tab - Change highlighter
