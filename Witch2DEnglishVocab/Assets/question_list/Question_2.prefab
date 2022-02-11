@@ -43,8 +43,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e5cf0b98a3e71d48b6a74857b0bee7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  main_script: A fake doctor that exacerbates the pain _____-ns the pain instead
-    of assuaging and relieving it .
+  main_script: A fake doctor that exacerbates the pain _____-s the pain instead of
+    assuaging and relieving it .
+  highlighted_word: A fake doctor that exacerbates the pain _____-s the pain instead
+    of <color=#FB7E4F>assuaging</color> and <color=#FB7E4F>relieving</color> it .
   speaker: Sensei
   clues:
   - assuaging
@@ -53,9 +55,9 @@ MonoBehaviour:
   - antonym
   - antonym
   choices:
-  - worse
-  - irritate
-  - complicate
+  - worsens
+  - irritates
+  - complicates
   results:
   - Correct
   - Incorrect

@@ -6,7 +6,7 @@ public class Question_Script : MonoBehaviour
 {
     // Start is called before the first frame update
     [TextArea(3, 10)]
-    [SerializeField] private string main_script;
+    [SerializeField] private string main_script, highlighted_word;
     [SerializeField] private string speaker;
     [SerializeField] private List<string> clues, type_clue;
     [SerializeField] private List<string> choices, results;
@@ -50,6 +50,9 @@ public class Question_Script : MonoBehaviour
     }
     public string get_result_diag(int num) {
         return results[num];
+    }
+    public string get_highlighted_sentence() {
+        return highlighted_word;
     }
     public void set_panel_counter(int counter) {
         

@@ -26,6 +26,7 @@ public class Question_Dialogue_Trigger : MonoBehaviour
     private bool has_finished = false;
     private bool is_on_tutorial = true;
     private string play_name = "Elaina";
+    private string highlight_question = "";
     private int counter = 0, tut_counter = 0;
 
     void Start()
@@ -125,7 +126,8 @@ public class Question_Dialogue_Trigger : MonoBehaviour
                 }
                 else
                 {
-                    new_dialogue(orig_question, orig_speaker);
+                    Debug.Log("CHOISAAA");
+                    new_dialogue(highlight_question, orig_speaker);
                     is_on_choice = true;
                     question_manager.set_active_dialogue(true, true);
                     canproc = false;
@@ -176,13 +178,13 @@ public class Question_Dialogue_Trigger : MonoBehaviour
 
     }
 
-    public void choice_trigger(List<string> clues)
+    public void choice_trigger(List<string> clues, List<string> clue_type)
     {
         //trigger dialogue
         is_on_question = false;
         canproc = true;
         qpanel_mech.set_clue_panel_active(false);
-        question_manager.indicate_context(clues, play_name);
+        question_manager.indicate_context(clues, clue_type, play_name);
 
 
     }
@@ -197,6 +199,8 @@ public class Question_Dialogue_Trigger : MonoBehaviour
         string question = question_list[counter].get_main_script();
 
         string speaker = question_list[counter].get_speaker();
+        string question_high = question_list[counter].get_highlighted_sentence();
+        highlight_question = question_high;
         orig_question = question;
         orig_speaker = speaker;
         new_dialogue(question, speaker);

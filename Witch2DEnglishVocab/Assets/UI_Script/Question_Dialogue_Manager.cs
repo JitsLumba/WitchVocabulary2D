@@ -7,7 +7,7 @@ public class Question_Dialogue_Manager : MonoBehaviour
     // Start is called before the first frame update
     [SerializeField] private GameObject dialogue_panel, choice_panel, remark_panel;
     
-    [SerializeField] private Text name_field, dialogue_field, remark_text, choice1, choice2, choice3;
+    [SerializeField] private Text name_field, dialogue_field,  remark_text, choice1, choice2, choice3;
     private string orig_question = "";
     void Start()
     {
@@ -19,23 +19,42 @@ public class Question_Dialogue_Manager : MonoBehaviour
     {
         
     }
-    public void indicate_context(List<string> clues, string speaker) {
+    public void indicate_context(List<string> clues, List<string> clue_type, string speaker) {
        
         string dialog_text = "The context clues for this dialogue are";
         int stopper = clues.Count - 1;
         for (int i = 0; i < clues.Count; i++) {
-            if (i == stopper) {
-                dialog_text = dialog_text + " and " +  clues[i];
+            string color = "";
+            string type_clue = clue_type[i];
+            Debug.Log("ASD " + type_clue);
+            if (type_clue.Equals("synonym")) {
+                color = "<color=#09FF00>";
+            }
+            else if (type_clue.Equals("antonym")) {
+                color = "<color=#FB7E4F>";
+            }
+            else if (type_clue.Equals("definition")) {
+                color = "<color=#FFA0D2>";
             }
             else {
-                dialog_text = dialog_text + " " + clues[i] + ","; 
+                color = "<color=#CE64FF>";
+            }
+            string clue_colored = color + clues[i] + "</color>";
+            if (i == stopper) {
+                dialog_text = dialog_text + " and " +  clue_colored;
+            }
+            else {
+                dialog_text = dialog_text + " " + clue_colored + ","; 
             }
         }
         dialog_text = dialog_text + ". Choose one of the definitions that is correct.";
       
+     
+      
         name_field.text = speaker;
         dialogue_field.text = dialog_text;
     }
+    
     public void set_active_dialogue(bool dialogue_active, bool choice_active) {
         dialogue_panel.SetActive(dialogue_active);
         choice_panel.SetActive(choice_active);

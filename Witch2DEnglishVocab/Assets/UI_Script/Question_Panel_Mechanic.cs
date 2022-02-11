@@ -358,10 +358,12 @@ public class Question_Panel_Mechanic : MonoBehaviour
     public void chang_to_choice() {
         int list_num = qtrigger.get_clue_num();
         List<string> clue_words = new List<string>();
+        List<string> clue_type = new List<string>();
         for (int i = 0; i < list_num; i++) {
             clue_words.Add(qtrigger.get_clue(i));
+            clue_type.Add(qtrigger.get_clue_type(i));
         }
-        qtrigger.choice_trigger(clue_words);
+        qtrigger.choice_trigger(clue_words, clue_type);
     }
     void show_result_panel(string result, bool resultcond)
     {

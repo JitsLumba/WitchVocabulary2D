@@ -45,6 +45,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   main_script: A wounded person getting assuaged by a bandage feels _____-d while
     feeling at ease because bandages dampens their pain.
+  highlighted_word: A wounded person getting assuaged by a bandage feels _____-d
+    while feeling at <color=#09FF00>ease</color> because bandages <color=#09FF00>dampens</color>
+    their pain.
   speaker: Sensei
   clues:
   - dampens
@@ -53,9 +56,9 @@ MonoBehaviour:
   - synonym
   - synonym
   choices:
-  - Satisfy
+  - Satisfied
   - Soothe
-  - Relieve
+  - Relieved
   results:
   - Incorrect
   - Kinda Correct
