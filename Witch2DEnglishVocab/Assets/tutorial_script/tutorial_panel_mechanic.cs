@@ -160,7 +160,7 @@ public class tutorial_panel_mechanic : MonoBehaviour
     public void change_context_highlighter() {
       
         if (can_tab) {
-            
+            Debug.Log("CHECK ME OUT " + current_type + " light " + light_counter);
             light_counter++;
         if (light_counter == 1 && has_antonym) {
 
@@ -185,7 +185,7 @@ public class tutorial_panel_mechanic : MonoBehaviour
         if (ison) {
             this.set_dialogue_box(words , counter);
         }
-        
+        Debug.Log("CHECK ME NOW " + current_type + " light " + light_counter);
         
         }
         
@@ -317,6 +317,7 @@ public class tutorial_panel_mechanic : MonoBehaviour
     public void compare_answers()
     {
         bool not_found = true, can_choice = false, is_not_close = true;
+        Debug.Log("WAHAT ABOUT " + current_type);
         string show_res = "";
         
            
@@ -445,6 +446,7 @@ public class tutorial_panel_mechanic : MonoBehaviour
     public string get_current_type() {
         return current_type;
     }
+    
     IEnumerator Freeze_Interv() {
         yield return new WaitForSeconds(1.0f);
         cantrigger = true;

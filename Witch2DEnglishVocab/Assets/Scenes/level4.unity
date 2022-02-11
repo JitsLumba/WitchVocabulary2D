@@ -7920,7 +7920,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '[Z] unfreeze [Enter] Select'
+  m_Text: '[Z] unfreeze [F] Select'
 --- !u!222 &1000520874
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -10481,7 +10481,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '[Z] unfreeze [Enter] Select'
+  m_Text: '[Z] unfreeze [F] Select'
 --- !u!222 &1361553357
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -92,7 +92,7 @@ public class Panel_Mechanic : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Tab) && can_tab) {
             change_context_highlighter();
         }
-        if (Input.GetKeyDown(KeyCode.Return) && ison && can_l)
+        if (Input.GetKeyDown(KeyCode.F) && ison && can_l)
         {
             check_listed();
         }
@@ -206,7 +206,7 @@ public class Panel_Mechanic : MonoBehaviour
     }
     public void change_context_highlighter() {
         
-        
+        if (can_tab) {
             light_counter++;
         if (light_counter == 1 && has_antonym) {
 
@@ -231,6 +231,8 @@ public class Panel_Mechanic : MonoBehaviour
         }
         change_highlighter_panel_color();
         
+        }
+            
         
     }
     void change_highlighter_panel_color() {

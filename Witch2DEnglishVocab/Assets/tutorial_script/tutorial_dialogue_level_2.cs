@@ -119,7 +119,7 @@ public class tutorial_dialogue_level_2 : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Z) && can_z) {
             freeze_tutorial_sequence();
         }
-        if (Input.GetKeyDown(KeyCode.Return) && can_f) {
+        if (Input.GetKeyDown(KeyCode.F) && can_f) {
             check_answer();
             
             set_can_g(true);
@@ -151,6 +151,7 @@ public class tutorial_dialogue_level_2 : MonoBehaviour
 
             }
             else {
+                Debug.Log("ACTUALL TIME");
                 tut_dtrigger.change_context_highlighter();
             }
         }
@@ -351,6 +352,7 @@ public class tutorial_dialogue_level_2 : MonoBehaviour
                 
                 tut_dtrigger.set_panel_mech_can_z(true);
                 tut_dtrigger.set_panel_mech_can_freeze(true);
+                tut_dtrigger.set_panel_mech_can_tab(true);
                 tut_dtrigger.reset_highlighter();
                 tut_dtrigger.set_panel_mech_can_a(true);
                 tut_dtrigger.set_panel_mech_can_d(true);
@@ -359,6 +361,7 @@ public class tutorial_dialogue_level_2 : MonoBehaviour
         
     }
     void set_can_tab(bool can) {
+        
         this.can_tab = can;
     }
     public void demo_change_highlighter() {

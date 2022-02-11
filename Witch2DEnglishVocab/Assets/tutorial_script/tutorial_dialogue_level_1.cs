@@ -75,7 +75,7 @@ public class tutorial_dialogue_level_1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+       
         if (Input.GetKeyDown(KeyCode.G) && can_g) {
             if (is_clue_panel_active) {
                 is_clue_panel_active = false;
@@ -196,7 +196,9 @@ public class tutorial_dialogue_level_1 : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Z) && can_z) {
             freeze_tutorial_sequence();
         }
-        if (Input.GetKeyDown(KeyCode.Return) && can_f) {
+        if (Input.GetKeyDown(KeyCode.F) && can_f) {
+            Debug.Log("MONSERSs ");
+            tut_dtrigger.show_me_now();
             check_answer();
             
             set_can_g(true);
@@ -319,13 +321,15 @@ public class tutorial_dialogue_level_1 : MonoBehaviour
     }
     void check_answer() {
         
-        tut_dtrigger.set_panel_mech_can_tab(false);
+        Debug.Log("WONSERSs ");
+        tut_dtrigger.show_me_now();
         this.set_can_tab(false);
         tut_dtrigger.set_panel_mech_can_d(false);
         tut_dtrigger.set_panel_mech_can_a(false);
         this.set_can_z(false);
         tut_dtrigger.set_panel_mech_can_freeze(false);
         tut_dtrigger.answer_trigger();
+        tut_dtrigger.set_panel_mech_can_tab(false);
       
     }
     
@@ -430,7 +434,7 @@ public class tutorial_dialogue_level_1 : MonoBehaviour
                 set_can_g(false);
                 set_can_z(true);
                 this.set_can_tab(true);
-                
+                tut_dtrigger.set_panel_mech_can_tab(true);
                 tut_dtrigger.set_panel_mech_can_z(true);
                 tut_dtrigger.set_panel_mech_can_freeze(true);
                 
@@ -441,6 +445,7 @@ public class tutorial_dialogue_level_1 : MonoBehaviour
         
     }
     void set_can_tab(bool can) {
+        
         this.can_tab = can;
     }
     public void demo_change_highlighter() {

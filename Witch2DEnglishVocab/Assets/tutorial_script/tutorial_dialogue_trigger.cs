@@ -223,7 +223,13 @@ public class tutorial_dialogue_trigger : MonoBehaviour
     public bool get_ison_panel_mech() {
         return tut_panel_mech.get_ison();
     }
+    public void show_me_now() {
+        string type = tut_panel_mech.get_current_type();
+        Debug.Log("HI THEE " + type);
+    }
     public void set_panel_mech_can_tab(bool can) {
+        string type = tut_panel_mech.get_current_type();
+        Debug.Log("HI STAB " + type);
         tut_panel_mech.set_can_tab(can);
     }
     public void set_normal_counter(int count) {

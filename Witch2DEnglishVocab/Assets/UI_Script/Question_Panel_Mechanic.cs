@@ -81,7 +81,7 @@ public class Question_Panel_Mechanic : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Tab)) {
             change_context_highlighter();
         }
-        if (Input.GetKeyDown(KeyCode.Return) && is_freeze && can_l)
+        if (Input.GetKeyDown(KeyCode.F) && is_freeze && can_l)
         {
             check_listed();
         }

@@ -1664,7 +1664,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '[Z] unfreeze [Enter] Select'
+  m_Text: '[Z] unfreeze [F] Select'
 --- !u!222 &246444530
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -16696,7 +16696,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '[Z] unfreeze [Enter] Select'
+  m_Text: '[Z] unfreeze [F] Select'
 --- !u!222 &1650567111
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -19892,7 +19892,7 @@ MonoBehaviour:
   - This highlighter works best when you select correct synonyms of the linked word.
   - The control you have over this magic is moving the Highlighter left and right
     through the dialogue with the arrow keys.
-  - And pressing Enter to SELECT the highlighted word.
+  - And pressing F to SELECT the highlighted word.
   - "You\u2019ll have some intuition of how many clues there are in the dialogue,
     shown in the upper right corner of the dialogue box."
   - "Let\u2019s give this a try, shall we?"
