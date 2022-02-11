@@ -43,7 +43,7 @@ public class Panel_Mechanic : MonoBehaviour
 
         }
 
-        if (Input.GetKeyDown(KeyCode.D) && ison && can_move)
+        if (Input.GetKeyDown(KeyCode.RightArrow) && ison && can_move)
         {
 
             words = original.Trim().Split(' ');
@@ -68,7 +68,7 @@ public class Panel_Mechanic : MonoBehaviour
 
 
         }
-        else if (Input.GetKeyDown(KeyCode.A) && ison && can_move)
+        else if (Input.GetKeyDown(KeyCode.LeftArrow) && ison && can_move)
         {
 
             words = original.Trim().Split(' ');
@@ -92,7 +92,7 @@ public class Panel_Mechanic : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Tab) && can_tab) {
             change_context_highlighter();
         }
-        if (Input.GetKeyDown(KeyCode.F) && ison && can_l)
+        if (Input.GetKeyDown(KeyCode.Return) && ison && can_l)
         {
             check_listed();
         }
@@ -155,7 +155,7 @@ public class Panel_Mechanic : MonoBehaviour
     }
     public void set_clue_number(int num) {
         clue_num = num;
-        clue_text.text = "Clues: " + num;
+        clue_text.text = "Clues left: " + num;
     }
     public void set_highlighter_panel_active(bool active) {
         highlighter_panel.SetActive(active);
@@ -206,7 +206,7 @@ public class Panel_Mechanic : MonoBehaviour
     }
     public void change_context_highlighter() {
         
-        if (ison) {
+        
             light_counter++;
         if (light_counter == 1 && has_antonym) {
 
@@ -226,9 +226,11 @@ public class Panel_Mechanic : MonoBehaviour
         
         string[] words = original.Trim().Split(' ');
         
-        this.set_dialogue_box(words , counter);
-        change_highlighter_panel_color();
+        if (ison) {
+            this.set_dialogue_box(words , counter);
         }
+        change_highlighter_panel_color();
+        
         
     }
     void change_highlighter_panel_color() {
@@ -369,7 +371,7 @@ public class Panel_Mechanic : MonoBehaviour
     {
         int index = beforecounter;
         highlighted_word = words[beforecounter];
-        string highlight = color_type + "[" +  highlighted_word + "]</color>";
+        string highlight = color_type + "" +  highlighted_word + "</color>";
 
         string new_word = "<color=#00D9FF>";
         int reduce = words.Length - 1;

@@ -690,10 +690,7 @@ MonoBehaviour:
     F
     - Interact(when near a door)
 
-    G - Next dialogue
-
-    X - bring up/close tutorial
-    box'
+    G - Next dialogue'
 --- !u!222 &496892641
 CanvasRenderer:
   m_ObjectHideFlags: 0

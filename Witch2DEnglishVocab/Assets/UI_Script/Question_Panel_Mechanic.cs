@@ -42,7 +42,7 @@ public class Question_Panel_Mechanic : MonoBehaviour
             
         }
         //HIGHLIGHTING WORDS
-        if (Input.GetKeyDown(KeyCode.D) && is_freeze && can_p) {
+        if (Input.GetKeyDown(KeyCode.RightArrow) && is_freeze && can_p) {
             words = original.Trim().Split(' ');
             int num = words.Length - 1;
 
@@ -61,7 +61,7 @@ public class Question_Panel_Mechanic : MonoBehaviour
             }
             this.set_dialogue_box(words, counter);
         }
-        else if (Input.GetKeyDown(KeyCode.A) && is_freeze && can_o) {
+        else if (Input.GetKeyDown(KeyCode.LeftArrow) && is_freeze && can_o) {
             words = original.Trim().Split(' ');
             int num = words.Length - 1;
 
@@ -81,7 +81,7 @@ public class Question_Panel_Mechanic : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Tab)) {
             change_context_highlighter();
         }
-        if (Input.GetKeyDown(KeyCode.F) && is_freeze && can_l)
+        if (Input.GetKeyDown(KeyCode.Return) && is_freeze && can_l)
         {
             check_listed();
         }
@@ -140,7 +140,7 @@ public class Question_Panel_Mechanic : MonoBehaviour
         canfreeze = freeze;
     }
     public void change_context_highlighter() {
-        if (is_freeze) {
+       
             light_counter++;
         if (light_counter == 1 && has_antonym) {
 
@@ -157,7 +157,7 @@ public class Question_Panel_Mechanic : MonoBehaviour
         highlighter_context(light_counter);
         change_highlighter_panel_color();
         string[] words = original.Trim().Split(' ');
-      
+        if (is_freeze) {
         this.set_dialogue_box(words , counter);
         }
         
@@ -246,7 +246,7 @@ public class Question_Panel_Mechanic : MonoBehaviour
     {
         
         highlighted_word = words[beforecounter];
-        string highlight = color_type + "[" +  highlighted_word + "]</color>";
+        string highlight = color_type + "" +  highlighted_word + "</color>";
 
         string new_word = "";
         int reduce = words.Length - 1;

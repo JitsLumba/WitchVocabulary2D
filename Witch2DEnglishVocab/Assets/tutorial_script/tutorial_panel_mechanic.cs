@@ -42,7 +42,7 @@ public class tutorial_panel_mechanic : MonoBehaviour
             freeze_or_defreeze();
         }*/
         
-        if ((Input.GetKeyDown(KeyCode.D)  || Input.GetKeyDown(KeyCode.RightArrow)) && ison && can_d) {
+        if (Input.GetKeyDown(KeyCode.RightArrow) && ison && can_d) {
             words = original.Trim().Split(' ');
             int num = words.Length - 1;
 
@@ -63,7 +63,7 @@ public class tutorial_panel_mechanic : MonoBehaviour
             int beforecounter = counter - 1;
 
         }
-        else if ((Input.GetKeyDown(KeyCode.A) || (Input.GetKeyDown(KeyCode.LeftArrow))) && ison && can_a) {
+        else if (Input.GetKeyDown(KeyCode.LeftArrow) && ison && can_a) {
             words = original.Trim().Split(' ');
             int num = words.Length;
             if (counter > 0)
@@ -91,6 +91,7 @@ public class tutorial_panel_mechanic : MonoBehaviour
         this.counter = num;
     }
     public void set_can_tab(bool active) {
+       
         can_tab = active;
     }
     public void key_actives(bool active) {
@@ -105,6 +106,7 @@ public class tutorial_panel_mechanic : MonoBehaviour
         can_f = can;
     }
     public void set_can_z(bool can) {
+        
         can_z = can;
     }
     public void set_can_d(bool can) {
@@ -118,7 +120,7 @@ public class tutorial_panel_mechanic : MonoBehaviour
                 
                 if (is_img_on) {
                     is_img_on = false;
-                    Debug.Log("REOPEN DIALOGUE");
+              
                     change_dialogue_active(true);
                     change_vocab_panel_active(true);
                     if (can_freeze) {
@@ -139,7 +141,7 @@ public class tutorial_panel_mechanic : MonoBehaviour
                         change_highlighter_panel_active(false);
                     }
                     
-                    Debug.Log("CLOSE DIALOGUE " + is_img_on + " " + can_browse);
+                
                 }
         }
     }
@@ -156,9 +158,9 @@ public class tutorial_panel_mechanic : MonoBehaviour
         can_browse = browse;
     }
     public void change_context_highlighter() {
-        Debug.Log("is_on " + ison + " can_tab " + can_tab);
+      
         if (can_tab) {
-            if (ison) {
+            
             light_counter++;
         if (light_counter == 1 && has_antonym) {
 
@@ -174,13 +176,17 @@ public class tutorial_panel_mechanic : MonoBehaviour
             
             
         }
-        Debug.Log("light_counter " + light_counter);
+        
         highlighter_context(light_counter);
         
         string[] words = original.Trim().Split(' ');
         change_highlighter_panel_color();
-        this.set_dialogue_box(words , counter);
+        
+        if (ison) {
+            this.set_dialogue_box(words , counter);
         }
+        
+        
         }
         
         
@@ -189,6 +195,7 @@ public class tutorial_panel_mechanic : MonoBehaviour
         light_counter = 0;
         highlighter_context(light_counter);
         change_highlighter_panel_color();
+    
     }
     public void change_vocab_panel_active(bool active) {
         vocabulary_panel.SetActive(active);
@@ -246,13 +253,14 @@ public class tutorial_panel_mechanic : MonoBehaviour
             current_type = "example";
             color_type = "<color=#CE64FF>";
         }
+      
     }
     public void set_clue_panel_active(bool active) {
         this.clue_panel.SetActive(active);
     }
     public void freeze_or_defreeze() {
         string[] words;
-        Debug.Log("CAN Z " + can_z + " can freeze" + can_freeze);
+        
         if (can_z) {
             bool is_not_img = !is_img_on;
         if (is_not_img) {
@@ -272,7 +280,7 @@ public class tutorial_panel_mechanic : MonoBehaviour
                     words = original.Trim().Split(' ');
                     counter = 0;
                     set_dialogue_box(words, counter);
-                    Debug.Log(original);
+                 
                 }
                 change_panel_sprite(switcher);
                    
@@ -294,7 +302,7 @@ public class tutorial_panel_mechanic : MonoBehaviour
     
     public void set_clue_number(int num) {
         clue_num = num;
-        clue_text.text = "Clues: " + num;
+        clue_text.text = "Clues left: " + num;
     }
     public void change_freeze_panel_color(string color) {
         ColorUtility.TryParseHtmlString(color, out panelcolor);
@@ -311,7 +319,7 @@ public class tutorial_panel_mechanic : MonoBehaviour
         bool not_found = true, can_choice = false, is_not_close = true;
         string show_res = "";
         
-      
+           
             string answer = tut_def_check.get_answer();
          
             string clue = tut_def_check.get_type();
@@ -342,7 +350,7 @@ public class tutorial_panel_mechanic : MonoBehaviour
             }
          
         }
-         Debug.Log("SOAM3");
+     
         
         
         if (not_found && is_not_close) {
@@ -358,6 +366,7 @@ public class tutorial_panel_mechanic : MonoBehaviour
 
     }
     public void freeze_prompt_show_or_hide(bool is_on) {
+     
         bool g_text = false;
         bool freeze_text = false;
         if (is_on) {
@@ -379,6 +388,7 @@ public class tutorial_panel_mechanic : MonoBehaviour
         return correct_counter;
     }
     public bool get_ison() {
+       
         return ison;
     }
     public void set_can_freeze(bool freeze) {
@@ -397,17 +407,18 @@ public class tutorial_panel_mechanic : MonoBehaviour
       
     }
     public void change_vocab_text(string text) {
+     
         vocabulary_text.text = text;
     }
     public void set_dialogue_active(bool active) {
-        Debug.Log("TURNING " + active);
+      
         dialogue_panel.SetActive(active);
     }
     public void set_dialogue_box(string[] words, int beforecounter)
     {
        
         highlighted_word = words[beforecounter];
-        string highlight = color_type + "[" + highlighted_word + "]</color>";
+        string highlight = color_type + "" + highlighted_word + "</color>";
 
         string new_word = "<color=#00D9FF>";
         int reduce = words.Length - 1;
@@ -430,6 +441,9 @@ public class tutorial_panel_mechanic : MonoBehaviour
         }
         new_word = new_word + "</color>";
         dialogue_text.text = new_word;
+    }
+    public string get_current_type() {
+        return current_type;
     }
     IEnumerator Freeze_Interv() {
         yield return new WaitForSeconds(1.0f);

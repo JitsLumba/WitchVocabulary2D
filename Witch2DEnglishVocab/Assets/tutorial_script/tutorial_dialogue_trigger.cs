@@ -61,6 +61,8 @@ public class tutorial_dialogue_trigger : MonoBehaviour
     }
     public void reset_highlighter() {
         tut_panel_mech.reset_highlighter();
+        string curr = tut_panel_mech.get_current_type();
+        Debug.Log(curr + " JAKES");
     }
     public void freeze_prompt_switch(bool active) {
         tut_panel_mech.freeze_prompt_panel_switch(active);
@@ -84,6 +86,8 @@ public class tutorial_dialogue_trigger : MonoBehaviour
         tut_panel_mech.key_actives(activate);
     }
     public void answer_trigger() {
+        string curr = tut_panel_mech.get_current_type();
+        Debug.Log("IS_ON YEAH " + curr);
         bool is_on = tut_panel_mech.get_ison();
             if (is_on) {
                 check_answer();

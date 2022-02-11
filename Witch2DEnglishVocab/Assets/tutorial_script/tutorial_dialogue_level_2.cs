@@ -119,7 +119,7 @@ public class tutorial_dialogue_level_2 : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Z) && can_z) {
             freeze_tutorial_sequence();
         }
-        if (Input.GetKeyDown(KeyCode.F) && can_f) {
+        if (Input.GetKeyDown(KeyCode.Return) && can_f) {
             check_answer();
             
             set_can_g(true);

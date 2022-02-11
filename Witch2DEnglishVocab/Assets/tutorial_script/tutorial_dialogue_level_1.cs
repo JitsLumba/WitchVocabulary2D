@@ -61,6 +61,8 @@ public class tutorial_dialogue_level_1 : MonoBehaviour
     private int after_confirm_counter = 0;
     private int after_confirm_max = 0;
     private bool can_tab = false;
+
+    private bool is_clue_panel_active = false;
     void Start()
     {
 
@@ -75,6 +77,10 @@ public class tutorial_dialogue_level_1 : MonoBehaviour
     {
 
         if (Input.GetKeyDown(KeyCode.G) && can_g) {
+            if (is_clue_panel_active) {
+                is_clue_panel_active = false;
+                clue_panel.SetActive(false);
+            }
             if (arrow_on) {
                 this.set_arrow_active(false);
             }
@@ -83,7 +89,7 @@ public class tutorial_dialogue_level_1 : MonoBehaviour
                     if (has_confirmed) {
                         this.set_can_g(false);
                          enable_movement();
-                    
+                        
                         confirm_counter = 0;
                         tut_dtrigger.panel_mechanic_dialogue_pane_active(false);
                         tut_dist_trigger.set_can_interact(true);
@@ -103,6 +109,10 @@ public class tutorial_dialogue_level_1 : MonoBehaviour
 
                     
                     int conf_num = conf_start + confirm_counter;
+                    if (has_confirmation) {
+                        on_confirm_effects(conf_num);
+                    }
+                    
                     tut_dtrigger.confirm_trigger_dialogue(conf_num);
                     confirm_counter++;
                 }
@@ -121,7 +131,7 @@ public class tutorial_dialogue_level_1 : MonoBehaviour
                 }
                 else {
                     
-                    after_confirm_sequence();
+                    tut_dtrigger.after_confirm_trigger_dialogue(after_confirm_counter);
                     after_confirm_counter++;
                 }
             }
@@ -186,7 +196,7 @@ public class tutorial_dialogue_level_1 : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Z) && can_z) {
             freeze_tutorial_sequence();
         }
-        if (Input.GetKeyDown(KeyCode.F) && can_f) {
+        if (Input.GetKeyDown(KeyCode.Return) && can_f) {
             check_answer();
             
             set_can_g(true);
@@ -226,6 +236,7 @@ public class tutorial_dialogue_level_1 : MonoBehaviour
 
             }
             else {
+                Debug.Log("NOW CHANGING TO THIS");
                 tut_dtrigger.change_context_highlighter();
             }
         }
@@ -363,13 +374,18 @@ public class tutorial_dialogue_level_1 : MonoBehaviour
             tut_dtrigger.panel_mech_highlighter_button_switch(true);
         }
         else if (i == 3) {
+            this.clue_panel.SetActive(true);
+            this.is_clue_panel_active = true;
+        }
+        else if (i == 4) {
+            
             tut_dtrigger.panel_mech_change_vocab_word("Humorous");
             tut_dtrigger.panel_mech_vocabulary_panel_switch(true);
         }
         else {
             //if it's getting synonyms
             set_can_g(false);
-        
+            tut_dtrigger.reset_highlighter();
             tut_dtrigger.set_panel_mech_can_z(true);
             set_can_z(true);
             this.set_can_f(true);
@@ -387,12 +403,12 @@ public class tutorial_dialogue_level_1 : MonoBehaviour
         else {
             if (i == 0) {
                 Debug.Log("MOSHI MOSHI");
-                tut_dtrigger.panel_mech_freeze_button_switch(true);
+                
                 tut_dtrigger.panel_mech_highlighter_button_switch(true);
-                tut_dtrigger.set_panel_mech_can_freeze(true);
+                
                 this.set_can_g(false);
-                this.set_can_z(true);
-                this.tut_dtrigger.set_panel_mech_can_z(true);
+              
+               
                 this.tut_dtrigger.set_panel_mech_can_tab(true);
                 this.set_can_tab(true);
                 this.set_is_antonym_demo(true);
@@ -407,6 +423,9 @@ public class tutorial_dialogue_level_1 : MonoBehaviour
             }
             else {
                 //actual test
+                
+                tut_dtrigger.reset_highlighter();
+                tut_dtrigger.panel_mech_freeze_button_switch(true);
                 this.set_can_f(true);
                 set_can_g(false);
                 set_can_z(true);
@@ -414,7 +433,7 @@ public class tutorial_dialogue_level_1 : MonoBehaviour
                 
                 tut_dtrigger.set_panel_mech_can_z(true);
                 tut_dtrigger.set_panel_mech_can_freeze(true);
-                tut_dtrigger.reset_highlighter();
+                
                 tut_dtrigger.set_panel_mech_can_a(true);
                 tut_dtrigger.set_panel_mech_can_d(true);
             }
@@ -425,8 +444,7 @@ public class tutorial_dialogue_level_1 : MonoBehaviour
         this.can_tab = can;
     }
     public void demo_change_highlighter() {
-        bool is_curr_on = tut_dtrigger.get_ison_panel_mech();
-        if (is_curr_on) {
+       
             set_is_antonym_demo(false);
             
             
@@ -434,14 +452,14 @@ public class tutorial_dialogue_level_1 : MonoBehaviour
             
             
             tut_dtrigger.change_context_highlighter();
-            tut_dtrigger.freeze_or_defreeze();
+            
             tut_dtrigger.set_panel_mech_can_freeze(false);
             tut_dtrigger.set_panel_mech_can_z(false);
             tut_dtrigger.set_panel_mech_can_tab(false);
             this.set_can_z(false);
             this.set_can_tab(false);
             next_dialogue();
-        }
+        
         
     }
 
@@ -456,6 +474,9 @@ public class tutorial_dialogue_level_1 : MonoBehaviour
         this.set_is_on_conf_diag(true);
         if (num == 0) {
             this.set_has_confirm(true);
+            if (has_confirmation) {
+                on_confirm_effects(num);
+            }
         }
         else {
             counter = num_go_back;
@@ -560,6 +581,21 @@ public class tutorial_dialogue_level_1 : MonoBehaviour
     void set_clue_panel_active(bool active) {
         clue_panel.SetActive(active);
     }
+    void on_confirm_effects(int num) {
+        for (int i = 0; i < after_counters.Count; i++) {
+            int num_show = after_counters[i];
+
+            if (num_show == num) {
+                on_confirm_show_effect(i);
+                break;
+            }
+        }
+    }
+    void on_confirm_show_effect(int i) {
+        if (i == 0) {
+            tut_dtrigger.panel_mech_change_vocab_word("Assuage");
+        }
+    }
     public void set_can_f(bool can) {
         can_f = can;
     }
@@ -567,7 +603,7 @@ public class tutorial_dialogue_level_1 : MonoBehaviour
         Debug.Log("WOOOAHHHHNALLLL ");
         set_can_g(true);
         is_after_conf = true;
-        after_confirm_sequence();
+        tut_dtrigger.after_confirm_trigger_dialogue(after_confirm_counter);
         tut_dtrigger.panel_mechanic_dialogue_pane_active(true);
         after_confirm_counter++;
     }
