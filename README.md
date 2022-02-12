@@ -11,9 +11,8 @@ Steps to Run
 # Controls
 * A - Left
 * D - Right
-* F - Interact (doors)
+* F - Interact (doors) / Select word
 * Z - Freeze
-* Enter - Select Word
 * Left Arrow Key - (Move word to the left during freeze)
 * Right Arrow Key - (Move word to the right during freeze)
 * G - Next dialogue
