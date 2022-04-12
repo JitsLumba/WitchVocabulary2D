@@ -6566,37 +6566,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sentences:
-  - "Traveler , you really won\u2019t believe this !"
-  - "What\u2019s up ?"
+  - "Elaina , you really won\u2019t believe this !"
+  - "Eh ? What\u2019s up ?"
   - My boss just gave us new work standards , and he expects us to just be congenial
-    about it .
+    about it !
   - Why ? What are they ?
-  - Literally just extra overtime . He said in the following lines of ...
-  - '" You all should be congenial with these standards ... "'
-  - '" And what I mean by that is finding them acceptable . "'
-  - 'He also makes them unpaid , who wouldn''t be against that ? '
-  - '" Just " ? Unbelievable ... has he no honor ?'
-  - "He does not have any \u2026 we\u2019ve been objecting to it since he gave them
-    to us ..."
+  - Literally just extra overtime .
+  - "Unpaid too , who wouldn\u2019t be against that ?"
+  - "\u201C Just \u201D ? "
+  - Nobody would find extra unpaid work like that acceptable !
+  - "Yeah \u2026 we\u2019ve been objecting to it since he gave them to us"
   choices:
   - "This sounds like an unpleasant situation for both parties\u2026 (pleasant)"
-  - We don't find those standards agreeable. (agreeable)
-  - Your boss is not very sociable with you all... (sociable)
+  - "I don\u2019t even work here and I can\u2019t agree with that (agreeable)"
+  - "Doesn\u2019t sound very sociable (sociable)"
   results:
-  - "This sounds like an unpleasant situation for both parties\u2026"
   - "Doesn\u2019t matter, this is taking it too far\u2026"
-  - And yes it is unpleasant , but that's not what we are thinking of with the new
-    standards ...
-  - That answer is not exactly the correct one. Try again...
-  - We don't find those standards agreeable...
-  - "Right? If this isn\u2019t resolved I\u2019m gonna go strike out on my own."
+  - That was unfortunately the incorrect answer, try again
+  - Right?
+  - Do you need help with your complaints?
+  - "Nah, if this isn\u2019t resolved I\u2019m gonna go strike out on my own."
   - "It\u2019s what I\u2019ve always wanted to do anyway!"
   - That was the correct answer!
-  - "Your boss just brought it up like that? Doesn\u2019t sound very sociable...."
-  - "I guess? I\u2019m pretty sure most bosses are like that though\u2026"
-  - Plus you shouldn't focus on the boss, focus on what we are thinking with the
-    new standards...
-  - That was the incorrect answer. Try again.
+  - I guess?
+  - "I\u2019m pretty sure most bosses are like that though\u2026"
+  - That was unfortunately the incorrect answer, try again.
   remarks:
   - Kinda Correct
   - Correct
@@ -6621,18 +6615,17 @@ MonoBehaviour:
   - Yuichi
   - Yuichi
   names_result:
+  - Yuichi
+  - 
+  - Yuichi
   - Elaina
   - Yuichi
   - Yuichi
   - 
-  - Elaina
   - Yuichi
   - Yuichi
   - 
-  - Elaina
-  - Yuichi
-  - Yuichi
-  - 
+  result_stopper: 010000000600000009000000
   dtrigger: {fileID: 1880291885}
   pmech: {fileID: 1481302474}
   answer: relieved!
@@ -6751,7 +6744,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 914805272}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 23.5, y: -34.808, z: 0}
+  m_LocalPosition: {x: 23.5, y: -34.87, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children:
   - {fileID: 106372852}
@@ -10969,40 +10962,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sentences:
-  - Traveler ? Do you need something ?
+  - Elaina ? Do you need something ?
   - Nah , just visiting again ~
   - "Well , I just finished another job , so I guess I\u2019ve got time to chat ."
-  - "I never would\u2019ve thought you are a mechanic though \u2026 What\u2019s it
-    like ?"
-  - "Heh , not very congenial towards an average person , that\u2019s for sure ."
+  - "I never would\u2019ve taken you for a mechanic though \u2026"
+  - "What\u2019s it like ?"
+  - "Heh , not very congenial to your average person, that\u2019s for sure ."
   - How so ?
-  - "It\u2019s rough , you could lose a limb if you\u2019re not careful ..."
+  - "It\u2019s rough , you could lose a limb if you\u2019re not careful"
   - "Yikes \u2026"
-  - And customers and higher-ups can be pretty cruel sometimes ...
+  - And customers and higher-ups can be pretty cruel sometimes .
   - Why do you still do it ?
-  - "It\u2019s a passion I found out I had some time ago , long after I left the
-    village"
-  - Being able to build and fix machinery and little breaks like these ...
-  - ... really makes the experience a lot more refreshing for me ...
+  - "It\u2019s a passion I found out I had some time ago, long after I left the village
+    ."
+  - Being able to build and fix machinery , ...
+  - ... and little breaks like these , ...
+  - ... really makes the experience a lot more refreshing for me compared to others
+    .
   choices:
-  - "A gracious worker aren\u2019t you? (gracious)"
-  - It feels so pleasant~ (pleasant)
-  - "You really enjoy the job (enjoyable)\r"
+  - "You\u2019re quite the gracious worker aren\u2019t you? (gracious)"
+  - "I\u2019m sure it\u2019s as pleasant for the others as it is for you~ (pleasant)"
+  - Sounds like you really enjoy the job (enjoyable)
   results:
-  - "You\u2019re quite the gracious worker aren\u2019t you?"
   - I guess you could say that?
-  - But gracious here..isn't exactly what I am feeling here...
-  - That answer isn't exactly correct. Try again.
-  - "I\u2019m sure it\u2019s as pleasant for the others as it is for you~"
-  - Hah, I hope for the best for those guys. But maybe when I strike out and work
-    on my own...
-  - "...they\u2019ll wanna jump ship over to me just because I\u2019m way more pleasant
-    to work with."
+  - That was unfortunately the incorrect answer, try again.
+  - Hah, I hope for the best for those guys.
+  - "But maybe when I strike out and work on my own, they\u2019ll wanna jump ship
+    over to me..."
+  - "...just because I\u2019m way more pleasant to work with."
   - That was the correct answer!
-  - Sounds like you really enjoy the job.
   - "Yep, though I can\u2019t help but think I could be more..."
-  - Also, I don't mean congenial like that...
-  - That was the incorrect answer. Try again.
+  - That was unfortunately the incorrect answer, try again
   remarks:
   - Kinda Correct
   - Correct
@@ -11020,12 +11010,14 @@ MonoBehaviour:
   - Elaina
   - Yuichi
   - Elaina
-  - Yuichi
   - Elaina
   - Yuichi
   - Elaina
   - Yuichi
   - Elaina
+  - Yuichi
+  - Elaina
+  - Yuichi
   - Yuichi
   - Yuichi
   - Yuichi
@@ -11042,6 +11034,7 @@ MonoBehaviour:
   - Yuichi
   - Yuichi
   - 
+  result_stopper: 010000000500000007000000
   dtrigger: {fileID: 1880291885}
   pmech: {fileID: 1481302474}
   answer: relieved!
@@ -11160,7 +11153,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1580047547}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 20.45, y: -34.808, z: 0}
+  m_LocalPosition: {x: 20.45, y: -34.87, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children:
   - {fileID: 491960403}
@@ -14591,7 +14584,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 3
-      m_TileSpriteIndex: 11
+      m_TileSpriteIndex: 16
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -15001,7 +14994,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 3
-      m_TileSpriteIndex: 12
+      m_TileSpriteIndex: 13
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -16960,18 +16953,18 @@ Tilemap:
     m_Data: {fileID: -1429927189243390561, guid: 0b754e3854b7ea44f84faa6511c57c34, type: 3}
   - m_RefCount: 14
     m_Data: {fileID: 4696456888141038197, guid: 0b754e3854b7ea44f84faa6511c57c34, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: 3287759362920022688, guid: 0b754e3854b7ea44f84faa6511c57c34, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: -2633716645771244073, guid: 0b754e3854b7ea44f84faa6511c57c34, type: 3}
   - m_RefCount: 0
     m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: -2633716645771244073, guid: 0b754e3854b7ea44f84faa6511c57c34, type: 3}
   - m_RefCount: 2
     m_Data: {fileID: -4281006351870389795, guid: 0b754e3854b7ea44f84faa6511c57c34, type: 3}
   - m_RefCount: 120
     m_Data: {fileID: 8375000414176727708, guid: 0b754e3854b7ea44f84faa6511c57c34, type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 3287759362920022688, guid: 0b754e3854b7ea44f84faa6511c57c34, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 1173420369427325992, guid: 0b754e3854b7ea44f84faa6511c57c34, type: 3}
   m_TileMatrixArray:
@@ -19086,7 +19079,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1007564714534547111}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 17.701008, y: -34.808, z: 0}
+  m_LocalPosition: {x: 17.722, y: -34.87, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children:
   - {fileID: 1943934277}
@@ -19109,36 +19102,27 @@ MonoBehaviour:
   - You see a disgruntled man walk out of what appears to be a garage of sorts .
   - You decide to investigate as you peer into the establishment .
   - Yuichi ?!
-  - "Eh ? Traveler ? You\u2019re here too ?"
-  - "Yeah \u2026 it\u2019s just \u2026 What happened with that guy back there ?"
-  - "Oh \u2026 don\u2019t mind that ... I just wish my customers were a little more
-    \u2026 neighborly ."
-  - What do you mean by that ?
-  - "They\u2019re pretty rude , talking like they\u2019re the boss of this company
-    ..."
-  - "Thinking my work here is easy \u2026"
-  - They could at least be a little more congenial when talking to me ...
-  - And by being congenial , that means being friendly to me ...
+  - "Eh ? Elaina ? You\u2019re here too ?"
+  - "Yeah \u2026 it\u2019s just \u2026"
+  - What happened with that guy back there?
+  - "Oh \u2026 don\u2019t mind that"
+  - "I just wish my customers were a little more \u2026 neighborly."
+  - Eh ?
+  - They could at least be a little more congenial when talking to me .
+  - "But hey, it\u2019s nice to finally see a friendly face here"
   choices:
   - "Weird to see such an unpleasant bunch\u2026 (pleasant)"
   - "Maybe you\u2019re not being agreeable? (agreeable)"
   - "Everyone else in town seemed to be a lot more sociable\u2026 (sociable)"
   results:
-  - "Weird to see such an unpleasant bunch\u2026"
-  - "Haven\u2019t seen much of the world yet have ya? It\u2019s pretty unfortunate."
-  - You aren't wrong...but that isn't what I want from them when it comes to being
-    congenial.
-  - That answer is not exactly the correct answer. Try again.
-  - "Maybe you\u2019re not being agreeable?"
-  - "What? Ah come on, I\u2019m far from the arrogant jerk I was then."
-  - Plus you should place yourselves in my shoes for once so that you will know on
-    what I want from them.
-  - That was the incorrect answer. Try again.
-  - "Everyone else in town seemed to be a lot more sociable\u2026"
-  - "I agree. Well, there tends to be people that don\u2019t connect with the rest
-    of society."
-  - "In my line of work, you meet a lot of the bad ones...like they\u2019ve never
-    met another human being, ugh\u2026"
+  - "Haven\u2019t seen much of the world yet have ya?"
+  - " It\u2019s pretty unfortunate."
+  - That was unfortunately the incorrect answer, try again
+  - "What? Ah come on, I\u2019m far from the arrogant jerk I was then"
+  - That was unfortunately the incorrect answer, try again
+  - "Well, there tends to be people that don\u2019t connect with the rest of society"
+  - In my line of work, you meet a lot of the bad ones.
+  - "Like they\u2019ve never met another human being, ugh\u2026"
   - That was the correct answer!
   remarks:
   - Kinda correct
@@ -19158,25 +19142,23 @@ MonoBehaviour:
   - Elaina
   - Yuichi
   - Elaina
-  - Yuichi
   - Elaina
   - Yuichi
   - Yuichi
+  - Elaina
   - Yuichi
   - Yuichi
   names_result:
-  - Elaina
   - Yuichi
   - Yuichi
   - 
-  - Elaina
+  - Yuichi
+  - 
+  - Yuichi
   - Yuichi
   - Yuichi
   - 
-  - Elaina
-  - Yuichi
-  - Yuichi
-  - 
+  result_stopper: 020000000400000008000000
   dtrigger: {fileID: 1880291885}
   pmech: {fileID: 1481302474}
   answer: relieved!
@@ -19389,7 +19371,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3674322212831296673}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 14.3, y: -34.67, z: 0}
+  m_LocalPosition: {x: 14.3, y: -34.724, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -19651,7 +19633,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5334363829152864345}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 16.53, y: -34.74, z: 0}
+  m_LocalPosition: {x: 16, y: -34.839, z: 0}
   m_LocalScale: {x: 2.679621, y: 2.679621, z: 2.679621}
   m_Children:
   - {fileID: 5334363828684214586}
@@ -19760,7 +19742,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5400894358496902791}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 26.5, y: -34.31, z: 0}
+  m_LocalPosition: {x: 26.5, y: -34.37, z: 0}
   m_LocalScale: {x: 8, y: 8, z: 1}
   m_Children:
   - {fileID: 1995807060}
@@ -19793,7 +19775,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 289680617787608049}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 29.338879, y: -34.663, z: 0}
+  m_LocalPosition: {x: 29.177, y: -34.729, z: 0}
   m_LocalScale: {x: 2.8, y: 3, z: 2.484118}
   m_Children: []
   m_Father: {fileID: 0}

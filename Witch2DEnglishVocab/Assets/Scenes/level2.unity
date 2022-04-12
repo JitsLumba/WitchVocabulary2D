@@ -765,22 +765,15 @@ MonoBehaviour:
   - I know how to remove that difficulty! (to complicate)
   - "That looks like a pain to swing with\u2026 (to irritate)"
   results:
-  - "Looks like you\u2019re gonna have a hard time with jobs now\u2026"
-  - The chip will worsen your swings after all.
   - Oh come on, have a little more confidence in me, will you?
-  - Even without my sword I still have my fists!
-  - You may have the correct idea, but that isn't exactly the correct answer. Try
-    again.
-  - I know how to remove that difficulty of swinging!
+  - That was unfortunately the incorrect answer, try again
   - You know how to do that?
   - Nah, I just ran into a blacksmith earlier that should be able to fix it up~
   - "Hah! Ain\u2019t you a lifesaver?"
-  - That was the correct answer.
-  - "That looks like a pain to swing with\u2026"
-  - "No\u2026I think\u2026"
-  - "It\u2019s getting better\u2026or maybe not..."
-  - My student that isn't exactly the correct answer of what exacerbate means.
-  - Try again for your answer is incorrect.
+  - That was the correct answer!
+  - "No\u2026 I think\u2026"
+  - "It\u2019s getting better\u2026"
+  - That was unfortunately the incorrect answer, try again
   remarks:
   - Kinda Correct
   - Correct
@@ -802,21 +795,16 @@ MonoBehaviour:
   - Mina
   - Mina
   names_result:
-  - Elaina
-  - Elaina
-  - Mina
   - Mina
   - 
-  - Elaina
   - Mina
   - Elaina
   - Mina
   - 
-  - Elaina
   - Mina
   - Mina
   - 
-  - 
+  result_stopper: 010000000500000008000000
   dtrigger: {fileID: 8022526438039422880}
   pmech: {fileID: 1680598379}
   answer: relieved!
@@ -935,7 +923,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 133560205}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.265, y: -1.246, z: 0}
+  m_LocalPosition: {x: 2.265, y: -1.24, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children:
   - {fileID: 1211515936}
@@ -3487,7 +3475,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 562199473}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -41.96, y: -0.69, z: 0}
+  m_LocalPosition: {x: -41.96, y: -0.75, z: 0}
   m_LocalScale: {x: 8, y: 8, z: 1}
   m_Children:
   - {fileID: 570984405}
@@ -5117,7 +5105,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 876147465}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.71, y: -1.036, z: 0}
+  m_LocalPosition: {x: -8.05, y: -1.104, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -17601,45 +17589,36 @@ MonoBehaviour:
   sentences:
   - Mina ! Mina ! Sto -
   - The gang lies in a pile knocked out .
-  - Oh ? Traveler , what are you doing here?
-  - "That doesn\u2019t matter right now ! You need to stop doing stuff like this
-    \u2026"
-  - "Huh ? It wasn\u2019t even my fault\u2026 these guys are the ones that exacerbated
-    me !"
-  - "They were really annoying me \u2026 I was really angry with them when they messed
-    with me !"
+  - Oh ? Elaina , what are you doing here?
+  - "That doesn\u2019t matter right now! you need to stop doing stuff like this \u2026"
+  - "Eeeh? It wasn\u2019t even my fault \u2026 these guys are the ones that exacerbated
+    me ."
+  - "They were really annoying me \u2026"
   - "Still \u2026"
   choices:
   - "I understand that you\u2019re irritated but\u2026 (irritate)"
   - You are making things worse! (worsen)
   - You are complicating things! (complicate)
   results:
-  - "I understand that you\u2019re irritated but\u2026you\u2019d also be attracting
-    more danger to yourself.."
+  - "You\u2019d also be attracting more danger to yourself.."
   - "Like other gang members, or even the local guards\u2026"
-  - Mina seems to calm down and puts her hand on your head
-  - "Alright, alright\u2026I\u2019ll try to control myself\u2026Sorry for making
-    you worry\u2026"
+  - "Mina seems to calm down and puts her hand on Elaine\u2019s head"
+  - "Alright, alright\u2026  I\u2019ll try to control myself\u2026"
+  - "Sorry for making you worry\u2026"
   - That was the correct answer!
-  - You are gonna make things worse here.
   - What would you know?!
-  - You do not know what I am feeling here!
-  - Ah...sorry...
-  - That was the incorrect answer. Try to understand Mina's feelings and try again.
-  - You are gonna complicate things here!
+  - "You didn\u2019t have to live out on the streets!"
+  - That was unfortunately the incorrect answer, try again
   - Ha?
   - "What\u2019s that supposed to mean?"
-  - You do not know what I am feeling here!
-  - That was the incorrect answer. Try to understand Mina's feelings and try again.
+  - That was unfortunately the incorrect answer, try again
   remarks:
   - Correct
   - Incorrect
   - Incorrect
   clues:
   - annoying
-  - angry
   clue_type:
-  - synonym
   - synonym
   names:
   - Elaina
@@ -17654,17 +17633,15 @@ MonoBehaviour:
   - Elaina
   - 
   - Mina
+  - Mina
   - 
-  - Elaina
-  - Mina
-  - Mina
-  - Elaina
-  - 
-  - Elaina
-  - Mina
   - Mina
   - Mina
   - 
+  - Mina
+  - Mina
+  - 
+  result_stopper: 05000000080000000b000000
   dtrigger: {fileID: 8022526438039422880}
   pmech: {fileID: 1680598379}
   answer: relieved!
@@ -17783,7 +17760,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2112259946}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.45, y: -1.22, z: 0}
+  m_LocalPosition: {x: -0.45, y: -1.24, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children:
   - {fileID: 1817249139}
@@ -18218,7 +18195,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sentences:
   - "You spot a familiar face on your travels \u2026"
-  - Oi ! Traveler ! Over here !
+  - Oi ! Elaina ! Over here !
   - "Mina ? What\u2019s up ?"
   - "Keep your wits about you when you\u2019re around here alright ?"
   - "Why ? What\u2019s going on ?"
@@ -18231,25 +18208,16 @@ MonoBehaviour:
   - "Whatever\u2019s happening to them gets exacerbated instead of being relieved
     !"
   choices:
-  - Wouldn't people be angry at him? (to irritate)
-  - "He made the problem more difficult\u2026 (to complicate)"
+  - "Shouldn\u2019t the people at large be real angry with him?(to irritate)"
+  - "He made the problem more difficult to handle\u2026 (to complicate)"
   - "He made their pain worse\u2026 (to worsen)"
   results:
-  - Considering that situation, wouldn't people be angry at him?
   - "I dunno, we can\u2019t really go around bothering everyone in town like lunatics
     can we?"
-  - Situation is already dire, we must tread carefully here.
-  - Yeah you are right.
   - That was unfortunately the incorrect answer, try again
-  - He made the problem even more complicated.
   - "I guess\u2026?"
-  - I honestly think you should try to take a look at what the result of the doings
-    of the quack doctor though...
-  - That's right, my student. Although that definition may be correct.
-  - That isn't what it means here to be precise. Try again.
-  - He definitely made their pain even worse. He is not fitting to be a doctor with
-    his skills.
-  - 'Right? '
+  - That was unfortunately the incorrect answer, try again
+  - Right?
   - "Makes your blood boil\u2026"
   - "If I ever find him, he\u2019s getting a fist to the face!"
   - That was the correct answer!
@@ -18272,25 +18240,16 @@ MonoBehaviour:
   - Mina
   - Elaina
   - Mina
-  - Mina
-  - Mina
-  - Mina
   names_result:
-  - Elaina
-  - Mina
-  - Mina
-  - Elaina
-  - 
-  - Elaina
-  - Mina
   - Mina
   - 
+  - Mina
   - 
-  - Elaina
   - Mina
   - Mina
   - Mina
   - 
+  result_stopper: 010000000300000007000000
   dtrigger: {fileID: 8022526438039422880}
   pmech: {fileID: 1680598379}
   answer: relieved!
@@ -18305,7 +18264,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 954655928450438404}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.53, y: -1.219, z: 0}
+  m_LocalPosition: {x: -3.524, y: -1.24, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children:
   - {fileID: 988733342}
@@ -18443,7 +18402,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5542937602921765764}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: -39, y: -1.041, z: 0}
+  m_LocalPosition: {x: -39.134, y: -1.094, z: 0}
   m_LocalScale: {x: 2.8, y: 3, z: 2.484118}
   m_Children: []
   m_Father: {fileID: 0}

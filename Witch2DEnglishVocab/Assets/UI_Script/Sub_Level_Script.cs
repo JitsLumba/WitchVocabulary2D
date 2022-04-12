@@ -7,6 +7,7 @@ public class Sub_Level_Script : MonoBehaviour
     [TextArea(3, 10)]
     [SerializeField] private List<string> sentences, choices, results, remarks, clues, clue_type;
     [SerializeField] private List<string> names, names_result;
+    [SerializeField] private List<int> result_stopper;
     [SerializeField] private Dialogue_Trigger dtrigger ;
     [SerializeField] private Panel_Mechanic pmech ;
  
@@ -36,7 +37,8 @@ public class Sub_Level_Script : MonoBehaviour
         dtrigger.set_freeze(true);
         dtrigger.set_stop_at(sentences.Count);
         dtrigger.clues_add(clues, clue_type);
-        dtrigger.change_dial_vals(sentences, names, choices, results, remarks, names_result, mult);
+        dtrigger.set_dialogue_stoppers(result_stopper);
+        dtrigger.change_dial_vals(sentences, names, choices, results, remarks, names_result);
         
     }
     

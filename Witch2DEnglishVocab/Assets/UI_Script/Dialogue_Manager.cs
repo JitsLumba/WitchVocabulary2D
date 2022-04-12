@@ -56,8 +56,8 @@ public class Dialogue_Manager : MonoBehaviour
             }
         }
        else if (mode == 2) {
-      
-           for (int i = start; i < end; i++) {
+           Debug.Log("RESULTED " + sentences.Count);
+           for (int i = start; i <= end; i++) {
             
                 sentences.Enqueue(dialogue.result_list[i]);
                 nameq.Enqueue(dialogue.name_list_result[i]);
@@ -66,6 +66,7 @@ public class Dialogue_Manager : MonoBehaviour
            
             
             }
+            Debug.Log("ADDED " + sentences.Count);
        }
         
         dial_1 = dialogue;
@@ -115,7 +116,7 @@ public class Dialogue_Manager : MonoBehaviour
         counter++;
         
         if (sentences.Count == 0) {
-            //Debug.Log("End of sentence queue");
+            Debug.Log("End of sentence queue");
             if (mode == 2) {
                 mode = 1;
             }
@@ -125,6 +126,7 @@ public class Dialogue_Manager : MonoBehaviour
             
         }
         else {
+            Debug.Log("JUMPERS " + sentences.Count);
             string sentence = sentences.Dequeue(), name = nameq.Dequeue();
             
             //Debug.Log(sentence);
@@ -166,7 +168,7 @@ public class Dialogue_Manager : MonoBehaviour
      
         
         return_level(can_return);
-        
+    
         
     }
     

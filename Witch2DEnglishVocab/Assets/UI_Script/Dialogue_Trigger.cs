@@ -176,6 +176,7 @@ public class Dialogue_Trigger : MonoBehaviour
             else
             {
                 counter++;
+                Debug.Log("COUNTER " + counter + " MULTIPLE");
                 if (after_result)
                 {
                     if (counter == multiple) {
@@ -239,7 +240,7 @@ public class Dialogue_Trigger : MonoBehaviour
         dialogue.clear_clue_lists();
         dialogue.add_clues(clues, clue_type);
     }
-    public void change_dial_vals(List<string> sentences, List<string> names, List<string> choices, List<string> results, List<string> remarks, List<string> name_res, int mult)
+    public void change_dial_vals(List<string> sentences, List<string> names, List<string> choices, List<string> results, List<string> remarks, List<string> name_res)
     {
         is_active = true;
         canfreeze = true;
@@ -249,7 +250,7 @@ public class Dialogue_Trigger : MonoBehaviour
         pmech.set_has_all_clues(false);
         this.canproc = true;
         this.cantrigger = true;
-        this.multiple = mult;
+        
         
         dialogue.clear_sentences();
         dialogue.add_remarks(remarks);
@@ -272,9 +273,13 @@ public class Dialogue_Trigger : MonoBehaviour
     {
         this.stop_at = stopper;
     }
-    
+    public void set_dialogue_stoppers(List<int> stoppers) {
+        dialogue.clear_result_stoppers();
+        dialogue.add_result_stoppers(stoppers);
+    }
     public void can_trigger_again(int num_button)
     {
+        int start = 0, end = 0;
         is_on_choice = false;
         is_bef_choice = false;
         after_result = true;
@@ -284,7 +289,20 @@ public class Dialogue_Trigger : MonoBehaviour
         if (remark.Equals("Correct")) {
             is_correct = true;
         }
-        dialogue_Manager.set_start_end(multiple * num_button, multiple * num_button + multiple);
+        if (num_button == 0) {
+            end = dialogue.get_stopper(num_button);
+        }
+        else if (num_button == 1) {
+            start = dialogue.get_stopper(0) + 1;
+            end = dialogue.get_stopper(num_button);
+        }
+        else {
+            start = dialogue.get_stopper(num_button - 1) + 1; 
+            end = dialogue.get_num_results() - 1;
+        }
+        multiple = end - start + 1;
+        Debug.Log("start " + start + " end " + end);
+        dialogue_Manager.set_start_end(start, end);
         dialogue_Manager.set_mode(2);
         dialogue_Manager.set_active_dialogue(true, false);
         dialogue_Manager.StartDialogue(dialogue);
