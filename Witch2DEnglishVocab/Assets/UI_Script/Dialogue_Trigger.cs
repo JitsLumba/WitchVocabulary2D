@@ -8,7 +8,7 @@ public class Dialogue_Trigger : MonoBehaviour
     [SerializeField] private GameObject dialogue_panel, invisi_button;
     [SerializeField] private Dialogue dialogue;
     [SerializeField] private Dialogue_Manager dialogue_Manager;
-    [SerializeField] private tutorial_image_show tut_img_show ;
+    
 
     [SerializeField] private Panel_Mechanic pmech;
     
@@ -52,38 +52,7 @@ public class Dialogue_Trigger : MonoBehaviour
 
 
         }
-        if (Input.GetKeyDown(KeyCode.X) && can_browse && is_active) {
-            
-            bool is_showing = tut_img_show.return_is_showing_image();
-            bool result = false;
-            Debug.Log("X goes here " + is_showing + " canfreeze " + canfreeze);
-            key_change_active();
-            if (is_showing) {
-                result = true;
-                cantrigger = true;
-            }
-            else {
-                cantrigger = false;
-            }
-            set_freeze(result);
-            Debug.Log("FREEZE " + canfreeze);
-            tut_img_show.show_img_sequence();
-            pmech.set_can_move(is_showing);
-            pmech.dialogue_show();
-        }
-        else if (Input.GetKeyDown(KeyCode.Escape) && can_browse && is_active) {
-
-            bool is_showing = tut_img_show.return_is_showing_image();
-            if (is_showing) {
-                key_change_active();
-                tut_img_show.exit_images();
-                canfreeze = true;
-                pmech.set_can_move(true);
-                
-            }
-            
-            pmech.dialogue_show();
-        }
+       
         else if (Input.GetKeyDown(KeyCode.Z))
         {
             Debug.Log("canfreezeZZZ " + canfreeze);
@@ -194,7 +163,7 @@ public class Dialogue_Trigger : MonoBehaviour
                         }
                         
                         Debug.Log("END OF SENTENCE");
-                        tut_img_show.set_can_browse(false);
+                       
                         can_browse = false;
                         is_active = false;
                         StartCoroutine(Dialogue_Interv(can_return));
@@ -245,7 +214,7 @@ public class Dialogue_Trigger : MonoBehaviour
         is_active = true;
         canfreeze = true;
         can_browse = true;
-        tut_img_show.set_is_not_on_dialogue(false);
+        
         set_freeze(true);
         pmech.set_has_all_clues(false);
         this.canproc = true;
@@ -313,7 +282,7 @@ public class Dialogue_Trigger : MonoBehaviour
     {
         yield return new WaitForSeconds(1.0f);
         can_browse = true;
-        tut_img_show.set_can_browse(true);
+       
         canproc = true;
         is_active = true;
         if (!can_return) {
@@ -333,7 +302,7 @@ public class Dialogue_Trigger : MonoBehaviour
         }
         else {
             is_active = false;
-            tut_img_show.set_is_not_on_dialogue(true);
+         
         }
     }
     IEnumerator Freeze_Interv()
