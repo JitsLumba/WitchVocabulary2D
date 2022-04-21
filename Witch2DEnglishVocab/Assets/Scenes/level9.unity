@@ -2151,64 +2151,59 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sentences:
-  - I have tried talking to Mina again, Iroha .
-  - Oh . What happened by then ?
-  - It seemed she became composed and wanted to apologize to you in person .
-  - "That\u2019s a surprise . The rambunctious Mina rarely apologize ."
-  - How did you talk to that unrestrainable person?
-  - "Well it goes like this \u2026"
-  - Elaina explained what happened to Iroha.
-  - "Thank goodness, perhaps I shall be at ease for now.\r"
+  - Job application ?
+  - Yes ... I did have a little bit of a nasty situation at my previous workplace
+    .
+  - They weren't jerks or anything ...
+  - They let me go and are even helping me out to find new employment .
+  - 'But even if I''m jobless , this whole situation still has me feeling lethargic
+    ...
+
+'
+  - "I didn't wanna end up all limp like this, but I\u2019m all lackadaisical now
+    \u2026"
   choices:
-  - "She is no longer uncontrollable.\r(uncontrollable)\n"
-  - She is no longer noisy.(noisy)
-  - She is no longer unorderly.
+  - "Guess you really can\u2019t get lazy in a situation like this (Lazy)"
+  - "If they\u2019re helping you why are you so tired (Tired)"
+  - "Really\u2026 you can\u2019t go around this place with your guard down like that\u2026
+    (Weak)"
   results:
-  - "Yeah you don\u2019t need to worry about her being uncontrollable. "
-  - She will give you a sincere apology.
-  - "Thank you\u2026I will meet her when the time is right\u2026"
+  - "But who can help not wanting a rest after what you\u2019ve been going through
+    after all\u2026"
+  - "Yeah\u2026"
   - That was the correct answer!
-  - I guess her being noisy is gone now.
-  - You could say that.
-  - "But I don\u2019t think it\u2019s her character to be not noisy."
-  - Oh yeah, she is still the rough one in her adventures.
+  - Mostly my fault really.
+  - "I can\u2019t stand not having anything to do\u2026"
   - That was the incorrect answer. Try again.
-  - I think she will be a good girl and will not be unorderly anymore.
-  - I do hope. Her apology is something I have yet to see.
-  - That was almost the correct answer. Try again.
+  - "I know\u2026"
+  - That was the incorrect answer. Try again.
   remarks:
   - Correct
   - Incorrect
-  - Kinda correct
+  - Incorrect
   clues:
-  - unrestrainable
-  - composed
+  - lethargic
+  - limp
   clue_type:
+  - definition
   - synonym
-  - antonym
   names:
   - Elaina
   - Iroha
-  - Elaina
   - Iroha
   - Iroha
-  - Elaina
-  - 
+  - Iroha
   - Iroha
   names_result:
   - Elaina
   - Iroha
-  - Iroha
   - 
-  - Elaina
   - Iroha
   - Iroha
   - 
-  - Elaina
-  - Elaina
   - Iroha
   - 
-  result_stopper: 020000000700000009000000
+  result_stopper: 020000000500000007000000
   dtrigger: {fileID: 1880291885}
   pmech: {fileID: 1814305329}
   answer: relieved!
@@ -3458,68 +3453,63 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sentences:
-  - "How\u2019s the situation with Mina so far Elaina ?"
-  - "For starters \u2026"
-  - "Let\u2019s just say she became loud mouthed in objection towards what I have
-    explained towards her."
-  - "I guess it\u2019s not easy to talk to a rambunctious person \u2026"
-  - Her rambunctious ways such as screaming , shouting , and being loud is not very
-    easy to quiet her .
-  - "If only I can reach out to her heart \u2026"
+  - The next day ...
+  - Iroha's sitting in the same place , looking rather dull .
+  - Elaina pouts at the sight .
+  - Iroha !
+  - Eh ?! Wait ! Wha ?!
+  - I have the papers , yes !
+  - Oi , what's going on with ya ?
+  - Eh ... oh , it's just you Elaina ...
+  - "Answer the question , I can't stand seeing ya look all lackadaisical \u2026"
+  - Iroha sighs listlessly at the constant prodding.
   choices:
-  - "I wonder why she is uncontrollable\u2026(uncontrollable)"
-  - "It\u2019s not easy since she is chaotic(chaotic)"
-  - I will try again when she is not noisy anymore.
+  - Getting lazy after all these years? (Lazy)
+  - You really need to get some proper rest (Tired)
+  - " Really\u2026 you can\u2019t go around this place with your guard down like
+    that\u2026 (Weak)"
   results:
-  - "I wonder why she is this uncontrollable\u2026"
-  - "I wonder too...something tells me there is more to this\u2026"
-  - That was almost the correct answer. Try again.
-  - "Well it\u2019s not gonna be easy since she is chaotic.\t"
-  - Yes I know, but I refuse to back down from this.
-  - She is my friend who helped me a lot back then.
+  - "I kind of want to, really\u2026"
   - That was the incorrect answer. Try again.
-  - Perhaps I will try again when she is not noisy anymore.
-  - I will be trying a different approach of talking to her.
-  - 'Thank you. '
-  - I am not sure on how to handle her but perhaps I can give you some advice.
-  - "I am afraid that won\u2019t do since I want to talk to you about something."
-  - Eh?
+  - "I\u2019m sorry Elaina\u2026 not\u2026 yet."
+  - "Oi, you\u2019re falling asleep again."
+  - 'E-eh? '
+  - That was the incorrect answer. Try again.
+  - "Maybe\u2026 but I need this as fast as possible\u2026"
+  - Need what exactly?
   - That was the correct answer!
   remarks:
   - Correct
   - Kinda Correct
   - Kinda correct
   clues:
-  - screaming
-  - shouting
-  - loud
+  - dull
+  - listlessly
   clue_type:
-  - example
-  - example
-  - example
+  - synonym
+  - synonym
   names:
+  - 
+  - 
+  - 
+  - Elaina
+  - Iroha
   - Iroha
   - Elaina
+  - Iroha
   - Elaina
-  - Iroha
-  - Iroha
-  - Iroha
+  - 
   names_result:
-  - Elaina
   - Iroha
   - 
-  - Elaina
-  - Iroha
-  - Iroha
-  - 
-  - Elaina
-  - Elaina
-  - Iroha
   - Iroha
   - Elaina
   - Iroha
   - 
-  result_stopper: 02000000060000000d000000
+  - Iroha
+  - Elaina
+  - 
+  result_stopper: 010000000500000008000000
   dtrigger: {fileID: 1880291885}
   pmech: {fileID: 1814305329}
   answer: relieved!
@@ -8550,69 +8540,53 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sentences:
-  - "Sigh \u2026"
-  - "Iroha ? What\u2019s wrong ?"
-  - 'I am thinking of quitting my job. '
-  - "This maid service isn\u2019t worth my time anymore."
-  - Why is that?
-  - "It\u2019s because of that rambunctious family who never knows how to be orderly
-    ."
-  - We had an argument that goes like this .
-  - "\u201C\u2018 You rambunctious lot do not know how to treat me with respect !
-    \u201D"
-  - " \u201CRambunctious ? What does that mean ? \""
-  - "\" Is that one of your nerd words that is lame ? \u201D Said one of their kids
-    . "
-  - "\u201C By rambunctious I mean you guys are rough and rowdy ! \u201D"
-  - "\u201C I had enough of every one of you ! \u201D"
-  - ... and after that we had endless arguments that frustrated me .
-  - "Iroha \u2026"
+  - You find Iroha sitting outside , she seems she is exhausted .
+  - Hey , what's up sleepyhead ?
+  - Iroha takes a moment to stir herself .
+  - Ah ... Elaina , I'm sorry ...
+  - You don't seem like your usual lively self ...
+  - Iroha weakly chuckles at the statement .
+  - Please , you don't need to worry about me .
+  - "I've just been a little down lately is all \u2026"
+  - Just a tad lackadaisical because of that ~
+  - Hey , what happened ?
   choices:
-  - "They are a chaotic bunch\u2026(chaotic)"
-  - "They are an uncontrollable bunch\u2026(uncontrollable)"
-  - "They are a noisy bunch\u2026(noisy)"
+  - Getting lazy after all these years? (Lazy)
+  - "It\u2019s rare to see you so tired (Tired)"
+  - "It\u2019s weird seeing you this weak\u2026 (Weak)"
   results:
-  - "I am sorry to hear that you worked with an unorderly family\u2026"
-  - "It\u2019s alright...I am currently away from them. "
-  - "I need to reset my mind before I go crazy from this mess\u2026"
+  - Iroha lets out a weak laugh
+  - "Wouldn\u2019t you like to believe it~"
+  - That was the incorrect answer. Try again.
+  - Is it?
+  - "I guess a lot really has happened since we went our separate ways\u2026"
   - That was the correct answer!
-  - I am sorry to hear that you experienced an uncontrollable bunch.
-  - "They are not exactly uncontrollable I have to say\u2026"
-  - "It's just that\u2026they are not disciplined\u2026"
-  - That was almost the correct answer. Try again.
-  - "I am sorry to hear that you experienced a noisy bunch\u2026"
-  - "Sigh\u2026it\u2019s okay\u2026"
-  - "At least the other neighbors did not hear our arguments\u2026"
+  - "Really, please don\u2019t worry, Elaina ."
+  - I never let my guard down~
   - That was the incorrect answer. Try again.
   remarks:
+  - Incorrect
   - Correct
-  - Kinda Correct
   - Incorrect
   clues:
-  - rough
-  - rowdy
-  - orderly
+  - exhausted
+  - lively
   clue_type:
-  - definition
   - definition
   - antonym
   names:
+  - 
+  - Elaina
+  - 
   - Iroha
   - Elaina
-  - Iroha
-  - Iroha
-  - Elaina
-  - Iroha
-  - Iroha
-  - Iroha
-  - Iroha
-  - Iroha
+  - 
   - Iroha
   - Iroha
   - Iroha
   - Elaina
   names_result:
-  - Elaina
+  - 
   - Iroha
   - Iroha
   - 
@@ -8621,10 +8595,7 @@ MonoBehaviour:
   - Iroha
   - 
   - Elaina
-  - Iroha
-  - Iroha
-  - 
-  result_stopper: 03000000070000000b000000
+  result_stopper: 020000000500000008000000
   dtrigger: {fileID: 1880291885}
   pmech: {fileID: 1814305329}
   answer: relieved!

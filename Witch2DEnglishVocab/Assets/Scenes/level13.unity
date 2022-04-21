@@ -1485,7 +1485,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Acquiesce
+  m_Text: Rapprochement
 --- !u!222 &680926348
 CanvasRenderer:
   m_ObjectHideFlags: 0

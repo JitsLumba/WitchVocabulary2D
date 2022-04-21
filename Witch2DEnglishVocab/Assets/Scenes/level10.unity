@@ -1485,7 +1485,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Acquiesce
+  m_Text: Atrocious
 --- !u!222 &680926348
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2151,71 +2151,64 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sentences:
-  - Hey Elaina , do you have a moment?
-  - "Yeah Yuichi , what\u2019s up ?"
-  - I have been thinking about whether or not I should acquiesce ...
-  - "... to the customers\u2019 demands with my furniture."
-  - 'What do you mean by that? '
-  - 'My sales and customer count has gone down lately and my shop is on its last
-    legs. '
-  - "Is it because I don\u2019t yield to my customers\u2019 needs ?"
-  - Or is it that I believe in my ideas of resisting their selfish ideas for their
-    product ?
-  - "I don\u2019t even know anymore \u2026"
-  - "Yuichi \u2026"
+  - Elaina ! Thank heavens I found you !
+  - "Mina ? What\u2019s got you all excited ?"
+  - I found these on a another mob that attacked me .
+  - "Seriously .. Those people are vile \u2026"
+  - She shows you what looks like a medallion .
+  - That's ...
+  - The household Iroha's serving ?
+  - I knew that wicked witch was up to something ...
+  - And here I am now with solid proof !
+  - That atrocious wench is finally gonna get what she deserves !
   choices:
-  - "It\u2019s not like you to accept their needs.(accept)"
-  - "It\u2019s not like you to submit to them.(submit)"
-  - "It\u2019s not like you to agree with them.(agree)"
+  - "You\u2019re pretty horrible at this kind of stuff\u2026 (horrible)"
+  - "Getting brutal\u2019s just gonna get you into more trouble (brutal)"
+  - "I stand corrected, I think the evil lord here is you\u2026 (evil)"
   results:
-  - "Submitting to their needs, that isn\u2019t so you at all."
-  - "Perhaps\u2026but I need to do something before my shop closes\u2026"
+  - "What\u2019s that supposed to mean?!"
+  - "Detective work\u2026"
   - That was the incorrect answer. Try again.
-  - "It\u2019s not like you to submit to them. Do you want to talk it over?"
-  - "Hm\u2026"
-  - Yeah you are right. I think I need to have this sorted first.
-  - And I don't think I sense a feeling of dislike from her...
-  - 'That was the correct answer. '
-  - "It\u2019s not like you to agree with them. You would honestly not be in favor
-    with their ideas."
-  - "Well it\u2019s not necessarily that I agree with them\u2026"
-  - "Just that I feel like I have to be on the same page with them\u2026"
-  - 'That was almost the correct answer. Try again. '
+  - "Tsk\u2026 I just wanna walk in there and start giving them what-for!"
+  - That was the incorrect answer. Try again.
+  - W-what?!
+  - "This isn\u2019t evidence Iroha\u2019s gone and become a mob boss!"
+  - "I\u2026 she\u2026"
+  - "Mina, please, you two used to be so close\u2026"
+  - That was the correct answer!
   remarks:
-  - Kinda Correct
   - Incorrect
-  - Kinda correct
+  - Incorrect
+  - Correct
   clues:
-  - yield
-  - resist
+  - vile
+  - wicked
   clue_type:
+  - definition
   - synonym
-  - antonym
   names:
-  - Yuichi
+  - Mina
   - Elaina
-  - Yuichi
-  - Yuichi
+  - Mina
+  - Mina
+  - 
   - Elaina
-  - Yuichi
-  - Yuichi
-  - Yuichi
-  - Yuichi
   - Elaina
+  - Mina
+  - Mina
+  - Mina
   names_result:
-  - Elaina
-  - Iroha
-  - Iroha
-  - 
-  - Elaina
-  - Iroha
-  - Iroha
-  - 
+  - Mina
   - Elaina
   - 
-  - Iroha
+  - Mina
   - 
-  result_stopper: 020000000700000009000000
+  - Mina
+  - Elaina
+  - Mina
+  - Elaina
+  - 
+  result_stopper: 020000000400000009000000
   dtrigger: {fileID: 1880291885}
   pmech: {fileID: 1814305329}
   answer: relieved!
@@ -8402,66 +8395,65 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sentences:
-  - "So traveler about our boss \u2026"
-  - "Ah the one who forces you to go overtime for no reason isn\u2019t it ?"
-  - Yes, he finally heard our complaints with work overtime.
-  - But unfortunately, he cannot acquiesce to our request of easing our work.
-  - In a split second , he rejected our complaints .
-  - What !? What an unfair boss he is !
-  - Yeah, he did not approve our complaints while thinking that his standards are
-    only fair and square.
-  - What a selfish boss !
+  - You find Mina amongst more knocked-out thugs .
+  - Mina!
+  - Mina's delighted to see you, but you could tell she was tired .
+  - Oh ... Elaina ... Sorry ...
+  - Dangit ... what did I tell you ? Are you alright ?
+  - "It's not my fault ... some heinous fiend\u2019s been sending 'em after me ..."
+  - Besides , it's not like it's anything I can't walk off ~
+  - These guys did an atrocious job at trying to get me anyway .
+  - "* sigh * \n"
+  - "At least knowing you , you\u2019re still a good enough person to not kill them
+    \u2026\r"
   choices:
-  - "I can\u2019t believe he did not agree(agree)"
-  - "I can\u2019t believe he did not accept(accept)"
-  - "I can\u2019t believe he did not submit(submit)"
+  - Did they really do such a horrible job? (horrible)
+  - Getting attacked regularly seems pretty brutal though (brutal)
+  - "Whoever's sending them must be some evil lord\u2026 (evil)"
   results:
-  - "It\u2019s unbelievable that he did not agree to your requests."
-  - "Sigh\u2026if only my boss can do that\u2026then he is a decent boss\u2026"
-  - "Unfortunately we can\u2019t have that\u2026."
-  - Close answer try again.
-  - "It\u2019s unbelievable that your boss did not submit to your requests."
-  - 'Absolutely! '
-  - This boss is the lowest of the low when it comes to work standards.
-  - I really hate working with that guy!
+  - "Yep, I\u2019m not sure if I can blame \u2018em really."
+  - "Whoever\u2019s doing this should know what I\u2019m capable of now\u2026"
+  - "Yet they keep sending in this\u2026 cannon fodder."
   - That was the correct answer!
-  - "It\u2019s unbelievable that your boss did not submit to your requests."
-  - "Honestly I do wish my boss can be more decent but I am afraid it won\u2019t
-    do here\u2026"
-  - That was the incorrect answer try again.
+  - "Can\u2019t say it is though~"
+  - I appreciate the exercise!
+  - "You\u2019re really something else aren\u2019t ya?"
+  - That was the incorrect answer. Try again.
+  - "I think your imagination\u2019s getting the better of ya~"
+  - That was the incorrect answer. Try again.
   remarks:
-  - Kinda Correct
   - Correct
   - Incorrect
+  - Incorrect
   clues:
-  - reject
-  - approve
+  - heinous
+  - good
   clue_type:
-  - antonym
   - synonym
+  - antonym
   names:
-  - Yuichi
+  - 
   - Elaina
-  - Yuichi
-  - Yuichi
-  - Yuichi
+  - 
+  - Mina
   - Elaina
-  - Yuichi
-  - Yuichi
+  - Mina
+  - Mina
+  - Mina
+  - Elaina
+  - Elaina
   names_result:
-  - Elaina
-  - Yuichi
-  - Yuichi
+  - Mina
+  - Mina
+  - Mina
   - 
+  - Mina
+  - Mina
   - Elaina
-  - Yuichi
-  - Yuichi
   - 
-  - Elaina
-  - Yuichi
-  - Yuichi
+  - Mina
   - 
-  result_stopper: 03000000070000000b000000
+  result_stopper: 030000000700000009000000
   dtrigger: {fileID: 1880291885}
   pmech: {fileID: 1814305329}
   answer: relieved!

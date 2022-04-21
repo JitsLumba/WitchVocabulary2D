@@ -8593,7 +8593,7 @@ MonoBehaviour:
   - rowdy
   - orderly
   clue_type:
-  - definition
+  - synonym
   - definition
   - antonym
   names:
