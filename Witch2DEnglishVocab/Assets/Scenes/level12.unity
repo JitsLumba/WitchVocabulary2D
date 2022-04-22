@@ -2151,43 +2151,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sentences:
-  - Hey Elaina , do you have a moment?
-  - "Yeah Yuichi , what\u2019s up ?"
-  - I have been thinking about whether or not I should acquiesce ...
-  - "... to the customers\u2019 demands with my furniture."
-  - 'What do you mean by that? '
-  - 'My sales and customer count has gone down lately and my shop is on its last
-    legs. '
-  - "Is it because I don\u2019t yield to my customers\u2019 needs ?"
-  - Or is it that I believe in my ideas of resisting their selfish ideas for their
-    product ?
-  - "I don\u2019t even know anymore \u2026"
-  - "Yuichi \u2026"
+  - Ah good sales and good vibes !
+  - "Hey Yuichi ! What\u2019s with the happy face ?"
+  - 'Heh, just recently I got a call from my manager . '
+  - "My boss\u2019s supervisor reproached the customers ..."
+  - ... who were not sticking with the contract .
+  - He humiliated them a lot for all the broken contracts ...
+  - ... and made them actually pay monthly payments for my furniture .
+  - "He doesn\u2019t honor those who refuses to stick with the contract that was
+    given to them ."
+  - "Wow Yuichi \u2026 your supervisor \u2026"
   choices:
-  - "It\u2019s not like you to accept their needs.(accept)"
-  - "It\u2019s not like you to submit to them.(submit)"
-  - "It\u2019s not like you to agree with them.(agree)"
+  - "He held nothing with shaming them\u2026(shame)"
+  - "He held nothing with scolding them\u2026(scold)"
+  - "He held nothing with criticizing them\u2026(criticize)"
   results:
-  - "Submitting to their needs, that isn\u2019t so you at all."
-  - "Perhaps\u2026but I need to do something before my shop closes\u2026"
+  - But of course. They broke the contract after all.
+  - It is only natural that they will get their just desserts.
+  - That was the correct answer!
+  - "I don\u2019t know about scolding but\u2026"
+  - "I am pretty sure that they did end up losing badly\u2026"
   - That was the incorrect answer. Try again.
-  - "It\u2019s not like you to submit to them. Do you want to talk it over?"
-  - "Hm\u2026"
-  - Yeah you are right. I think I need to have this sorted first.
-  - And I don't think I sense a feeling of dislike from her...
-  - 'That was the correct answer. '
-  - "It\u2019s not like you to agree with them. You would honestly not be in favor
-    with their ideas."
-  - "Well it\u2019s not necessarily that I agree with them\u2026"
-  - "Just that I feel like I have to be on the same page with them\u2026"
-  - 'That was almost the correct answer. Try again. '
+  - You can say that.
+  - I just hope that they will pay me in full the next time they come to me.
+  - That was almost the correct answer. Try again.
   remarks:
   - Kinda Correct
   - Incorrect
   - Kinda correct
   clues:
-  - yield
-  - resist
+  - humiliated
+  - honor
   clue_type:
   - synonym
   - antonym
@@ -2196,26 +2190,22 @@ MonoBehaviour:
   - Elaina
   - Yuichi
   - Yuichi
-  - Elaina
   - Yuichi
   - Yuichi
   - Yuichi
   - Yuichi
   - Elaina
   names_result:
-  - Elaina
-  - Iroha
-  - Iroha
+  - Yuichi
+  - Yuichi
   - 
-  - Elaina
-  - Iroha
-  - Iroha
+  - Yuichi
+  - Yuichi
   - 
-  - Elaina
+  - Yuichi
+  - Yuichi
   - 
-  - Iroha
-  - 
-  result_stopper: 020000000700000009000000
+  result_stopper: 020000000500000008000000
   dtrigger: {fileID: 1880291885}
   pmech: {fileID: 1814305329}
   answer: relieved!
@@ -3383,74 +3373,54 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sentences:
-  - "Sigh \u2026"
-  - "Yuichi ! What\u2019s wrong ?"
-  - These customers cannot consent to the terms of paying...
-  - ...the monthly reparations of the furniture they requested from me.
-  - It would be nice to have them acquiesce to these terms...
-  - ...such as a civil accordance and acknowledgement of their responsibility with
-    their furniture.
-  - But no. They decided to oppose with the contract that was given to them.
+  - Say Yuichi ...
+  - ... do you have any advice when condemning difficult people in conversations
+    ?
+  - Advice for reproaching them huh ?
+  - Well first off you need to know what is worth detesting from them .
+  - Analyze their characters and the situation you are in .
+  - Then go for the attack that will make them remember their wrongdoings in shame
+    .
   choices:
-  - They should stick with the agreement on the contract(agree)
-  - They should submit towards the contract(submit)
-  - They should have accepted the terms(accept)
+  - "Ah so that\u2019s how I should criticize them?(Criticize)"
+  - Good tips for shaming them.(shame)
+  - So that is basically scolding right?(scold)
   results:
-  - "These customers\u2026"
-  - ...the moment they were given an agreement, they should stick by it.
-  - 'Definitely! '
-  - Those customers paid for it...
-  - ...meaning they should agree to the contract that was given to them.
-  - "It\u2019s their money that they have bought this furniture after all!"
+  - Precisely! You should remember these tips.
   - That was the correct answer!
-  - "It\u2019s hard to believe that with their money, they won\u2019t submit towards
-    the contract."
-  - "They are difficult people. As if they would submit to the contract\u2026"
-  - "If only\u2026"
-  - That was the incorrect answer. Try again.
-  - When they were given a contract, they should accept the terms written on it.
-  - Yes, sadly they did not do so.
-  - "And it\u2019s something that irritates me to no end."
-  - 'That was almost the correct answer. Try again.
-
-'
+  - Pretty much.
+  - "Although this is not exactly shaming them\u2026"
+  - That was almost the correct answer. Try again.
+  - "Wait\u2026are you trying to scold them?"
+  - "I am not sure if I got that message right\u2026"
+  - That was the incorrect answer.
   remarks:
   - Correct
   - Kinda Correct
   - Kinda correct
   clues:
-  - accordance
-  - acknowledgement
-  - disagreement
+  - condemning
+  - detest
+  - attack
   clue_type:
-  - example
-  - example
-  - antonym
+  - definition
+  - synonym
   names:
-  - 
-  - Iroha
-  - Iroha
   - Elaina
-  - Iroha
-  - Elaina
-  - Elaina
+  - Yuichi
+  - Yuichi
+  - Yuichi
+  - Yuichi
+  - Yuichi
   names_result:
-  - Elaina
-  - Elaina
   - Yuichi
-  - Yuichi
+  - 
   - Yuichi
   - Yuichi
   - 
-  - Elaina
-  - Yuichi
   - Yuichi
   - 
-  - Elaina
-  - Yuichi
-  - Yuichi
-  - 
-  result_stopper: 060000000a0000000e000000
+  result_stopper: 010000000400000006000000
   dtrigger: {fileID: 1880291885}
   pmech: {fileID: 1814305329}
   answer: relieved!
@@ -8402,50 +8372,46 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sentences:
-  - "So traveler about our boss \u2026"
-  - "Ah the one who forces you to go overtime for no reason isn\u2019t it ?"
-  - Yes, he finally heard our complaints with work overtime.
-  - But unfortunately, he cannot acquiesce to our request of easing our work.
-  - In a split second , he rejected our complaints .
-  - What !? What an unfair boss he is !
-  - Yeah, he did not approve our complaints while thinking that his standards are
-    only fair and square.
-  - What a selfish boss !
+  - Hey Yuichi ! How is your day at work ?
+  - Feeling in good spirits today .
+  - Why is that ?
+  - Remember my boss ? He just got reproached by his superior today !
+  - His way of reproaching such as lecturing and rebuking his selfish ways...
+  - ... has made him remorseful of his ways !
+  - He has finally accepted our request to ease our work times after that !
   choices:
-  - "I can\u2019t believe he did not agree(agree)"
-  - "I can\u2019t believe he did not accept(accept)"
-  - "I can\u2019t believe he did not submit(submit)"
+  - He got shamed(shamed)
+  - He deserved that scolding.(scold)
+  - His wrongdoings were criticized!(criticize)
   results:
-  - "It\u2019s unbelievable that he did not agree to your requests."
-  - "Sigh\u2026if only my boss can do that\u2026then he is a decent boss\u2026"
-  - "Unfortunately we can\u2019t have that\u2026."
-  - Close answer try again.
-  - "It\u2019s unbelievable that your boss did not submit to your requests."
-  - 'Absolutely! '
-  - This boss is the lowest of the low when it comes to work standards.
-  - I really hate working with that guy!
+  - He sure got shamed and learned his lesson.
+  - "You can say that. But for learning his lesson\u2026"
+  - "\u2026that has yet to be seen for he is currently going through evaluation."
+  - That was almost the correct answer. Try again.
+  - "What karma\u2026he deserved every scolding he received from his supervisor."
+  - 'Right!? '
+  - Ah you should his blue face that he does not want to show towards his supervisor!
+  - "It\u2019s so satisfying to look at!"
   - That was the correct answer!
-  - "It\u2019s unbelievable that your boss did not submit to your requests."
-  - "Honestly I do wish my boss can be more decent but I am afraid it won\u2019t
-    do here\u2026"
-  - That was the incorrect answer try again.
+  - Heh, he finally got his wrongdoings criticized.
+  - He sure did. Well I just hope his ways are changed after that.
+  - That was the close answer. Try again.
   remarks:
   - Kinda Correct
   - Correct
-  - Incorrect
+  - Kinda correct
   clues:
-  - reject
-  - approve
+  - lecturing
+  - rebuking
   clue_type:
-  - antonym
-  - synonym
+  - example
+  - example
   names:
+  - Elaina
   - Yuichi
   - Elaina
   - Yuichi
   - Yuichi
-  - Yuichi
-  - Elaina
   - Yuichi
   - Yuichi
   names_result:
@@ -8461,7 +8427,7 @@ MonoBehaviour:
   - Yuichi
   - Yuichi
   - 
-  result_stopper: 03000000070000000b000000
+  result_stopper: 03000000080000000b000000
   dtrigger: {fileID: 1880291885}
   pmech: {fileID: 1814305329}
   answer: relieved!

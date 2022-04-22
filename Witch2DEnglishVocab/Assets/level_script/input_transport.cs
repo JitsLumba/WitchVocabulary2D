@@ -8,7 +8,7 @@ public class input_transport : MonoBehaviour
  
     bool cantransport = false;
     bool cango = true;
-    [SerializeField] float camera_x, camera_y, player_x, player_y, second_char_x_transf, second_char_y_rot, return_camera_x, return_player_x, return_scnd_char_x_transf, return_scnd_char_y_rot;
+    [SerializeField] float camera_x, camera_y, player_x, player_y, player_rot_y, player_return_rot_y, second_char_x_transf, second_char_y_rot, return_camera_x, return_player_x, return_scnd_char_x_transf, return_scnd_char_y_rot;
     [SerializeField] private GameObject camdest, playerdest, second_char;
 
     [SerializeField] private string samp;
@@ -38,9 +38,13 @@ public class input_transport : MonoBehaviour
          
            invdsy.setFalseInterv();
            lreturn.set_return_door(this.door_num);
-           lreturn.set_coordinates(return_camera_x, return_player_x, return_scnd_char_x_transf, return_scnd_char_y_rot);
+           lreturn.set_coordinates(return_camera_x, return_player_x, player_return_rot_y, return_scnd_char_x_transf, return_scnd_char_y_rot);
            camdest.transform.position = new Vector3(camera_x, camdest.transform.position.y, camdest.transform.position.z);
-           playerdest.transform.position = new Vector2(player_x, playerdest.transform.position.y);
+           playerdest.transform.position = new Vector3(player_x, playerdest.transform.position.y, playerdest.transform.position.z);
+           var rotate_player_vect = this.playerdest.transform.eulerAngles;
+           rotate_player_vect.y = this.player_rot_y;
+           playerdest.transform.rotation = Quaternion.Euler(rotate_player_vect);
+           
            var rotateVect = second_char.transform.eulerAngles;
            rotateVect.y = this.second_char_y_rot;
            second_char.transform.rotation = Quaternion.Euler(rotateVect);

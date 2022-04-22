@@ -43,7 +43,7 @@ public class Panel_Mechanic : MonoBehaviour
 
         }
 
-        if (Input.GetKeyDown(KeyCode.RightArrow) && ison && can_move)
+        if (((Input.GetKeyDown(KeyCode.RightArrow)) || (Input.GetKeyDown(KeyCode.D)))  && ison && can_move)
         {
 
             words = original.Trim().Split(' ');
@@ -68,7 +68,7 @@ public class Panel_Mechanic : MonoBehaviour
 
 
         }
-        else if (Input.GetKeyDown(KeyCode.LeftArrow) && ison && can_move)
+        else if (((Input.GetKeyDown(KeyCode.LeftArrow)) || (Input.GetKeyDown(KeyCode.A))) && ison && can_move)
         {
 
             words = original.Trim().Split(' ');

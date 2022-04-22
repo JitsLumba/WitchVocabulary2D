@@ -2132,7 +2132,7 @@ GameObject:
   - component: {fileID: 914805274}
   - component: {fileID: 914805273}
   m_Layer: 0
-  m_Name: Third_Door
+  m_Name: Second_door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2239,9 +2239,9 @@ MonoBehaviour:
   return_scnd_char_y_rot: 0
   camdest: {fileID: 398638468193488862}
   playerdest: {fileID: 5334363829152864345}
-  second_char: {fileID: 0}
+  second_char: {fileID: 8883835414974525880}
   samp: first_door
-  door_num: door_3
+  door_num: door_2
   subscrpt: {fileID: 914805273}
   invdsy: {fileID: 7237761973073092811}
   canchangediag: 1
@@ -2327,12 +2327,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 914805272}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 23.44, y: -34.87, z: 0}
+  m_LocalPosition: {x: 20.45, y: -34.87, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children:
   - {fileID: 1976913463}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &934626999
 GameObject:
@@ -3521,7 +3521,7 @@ GameObject:
   - component: {fileID: 1580047549}
   - component: {fileID: 1580047548}
   m_Layer: 0
-  m_Name: Second_Door
+  m_Name: Third_door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3540,74 +3540,69 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sentences:
-  - "Sigh \u2026"
-  - "Yuichi ! What\u2019s wrong ?"
-  - These customers cannot consent to the terms of paying...
-  - ...the monthly reparations of the furniture they requested from me.
-  - It would be nice to have them acquiesce to these terms...
-  - ...such as a civil accordance and acknowledgement of their responsibility with
-    their furniture.
-  - But no. They decided to oppose with the contract that was given to them.
+  - "No normal person is so \u2026 atrocious to who they used to care for so much
+    \u2026"
+  - "That is so callous for someone like you \u2026"
+  - :...
+  - Mina , she was let off last week .
+  - Mina continues to remain silent, though her silence was anything but gentle .
+  - I ran into her a few days ago .
+  - She's looking for a new job .
+  - :...
   choices:
-  - They should stick with the agreement on the contract(agree)
-  - They should submit towards the contract(submit)
-  - They should have accepted the terms(accept)
+  - "You\u2019re horrible\u2026 (horrible)"
+  - How could you still be so brutal towards someone like that?! (brutal)
+  - "I stand corrected, I think the evil lord here is you\u2026 (evil)"
   results:
-  - "These customers\u2026"
-  - ...the moment they were given an agreement, they should stick by it.
-  - 'Definitely! '
-  - Those customers paid for it...
-  - ...meaning they should agree to the contract that was given to them.
-  - "It\u2019s their money that they have bought this furniture after all!"
-  - That was the correct answer!
-  - "It\u2019s hard to believe that with their money, they won\u2019t submit towards
-    the contract."
-  - "They are difficult people. As if they would submit to the contract\u2026"
-  - "If only\u2026"
+  - "\u2026"
+  - Mina clenches her fist and almost reaches for her sword.
+  - "\u2026What would you know?"
   - That was the incorrect answer. Try again.
-  - When they were given a contract, they should accept the terms written on it.
-  - Yes, sadly they did not do so.
-  - "And it\u2019s something that irritates me to no end."
-  - 'That was almost the correct answer. Try again.
-
-'
+  - "I\u2026"
+  - "Tears start flowing down Mina\u2019s cheeks"
+  - '*sigh*'
+  - "Fine\u2026 I\u2019ll forget about it\u2026 "
+  - "Just\u2026 tell her to forget about me\u2026."
+  - That was the correct answer!
+  - "\u2026"
+  - Mina clenches her fist and almost reaches for her sword.
+  - "\u2026What would you know?"
+  - That was the incorrect answer. Try again.
   remarks:
+  - Incorrect
   - Correct
-  - Kinda Correct
-  - Kinda correct
+  - Incorrect
   clues:
-  - accordance
-  - acknowledgement
-  - disagreement
+  - callous
+  - gentle
   clue_type:
-  - example
   - example
   - antonym
   names:
-  - 
-  - Iroha
-  - Iroha
-  - Elaina
-  - Iroha
   - Elaina
   - Elaina
+  - Mina
+  - Elaina
+  - Elaina
+  - Elaina
+  - Elaina
+  - Mina
   names_result:
-  - Elaina
-  - Elaina
-  - Yuichi
-  - Yuichi
-  - Yuichi
-  - Yuichi
+  - Mina
   - 
-  - Elaina
-  - Yuichi
-  - Yuichi
+  - Mina
   - 
-  - Elaina
-  - Yuichi
-  - Yuichi
+  - Mina
   - 
-  result_stopper: 060000000a0000000e000000
+  - Mina
+  - Mina
+  - Mina
+  - 
+  - Mina
+  - 
+  - Mina
+  - 
+  result_stopper: 03000000090000000d000000
   dtrigger: {fileID: 1880291885}
   pmech: {fileID: 1814305329}
   answer: relieved!
@@ -3638,9 +3633,9 @@ MonoBehaviour:
   return_scnd_char_y_rot: 0
   camdest: {fileID: 398638468193488862}
   playerdest: {fileID: 5334363829152864345}
-  second_char: {fileID: 0}
+  second_char: {fileID: 8883835414974525880}
   samp: first_door
-  door_num: door_2
+  door_num: door_3
   subscrpt: {fileID: 1580047548}
   invdsy: {fileID: 7237761973073092811}
   canchangediag: 1
@@ -3726,12 +3721,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1580047547}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 20.45, y: -34.86, z: 0}
+  m_LocalPosition: {x: 23.44, y: -34.86, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children:
   - {fileID: 2082919027}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1616723370
 GameObject:
@@ -8484,7 +8479,7 @@ MonoBehaviour:
   return_scnd_char_y_rot: 0
   camdest: {fileID: 398638468193488862}
   playerdest: {fileID: 5334363829152864345}
-  second_char: {fileID: 0}
+  second_char: {fileID: 8883835414974525880}
   samp: first_door
   door_num: door_1
   subscrpt: {fileID: 1007564714534547114}

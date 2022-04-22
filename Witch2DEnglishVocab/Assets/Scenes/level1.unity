@@ -23442,7 +23442,7 @@ MonoBehaviour:
   - "A human ? To be discovered like this \u2026"
   - Eh ?
   - "No matter \u2026 I\u2019ve simply scraped myself on a rock when I tripped \u2026"
-  - "Fox: I need something to assuage this wound of mine\u2026"
+  - "I need something to assuage this wound of mine\u2026"
   - Human , might you have something to ease my wound ?
   - "This wound must be dampened if I am to continue on \u2026"
   choices:
@@ -23455,8 +23455,8 @@ MonoBehaviour:
     not forget this..."
   - Thank you, I shall not forget this...
   - That was the correct answer!
-  - "\u2026"
   - I have a snack here, you want some, Miss Fox?
+  - "\u2026"
   - That was unfortunately the incorrect answer, try again
   - "That\u2019s sad Miss Fox\u2026 do you want a hug?"
   - "I\u2026 do not think that will be necessary, human\u2026"
@@ -23485,7 +23485,7 @@ MonoBehaviour:
   - Fox
   - Fox
   - 
-  - Elaina
+  - Fox
   - Fox
   - 
   - Elaina

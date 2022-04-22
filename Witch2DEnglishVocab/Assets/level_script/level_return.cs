@@ -10,7 +10,7 @@ public class level_return : MonoBehaviour
     [SerializeField] private PlayerMovement pmove ;
     [SerializeField] private finished_level_check finish_level ;
     private List<string> door_lists;
-    private float camx, player_x, rotate_y_second_person, second_person_x;
+    private float camx, player_x, player_rotate_y, rotate_y_second_person, second_person_x;
     private bool can_return = true;
     private string door_return_name;
     // Start is called before the first frame update
@@ -31,11 +31,12 @@ public class level_return : MonoBehaviour
         c2d.enabled = true;
         pmove.enabled = true;
     }
-    public void set_coordinates(float camera_x, float play_x, float second_ps_x, float second_ps_y_rot) {
+    public void set_coordinates(float camera_x, float play_x, float play_rot_y, float second_ps_x, float second_ps_y_rot) {
         camx = camera_x;
         player_x = play_x;
         second_person_x = second_ps_x;
         this.rotate_y_second_person = second_ps_y_rot;
+        this.player_rotate_y = play_rot_y;
         
     }
     public void add_door(string door_n) {
@@ -60,14 +61,16 @@ public class level_return : MonoBehaviour
     public void return_objects() {
 
         this.camera.transform.position = new Vector3(camx, this.camera.transform.position.y, this.camera.transform.position.z);
-
+        var rotater_player = player.transform.eulerAngles;
+        rotater_player.y = player_rotate_y;
+        this.player.transform.rotation = Quaternion.Euler(rotater_player);
         var rotater_second = secondperson.transform.eulerAngles;
         rotater_second.y = rotate_y_second_person;
         this.secondperson.transform.rotation = Quaternion.Euler(rotater_second);
 
-        this.secondperson.transform.position = new Vector2(second_person_x, this.secondperson.transform.position.y);
+        this.secondperson.transform.position = new Vector3(second_person_x, this.secondperson.transform.position.y, this.secondperson.transform.position.z);
         
-        this.player.transform.position = new Vector2(player_x, this.player.transform.position.y);
+        this.player.transform.position = new Vector3(player_x, this.player.transform.position.y, this.player.transform.position.z);
         hide_dialogue();
         enable_movement();
     }

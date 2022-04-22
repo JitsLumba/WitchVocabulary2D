@@ -6812,6 +6812,8 @@ MonoBehaviour:
   camera_y: -34.92
   player_x: 40.13
   player_y: -34.74
+  player_rot_y: 0
+  player_return_rot_y: 0
   second_char_x_transf: 41.68
   second_char_y_rot: 180
   return_camera_x: 21.79
@@ -11104,16 +11106,12 @@ MonoBehaviour:
   - Yuichi
   - Yuichi
   names_result:
-  - Elaina
+  - Yuichi
+  - 
+  - Yuichi
   - Yuichi
   - Yuichi
   - 
-  - Elaina
-  - Yuichi
-  - Yuichi
-  - 
-  - Elaina
-  - Yuichi
   - Yuichi
   - 
   result_stopper: 010000000500000007000000
@@ -11139,6 +11137,8 @@ MonoBehaviour:
   camera_y: -34.92
   player_x: 40.13
   player_y: -34.74
+  player_rot_y: 0
+  player_return_rot_y: 0
   second_char_x_transf: 41.68
   second_char_y_rot: 180
   return_camera_x: 21.79
@@ -19103,10 +19103,12 @@ MonoBehaviour:
   - Yuichi ?!
   - "Eh ? Elaina ? You\u2019re here too ?"
   - "Yeah \u2026 it\u2019s just \u2026"
-  - What happened with that guy back there?
-  - "Oh \u2026 don\u2019t mind that"
-  - "I just wish my customers were a little more \u2026 neighborly."
+  - What happened with that guy back there ?
+  - "Oh \u2026 don\u2019t mind that ."
+  - "I just wish my customers were a little more \u2026 neighborly ."
   - Eh ?
+  - "They\u2019re pretty rude , talking like they\u2019re the darn boss ."
+  - "Thinking my work here is easy \u2026"
   - They could at least be a little more congenial when talking to me .
   - "But hey, it\u2019s nice to finally see a friendly face here"
   choices:
@@ -19115,10 +19117,10 @@ MonoBehaviour:
   - "Everyone else in town seemed to be a lot more sociable\u2026 (sociable)"
   results:
   - "Haven\u2019t seen much of the world yet have ya?"
-  - " It\u2019s pretty unfortunate."
-  - That was unfortunately the incorrect answer, try again
-  - "What? Ah come on, I\u2019m far from the arrogant jerk I was then"
-  - That was unfortunately the incorrect answer, try again
+  - "It\u2019s pretty unfortunate."
+  - That was unfortunately the incorrect answer, try again.
+  - "What? Ah come on, I\u2019m far from the arrogant jerk I was then."
+  - That was unfortunately the incorrect answer, try again.
   - "Well, there tends to be people that don\u2019t connect with the rest of society"
   - In my line of work, you meet a lot of the bad ones.
   - "Like they\u2019ve never met another human being, ugh\u2026"
@@ -19145,6 +19147,8 @@ MonoBehaviour:
   - Yuichi
   - Yuichi
   - Elaina
+  - Yuichi
+  - Yuichi
   - Yuichi
   - Yuichi
   names_result:
@@ -19180,6 +19184,8 @@ MonoBehaviour:
   camera_y: -34.92
   player_x: 40.13
   player_y: -34.74
+  player_rot_y: 0
+  player_return_rot_y: 0
   second_char_x_transf: 41.68
   second_char_y_rot: 180
   return_camera_x: 21.79

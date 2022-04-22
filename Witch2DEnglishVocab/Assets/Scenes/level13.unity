@@ -531,7 +531,7 @@ RectTransform:
   - {fileID: 1429774807}
   - {fileID: 1927710811}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -697,7 +697,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &386342921
 GameObject:
@@ -742,7 +742,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &394083967
 GameObject:
@@ -1243,7 +1243,7 @@ Transform:
   m_Children:
   - {fileID: 2006406357}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &624971589
 GameObject:
@@ -2151,57 +2151,64 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sentences:
-  - Hey Elaina , do you have a moment?
-  - "Yeah Yuichi , what\u2019s up ?"
-  - I have been thinking about whether or not I should acquiesce ...
-  - "... to the customers\u2019 demands with my furniture."
-  - 'What do you mean by that? '
-  - 'My sales and customer count has gone down lately and my shop is on its last
-    legs. '
-  - "Is it because I don\u2019t yield to my customers\u2019 needs ?"
-  - Or is it that I believe in my ideas of resisting their selfish ideas for their
-    product ?
-  - "I don\u2019t even know anymore \u2026"
-  - "Yuichi \u2026"
+  - "Eh ? Wait \u2026"
+  - "This isn\u2019t a memory \u2026"
+  - "Ah .. you really have come a long way haven\u2019t you ?"
+  - I guess you could say that ?
+  - Your magic is strong Elaina .
+  - "But words can hold just as if not more \u2026"
+  - "\u2026"
+  - Words can cause trouble .
+  - Words can make friendships bloom .
+  - Words can bring people together in of unity .
+  - Words can make friendships bloom
+  - "You\u2019ve brought many incidents and troublemakers to heel ."
+  - "But do you see the magic you\u2019ve cast on others through simple conversation
+    ?\r\n"
   choices:
-  - "It\u2019s not like you to accept their needs.(accept)"
-  - "It\u2019s not like you to submit to them.(submit)"
-  - "It\u2019s not like you to agree with them.(agree)"
+  - "I\u2019ve\u2026 fixed relationships\u2026 (reconcile)"
+  - "I\u2019ve\u2026 settled fears\u2026 (settlement)"
+  - "I\u2019ve\u2026 brought harmony to those around me (harmony)"
   results:
-  - "Submitting to their needs, that isn\u2019t so you at all."
-  - "Perhaps\u2026but I need to do something before my shop closes\u2026"
-  - That was the incorrect answer. Try again.
-  - "It\u2019s not like you to submit to them. Do you want to talk it over?"
-  - "Hm\u2026"
-  - Yeah you are right. I think I need to have this sorted first.
-  - And I don't think I sense a feeling of dislike from her...
-  - 'That was the correct answer. '
-  - "It\u2019s not like you to agree with them. You would honestly not be in favor
-    with their ideas."
-  - "Well it\u2019s not necessarily that I agree with them\u2026"
-  - "Just that I feel like I have to be on the same page with them\u2026"
-  - 'That was almost the correct answer. Try again. '
+  - "Hm, close, try again\u2026"
+  - "You\u2019re getting warmer\u2026"
+  - Exactly.
+  - "And you wouldn\u2019t have done that..."
+  - "...if you didn\u2019t meet so many great people on your journeys."
+  - "They\u2019ve helped shape you as much as you\u2019ve helped them\u2026"
+  - "Don\u2019t ever forget that\u2026"
+  - "Yes\u2026"
+  - "Sensei\u2026"
+  - "Well, don\u2019t get complacent yet~"
+  - "I\u2019ll be waiting for you in the final test~"
   remarks:
   - Kinda Correct
-  - Incorrect
-  - Kinda correct
+  - Kinda Correct
+  - Correct
   clues:
-  - yield
-  - resist
+  - friendship
+  - unity
+  - trouble
+  - bitterness
   clue_type:
   - synonym
+  - synonym
+  - antonym
   - antonym
   names:
-  - Yuichi
+  - Sensei
+  - Sensei
+  - Sensei
   - Elaina
-  - Yuichi
-  - Yuichi
+  - Sensei
+  - Sensei
   - Elaina
-  - Yuichi
-  - Yuichi
-  - Yuichi
-  - Yuichi
-  - Elaina
+  - Sensei
+  - Sensei
+  - Sensei
+  - Sensei
+  - Sensei
+  - Sensei
   names_result:
   - Elaina
   - Iroha
@@ -2214,8 +2221,7 @@ MonoBehaviour:
   - Elaina
   - 
   - Iroha
-  - 
-  result_stopper: 020000000700000009000000
+  result_stopper: 000000000100000009000000
   dtrigger: {fileID: 1880291885}
   pmech: {fileID: 1814305329}
   answer: relieved!
@@ -2339,7 +2345,7 @@ Transform:
   m_Children:
   - {fileID: 1976913463}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &934626999
 GameObject:
@@ -2421,7 +2427,7 @@ Transform:
   m_LocalScale: {x: 5.1945, y: 4.473619, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &954682324
 GameObject:
@@ -2556,7 +2562,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &979434733
 GameObject:
@@ -3253,7 +3259,7 @@ Transform:
   m_LocalScale: {x: 5.1945, y: 4.473619, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1441417533
 GameObject:
@@ -3547,74 +3553,89 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sentences:
-  - "Sigh \u2026"
-  - "Yuichi ! What\u2019s wrong ?"
-  - These customers cannot consent to the terms of paying...
-  - ...the monthly reparations of the furniture they requested from me.
-  - It would be nice to have them acquiesce to these terms...
-  - ...such as a civil accordance and acknowledgement of their responsibility with
-    their furniture.
-  - But no. They decided to oppose with the contract that was given to them.
-  choices:
-  - They should stick with the agreement on the contract(agree)
-  - They should submit towards the contract(submit)
-  - They should have accepted the terms(accept)
-  results:
-  - "These customers\u2026"
-  - ...the moment they were given an agreement, they should stick by it.
-  - 'Definitely! '
-  - Those customers paid for it...
-  - ...meaning they should agree to the contract that was given to them.
-  - "It\u2019s their money that they have bought this furniture after all!"
-  - That was the correct answer!
-  - "It\u2019s hard to believe that with their money, they won\u2019t submit towards
-    the contract."
-  - "They are difficult people. As if they would submit to the contract\u2026"
-  - "If only\u2026"
-  - That was the incorrect answer. Try again.
-  - When they were given a contract, they should accept the terms written on it.
-  - Yes, sadly they did not do so.
-  - "And it\u2019s something that irritates me to no end."
-  - 'That was almost the correct answer. Try again.
+  - You find Mina sitting out by the cliff edge .
+  - "Uuuh \u2026 Mina ?"
+  - "EH ?! WHO\u2019S WHAT ?!"
+  - "Hey hey hey ! Calm down, it\u2019s just me !"
+  - "Oh \u2026 Elaina , please don\u2019t sneak up on people like that \u2026"
+  - "Sorry , sorry \u2026 but you\u2019ve never been one to be snuck up on \u2026"
+  - "Yeah \u2026 you\u2019re right , but I\u2019ve had a lot of time to think since
+    \u2026"
+  - Since ?
+  - 'I spoke to Iroha yesterday ...
 
 '
+  - "... we\u2019ve reached an understanding I guess you can call it\r ."
+  - Oh really ?
+  - "Who would\u2019ve thought she\u2019d end up in the guild ?"
+  - "But someone of her talents , I guess it should\u2019ve been obvious \u2026\r\n"
+  - :...
+  - Would you believe it though ?
+  - "I never once thought how far I\u2019ve gotten from all of you \u2026"
+  - 'Following my darn justice without a care in the world ...
+
+'
+  - "... I was so distanced from you lot\r ."
+  - "Heh , it wasn\u2019t until she bear hugged me that I realized \u2026"
+  - "I\u2019m finally reunited with the people I care about \u2026 properly \u2026 "
+  - Elaina starts sniffling
+  choices:
+  - "Reconciliation\u2026 I\u2019m glad you\u2019re back Mina\u2026 (reconcile)"
+  - "We can finally work in harmony again\u2026 (harmony)"
+  - "It\u2019s settled then? (settlement)"
+  results:
+  - Mina also looks to be on the verge of tears.
+  - "Yeah\u2026 I\u2019m home\u2026"
+  - That was the correct answer!
+  - "Haah\u2026 I guess you could say that\u2026"
+  - That was unfortunately the incorrect answer, try again
+  - "You could say that\u2026"
+  - Especially since I answer to her now~
+  - Mina starts laughing to herself, you also join in.
+  - That was unfortunately the incorrect answer, try again
   remarks:
   - Correct
-  - Kinda Correct
-  - Kinda correct
+  - Incorrect
+  - Incorrect
   clues:
-  - accordance
-  - acknowledgement
-  - disagreement
+  - distanced
+  - understanding
   clue_type:
-  - example
-  - example
-  - antonym
+  - definition
+  - synonym
   names:
   - 
-  - Iroha
-  - Iroha
   - Elaina
-  - Iroha
+  - Mina
   - Elaina
+  - Mina
   - Elaina
+  - Mina
+  - Elaina
+  - Mina
+  - Mina
+  - Elaina
+  - Mina
+  - Mina
+  - Elaina
+  - Mina
+  - Mina
+  - Mina
+  - Mina
+  - Mina
+  - Mina
+  - 
   names_result:
-  - Elaina
-  - Elaina
-  - Yuichi
-  - Yuichi
-  - Yuichi
-  - Yuichi
   - 
-  - Elaina
-  - Yuichi
-  - Yuichi
+  - Mina
   - 
-  - Elaina
-  - Yuichi
-  - Yuichi
+  - Mina
   - 
-  result_stopper: 060000000a0000000e000000
+  - Mina
+  - Mina
+  - 
+  - 
+  result_stopper: 020000000400000008000000
   dtrigger: {fileID: 1880291885}
   pmech: {fileID: 1814305329}
   answer: relieved!
@@ -3645,7 +3666,7 @@ MonoBehaviour:
   return_scnd_char_y_rot: 0
   camdest: {fileID: 398638468193488862}
   playerdest: {fileID: 5334363829152864345}
-  second_char: {fileID: 0}
+  second_char: {fileID: 8883835414974525880}
   samp: first_door
   door_num: door_2
   subscrpt: {fileID: 1580047548}
@@ -3738,7 +3759,7 @@ Transform:
   m_Children:
   - {fileID: 2082919027}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1616723370
 GameObject:
@@ -3944,7 +3965,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1753184362
 GameObject:
@@ -8113,7 +8134,7 @@ Transform:
   m_Children:
   - {fileID: 1515648507}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2128379353
 GameObject:
@@ -8387,7 +8408,7 @@ Transform:
   m_Children:
   - {fileID: 1848171034}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1007564714534547114
 MonoBehaviour:
@@ -8402,64 +8423,80 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sentences:
-  - "So traveler about our boss \u2026"
-  - "Ah the one who forces you to go overtime for no reason isn\u2019t it ?"
-  - Yes, he finally heard our complaints with work overtime.
-  - But unfortunately, he cannot acquiesce to our request of easing our work.
-  - In a split second , he rejected our complaints .
-  - What !? What an unfair boss he is !
-  - Yeah, he did not approve our complaints while thinking that his standards are
-    only fair and square.
-  - What a selfish boss !
+  - Iroha !
+  - Ah ! Elaina, you made it .
+  - "So what\u2019s this all about ? "
+  - I just wanted to celebrate my finding a new job is all ~
+  - Really ?
+  - Yep , your new guild officer is standing right in front of ya ~
+  - Nice ! Glad to see you got yourself out of that feud
+  - Thanks Elaina .
+  - " I\u2019m just relieved that I\u2019m finally reaching some level of rapprochement
+    with my employment ."
+  - "It\u2019s great really , it\u2019s like me finally resolving another ridiculous
+    incident \u2026"
+  - "Man \u2026 "
+  - Would you believe my last job was the only one that I spent more than 2 years
+    in?
+  - "Uuuuh \u2026"
   choices:
-  - "I can\u2019t believe he did not agree(agree)"
-  - "I can\u2019t believe he did not accept(accept)"
-  - "I can\u2019t believe he did not submit(submit)"
+  - W-well, were you able to reconcile with your old bosses at the estate? (reconcile)
+  - "L-let\u2019s try to harmonize our work ethics together (harmony)"
+  - "A-ah\u2026 at least you\u2019ve settled this little issue of yours~ But\u2026
+    (settlement)"
   results:
-  - "It\u2019s unbelievable that he did not agree to your requests."
-  - "Sigh\u2026if only my boss can do that\u2026then he is a decent boss\u2026"
-  - "Unfortunately we can\u2019t have that\u2026."
-  - Close answer try again.
-  - "It\u2019s unbelievable that your boss did not submit to your requests."
-  - 'Absolutely! '
-  - This boss is the lowest of the low when it comes to work standards.
-  - I really hate working with that guy!
+  - Oh, there was no need for that~
+  - They knew the nasty stuff that was going on and said it was best for me to leave.
+  - "Aah\u2026"
+  - I told you, didn't I? They helped me land this new job too~
+  - That was unfortunately the incorrect answer, try again.
+  - Eh? What are you saying?
+  - N-nothing, nothing!
+  - That was unfortunately the incorrect answer, try again
+  - Hm?
+  - How many jobs have you burned through before the previous one?
+  - "Erm\u2026 6?"
+  - "How did you still get hired 4 times after the first two\u2026"
+  - "I\u2026 I see\u2026"
   - That was the correct answer!
-  - "It\u2019s unbelievable that your boss did not submit to your requests."
-  - "Honestly I do wish my boss can be more decent but I am afraid it won\u2019t
-    do here\u2026"
-  - That was the incorrect answer try again.
   remarks:
   - Kinda Correct
   - Correct
   - Incorrect
   clues:
-  - reject
-  - approve
+  - feud
+  - resolve
   clue_type:
   - antonym
-  - synonym
+  - example
   names:
-  - Yuichi
   - Elaina
-  - Yuichi
-  - Yuichi
-  - Yuichi
+  - Iroha
   - Elaina
-  - Yuichi
-  - Yuichi
+  - Iroha
+  - Elaina
+  - Iroha
+  - Elaina
+  - Iroha
+  - Iroha
+  - Elaina
+  - Iroha
+  - Iroha
+  - Elaina
   names_result:
+  - Iroha
+  - Iroha
   - Elaina
-  - Yuichi
-  - Yuichi
+  - Iroha
+  - 
+  - Iroha
+  - Elaina
   - 
   - Elaina
   - Yuichi
   - Yuichi
   - 
-  - Elaina
-  - Yuichi
-  - Yuichi
+  - 
   - 
   result_stopper: 03000000070000000b000000
   dtrigger: {fileID: 1880291885}
@@ -8488,11 +8525,11 @@ MonoBehaviour:
   second_char_y_rot: 180
   return_camera_x: 21.79
   return_player_x: 17.69
-  return_scnd_char_x_transf: 14.3
+  return_scnd_char_x_transf: 14.9
   return_scnd_char_y_rot: 0
   camdest: {fileID: 398638468193488862}
   playerdest: {fileID: 5334363829152864345}
-  second_char: {fileID: 0}
+  second_char: {fileID: 5949074326228894659}
   samp: first_door
   door_num: door_1
   subscrpt: {fileID: 1007564714534547114}
@@ -8833,15 +8870,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5334363829152864345}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 15.882, y: -34.838, z: 0}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 28.18, y: -34.838, z: 0}
   m_LocalScale: {x: 2.679621, y: 2.679621, z: 2.679621}
   m_Children:
   - {fileID: 5334363828684214586}
   - {fileID: 5334363828724554578}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &5334363829152864345
 GameObject:
   m_ObjectHideFlags: 0
@@ -8948,7 +8985,7 @@ Transform:
   m_Children:
   - {fileID: 1459766028}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5400894358496902791
 GameObject:
@@ -8980,8 +9017,110 @@ Transform:
   m_LocalScale: {x: 2.8, y: 3, z: 2.484118}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!95 &5949074326228894658
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5949074326228894659}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cf0d10e4eb84ba443bf07112c3aaedde, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1 &5949074326228894659
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5949074326228894660}
+  - component: {fileID: 5949074326228894661}
+  - component: {fileID: 5949074326228894658}
+  m_Layer: 0
+  m_Name: Iroha
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5949074326228894660
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5949074326228894659}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 14.9, y: -34.72, z: 0}
+  m_LocalScale: {x: 3, y: 3, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &5949074326228894661
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5949074326228894659}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 7
+  m_Sprite: {fileID: 21300000, guid: 97d8b634a9a6afd46ad2f0931d183637, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.64, y: 0.64}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &7237761973073092808
 GameObject:
   m_ObjectHideFlags: 0
@@ -9011,7 +9150,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7237761973073092811
 MonoBehaviour:
@@ -9088,7 +9227,7 @@ Transform:
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8883835414974525880
 GameObject:

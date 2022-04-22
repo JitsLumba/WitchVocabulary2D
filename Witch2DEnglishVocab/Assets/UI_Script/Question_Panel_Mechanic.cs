@@ -42,7 +42,7 @@ public class Question_Panel_Mechanic : MonoBehaviour
             
         }
         //HIGHLIGHTING WORDS
-        if (Input.GetKeyDown(KeyCode.RightArrow) && is_freeze && can_p) {
+        if (((Input.GetKeyDown(KeyCode.RightArrow)) || (Input.GetKeyDown(KeyCode.D))) && is_freeze && can_p) {
             words = original.Trim().Split(' ');
             int num = words.Length - 1;
 
@@ -61,7 +61,7 @@ public class Question_Panel_Mechanic : MonoBehaviour
             }
             this.set_dialogue_box(words, counter);
         }
-        else if (Input.GetKeyDown(KeyCode.LeftArrow) && is_freeze && can_o) {
+        else if (((Input.GetKeyDown(KeyCode.LeftArrow)) || (Input.GetKeyDown(KeyCode.A))) && is_freeze && can_o) {
             words = original.Trim().Split(' ');
             int num = words.Length - 1;
 

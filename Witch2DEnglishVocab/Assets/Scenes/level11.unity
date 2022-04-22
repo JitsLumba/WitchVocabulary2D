@@ -1403,7 +1403,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Animosity
+  m_Text: Vivacious
 --- !u!222 &680926348
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2069,71 +2069,64 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sentences:
-  - Hey Elaina , do you have a moment?
-  - "Yeah Yuichi , what\u2019s up ?"
-  - I have been thinking about whether or not I should acquiesce ...
-  - "... to the customers\u2019 demands with my furniture."
-  - 'What do you mean by that? '
-  - 'My sales and customer count has gone down lately and my shop is on its last
-    legs. '
-  - "Is it because I don\u2019t yield to my customers\u2019 needs ?"
-  - Or is it that I believe in my ideas of resisting their selfish ideas for their
-    product ?
-  - "I don\u2019t even know anymore \u2026"
-  - "Yuichi \u2026"
+  - You and your newfound friend run into someone ...
+  - ... who seems to be down on his luck .
+  - What's up with that guy ?
+  - He's all ... lifeless ...
+  - 'Ah ... '
+  - "Well you could say it's the other side of the coin that is human society\t\u2026"
+  - "The side of us that\u2019s a lot less\u2026 vivacious ..."
+  - "... is a lot less \u2026 a side that is a lot less jolly ."
+  - Eh ?
+  - He's just one of many really , all bright and bouncy ...
+  - "... chasing promises of glory\r ."
+  - Only to be played for fools at the end .
+  - ...
   choices:
-  - "It\u2019s not like you to accept their needs.(accept)"
-  - "It\u2019s not like you to submit to them.(submit)"
-  - "It\u2019s not like you to agree with them.(agree)"
+  - "Sucks all the joy out of you, seeing this\u2026 (joyful)"
+  - "Sights like these really do drain you\u2026 (energetic)"
+  - "The life\u2019s practically been sucked out of them\u2026 (lively)"
   results:
-  - "Submitting to their needs, that isn\u2019t so you at all."
-  - "Perhaps\u2026but I need to do something before my shop closes\u2026"
+  - "I\u2026 see\u2026"
   - That was the incorrect answer. Try again.
-  - "It\u2019s not like you to submit to them. Do you want to talk it over?"
-  - "Hm\u2026"
-  - Yeah you are right. I think I need to have this sorted first.
-  - And I don't think I sense a feeling of dislike from her...
-  - 'That was the correct answer. '
-  - "It\u2019s not like you to agree with them. You would honestly not be in favor
-    with their ideas."
-  - "Well it\u2019s not necessarily that I agree with them\u2026"
-  - "Just that I feel like I have to be on the same page with them\u2026"
-  - 'That was almost the correct answer. Try again. '
+  - "Yeah\u2026 they do."
+  - That was the incorrect answer. Try again.
+  - "\u2026"
+  - "Maybe there is something I can do about this\u2026"
+  - That was the correct answer!
   remarks:
-  - Kinda Correct
   - Incorrect
-  - Kinda correct
+  - Incorrect
+  - Correct
   clues:
-  - yield
-  - resist
+  - lifeless
+  - jolly
   clue_type:
-  - synonym
   - antonym
+  - example
   names:
-  - Yuichi
+  - 
+  - 
+  - Fox
+  - Fox
   - Elaina
-  - Yuichi
-  - Yuichi
   - Elaina
-  - Yuichi
-  - Yuichi
-  - Yuichi
-  - Yuichi
+  - Elaian
   - Elaina
+  - Fox
+  - Elaina
+  - Elaina
+  - Elaina
+  - Fox
   names_result:
-  - Elaina
-  - Iroha
-  - Iroha
+  - Fox
   - 
-  - Elaina
-  - Iroha
-  - Iroha
+  - Fox
   - 
-  - Elaina
+  - Fox
+  - Fox
   - 
-  - Iroha
-  - 
-  result_stopper: 020000000700000009000000
+  result_stopper: 010000000300000006000000
   dtrigger: {fileID: 1880291885}
   pmech: {fileID: 1814305329}
   answer: relieved!
@@ -3465,74 +3458,60 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sentences:
-  - "Sigh \u2026"
-  - "Yuichi ! What\u2019s wrong ?"
-  - These customers cannot consent to the terms of paying...
-  - ...the monthly reparations of the furniture they requested from me.
-  - It would be nice to have them acquiesce to these terms...
-  - ...such as a civil accordance and acknowledgement of their responsibility with
-    their furniture.
-  - But no. They decided to oppose with the contract that was given to them.
+  - Compared to back home , your towns are so much more vivacious !
+  - You have towns in ... wherever you lived ?
+  - Yep~
+  - The stories make the place sound all spiritual ...
+  - ... but really it's just a bunch of Kami drinking themselves to undeath .
+  - A - ah ...
+  - All Elaina can muster up is a dull smile at her stories .
+  - I know that sounds great and all , but believe me when I say that's ...
+  - ... Really all they do , it seems it is cheerful ...
+  - "... but that dies off pretty quickly if you\u2019re not one of them\r .\n"
   choices:
-  - They should stick with the agreement on the contract(agree)
-  - They should submit towards the contract(submit)
-  - They should have accepted the terms(accept)
+  - This is so normal though, does it bring you that much joy? (joyful)
+  - "They should be more energetic (energetic)\t"
+  - Were the residents there not very lively? (lively)
   results:
-  - "These customers\u2026"
-  - ...the moment they were given an agreement, they should stick by it.
-  - 'Definitely! '
-  - Those customers paid for it...
-  - ...meaning they should agree to the contract that was given to them.
-  - "It\u2019s their money that they have bought this furniture after all!"
-  - That was the correct answer!
-  - "It\u2019s hard to believe that with their money, they won\u2019t submit towards
-    the contract."
-  - "They are difficult people. As if they would submit to the contract\u2026"
-  - "If only\u2026"
+  - "Hm, it\u2019s really about the simple things I guess."
   - That was the incorrect answer. Try again.
-  - When they were given a contract, they should accept the terms written on it.
-  - Yes, sadly they did not do so.
-  - "And it\u2019s something that irritates me to no end."
-  - 'That was almost the correct answer. Try again.
-
-'
+  - "Heh, believe me human, that\u2019s the last thing they need."
+  - That was the incorrect answer. Try again.
+  - Far from it really.
+  - "Even if they\u2019re all divine, they still get drunk like anyone else."
+  - The hard part is ignoring all the noise.
+  - That was the correct answer!
   remarks:
+  - Incorrect
+  - Incorrect
   - Correct
-  - Kinda Correct
-  - Kinda correct
   clues:
-  - accordance
-  - acknowledgement
-  - disagreement
+  - dull
+  - cheerful
   clue_type:
-  - example
-  - example
   - antonym
+  - example
   names:
+  - Fox
+  - Elaina
+  - Fox
+  - Fox
+  - Fox
+  - Elaina
   - 
-  - Iroha
-  - Iroha
-  - Elaina
-  - Iroha
-  - Elaina
-  - Elaina
+  - Fox
+  - Fox
+  - Fox
   names_result:
-  - Elaina
-  - Elaina
-  - Yuichi
-  - Yuichi
-  - Yuichi
-  - Yuichi
+  - Fox
   - 
-  - Elaina
-  - Yuichi
-  - Yuichi
+  - Fox
   - 
-  - Elaina
-  - Yuichi
-  - Yuichi
+  - Fox
+  - Fox
+  - Fox
   - 
-  result_stopper: 060000000a0000000e000000
+  result_stopper: 010000000300000007000000
   dtrigger: {fileID: 1880291885}
   pmech: {fileID: 1814305329}
   answer: relieved!
@@ -8320,54 +8299,62 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sentences:
-  - Say Miss Fox , you mentioned something about your sisters kicking you out ?
-  - Eugh , you could say they're rather ornery towards the mortal plane ...
-  - "... kinda like your nasty mother-in-law I think I\u2019ve heard you people joke
-    about\r .\n"
-  - They find mingling with you lot pointless .
-  - Content to sit around and be worshipped as their own cranky selves .
-  - If only you people knew what you were worshipping ...
-  - Well if I'll be honest , I think you're pretty cranky yourself
-  - What ?!
-  - Nothing , nothing ~
+  - So you're happy here ?
+  - Surprisingly, yes actually .
+  - Been a lot more cheerful since they kicked me out .
+  - Was it that boring back home ?
+  - With how my own sisters are ?
+  - It shouldn't, but trust me...
+  - ...you'd go insane if you were around those three 24/7 for eternity .
+  - That place is nothing but a half-hearted facade .
+  - "You\u2019ll be anything but vivacious ."
   choices:
-  - "They\u2019re pretty harsh though (Harsh)"
-  - "They don\u2019t seem like they\u2019d be patient with us (Impatient)"
-  - Are they just permanently early morning grumpy  (Grumpy)
+  - Do we really bring you that much joy? (joyful)
+  - Were you always this energetic (energetic)
+  - "It\u2019s nice to see you so lively~ (lively)\r"
   results:
-  - "Yeah, all high \u2018n\u2019 mighty and all that"
-  - That was the incorrect answer. Try again.
-  - Heh, yeah, definitely
-  - That was the incorrect answer. Try again.
-  - "well I guess that\u2019s one way to put it, heh"
+  - "It\u2019s hard to explain really~"
+  - "You people are so much more\u2026 genuine."
+  - "Didn\u2019t really care for you lot till I decided to actually take a look."
+  - Curiosity may have killed the cat but it gave the fox life~
   - That was the correct answer!
+  - Kinda?
+  - That was the incorrect answer. Try again.
+  - Really? My sisters called it so unbecoming of a kami
+  - That was the incorrect answer. Try again.
   remarks:
-  - Incorrect
-  - Incorect
   - Correct
+  - Incorect
+  - Incorrect
   clues:
-  - reject
-  - approve
+  - happy
+  - cheerful
+  - boring
   clue_type:
-  - antonym
   - synonym
+  - synonym
+  - antonym
   names:
-  - Yuichi
   - Elaina
-  - Yuichi
-  - Yuichi
-  - Yuichi
+  - Fox
+  - Fox
   - Elaina
-  - Yuichi
-  - Yuichi
+  - Fox
+  - Fox
+  - Fox
+  - Fox
+  - Fox
   names_result:
-  - Elaina
-  - Yuichi
-  - Yuichi
+  - Fox
+  - Fox
+  - Fox
+  - Fox
   - 
-  - Elaina
-  - Yuichi
-  result_stopper: 03000000070000000b000000
+  - Fox
+  - 
+  - Fox
+  - 
+  result_stopper: 040000000600000008000000
   dtrigger: {fileID: 1880291885}
   pmech: {fileID: 1814305329}
   answer: relieved!
