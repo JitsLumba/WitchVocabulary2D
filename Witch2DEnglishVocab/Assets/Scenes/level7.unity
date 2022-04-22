@@ -2097,7 +2097,7 @@ MonoBehaviour:
   - That was the incorrect answer. Try again.
   remarks:
   - Kinda Correct
-  - Incorrect
+  - Correct
   - Kinda correct
   clues:
   - ill-tempered
@@ -2148,6 +2148,8 @@ MonoBehaviour:
   camera_y: -34.92
   player_x: 40.13
   player_y: -34.74
+  player_rot_y: 0
+  player_return_rot_y: 0
   second_char_x_transf: 41.68
   second_char_y_rot: 180
   return_camera_x: 21.79
@@ -3533,6 +3535,8 @@ MonoBehaviour:
   camera_y: -34.92
   player_x: 40.13
   player_y: -34.74
+  player_rot_y: 0
+  player_return_rot_y: 0
   second_char_x_transf: 41.68
   second_char_y_rot: 180
   return_camera_x: 21.79
@@ -8369,6 +8373,8 @@ MonoBehaviour:
   camera_y: -34.92
   player_x: 40.13
   player_y: -34.74
+  player_rot_y: 0
+  player_return_rot_y: 0
   second_char_x_transf: 41.68
   second_char_y_rot: 180
   return_camera_x: 21.79

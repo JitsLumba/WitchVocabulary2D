@@ -2174,7 +2174,6 @@ MonoBehaviour:
   - "It\u2019s not like you to submit to them. Do you want to talk it over?"
   - "Hm\u2026"
   - Yeah you are right. I think I need to have this sorted first.
-  - And I don't think I sense a feeling of dislike from her...
   - 'That was the correct answer. '
   - "It\u2019s not like you to agree with them. You would honestly not be in favor
     with their ideas."
@@ -2183,11 +2182,11 @@ MonoBehaviour:
   - 'That was almost the correct answer. Try again. '
   remarks:
   - Kinda Correct
-  - Incorrect
+  - Correct
   - Kinda correct
   clues:
   - yield
-  - resist
+  - resisting
   clue_type:
   - synonym
   - antonym
@@ -2204,18 +2203,17 @@ MonoBehaviour:
   - Elaina
   names_result:
   - Elaina
-  - Iroha
-  - Iroha
+  - Yuichi
   - 
   - Elaina
-  - Iroha
-  - Iroha
+  - Yuichi
+  - Yuichi
   - 
   - Elaina
+  - Yuichi
+  - Yuichi
   - 
-  - Iroha
-  - 
-  result_stopper: 020000000700000009000000
+  result_stopper: 02000000060000000a000000
   dtrigger: {fileID: 1880291885}
   pmech: {fileID: 1814305329}
   answer: relieved!
@@ -2238,6 +2236,8 @@ MonoBehaviour:
   camera_y: -34.92
   player_x: 40.13
   player_y: -34.74
+  player_rot_y: 0
+  player_return_rot_y: 0
   second_char_x_transf: 41.68
   second_char_y_rot: 180
   return_camera_x: 21.79
@@ -3385,12 +3385,12 @@ MonoBehaviour:
   sentences:
   - "Sigh \u2026"
   - "Yuichi ! What\u2019s wrong ?"
-  - These customers cannot consent to the terms of paying...
-  - ...the monthly reparations of the furniture they requested from me.
-  - It would be nice to have them acquiesce to these terms...
-  - ...such as a civil accordance and acknowledgement of their responsibility with
+  - These customers cannot even pay ...
+  - ... the term of the monthly repairs of the furniture they requested from me .
+  - It would be nice to have them acquiesce to these terms ...
+  - ... such as a civil accordance and acknowledgement of their responsibility with
     their furniture.
-  - But no. They decided to oppose with the contract that was given to them.
+  - But no. They decided to ignore the contract that was given to them.
   choices:
   - They should stick with the agreement on the contract(agree)
   - They should submit towards the contract(submit)
@@ -3421,19 +3421,19 @@ MonoBehaviour:
   clues:
   - accordance
   - acknowledgement
-  - disagreement
+  - ignore
   clue_type:
   - example
   - example
   - antonym
   names:
-  - 
-  - Iroha
-  - Iroha
+  - Yuichi
   - Elaina
-  - Iroha
-  - Elaina
-  - Elaina
+  - Yuichi
+  - Yuichi
+  - Yuichi
+  - Yuichi
+  - Yuichi
   names_result:
   - Elaina
   - Elaina
@@ -3473,6 +3473,8 @@ MonoBehaviour:
   camera_y: -34.92
   player_x: 40.13
   player_y: -34.74
+  player_rot_y: 0
+  player_return_rot_y: 0
   second_char_x_transf: 41.68
   second_char_y_rot: 180
   return_camera_x: 21.79
@@ -8404,8 +8406,8 @@ MonoBehaviour:
   sentences:
   - "So traveler about our boss \u2026"
   - "Ah the one who forces you to go overtime for no reason isn\u2019t it ?"
-  - Yes, he finally heard our complaints with work overtime.
-  - But unfortunately, he cannot acquiesce to our request of easing our work.
+  - Yes, he finally heard our complaints with work overtime .
+  - But unfortunately, he cannot acquiesce to our request of easing our work .
   - In a split second , he rejected our complaints .
   - What !? What an unfair boss he is !
   - Yeah, he did not approve our complaints while thinking that his standards are
@@ -8434,7 +8436,7 @@ MonoBehaviour:
   - Correct
   - Incorrect
   clues:
-  - reject
+  - rejected
   - approve
   clue_type:
   - antonym
@@ -8461,7 +8463,7 @@ MonoBehaviour:
   - Yuichi
   - Yuichi
   - 
-  result_stopper: 03000000070000000b000000
+  result_stopper: 03000000080000000b000000
   dtrigger: {fileID: 1880291885}
   pmech: {fileID: 1814305329}
   answer: relieved!
@@ -8484,6 +8486,8 @@ MonoBehaviour:
   camera_y: -34.92
   player_x: 40.13
   player_y: -34.74
+  player_rot_y: 0
+  player_return_rot_y: 0
   second_char_x_transf: 41.68
   second_char_y_rot: 180
   return_camera_x: 21.79

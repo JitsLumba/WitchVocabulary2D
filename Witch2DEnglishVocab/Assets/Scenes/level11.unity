@@ -406,7 +406,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   camera: {fileID: 398638468193488862}
   player: {fileID: 5334363829152864345}
-  secondperson: {fileID: 0}
+  secondperson: {fileID: 1712123154190947497}
+  thirdperson: {fileID: 289680617787608049}
+  fourthperson: {fileID: 289680617787608049}
   dialogue_panel: {fileID: 1429774806}
   invisi_button: {fileID: 2016104137}
   c2d: {fileID: 5334363829152864340}
@@ -646,7 +648,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db3d625ed2eb2840b1e969788417e15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  next_level: final_test
+  next_level: level11
   can_go: 1
 --- !u!4 &386342923
 Transform:
@@ -2103,7 +2105,7 @@ MonoBehaviour:
   - jolly
   clue_type:
   - antonym
-  - example
+  - definition
   names:
   - 
   - 
@@ -2149,6 +2151,8 @@ MonoBehaviour:
   camera_y: -34.92
   player_x: 40.13
   player_y: -34.74
+  player_rot_y: 0
+  player_return_rot_y: 0
   second_char_x_transf: 41.68
   second_char_y_rot: 180
   return_camera_x: 21.79
@@ -2157,7 +2161,7 @@ MonoBehaviour:
   return_scnd_char_y_rot: 0
   camdest: {fileID: 398638468193488862}
   playerdest: {fileID: 5334363829152864345}
-  second_char: {fileID: 0}
+  second_char: {fileID: 1712123154190947497}
   samp: first_door
   door_num: door_3
   subscrpt: {fileID: 914805273}
@@ -2166,6 +2170,7 @@ MonoBehaviour:
   lreturn: {fileID: 195984277}
   c2d: {fileID: 5334363829152864340}
   pmove: {fileID: 5334363829152864336}
+  call_person: 0
 --- !u!114 &914805275
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3534,6 +3539,8 @@ MonoBehaviour:
   camera_y: -34.92
   player_x: 40.13
   player_y: -34.74
+  player_rot_y: 0
+  player_return_rot_y: 0
   second_char_x_transf: 41.68
   second_char_y_rot: 180
   return_camera_x: 21.79
@@ -3542,7 +3549,7 @@ MonoBehaviour:
   return_scnd_char_y_rot: 0
   camdest: {fileID: 398638468193488862}
   playerdest: {fileID: 5334363829152864345}
-  second_char: {fileID: 0}
+  second_char: {fileID: 1712123154190947497}
   samp: first_door
   door_num: door_2
   subscrpt: {fileID: 1580047548}
@@ -3551,6 +3558,7 @@ MonoBehaviour:
   lreturn: {fileID: 195984277}
   c2d: {fileID: 5334363829152864340}
   pmove: {fileID: 5334363829152864336}
+  call_person: 0
 --- !u!114 &1580047550
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8377,6 +8385,8 @@ MonoBehaviour:
   camera_y: -34.92
   player_x: 40.13
   player_y: -34.74
+  player_rot_y: 0
+  player_return_rot_y: 0
   second_char_x_transf: 41.68
   second_char_y_rot: 180
   return_camera_x: 21.79
@@ -8385,7 +8395,7 @@ MonoBehaviour:
   return_scnd_char_y_rot: 0
   camdest: {fileID: 398638468193488862}
   playerdest: {fileID: 5334363829152864345}
-  second_char: {fileID: 0}
+  second_char: {fileID: 1712123154190947497}
   samp: first_door
   door_num: door_1
   subscrpt: {fileID: 1007564714534547114}
@@ -8394,6 +8404,7 @@ MonoBehaviour:
   lreturn: {fileID: 195984277}
   c2d: {fileID: 5334363829152864340}
   pmove: {fileID: 5334363829152864336}
+  call_person: 0
 --- !u!212 &1712123154190947496
 SpriteRenderer:
   m_ObjectHideFlags: 0

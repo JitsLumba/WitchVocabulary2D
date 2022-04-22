@@ -2198,16 +2198,18 @@ MonoBehaviour:
   - Mina
   names_result:
   - Elaina
-  - Iroha
-  - Iroha
+  - Mina
+  - Mina
+  - Mina
   - 
   - Elaina
-  - Iroha
-  - Iroha
-  - 
+  - Mina
+  - Mina
   - Elaina
   - 
-  - Iroha
+  - Elaina
+  - Mina
+  - Mina
   - 
   result_stopper: 04000000090000000d000000
   dtrigger: {fileID: 1880291885}
@@ -2232,6 +2234,8 @@ MonoBehaviour:
   camera_y: -34.92
   player_x: 40.13
   player_y: -34.74
+  player_rot_y: 0
+  player_return_rot_y: 0
   second_char_x_transf: 41.68
   second_char_y_rot: 180
   return_camera_x: 21.79
@@ -3541,11 +3545,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sentences:
-  - 'Absolutely not!  '
+  - 'Absolutely not !  '
   - Do you know how that addlepated maid is ignorant ...
   - ... of how I feel about that task she gave!?
   - What about the task she gave ?
-  - "he didn\u2019t tell you !? Her unmindfulness shows no bounds\u2026"
+  - "She didn\u2019t tell you !? Her unmindfulness shows no bounds \u2026"
   - ... such as her inattentiveness to detail ...
   - "... in one of the quest destinations she made me go\u2026\r\n"
   - "Jeez \u2026 I got injured so badly in the aftermath \u2026"
@@ -3577,7 +3581,7 @@ MonoBehaviour:
   clues:
   - ignorant
   - informed
-  - unmindful
+  - unmindfulness
   - inattentiveness
   clue_type:
   - synonym
@@ -3632,6 +3636,8 @@ MonoBehaviour:
   camera_y: -34.92
   player_x: 40.13
   player_y: -34.74
+  player_rot_y: 0
+  player_return_rot_y: 0
   second_char_x_transf: 41.68
   second_char_y_rot: 180
   return_camera_x: 21.79
@@ -8402,18 +8408,20 @@ MonoBehaviour:
   - Yeah , you should have seen his addlepated face when his wrongdoings were exposed
     .
   - What does his face look like at that time ?
+  - 'His face looked mindless at that time . '
   - His thoughtless confession exposed his lies when the decisive evidence was shown
     in his face !
   - Shows how much he is !
   choices:
   - He looks so confused(confused)
   - The nonsensical doctor got what he deserved(nonsense)
-  - He is so unaware(he is so unaware)
+  - He is so unaware(unaware)
   results:
   - He is so confused, he does not know what to say anymore.
+  - Well he did have some counter arguments.
   - "But unfortunately, every argument he makes is just used against him\u2026"
   - Consider him finished at that point.
-  - That is almost the incorrect answer. Try again.
+  - That is almost the correct answer. Try again.
   - He deserved it for being a nonsensical doctor.
   - Yeah! He will definitely pay for the patients he has deceived.
   - I am gonna multiply his punishment by a hundred-fold!
@@ -8436,11 +8444,13 @@ MonoBehaviour:
   - Elaina
   - Elaina
   - Mina
-  - Mina
   - Elaina
+  - Mina
+  - Mina
   - Mina
   names_result:
   - Elaina
+  - Mina
   - Mina
   - Mina
   - 
@@ -8453,7 +8463,7 @@ MonoBehaviour:
   - Yuichi
   - 
   - 
-  result_stopper: 03000000070000000b000000
+  result_stopper: 04000000080000000c000000
   dtrigger: {fileID: 1880291885}
   pmech: {fileID: 1814305329}
   answer: relieved!
@@ -8476,6 +8486,8 @@ MonoBehaviour:
   camera_y: -34.92
   player_x: 40.13
   player_y: -34.74
+  player_rot_y: 0
+  player_return_rot_y: 0
   second_char_x_transf: 41.68
   second_char_y_rot: 180
   return_camera_x: 21.79

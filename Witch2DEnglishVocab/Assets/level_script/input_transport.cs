@@ -21,6 +21,7 @@ public class input_transport : MonoBehaviour
 
     [SerializeField] private CharacterController2D c2d ;
     [SerializeField] private PlayerMovement pmove ;
+    [SerializeField] private int call_person = 0;
     bool cantransp = false;
     void Start()
     {
@@ -38,7 +39,7 @@ public class input_transport : MonoBehaviour
          
            invdsy.setFalseInterv();
            lreturn.set_return_door(this.door_num);
-           lreturn.set_coordinates(return_camera_x, return_player_x, player_return_rot_y, return_scnd_char_x_transf, return_scnd_char_y_rot);
+           lreturn.set_coordinates(return_camera_x, return_player_x, player_return_rot_y, return_scnd_char_x_transf, return_scnd_char_y_rot, call_person);
            camdest.transform.position = new Vector3(camera_x, camdest.transform.position.y, camdest.transform.position.z);
            playerdest.transform.position = new Vector3(player_x, playerdest.transform.position.y, playerdest.transform.position.z);
            var rotate_player_vect = this.playerdest.transform.eulerAngles;

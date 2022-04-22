@@ -406,7 +406,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   camera: {fileID: 398638468193488862}
   player: {fileID: 5334363829152864345}
-  secondperson: {fileID: 0}
+  secondperson: {fileID: 5949074326228894659}
+  thirdperson: {fileID: 8883835414974525880}
+  fourthperson: {fileID: 289680617787608049}
   dialogue_panel: {fileID: 1429774806}
   invisi_button: {fileID: 2016104137}
   c2d: {fileID: 5334363829152864340}
@@ -728,7 +730,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db3d625ed2eb2840b1e969788417e15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  next_level: final_test
+  next_level: final_test_3
   can_go: 1
 --- !u!4 &386342923
 Transform:
@@ -2160,8 +2162,8 @@ MonoBehaviour:
   - "\u2026"
   - Words can cause trouble .
   - Words can make friendships bloom .
+  - Words can make one rot with bitterness .
   - Words can bring people together in of unity .
-  - Words can make friendships bloom
   - "You\u2019ve brought many incidents and troublemakers to heel ."
   - "But do you see the magic you\u2019ve cast on others through simple conversation
     ?\r\n"
@@ -2186,7 +2188,7 @@ MonoBehaviour:
   - Kinda Correct
   - Correct
   clues:
-  - friendship
+  - friendships
   - unity
   - trouble
   - bitterness
@@ -2196,8 +2198,8 @@ MonoBehaviour:
   - antonym
   - antonym
   names:
-  - Sensei
-  - Sensei
+  - Elaina
+  - Elaina
   - Sensei
   - Elaina
   - Sensei
@@ -2210,17 +2212,17 @@ MonoBehaviour:
   - Sensei
   - Sensei
   names_result:
+  - Sensei
+  - Sensei
+  - Sensei
+  - Sensei
+  - Sensei
+  - Sensei
+  - Sensei
   - Elaina
-  - Iroha
-  - Iroha
-  - 
   - Elaina
-  - Iroha
-  - Iroha
-  - 
-  - Elaina
-  - 
-  - Iroha
+  - Sensei
+  - Sensei
   result_stopper: 000000000100000009000000
   dtrigger: {fileID: 1880291885}
   pmech: {fileID: 1814305329}
@@ -2244,15 +2246,17 @@ MonoBehaviour:
   camera_y: -34.92
   player_x: 40.13
   player_y: -34.74
+  player_rot_y: 180
+  player_return_rot_y: 0
   second_char_x_transf: 41.68
   second_char_y_rot: 180
   return_camera_x: 21.79
-  return_player_x: 23.55
+  return_player_x: 17.69
   return_scnd_char_x_transf: 14.3
   return_scnd_char_y_rot: 0
   camdest: {fileID: 398638468193488862}
   playerdest: {fileID: 5334363829152864345}
-  second_char: {fileID: 0}
+  second_char: {fileID: 289680617787608049}
   samp: first_door
   door_num: door_3
   subscrpt: {fileID: 914805273}
@@ -2261,6 +2265,7 @@ MonoBehaviour:
   lreturn: {fileID: 195984277}
   c2d: {fileID: 5334363829152864340}
   pmove: {fileID: 5334363829152864336}
+  call_person: 2
 --- !u!114 &914805275
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2340,7 +2345,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 914805272}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 23.44, y: -34.87, z: 0}
+  m_LocalPosition: {x: 17.7, y: -34.87, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children:
   - {fileID: 1976913463}
@@ -3601,7 +3606,7 @@ MonoBehaviour:
   - distanced
   - understanding
   clue_type:
-  - definition
+  - antonym
   - synonym
   names:
   - 
@@ -3658,6 +3663,8 @@ MonoBehaviour:
   camera_y: -34.92
   player_x: 40.13
   player_y: -34.74
+  player_rot_y: 180
+  player_return_rot_y: 0
   second_char_x_transf: 41.68
   second_char_y_rot: 180
   return_camera_x: 21.79
@@ -3675,6 +3682,7 @@ MonoBehaviour:
   lreturn: {fileID: 195984277}
   c2d: {fileID: 5334363829152864340}
   pmove: {fileID: 5334363829152864336}
+  call_person: 1
 --- !u!114 &1580047550
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8403,7 +8411,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1007564714534547111}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 17.701008, y: -34.87, z: 0}
+  m_LocalPosition: {x: 23.44, y: -34.87, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children:
   - {fileID: 1848171034}
@@ -8457,15 +8465,16 @@ MonoBehaviour:
   - How many jobs have you burned through before the previous one?
   - "Erm\u2026 6?"
   - "How did you still get hired 4 times after the first two\u2026"
+  - My first 2 employers found out I had a rather special set of talents~
   - "I\u2026 I see\u2026"
   - That was the correct answer!
   remarks:
   - Kinda Correct
-  - Correct
   - Incorrect
+  - Correct
   clues:
   - feud
-  - resolve
+  - resolving
   clue_type:
   - antonym
   - example
@@ -8492,13 +8501,14 @@ MonoBehaviour:
   - Iroha
   - Elaina
   - 
+  - Iroha
   - Elaina
-  - Yuichi
-  - Yuichi
+  - Iroha
+  - Elaina
+  - Iroha
+  - Elaina
   - 
-  - 
-  - 
-  result_stopper: 03000000070000000b000000
+  result_stopper: 04000000070000000b000000
   dtrigger: {fileID: 1880291885}
   pmech: {fileID: 1814305329}
   answer: relieved!
@@ -8521,10 +8531,12 @@ MonoBehaviour:
   camera_y: -34.92
   player_x: 40.13
   player_y: -34.74
+  player_rot_y: 180
+  player_return_rot_y: 0
   second_char_x_transf: 41.68
   second_char_y_rot: 180
   return_camera_x: 21.79
-  return_player_x: 17.69
+  return_player_x: 23.55
   return_scnd_char_x_transf: 14.9
   return_scnd_char_y_rot: 0
   camdest: {fileID: 398638468193488862}
@@ -8538,6 +8550,7 @@ MonoBehaviour:
   lreturn: {fileID: 195984277}
   c2d: {fileID: 5334363829152864340}
   pmove: {fileID: 5334363829152864336}
+  call_person: 0
 --- !u!212 &2002695054888836369
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8870,7 +8883,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5334363829152864345}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 28.18, y: -34.838, z: 0}
   m_LocalScale: {x: 2.679621, y: 2.679621, z: 2.679621}
   m_Children:
@@ -8878,7 +8891,7 @@ Transform:
   - {fileID: 5334363828724554578}
   m_Father: {fileID: 0}
   m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5334363829152864345
 GameObject:
   m_ObjectHideFlags: 0
