@@ -42,7 +42,7 @@ public class tutorial_panel_mechanic : MonoBehaviour
             freeze_or_defreeze();
         }*/
         
-        if (((Input.GetKeyDown(KeyCode.RightArrow)) || (Input.GetKeyDown(KeyCode.D))) && ison && can_d) {
+        if ((Input.GetKeyDown(KeyCode.RightArrow))  && ison && can_d) {
             words = original.Trim().Split(' ');
             int num = words.Length - 1;
 
@@ -63,7 +63,7 @@ public class tutorial_panel_mechanic : MonoBehaviour
             int beforecounter = counter - 1;
 
         }
-        else if (((Input.GetKeyDown(KeyCode.LeftArrow)) || (Input.GetKeyDown(KeyCode.A))) && ison && can_a) {
+        else if ((Input.GetKeyDown(KeyCode.LeftArrow) ) && ison && can_a) {
             words = original.Trim().Split(' ');
             int num = words.Length;
             if (counter > 0)

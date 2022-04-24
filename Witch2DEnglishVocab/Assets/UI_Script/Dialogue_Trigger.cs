@@ -5,16 +5,17 @@ using UnityEngine;
 public class Dialogue_Trigger : MonoBehaviour
 {
     // Start is called before the first frame update
-    [SerializeField] private GameObject dialogue_panel, invisi_button;
+    [SerializeField] private GameObject dialogue_panel, invisi_button, g_text, traverse_text ;
     [SerializeField] private Dialogue dialogue;
     [SerializeField] private Dialogue_Manager dialogue_Manager;
     
 
     [SerializeField] private Panel_Mechanic pmech;
-    
+    private bool can_traverse = false;
     private int stop_at = 0;
     private bool can_z = true, can_f = true;
     private string play_name = "Elaina";
+    private string direction = "forward";
     bool canproc = false;
     bool is_active = false;
     
@@ -28,6 +29,7 @@ public class Dialogue_Trigger : MonoBehaviour
     bool is_img_on = false;
     int counter = 0;
     int multiple = 0, button_select = 0;
+
     void Start()
     {
         //red
@@ -47,6 +49,17 @@ public class Dialogue_Trigger : MonoBehaviour
         {
 
             Debug.Log("canproc " + canproc);
+            direction = "forward";
+            Trigger_Dialogue();
+
+
+
+        }
+        if (Input.GetKeyDown(KeyCode.B) && cantrigger)
+        {
+
+            Debug.Log("canproc " + canproc);
+            direction = "backward";
             Trigger_Dialogue();
 
 
@@ -62,6 +75,15 @@ public class Dialogue_Trigger : MonoBehaviour
             
 
         }
+    }
+    public void set_two_texts_prompt(bool active) {
+        traverse_text.SetActive(active);
+    }
+    public void set_can_traverse(bool can) {
+        this.can_traverse = can;
+    }
+    public void set_g_text_prompt(bool active) {
+        g_text.SetActive(active);
     }
     void key_change_active() {
         bool activate = true;
@@ -126,6 +148,7 @@ public class Dialogue_Trigger : MonoBehaviour
     public void set_can_proc(bool proc) {
         canproc = proc;
     }
+    
     public void Trigger_Dialogue()
     {
 
@@ -155,6 +178,7 @@ public class Dialogue_Trigger : MonoBehaviour
                         cantrigger = false;
                         canproc = false;
                         counter = 0;
+                        dialogue_Manager.set_diag_counter(counter);
                         if (is_correct) {
                             
                             can_return = true;
@@ -177,7 +201,14 @@ public class Dialogue_Trigger : MonoBehaviour
                 }
                 else 
                 {
-                    if (counter != stop_at)
+                    counter--;
+                    if (direction.Equals("forward")) {
+                        next_button_func();
+                    }
+                    else {
+                        back_button_func();
+                    }
+                    /*if (counter != stop_at)
                     {
                         //GOES TO THE NEXT SENTENCE
                         this.dialogue_Manager.Display_Next_Sentence();
@@ -189,7 +220,7 @@ public class Dialogue_Trigger : MonoBehaviour
                         counter = 0;
                         dialogue_Manager.StartDialogue(dialogue);
                         //dialogue_Manager.set_active_dialogue(false, true);
-                    }
+                    }*/
                 }
 
             }
@@ -214,7 +245,9 @@ public class Dialogue_Trigger : MonoBehaviour
         is_active = true;
         canfreeze = true;
         can_browse = true;
-        
+        set_can_traverse(true);
+        set_g_text_prompt(false);
+        set_two_texts_prompt(true);
         set_freeze(true);
         pmech.set_has_all_clues(false);
         this.canproc = true;
@@ -245,6 +278,33 @@ public class Dialogue_Trigger : MonoBehaviour
     public void set_dialogue_stoppers(List<int> stoppers) {
         dialogue.clear_result_stoppers();
         dialogue.add_result_stoppers(stoppers);
+    }
+    public void next_button_func() {
+        if (can_traverse) {
+            if (canproc) {
+            int last_ind = stop_at - 1;
+            if (counter < last_ind) {
+                counter++;
+                dialogue_Manager.set_diag_counter(counter);
+                dialogue_Manager.show_dialogue_sentence();
+            }
+        }
+        }
+        
+        
+    }
+    public void back_button_func() {
+        if (can_traverse) {
+            if (canproc) {
+            if (counter != 0) {
+                counter--;
+                dialogue_Manager.set_diag_counter(counter);
+                dialogue_Manager.show_dialogue_sentence();
+            }
+        }
+        }
+        
+        
     }
     public void can_trigger_again(int num_button)
     {
@@ -297,7 +357,7 @@ public class Dialogue_Trigger : MonoBehaviour
                 clue_list.Add(clue_word);
                 clue_type.Add(type_clue);
             }
-            cantrigger = true;
+            cantrigger = true ;
             choice_trigger(clue_list, clue_type);
         }
         else {

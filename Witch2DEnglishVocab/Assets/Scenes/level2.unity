@@ -846,6 +846,7 @@ MonoBehaviour:
   lreturn: {fileID: 4436090423277477864}
   c2d: {fileID: 201767536}
   pmove: {fileID: 201767532}
+  call_person: 0
 --- !u!114 &133560208
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2899,6 +2900,7 @@ RectTransform:
   - {fileID: 1680598378}
   - {fileID: 1122902896}
   - {fileID: 168543685}
+  - {fileID: 1241482126}
   m_Father: {fileID: 8022526438028147215}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -14463,6 +14465,101 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1234425490}
   m_CullTransparentMesh: 1
+--- !u!1 &1241482125
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1241482126}
+  - component: {fileID: 1241482129}
+  - component: {fileID: 1241482128}
+  - component: {fileID: 1241482127}
+  m_Layer: 5
+  m_Name: two_prompts
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1241482126
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1241482125}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 522267393}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 407.91003, y: -104.30998}
+  m_SizeDelta: {x: 344.942, y: 38.265}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1241482127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1241482125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
+  m_EffectDistance: {x: 2, y: -1}
+  m_UseGraphicAlpha: 1
+--- !u!114 &1241482128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1241482125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.9874805, g: 1, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: c2cff028cda29384f89c7883e2c3c6ea, type: 3}
+    m_FontSize: 30
+    m_FontStyle: 1
+    m_BestFit: 0
+    m_MinSize: 2
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: B [Back] G[Proceed]
+--- !u!222 &1241482129
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1241482125}
+  m_CullTransparentMesh: 1
 --- !u!1 &1251213992
 GameObject:
   m_ObjectHideFlags: 0
@@ -17011,7 +17108,7 @@ MonoBehaviour:
   clue_panel: {fileID: 168543684}
   highlighter_panel: {fileID: 1294180929}
   dialogue_panel: {fileID: 522267392}
-  press_g_panel: {fileID: 1316418790}
+  press_g_panel: {fileID: 1241482125}
   freeze_prompt_panel: {fileID: 1122902895}
   panel: {fileID: 522267394}
   freeze_image: {fileID: 426161148}
@@ -19861,6 +19958,7 @@ MonoBehaviour:
   lreturn: {fileID: 4436090423277477864}
   c2d: {fileID: 201767536}
   pmove: {fileID: 201767532}
+  call_person: 0
 --- !u!114 &2112259949
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20363,6 +20461,7 @@ MonoBehaviour:
   lreturn: {fileID: 4436090423277477864}
   c2d: {fileID: 201767536}
   pmove: {fileID: 201767532}
+  call_person: 0
 --- !u!114 &954655928450438409
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20853,6 +20952,8 @@ MonoBehaviour:
   camera: {fileID: 4294687184866853893}
   player: {fileID: 201767530}
   secondperson: {fileID: 876147465}
+  thirdperson: {fileID: 0}
+  fourthperson: {fileID: 0}
   dialogue_panel: {fileID: 522267392}
   invisi_button: {fileID: 8022526436824637260}
   c2d: {fileID: 201767536}
@@ -21917,6 +22018,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue_panel: {fileID: 522267392}
   invisi_button: {fileID: 8022526436824637260}
+  g_text: {fileID: 1316418790}
+  traverse_text: {fileID: 1241482125}
   dialogue:
     sentences:
     - Hello junifer

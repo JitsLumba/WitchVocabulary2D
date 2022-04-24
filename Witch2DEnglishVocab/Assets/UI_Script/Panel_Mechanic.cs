@@ -43,7 +43,7 @@ public class Panel_Mechanic : MonoBehaviour
 
         }
 
-        if (((Input.GetKeyDown(KeyCode.RightArrow)) || (Input.GetKeyDown(KeyCode.D)))  && ison && can_move)
+        if (((Input.GetKeyDown(KeyCode.RightArrow)) )  && ison && can_move)
         {
 
             words = original.Trim().Split(' ');
@@ -68,7 +68,7 @@ public class Panel_Mechanic : MonoBehaviour
 
 
         }
-        else if (((Input.GetKeyDown(KeyCode.LeftArrow)) || (Input.GetKeyDown(KeyCode.A))) && ison && can_move)
+        else if (((Input.GetKeyDown(KeyCode.LeftArrow)) ) && ison && can_move)
         {
 
             words = original.Trim().Split(' ');
@@ -422,6 +422,10 @@ public class Panel_Mechanic : MonoBehaviour
         int list_num = dcheck.get_count();
         List<string> clue_words = new List<string>();
         List<string> clue_type = new List<string>();
+        
+        dtrigger.set_two_texts_prompt(false);
+        dtrigger.set_g_text_prompt(true);
+        dtrigger.set_can_traverse(false);
         for (int i = 0; i < list_num; i++) {
             clue_words.Add(dcheck.get_answer(i));
             clue_type.Add(dcheck.get_clue(i));
@@ -447,6 +451,7 @@ public class Panel_Mechanic : MonoBehaviour
             set_highlighter_panel_active(false);
             dtrigger.set_freeze(false);
             dtrigger.set_canproc(true);
+            
             clue_count = 0;
             canfreeze = false;
             set_clue_panel_active(false);

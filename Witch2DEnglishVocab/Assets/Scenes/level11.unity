@@ -648,7 +648,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db3d625ed2eb2840b1e969788417e15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  next_level: level11
+  next_level: level12
   can_go: 1
 --- !u!4 &386342923
 Transform:
@@ -3125,6 +3125,7 @@ RectTransform:
   - {fileID: 1814305328}
   - {fileID: 1361553354}
   - {fileID: 979434734}
+  - {fileID: 1992141576}
   m_Father: {fileID: 304967390}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3996,7 +3997,7 @@ MonoBehaviour:
   clue_panel: {fileID: 979434733}
   highlighter_panel: {fileID: 787369722}
   dialogue_panel: {fileID: 1429774806}
-  press_g_panel: {fileID: 501481831}
+  press_g_panel: {fileID: 1992141575}
   freeze_prompt_panel: {fileID: 1361553353}
   panel: {fileID: 1429774808}
   freeze_image: {fileID: 1243593378}
@@ -4136,6 +4137,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue_panel: {fileID: 1429774806}
   invisi_button: {fileID: 2016104137}
+  g_text: {fileID: 501481831}
+  traverse_text: {fileID: 1992141575}
   dialogue:
     sentences:
     - Hello junifer
@@ -4455,6 +4458,101 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1992141575
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1992141576}
+  - component: {fileID: 1992141579}
+  - component: {fileID: 1992141578}
+  - component: {fileID: 1992141577}
+  m_Layer: 5
+  m_Name: two_prompts
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1992141576
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1992141575}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1429774807}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 407.91003, y: -104.31}
+  m_SizeDelta: {x: 344.942, y: 38.265}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1992141577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1992141575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
+  m_EffectDistance: {x: 2, y: -1}
+  m_UseGraphicAlpha: 1
+--- !u!114 &1992141578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1992141575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.9874805, g: 1, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: c2cff028cda29384f89c7883e2c3c6ea, type: 3}
+    m_FontSize: 30
+    m_FontStyle: 1
+    m_BestFit: 0
+    m_MinSize: 2
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: B [Back] G[Proceed]
+--- !u!222 &1992141579
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1992141575}
+  m_CullTransparentMesh: 1
 --- !u!1 &2006406356
 GameObject:
   m_ObjectHideFlags: 0

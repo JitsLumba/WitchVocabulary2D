@@ -9,9 +9,11 @@ public class Dialogue_Manager : MonoBehaviour
     [SerializeField] private GameObject panel, choicepanel, result_obj;
 
     [SerializeField] private level_return lreturn;
+    private List<string> sentences_list, name_list;
    private Queue<string> sentences, nameq;
    private string result_txt = "";
    private int counter = 0;
+   private int diag_counter = 0;
     private int mode = 1, start = 0, end = 0;
    private Dialogue dial_1;
     // Start is called before the first frame update
@@ -19,6 +21,8 @@ public class Dialogue_Manager : MonoBehaviour
     {
         sentences = new Queue<string>();
         nameq = new Queue<string>();
+        sentences_list = new List<string>();
+        name_list = new List<string>();
         sentences.Enqueue("Hello");
         nameq.Enqueue("Elaina");
        
@@ -31,6 +35,9 @@ public class Dialogue_Manager : MonoBehaviour
     {
         
     }
+    public void set_diag_counter(int count) {
+        this.diag_counter = count;
+    }
     public void set_result(string res) {
         this.result_txt = res;
     }
@@ -39,23 +46,26 @@ public class Dialogue_Manager : MonoBehaviour
     }
     public void StartDialogue(Dialogue dialogue) {
           
-            sentences.Clear();
-          
-            nameq.Clear();
+            
       
         
         if (mode == 1) {
+            sentences_list.Clear();
+            name_list.Clear();
              for (int i = 0; i < dialogue.sentence_list.Count; i++) {
-            
-                sentences.Enqueue(dialogue.sentence_list[i]);
-                nameq.Enqueue(dialogue.name_list[i]);
-          
+                 sentences_list.Add(dialogue.sentence_list[i]);
+                 name_list.Add(dialogue.name_list[i]);
+             
             
            
             
             }
+            show_dialogue_sentence();
         }
        else if (mode == 2) {
+           sentences.Clear();
+          
+            nameq.Clear();
            Debug.Log("RESULTED " + sentences.Count);
            for (int i = start; i <= end; i++) {
             
@@ -67,12 +77,18 @@ public class Dialogue_Manager : MonoBehaviour
             
             }
             Debug.Log("ADDED " + sentences.Count);
+            Display_Next_Sentence();
        }
         
         dial_1 = dialogue;
         
         
-        Display_Next_Sentence();
+        
+    }
+    public void show_dialogue_sentence() {
+        string name = name_list[diag_counter], sentence = sentences_list[diag_counter];
+        name_text.text = name;
+        dial_text.text = sentence;
     }
     public void set_choices(List<string> choices) {
         choice1.text = choices[0];
