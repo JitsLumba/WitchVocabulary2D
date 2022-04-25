@@ -16,6 +16,7 @@ public class Dialogue_Trigger : MonoBehaviour
     private bool can_z = true, can_f = true;
     private string play_name = "Elaina";
     private string direction = "forward";
+    private List<string> choice_list;
     bool canproc = false;
     bool is_active = false;
     
@@ -36,6 +37,7 @@ public class Dialogue_Trigger : MonoBehaviour
         //E90000
         //pink
         //E900E3
+        choice_list = new List<string>();
         dialogue.start_list();
     }
 
@@ -260,6 +262,10 @@ public class Dialogue_Trigger : MonoBehaviour
         dialogue.add_result_dialogues(results, name_res);
         dialogue_panel.SetActive(true);
         invisi_button.SetActive(true);
+        choice_list.Clear();
+        for (int i = 0; i < choices.Count; i++) {
+            choice_list.Add(choices[i]);
+        }
         dialogue_Manager.set_choices(choices);
         dialogue_Manager.set_mode(1);
         Debug.Log("CLEAR");
@@ -315,11 +321,12 @@ public class Dialogue_Trigger : MonoBehaviour
         button_select = num_button;
         string remark = dialogue.get_remark(num_button);
         counter = 0;
-
-        string message = "Player selected \"" + dialogue.get_clues(num_button) + "\" choice\n";
+        Debug.Log("YEAH BOY");
+        string message = "Player selected \"" + choice_list[num_button] + "\" choice\n";
         string res_msg = "Result is \"" + remark + "\"\n\n";
         slevel_backend.append_file_log(message);
         slevel_backend.append_file_log(res_msg);
+        Debug.Log("YEAH BOY2");
         if (remark.Equals("Correct")) {
             is_correct = true;
         }
@@ -331,8 +338,10 @@ public class Dialogue_Trigger : MonoBehaviour
             end = dialogue.get_stopper(num_button);
         }
         else {
+            Debug.Log("YEAH BOY 3");
             start = dialogue.get_stopper(num_button - 1) + 1; 
             end = dialogue.get_num_results() - 1;
+            Debug.Log("YEAH BOY 4");
         }
 
         multiple = end - start + 1;
@@ -341,7 +350,7 @@ public class Dialogue_Trigger : MonoBehaviour
         dialogue_Manager.set_mode(2);
         dialogue_Manager.set_active_dialogue(true, false);
         dialogue_Manager.StartDialogue(dialogue);
-        
+        Debug.Log("FLUSH");
         
     }
     IEnumerator Dialogue_Interv(bool can_return)
