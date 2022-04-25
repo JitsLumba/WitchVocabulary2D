@@ -12,10 +12,13 @@ public class Panel_Mechanic : MonoBehaviour
     [SerializeField] private Text text_dialogue, result_text, clue_text ;
     [SerializeField] private definition_check dcheck;
     [SerializeField] private level_return lreturn;
+
+    [SerializeField] private sublevel_backend slevel_backend ;
     [SerializeField] private Dialogue_Trigger dtrigger ;
     
     [SerializeField] private bool has_antonym = false, has_explain = false, has_example = false; 
     
+    private int correct = 0, incorrect = 0, close = 0;
     private List<string> clue_listed;
     private bool ison = false, canfreeze = false, hashighlight = false, cantrigger = true, is_img_on = false, can_move = true, has_all_clues = false;
     private string original = "";
@@ -328,6 +331,7 @@ public class Panel_Mechanic : MonoBehaviour
             
             if (current_type.Equals(clue)) {
                 show_res = "Correct";
+                correct++;
             clue_num--;
             set_clue_number(clue_num);
             clue_count++;
@@ -339,6 +343,7 @@ public class Panel_Mechanic : MonoBehaviour
             else {
                 is_not_close = false; 
                 show_res = "Close...";
+                close++;
             }
             break;
         }
@@ -347,15 +352,36 @@ public class Panel_Mechanic : MonoBehaviour
         }
         if (not_found && is_not_close) {
             show_res = "Incorrect";
+            incorrect++;
         }
         int clue_counter = dcheck.get_count();
+
+        string message = "Player selected word: \"" + highlighted_word + "\" with the " + current_type + " highlighter\n";
+        slevel_backend.append_file_log(message);
+        string result = "Result is \"" + show_res+ "\"\n\n";
+        slevel_backend.append_file_log(result);
+
         if (clue_count == clue_counter) {
             has_all_clues = true;
             can_choice = true;
             canfreeze = false;
+
+            slevel_backend.append_file_log("\nResults:\n\n");
+            
+            string correct_message = "Number of times gotten correct: " + correct + "\n";
+            string incorrect_message = "Number of times gotten incorrect: " + incorrect + "\n";
+            string close_message = "Number of times gotten close: " + close + "\n\n";
+
+            slevel_backend.append_file_log(correct_message);
+            slevel_backend.append_file_log(incorrect_message);
+            slevel_backend.append_file_log(close_message);
+
+            correct = 0;
+            incorrect = 0;
+            close = 0;
             clue_list_clear();
         }
-      
+        
         show_result_panel(show_res, can_choice);
         
 

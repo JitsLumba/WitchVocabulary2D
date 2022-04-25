@@ -406,11 +406,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   camera: {fileID: 398638468193488862}
   player: {fileID: 5334363829152864345}
-  secondperson: {fileID: 1712123154190947497}
+  secondperson: {fileID: 4390758275744382627}
   thirdperson: {fileID: 289680617787608049}
   fourthperson: {fileID: 289680617787608049}
   dialogue_panel: {fileID: 1429774806}
   invisi_button: {fileID: 2016104137}
+  slevel_backend: {fileID: 0}
   c2d: {fileID: 5334363829152864340}
   pmove: {fileID: 5334363829152864336}
   finish_level: {fileID: 5400894358496902786}
@@ -428,6 +429,101 @@ Transform:
   m_Father: {fileID: 304967390}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &285831319
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 285831320}
+  - component: {fileID: 285831323}
+  - component: {fileID: 285831322}
+  - component: {fileID: 285831321}
+  m_Layer: 5
+  m_Name: two_prompts
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &285831320
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 285831319}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1429774807}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 407.91003, y: -104.31}
+  m_SizeDelta: {x: 344.942, y: 38.265}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &285831321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 285831319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
+  m_EffectDistance: {x: 2, y: -1}
+  m_UseGraphicAlpha: 1
+--- !u!114 &285831322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 285831319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.9874805, g: 1, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: c2cff028cda29384f89c7883e2c3c6ea, type: 3}
+    m_FontSize: 30
+    m_FontStyle: 1
+    m_BestFit: 0
+    m_MinSize: 2
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: B [Back] G[Proceed]
+--- !u!222 &285831323
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 285831319}
+  m_CullTransparentMesh: 1
 --- !u!1 &304967386
 GameObject:
   m_ObjectHideFlags: 0
@@ -619,6 +715,88 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 334618336}
   m_CullTransparentMesh: 1
+--- !u!1 &348096402
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 348096404}
+  - component: {fileID: 348096403}
+  m_Layer: 0
+  m_Name: night_background (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &348096403
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 348096402}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: e5c7fc2e13a67ee42be4239d18baca73, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 3.84, y: 2.4}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &348096404
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 348096402}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 6.703294, y: -32.687794, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &386342921
 GameObject:
   m_ObjectHideFlags: 0
@@ -1405,7 +1583,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Vivacious
+  m_Text: Reproach
 --- !u!222 &680926348
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2071,69 +2249,68 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sentences:
-  - You and your newfound friend run into someone ...
-  - ... who seems to be down on his luck .
-  - What's up with that guy ?
-  - He's all ... lifeless ...
-  - 'Ah ... '
-  - "Well you could say it's the other side of the coin that is human society\t\u2026"
-  - "The side of us that\u2019s a lot less\u2026 vivacious ..."
-  - "... is a lot less \u2026 a side that is a lot less jolly ."
-  - Eh ?
-  - He's just one of many really , all bright and bouncy ...
-  - "... chasing promises of glory\r ."
-  - Only to be played for fools at the end .
-  - ...
+  - Ah good sales and good vibes !
+  - "Hey Yuichi ! What\u2019s with the happy face ?"
+  - 'Heh, just recently I got a call from my manager . '
+  - "My boss\u2019s supervisor reproached the customers ..."
+  - ... who were not sticking with the contract .
+  - He humiliated them a lot for all the broken contracts ...
+  - ... and made them actually pay monthly payments for my furniture .
+  - "He doesn\u2019t honor those who refuses to stick with the contract that was
+    given to them ."
+  - "Wow Yuichi \u2026 your supervisor \u2026"
   choices:
-  - "Sucks all the joy out of you, seeing this\u2026 (joyful)"
-  - "Sights like these really do drain you\u2026 (energetic)"
-  - "The life\u2019s practically been sucked out of them\u2026 (lively)"
+  - "He held nothing with shaming them\u2026(shame)"
+  - "He held nothing with scolding them\u2026(scold)"
+  - "He held nothing with criticizing them\u2026(criticize)"
   results:
-  - "I\u2026 see\u2026"
-  - That was the incorrect answer. Try again.
-  - "Yeah\u2026 they do."
-  - That was the incorrect answer. Try again.
-  - "\u2026"
-  - "Maybe there is something I can do about this\u2026"
+  - But of course. They broke the contract after all.
+  - It is only natural that they will get their just desserts.
   - That was the correct answer!
+  - "I don\u2019t know about scolding but\u2026"
+  - "I am pretty sure that they did end up losing badly\u2026"
+  - That was the incorrect answer. Try again.
+  - You can say that.
+  - I just hope that they will pay me in full the next time they come to me.
+  - That was almost the correct answer. Try again.
   remarks:
-  - Incorrect
-  - Incorrect
   - Correct
+  - Incorrect
+  - Kinda correct
   clues:
-  - lifeless
-  - jolly
+  - humiliated
+  - honor
   clue_type:
+  - synonym
   - antonym
-  - definition
   names:
-  - 
-  - 
-  - Fox
-  - Fox
+  - Yuichi
   - Elaina
+  - Yuichi
+  - Yuichi
+  - Yuichi
+  - Yuichi
+  - Yuichi
+  - Yuichi
   - Elaina
-  - Elaian
-  - Elaina
-  - Fox
-  - Elaina
-  - Elaina
-  - Elaina
-  - Fox
   names_result:
-  - Fox
+  - Yuichi
+  - Yuichi
   - 
-  - Fox
+  - Yuichi
+  - Yuichi
   - 
-  - Fox
-  - Fox
+  - Yuichi
+  - Yuichi
   - 
-  result_stopper: 010000000300000006000000
+  result_stopper: 020000000500000008000000
   dtrigger: {fileID: 1880291885}
   pmech: {fileID: 1814305329}
   answer: relieved!
   context_no: 0
   dcheck: {fileID: 888231758}
+  slevel_backend: {fileID: 0}
+  sub_level_name: 
   mult: 4
 --- !u!114 &914805274
 MonoBehaviour:
@@ -2161,7 +2338,7 @@ MonoBehaviour:
   return_scnd_char_y_rot: 0
   camdest: {fileID: 398638468193488862}
   playerdest: {fileID: 5334363829152864345}
-  second_char: {fileID: 1712123154190947497}
+  second_char: {fileID: 4390758275744382627}
   samp: first_door
   door_num: door_3
   subscrpt: {fileID: 914805273}
@@ -2256,88 +2433,6 @@ Transform:
   - {fileID: 1976913463}
   m_Father: {fileID: 0}
   m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &920740072
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 920740074}
-  - component: {fileID: 920740073}
-  m_Layer: 0
-  m_Name: Schoolyard_background (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!212 &920740073
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 920740072}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4cb9017f0161f284e9b67e67713b7af3, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 3.84, y: 2.4}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!4 &920740074
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 920740072}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 42.06, y: -34.23, z: 0}
-  m_LocalScale: {x: 5.1945, y: 4.473619, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &954682324
 GameObject:
@@ -2779,88 +2874,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1243593375}
   m_CullTransparentMesh: 1
---- !u!1 &1310448842
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1310448844}
-  - component: {fileID: 1310448843}
-  m_Layer: 0
-  m_Name: Schoolyard_background
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!212 &1310448843
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1310448842}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4cb9017f0161f284e9b67e67713b7af3, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 3.84, y: 2.4}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!4 &1310448844
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1310448842}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 22.12, y: -34.23, z: 0}
-  m_LocalScale: {x: 5.1945, y: 4.473619, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 15
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1361553353
 GameObject:
   m_ObjectHideFlags: 0
@@ -3125,7 +3138,7 @@ RectTransform:
   - {fileID: 1814305328}
   - {fileID: 1361553354}
   - {fileID: 979434734}
-  - {fileID: 1992141576}
+  - {fileID: 285831320}
   m_Father: {fileID: 304967390}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3464,65 +3477,63 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sentences:
-  - Compared to back home , your towns are so much more vivacious !
-  - You have towns in ... wherever you lived ?
-  - Yep~
-  - The stories make the place sound all spiritual ...
-  - ... but really it's just a bunch of Kami drinking themselves to undeath .
-  - A - ah ...
-  - All Elaina can muster up is a dull smile at her stories .
-  - I know that sounds great and all , but believe me when I say that's ...
-  - ... Really all they do , it seems it is cheerful ...
-  - "... but that dies off pretty quickly if you\u2019re not one of them\r .\n"
+  - Say Yuichi ...
+  - ... do you have any advice when condemning difficult people in conversations
+    ?
+  - Advice for reproaching them huh ?
+  - Well first off you need to know what is worth detesting from them .
+  - Analyze their characters and the situation you are in .
+  - Then go for the attack that will make them remember their wrongdoings in shame
+    .
   choices:
-  - This is so normal though, does it bring you that much joy? (joyful)
-  - "They should be more energetic (energetic)\t"
-  - Were the residents there not very lively? (lively)
+  - "Ah so that\u2019s how I should criticize them?(Criticize)"
+  - Good tips for shaming them.(shame)
+  - So that is basically scolding right?(scold)
   results:
-  - "Hm, it\u2019s really about the simple things I guess."
-  - That was the incorrect answer. Try again.
-  - "Heh, believe me human, that\u2019s the last thing they need."
-  - That was the incorrect answer. Try again.
-  - Far from it really.
-  - "Even if they\u2019re all divine, they still get drunk like anyone else."
-  - The hard part is ignoring all the noise.
+  - Precisely! You should remember these tips.
   - That was the correct answer!
+  - Pretty much.
+  - "Although this is not exactly shaming them\u2026"
+  - That was almost the correct answer. Try again.
+  - "Wait\u2026are you trying to scold them?"
+  - "I am not sure if I got that message right\u2026"
+  - That was the incorrect answer.
   remarks:
-  - Incorrect
-  - Incorrect
   - Correct
+  - Kinda Correct
+  - Kinda correct
   clues:
-  - dull
-  - cheerful
+  - condemning
+  - detesting
+  - attack
   clue_type:
-  - antonym
-  - example
+  - synonym
+  - definition
+  - synonym
   names:
-  - Fox
   - Elaina
-  - Fox
-  - Fox
-  - Fox
   - Elaina
-  - 
-  - Fox
-  - Fox
-  - Fox
+  - Yuichi
+  - Yuichi
+  - Yuichi
+  - Yuichi
   names_result:
-  - Fox
+  - Yuichi
   - 
-  - Fox
+  - Yuichi
+  - Yuichi
   - 
-  - Fox
-  - Fox
-  - Fox
+  - Yuichi
+  - Yuichi
   - 
-  result_stopper: 010000000300000007000000
+  result_stopper: 010000000400000006000000
   dtrigger: {fileID: 1880291885}
   pmech: {fileID: 1814305329}
   answer: relieved!
   context_no: 0
   dcheck: {fileID: 888231758}
+  slevel_backend: {fileID: 0}
+  sub_level_name: 
   mult: 6
 --- !u!114 &1580047549
 MonoBehaviour:
@@ -3550,7 +3561,7 @@ MonoBehaviour:
   return_scnd_char_y_rot: 0
   camdest: {fileID: 398638468193488862}
   playerdest: {fileID: 5334363829152864345}
-  second_char: {fileID: 1712123154190947497}
+  second_char: {fileID: 4390758275744382627}
   samp: first_door
   door_num: door_2
   subscrpt: {fileID: 1580047548}
@@ -3997,7 +4008,7 @@ MonoBehaviour:
   clue_panel: {fileID: 979434733}
   highlighter_panel: {fileID: 787369722}
   dialogue_panel: {fileID: 1429774806}
-  press_g_panel: {fileID: 1992141575}
+  press_g_panel: {fileID: 285831319}
   freeze_prompt_panel: {fileID: 1361553353}
   panel: {fileID: 1429774808}
   freeze_image: {fileID: 1243593378}
@@ -4020,6 +4031,7 @@ MonoBehaviour:
   clue_text: {fileID: 394083970}
   dcheck: {fileID: 888231758}
   lreturn: {fileID: 195984277}
+  slevel_backend: {fileID: 0}
   dtrigger: {fileID: 1880291885}
   has_antonym: 1
   has_explain: 1
@@ -4138,7 +4150,7 @@ MonoBehaviour:
   dialogue_panel: {fileID: 1429774806}
   invisi_button: {fileID: 2016104137}
   g_text: {fileID: 501481831}
-  traverse_text: {fileID: 1992141575}
+  traverse_text: {fileID: 285831319}
   dialogue:
     sentences:
     - Hello junifer
@@ -4155,6 +4167,7 @@ MonoBehaviour:
     result_name: 
     name: Elaina
   dialogue_Manager: {fileID: 995939244}
+  slevel_backend: {fileID: 0}
   pmech: {fileID: 1814305329}
 --- !u!224 &1880291886
 RectTransform:
@@ -4175,6 +4188,88 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1909276184
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1909276186}
+  - component: {fileID: 1909276185}
+  m_Layer: 0
+  m_Name: Junkyard_background
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &1909276185
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1909276184}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 4a5001d4cd9004e489fcad12d27820c6, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 3.84, y: 2.4}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &1909276186
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1909276184}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 22.79, y: -34.23, z: 0}
+  m_LocalScale: {x: 5.1945, y: 4.473619, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1927710810
 GameObject:
   m_ObjectHideFlags: 0
@@ -4458,101 +4553,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &1992141575
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1992141576}
-  - component: {fileID: 1992141579}
-  - component: {fileID: 1992141578}
-  - component: {fileID: 1992141577}
-  m_Layer: 5
-  m_Name: two_prompts
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!224 &1992141576
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1992141575}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1429774807}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 407.91003, y: -104.31}
-  m_SizeDelta: {x: 344.942, y: 38.265}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1992141577
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1992141575}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
-  m_EffectDistance: {x: 2, y: -1}
-  m_UseGraphicAlpha: 1
---- !u!114 &1992141578
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1992141575}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.9874805, g: 1, b: 0, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 12800000, guid: c2cff028cda29384f89c7883e2c3c6ea, type: 3}
-    m_FontSize: 30
-    m_FontStyle: 1
-    m_BestFit: 0
-    m_MinSize: 2
-    m_MaxSize: 40
-    m_Alignment: 4
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: B [Back] G[Proceed]
---- !u!222 &1992141579
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1992141575}
-  m_CullTransparentMesh: 1
 --- !u!1 &2006406356
 GameObject:
   m_ObjectHideFlags: 0
@@ -8184,6 +8184,88 @@ MonoBehaviour:
   m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
+--- !u!1 &2146340465
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2146340467}
+  - component: {fileID: 2146340466}
+  m_Layer: 0
+  m_Name: Junkyard_background (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &2146340466
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2146340465}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 4a5001d4cd9004e489fcad12d27820c6, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 3.84, y: 2.4}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &2146340467
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2146340465}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 42.62, y: -34.23, z: 0}
+  m_LocalScale: {x: 5.1945, y: 4.473619, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &289680617787608049
 GameObject:
   m_ObjectHideFlags: 0
@@ -8405,67 +8487,69 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sentences:
-  - So you're happy here ?
-  - Surprisingly, yes actually .
-  - Been a lot more cheerful since they kicked me out .
-  - Was it that boring back home ?
-  - With how my own sisters are ?
-  - It shouldn't, but trust me...
-  - ...you'd go insane if you were around those three 24/7 for eternity .
-  - That place is nothing but a half-hearted facade .
-  - "You\u2019ll be anything but vivacious ."
+  - Hey Yuichi ! How is your day at work ?
+  - Feeling in good spirits today .
+  - Why is that ?
+  - Remember my boss ? He just got reproached by his superior today !
+  - His way of reproaching such as lecturing and rebuking his selfish ways...
+  - ... has made him remorseful of his ways !
+  - He has finally accepted our request to ease our work times after that !
   choices:
-  - Do we really bring you that much joy? (joyful)
-  - Were you always this energetic (energetic)
-  - "It\u2019s nice to see you so lively~ (lively)\r"
+  - He got shamed(shamed)
+  - He deserved that scolding.(scold)
+  - His wrongdoings were criticized!(criticize)
   results:
-  - "It\u2019s hard to explain really~"
-  - "You people are so much more\u2026 genuine."
-  - "Didn\u2019t really care for you lot till I decided to actually take a look."
-  - Curiosity may have killed the cat but it gave the fox life~
+  - He sure got shamed and learned his lesson.
+  - "You can say that. But for learning his lesson\u2026"
+  - "\u2026that has yet to be seen for he is currently going through evaluation."
+  - That was almost the correct answer. Try again.
+  - "What karma\u2026he deserved every scolding he received from his supervisor."
+  - 'Right!? '
+  - Ah you should his blue face that he does not want to show towards his supervisor!
+  - "It\u2019s so satisfying to look at!"
   - That was the correct answer!
-  - Kinda?
-  - That was the incorrect answer. Try again.
-  - Really? My sisters called it so unbecoming of a kami
-  - That was the incorrect answer. Try again.
+  - Heh, he finally got his wrongdoings criticized.
+  - He sure did. Well I just hope his ways are changed after that.
+  - That was the close answer. Try again.
   remarks:
+  - Kinda Correct
   - Correct
-  - Incorect
-  - Incorrect
+  - Kinda correct
   clues:
-  - happy
-  - cheerful
-  - boring
+  - lecturing
+  - rebuking
   clue_type:
-  - synonym
-  - synonym
-  - antonym
+  - example
+  - example
   names:
   - Elaina
-  - Fox
-  - Fox
+  - Yuichi
   - Elaina
-  - Fox
-  - Fox
-  - Fox
-  - Fox
-  - Fox
+  - Yuichi
+  - Yuichi
+  - Yuichi
+  - Yuichi
   names_result:
-  - Fox
-  - Fox
-  - Fox
-  - Fox
+  - Elaina
+  - Yuichi
+  - Yuichi
   - 
-  - Fox
+  - Elaina
+  - Yuichi
+  - Yuichi
   - 
-  - Fox
+  - Elaina
+  - Yuichi
+  - Yuichi
   - 
-  result_stopper: 040000000600000008000000
+  result_stopper: 03000000080000000b000000
   dtrigger: {fileID: 1880291885}
   pmech: {fileID: 1814305329}
   answer: relieved!
   context_no: 0
   dcheck: {fileID: 888231758}
+  slevel_backend: {fileID: 0}
+  sub_level_name: 
   mult: 5
 --- !u!114 &1007564714534547115
 MonoBehaviour:
@@ -8493,7 +8577,7 @@ MonoBehaviour:
   return_scnd_char_y_rot: 0
   camdest: {fileID: 398638468193488862}
   playerdest: {fileID: 5334363829152864345}
-  second_char: {fileID: 1712123154190947497}
+  second_char: {fileID: 4390758275744382627}
   samp: first_door
   door_num: door_1
   subscrpt: {fileID: 1007564714534547114}
@@ -8503,108 +8587,6 @@ MonoBehaviour:
   c2d: {fileID: 5334363829152864340}
   pmove: {fileID: 5334363829152864336}
   call_person: 0
---- !u!212 &1712123154190947496
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1712123154190947497}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 7
-  m_Sprite: {fileID: 21300000, guid: 45818b5e421ec0d4e94e13aa0dbfbd67, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 0.64, y: 0.64}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!1 &1712123154190947497
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1712123154190947499}
-  - component: {fileID: 1712123154190947496}
-  - component: {fileID: 1712123154190947498}
-  m_Layer: 0
-  m_Name: Fox_idle_1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!95 &1712123154190947498
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1712123154190947497}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 7dd381288a1cb52479a822d189efdb7b, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!4 &1712123154190947499
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1712123154190947497}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 13.998, y: -34.736, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2002695054888836369
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8682,6 +8664,108 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.25, y: 0.6}
   m_EdgeRadius: 0
+--- !u!95 &4390758275744382624
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4390758275744382627}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2dfcca0e8f461b54b98cb5f76a44ed26, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!212 &4390758275744382625
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4390758275744382627}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 7
+  m_Sprite: {fileID: 21300000, guid: fc852e1e168fbb84fb285887998b69fd, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.64, y: 0.64}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!1 &4390758275744382627
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4390758275744382638}
+  - component: {fileID: 4390758275744382625}
+  - component: {fileID: 4390758275744382624}
+  m_Layer: 0
+  m_Name: Yu
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4390758275744382638
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4390758275744382627}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 14.3, y: -34.724, z: 0}
+  m_LocalScale: {x: 3, y: 3, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &5334363828684214586
 Transform:
   m_ObjectHideFlags: 0

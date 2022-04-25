@@ -1,0 +1,27 @@
+Backend for sub-level: level_5_1
+
+Player selected word: "orderly" with the antonym highlighter
+Result is "Correct"
+
+Player selected word: "rough" with the definition highlighter
+Result is "Correct"
+
+Player selected word: "rowdy" with the definition highlighter
+Result is "Correct"
+
+
+Results:
+
+Number of times gotten correct: 3
+Number of times gotten incorrect: 0
+Number of times gotten close: 0
+Player selected "orderly" choice
+Result is "Incorrect"
+
+Player selected "rowdy" choice
+Result is "Kinda Correct"
+
+Player selected "rough" choice
+Result is "Correct"
+
+Time: 31 seconds

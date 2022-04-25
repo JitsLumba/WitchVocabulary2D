@@ -11,6 +11,7 @@ public class Question_Dialogue_Trigger : MonoBehaviour
     [SerializeField] private Question_Panel_Mechanic qpanel_mech;
     [SerializeField] private question_next_level qnext_level;
     [SerializeField] private tutorial_image_show tut_img_show;
+    [SerializeField] private cloze_test_backend cbackend;
     [TextArea(3, 10)]
     [SerializeField] private List<string> tutorial_cloze_diag ;
     [SerializeField] private List<string> tutorial_cloze_speaker;
@@ -28,7 +29,8 @@ public class Question_Dialogue_Trigger : MonoBehaviour
     private string play_name = "Elaina";
     private string highlight_question = "";
     private int counter = 0, tut_counter = 0;
-
+    private int correct = 0, kinda_correct = 0, incorrect = 0;
+    string end_words = "Well done my student. You have finally completed all the trials!";
     void Start()
     {
         choices = new List<string>();
@@ -111,6 +113,9 @@ public class Question_Dialogue_Trigger : MonoBehaviour
             }
             else if (has_finished)
             {
+                //go to the next level or not
+                //natsuiro
+
                 qnext_level.next_level_notify();
             }
             else
@@ -119,8 +124,23 @@ public class Question_Dialogue_Trigger : MonoBehaviour
                 {
                     canproc = false;
                     after_result = false;
-                    question_manager.show_result(question_list[counter].get_result_diag(button_select));
+                    string result = question_list[counter].get_result_diag(button_select).Trim();
+                    if (result.Equals("Correct")) {
+                        correct++;
+                    }
+                    else if (result.Equals("Incorrect")) {
+                        incorrect++;
+                    }
+                    else {
+                        kinda_correct++;
+                    }
+                    question_manager.show_result(result);
+                    
+                    //natsuiro
+                    string message = "Result is: " + result + "\n\n";
                     can_x = false;
+                    cbackend.append_file_log(message);
+                    cbackend.write_end_time();
                     Debug.Log("is_choice " + is_on_choice);
                     StartCoroutine(Result_Interv());
                 }
@@ -196,6 +216,7 @@ public class Question_Dialogue_Trigger : MonoBehaviour
     public void trigger_dialogue()
     {
         is_on_question = true;
+        cbackend.start_question_time();
         string question = question_list[counter].get_main_script();
 
         string speaker = question_list[counter].get_speaker();
@@ -225,6 +246,11 @@ public class Question_Dialogue_Trigger : MonoBehaviour
     {
         qpanel_mech.set_can_freeze(false);
         is_on_choice = false;
+
+        //natsuiro
+        cbackend.end_of_question();
+        string message = "Player selected \"" + choices[num] + "\" choice\n" ;
+        cbackend.append_file_log(message);
         button_select = num;
         after_result = true;
         canproc = true;
@@ -253,7 +279,15 @@ public class Question_Dialogue_Trigger : MonoBehaviour
     }
     void end_of_question()
     {
-        string end_words = "Well done my student. You have finally completed all the trials!";
+        string result_message = "Results:\n\n";
+        string correct_message = "No. of correct: " + correct + "\n";
+        string kinda_correct_message = "No. of kinda correct: " + kinda_correct + "\n";
+        string incorrect_message = "No. of incorrect: " + incorrect + "\n\n";
+        cbackend.append_file_log(result_message);
+        cbackend.append_file_log(correct_message);
+        cbackend.append_file_log(kinda_correct_message);
+        cbackend.append_file_log(incorrect_message);
+        cbackend.end_test();
         string talker = "Sensei";
         canproc = true;
         set_has_finished(true);

@@ -14,6 +14,8 @@ public class Sub_Level_Script : MonoBehaviour
     [SerializeField] private string answer;
     [SerializeField] private int context_no;
     [SerializeField] private definition_check dcheck ;
+    [SerializeField] private sublevel_backend slevel_backend ;
+    [SerializeField] private string sub_level_name;
     [SerializeField] private int mult = 0;
     // Start is called before the first frame update
     void Start()
@@ -25,6 +27,9 @@ public class Sub_Level_Script : MonoBehaviour
     void Update()
     {
         
+    }
+    public void initialize_file_backend() {
+        slevel_backend.write_file_log(sub_level_name);
     }
     public void set_definition() {
        dcheck.clear_lists();

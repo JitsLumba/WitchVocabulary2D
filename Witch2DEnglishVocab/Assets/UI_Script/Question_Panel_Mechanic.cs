@@ -12,6 +12,7 @@ public class Question_Panel_Mechanic : MonoBehaviour
     [SerializeField] private Sprite dialogue_sprite, system_sprite, freeze_sprite, synonym_sprite, antonym_sprite, definition_sprite, example_sprite;
     [SerializeField] private Sprite S_sprite, A_sprite, D_sprite, E_sprite;
     [SerializeField] private Question_Dialogue_Trigger qtrigger ;
+    [SerializeField] private cloze_test_backend cbackend;
     [SerializeField] private bool has_antonym = false, has_definition = false, has_example = false;
     private List<string> clue_listed;
     private int num_of_clues = 0;
@@ -24,6 +25,8 @@ public class Question_Panel_Mechanic : MonoBehaviour
     private int counter = 0;
     private int light_counter = 0;
     private int clue_count = 0;
+
+    private int correct = 0, incorrect = 0, close = 0;
     Color panelcolor;
     private string color_type = "<color=#09FF00>";
     private string current_type = "synonym";
@@ -307,12 +310,13 @@ public class Question_Panel_Mechanic : MonoBehaviour
             int remain = clue_counter - clue_count;
             set_clue_number(remain);
             clue_listed.Add(highlighted_word);
-
+            correct++;
 
             }
             else {
                 is_not_close = false; 
                 show_res = "Close...";
+                close++;
             }
             break;
         }
@@ -321,12 +325,29 @@ public class Question_Panel_Mechanic : MonoBehaviour
         }
         if (not_found && is_not_close) {
             show_res = "Incorrect";
+            incorrect++;
         }
-        
+        string message = "Player selected word: \"" + highlighted_word + "\" with the " + current_type + " highlighter\n";
+        cbackend.append_file_log(message);
+        string result = "Result is \"" + show_res+ "\"\n\n";
+        cbackend.append_file_log(result);
         if (clue_count == clue_counter) {
             counter = 0;
             clue_count = 0;
             can_choice = true;
+            cbackend.append_file_log("\nResults:\n\n");
+            
+            string correct_message = "Number of times gotten correct: " + correct + "\n";
+            string incorrect_message = "Number of times gotten incorrect: " + incorrect + "\n";
+            string close_message = "Number of times gotten close: " + close + "\n";
+
+            cbackend.append_file_log(correct_message);
+            cbackend.append_file_log(incorrect_message);
+            cbackend.append_file_log(close_message);
+
+            correct = 0;
+            incorrect = 0;
+            close = 0;
             clue_list_clear();
         }
         Debug.Log("RESULT IS " + show_res);

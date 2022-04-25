@@ -1,0 +1,18 @@
+Backend for sub-level: level_5_2
+
+Player selected word: "screaming" with the example highlighter
+Result is "Correct"
+
+Player selected word: "shouting" with the example highlighter
+Result is "Correct"
+
+Player selected word: "loud" with the example highlighter
+Result is "Correct"
+
+
+Results:
+
+Number of times gotten correct: 3
+Number of times gotten incorrect: 0
+Number of times gotten close: 0
+time: 17 seconds

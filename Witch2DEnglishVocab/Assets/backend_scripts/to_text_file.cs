@@ -8,10 +8,13 @@ public class to_text_file : MonoBehaviour
     // Start is called before the first frame update
     private float timeStart = 0.0f;
     bool isPaused = false;
+    private System.DateTime startTime ;
     void Start()
     {
         Directory.CreateDirectory(Application.streamingAssetsPath + "/sample/");
         create_text_file();
+
+        startTime = System.DateTime.UtcNow;
     }
 
     // Update is called once per frame
@@ -39,7 +42,12 @@ public class to_text_file : MonoBehaviour
 	{
 		// Passing the variable to prevent from updating
         Debug.Log("QUIT");
+        System.TimeSpan ts = System.DateTime.UtcNow - startTime;
+        string seconds = ts.Seconds.ToString();
+        float minutes = float.Parse(seconds) / 60 ;
+        Debug.Log (minutes + " minutes");
 		CreateTimeFile(timeStart);
+        
 	}
     public void create_text_file() {
         string dir = Application.streamingAssetsPath + "/sample/chat.txt"; 
@@ -47,7 +55,7 @@ public class to_text_file : MonoBehaviour
         if (!(File.Exists(dir))) {
             File.WriteAllText(dir, "TITLE OF MY CHAT LOG");
         }
-        File.AppendAllText(dir, "Elsa is so beautiful");
+        
     }
     public void CreateTimeFile(float time) {
         string dir = Application.streamingAssetsPath + "/sample/time.txt";

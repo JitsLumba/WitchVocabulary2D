@@ -63,6 +63,7 @@ public class input_transport : MonoBehaviour
         this.pmove.enabled = false;
     }
     void set_script() {
+        subscrpt.initialize_file_backend();
         subscrpt.set_definition();
         subscrpt.set_dialogues();
     }

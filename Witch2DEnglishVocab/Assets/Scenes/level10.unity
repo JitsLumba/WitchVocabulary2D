@@ -406,11 +406,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   camera: {fileID: 398638468193488862}
   player: {fileID: 5334363829152864345}
-  secondperson: {fileID: 8883835414974525880}
+  secondperson: {fileID: 1712123154190947497}
   thirdperson: {fileID: 289680617787608049}
   fourthperson: {fileID: 289680617787608049}
   dialogue_panel: {fileID: 1429774806}
   invisi_button: {fileID: 2016104137}
+  slevel_backend: {fileID: 0}
   c2d: {fileID: 5334363829152864340}
   pmove: {fileID: 5334363829152864336}
   finish_level: {fileID: 5400894358496902786}
@@ -619,88 +620,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 334618336}
   m_CullTransparentMesh: 1
---- !u!1 &348096402
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 348096404}
-  - component: {fileID: 348096403}
-  m_Layer: 0
-  m_Name: night_background (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!212 &348096403
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 348096402}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e5c7fc2e13a67ee42be4239d18baca73, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 3.84, y: 2.4}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!4 &348096404
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 348096402}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.703294, y: -32.687794, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 15
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &386342921
 GameObject:
   m_ObjectHideFlags: 0
@@ -1487,7 +1406,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Atrocious
+  m_Text: Vivacious
 --- !u!222 &680926348
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2134,7 +2053,7 @@ GameObject:
   - component: {fileID: 914805274}
   - component: {fileID: 914805273}
   m_Layer: 0
-  m_Name: Second_door
+  m_Name: Third_Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2153,69 +2072,71 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sentences:
-  - Elaina ! Thank heavens I found you !
-  - "Mina ? What\u2019s got you all excited ?"
-  - I found these on a another mob that attacked me .
-  - "Seriously .. Those people are vile \u2026"
-  - She shows you what looks like a medallion .
-  - That's ...
-  - The household Iroha's serving ?
-  - I knew that wicked witch was up to something ...
-  - And here I am now with solid proof !
-  - That atrocious wench is finally gonna get what she deserves !
+  - You and your newfound friend run into someone ...
+  - ... who seems to be down on his luck .
+  - What's up with that guy ?
+  - He's all ... lifeless ...
+  - 'Ah ... '
+  - "Well you could say it's the other side of the coin that is human society\t\u2026"
+  - "The side of us that\u2019s a lot less\u2026 vivacious ..."
+  - "... is a lot less \u2026 a side that is a lot less jolly ."
+  - Eh ?
+  - He's just one of many really , all bright and bouncy ...
+  - "... chasing promises of glory\r ."
+  - Only to be played for fools at the end .
+  - ...
   choices:
-  - "You\u2019re pretty horrible at this kind of stuff\u2026 (horrible)"
-  - "Getting brutal\u2019s just gonna get you into more trouble (brutal)"
-  - "I stand corrected, I think the evil lord here is you\u2026 (evil)"
+  - "Sucks all the joy out of you, seeing this\u2026 (joyful)"
+  - "Sights like these really do drain you\u2026 (energetic)"
+  - "The life\u2019s practically been sucked out of them\u2026 (lively)"
   results:
-  - "What\u2019s that supposed to mean?!"
-  - "Detective work\u2026"
+  - "I\u2026 see\u2026"
   - That was the incorrect answer. Try again.
-  - "Tsk\u2026 I just wanna walk in there and start giving them what-for!"
+  - "Yeah\u2026 they do."
   - That was the incorrect answer. Try again.
-  - W-what?!
-  - "This isn\u2019t evidence Iroha\u2019s gone and become a mob boss!"
-  - "I\u2026 she\u2026"
-  - "Mina, please, you two used to be so close\u2026"
+  - "\u2026"
+  - "Maybe there is something I can do about this\u2026"
   - That was the correct answer!
   remarks:
   - Incorrect
   - Incorrect
   - Correct
   clues:
-  - vile
-  - wicked
+  - lifeless
+  - jolly
   clue_type:
+  - antonym
   - definition
-  - synonym
   names:
-  - Mina
-  - Elaina
-  - Mina
-  - Mina
   - 
+  - 
+  - Fox
+  - Fox
   - Elaina
   - Elaina
-  - Mina
-  - Mina
-  - Mina
+  - Elaian
+  - Elaina
+  - Fox
+  - Elaina
+  - Elaina
+  - Elaina
+  - Fox
   names_result:
-  - Mina
-  - Elaina
+  - Fox
   - 
-  - Mina
+  - Fox
   - 
-  - Mina
-  - Elaina
-  - Mina
-  - Elaina
+  - Fox
+  - Fox
   - 
-  result_stopper: 020000000400000009000000
+  result_stopper: 010000000300000006000000
   dtrigger: {fileID: 1880291885}
   pmech: {fileID: 1814305329}
   answer: relieved!
   context_no: 0
   dcheck: {fileID: 888231758}
+  slevel_backend: {fileID: 0}
+  sub_level_name: 
   mult: 4
 --- !u!114 &914805274
 MonoBehaviour:
@@ -2238,14 +2159,14 @@ MonoBehaviour:
   second_char_x_transf: 41.68
   second_char_y_rot: 180
   return_camera_x: 21.79
-  return_player_x: 20.4
+  return_player_x: 23.55
   return_scnd_char_x_transf: 14.3
   return_scnd_char_y_rot: 0
   camdest: {fileID: 398638468193488862}
   playerdest: {fileID: 5334363829152864345}
-  second_char: {fileID: 8883835414974525880}
+  second_char: {fileID: 1712123154190947497}
   samp: first_door
-  door_num: door_2
+  door_num: door_3
   subscrpt: {fileID: 914805273}
   invdsy: {fileID: 7237761973073092811}
   canchangediag: 1
@@ -2270,7 +2191,7 @@ MonoBehaviour:
   door: {fileID: 914805272}
   f_button: {fileID: 1976913462}
   checl: first_door
-  door_num: door_2
+  door_num: door_3
   lreturn: {fileID: 195984277}
   inp_transpy: {fileID: 914805274}
 --- !u!212 &914805276
@@ -2332,14 +2253,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 914805272}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 20.45, y: -34.87, z: 0}
+  m_LocalPosition: {x: 23.44, y: -34.87, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children:
   - {fileID: 1976913463}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &934626999
+--- !u!1 &920740072
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2347,22 +2268,22 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 934627001}
-  - component: {fileID: 934627000}
+  - component: {fileID: 920740074}
+  - component: {fileID: 920740073}
   m_Layer: 0
-  m_Name: morning_background (1)
+  m_Name: Schoolyard_background (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!212 &934627000
+--- !u!212 &920740073
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 934626999}
+  m_GameObject: {fileID: 920740072}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -2396,7 +2317,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4a58de1c22e35204dbc03179290e4f48, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4cb9017f0161f284e9b67e67713b7af3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2407,19 +2328,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!4 &934627001
+--- !u!4 &920740074
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 934626999}
+  m_GameObject: {fileID: 920740072}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 42.58, y: -34.23, z: 0}
+  m_LocalPosition: {x: 42.06, y: -34.23, z: 0}
   m_LocalScale: {x: 5.1945, y: 4.473619, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &954682324
 GameObject:
@@ -2690,88 +2611,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &1006424917
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1006424919}
-  - component: {fileID: 1006424918}
-  m_Layer: 0
-  m_Name: KO (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!212 &1006424918
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1006424917}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 5a1cb0d6041776e4da1c704d46c25b5b, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 0.64, y: 0.64}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!4 &1006424919
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1006424917}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 47.23, y: -34.04, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 19
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1206246535
 GameObject:
   m_ObjectHideFlags: 0
@@ -2943,6 +2782,88 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1243593375}
   m_CullTransparentMesh: 1
+--- !u!1 &1310448842
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1310448844}
+  - component: {fileID: 1310448843}
+  m_Layer: 0
+  m_Name: Schoolyard_background
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &1310448843
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1310448842}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 4cb9017f0161f284e9b67e67713b7af3, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 3.84, y: 2.4}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &1310448844
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1310448842}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 22.12, y: -34.23, z: 0}
+  m_LocalScale: {x: 5.1945, y: 4.473619, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1361553353
 GameObject:
   m_ObjectHideFlags: 0
@@ -3207,7 +3128,7 @@ RectTransform:
   - {fileID: 1814305328}
   - {fileID: 1361553354}
   - {fileID: 979434734}
-  - {fileID: 1943617338}
+  - {fileID: 1992141576}
   m_Father: {fileID: 304967390}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3254,88 +3175,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1429774806}
   m_CullTransparentMesh: 1
---- !u!1 &1432288433
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1432288435}
-  - component: {fileID: 1432288434}
-  m_Layer: 0
-  m_Name: morning_background
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!212 &1432288434
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1432288433}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4a58de1c22e35204dbc03179290e4f48, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 3.84, y: 2.4}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!4 &1432288435
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1432288433}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 22.63, y: -34.23, z: 0}
-  m_LocalScale: {x: 5.1945, y: 4.473619, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 16
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1441417533
 GameObject:
   m_ObjectHideFlags: 0
@@ -3595,88 +3434,6 @@ Transform:
   m_Father: {fileID: 2104057219}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1543702618
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1543702620}
-  - component: {fileID: 1543702619}
-  m_Layer: 0
-  m_Name: KO
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!212 &1543702619
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1543702618}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 5a1cb0d6041776e4da1c704d46c25b5b, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 0.64, y: 0.64}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!4 &1543702620
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1543702618}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 37.49, y: -34.04, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 18
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1580047547
 GameObject:
   m_ObjectHideFlags: 0
@@ -3691,7 +3448,7 @@ GameObject:
   - component: {fileID: 1580047549}
   - component: {fileID: 1580047548}
   m_Layer: 0
-  m_Name: Third_door
+  m_Name: Second_Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3710,74 +3467,67 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sentences:
-  - "No normal person is so \u2026 atrocious to who they used to care for so much
-    \u2026"
-  - "That is so callous for someone like you \u2026"
-  - :...
-  - Mina , she was let off last week .
-  - Mina continues to remain silent, though her silence was anything but gentle .
-  - I ran into her a few days ago .
-  - She's looking for a new job .
-  - :...
+  - Compared to back home , your towns are so much more vivacious !
+  - You have towns in ... wherever you lived ?
+  - Yep~
+  - The stories make the place sound all spiritual ...
+  - ... but really it's just a bunch of Kami drinking themselves to undeath .
+  - A - ah ...
+  - All Elaina can muster up is a dull smile at her stories .
+  - I know that sounds great and all , but believe me when I say that's ...
+  - ... Really all they do , it seems it is cheerful ...
+  - "... but that dies off pretty quickly if you\u2019re not one of them\r .\n"
   choices:
-  - "You\u2019re horrible\u2026 (horrible)"
-  - How could you still be so brutal towards someone like that?! (brutal)
-  - "I stand corrected, I think the evil lord here is you\u2026 (evil)"
+  - This is so normal though, does it bring you that much joy? (joyful)
+  - "They should be more energetic (energetic)\t"
+  - Were the residents there not very lively? (lively)
   results:
-  - "\u2026"
-  - Mina clenches her fist and almost reaches for her sword.
-  - "\u2026What would you know?"
+  - "Hm, it\u2019s really about the simple things I guess."
   - That was the incorrect answer. Try again.
-  - "I\u2026"
-  - "Tears start flowing down Mina\u2019s cheeks"
-  - '*sigh*'
-  - "Fine\u2026 I\u2019ll forget about it\u2026 "
-  - "Just\u2026 tell her to forget about me\u2026."
+  - "Heh, believe me human, that\u2019s the last thing they need."
+  - That was the incorrect answer. Try again.
+  - Far from it really.
+  - "Even if they\u2019re all divine, they still get drunk like anyone else."
+  - The hard part is ignoring all the noise.
   - That was the correct answer!
-  - "\u2026"
-  - Mina clenches her fist and almost reaches for her sword.
-  - "\u2026What would you know?"
-  - That was the incorrect answer. Try again.
   remarks:
   - Incorrect
-  - Correct
   - Incorrect
+  - Correct
   clues:
-  - callous
-  - gentle
+  - dull
+  - cheerful
   clue_type:
-  - example
   - antonym
+  - example
   names:
+  - Fox
   - Elaina
-  - Elaina
-  - Mina
+  - Fox
+  - Fox
+  - Fox
   - Elaina
   - 
-  - Elaina
-  - Elaina
-  - Mina
+  - Fox
+  - Fox
+  - Fox
   names_result:
-  - Mina
+  - Fox
   - 
-  - Mina
+  - Fox
   - 
-  - Mina
+  - Fox
+  - Fox
+  - Fox
   - 
-  - Mina
-  - Mina
-  - Mina
-  - 
-  - Mina
-  - 
-  - Mina
-  - 
-  result_stopper: 03000000090000000d000000
+  result_stopper: 010000000300000007000000
   dtrigger: {fileID: 1880291885}
   pmech: {fileID: 1814305329}
   answer: relieved!
   context_no: 0
   dcheck: {fileID: 888231758}
+  slevel_backend: {fileID: 0}
+  sub_level_name: 
   mult: 6
 --- !u!114 &1580047549
 MonoBehaviour:
@@ -3800,14 +3550,14 @@ MonoBehaviour:
   second_char_x_transf: 41.68
   second_char_y_rot: 180
   return_camera_x: 21.79
-  return_player_x: 23.55
+  return_player_x: 20.45
   return_scnd_char_x_transf: 14.3
   return_scnd_char_y_rot: 0
   camdest: {fileID: 398638468193488862}
   playerdest: {fileID: 5334363829152864345}
-  second_char: {fileID: 8883835414974525880}
+  second_char: {fileID: 1712123154190947497}
   samp: first_door
-  door_num: door_3
+  door_num: door_2
   subscrpt: {fileID: 1580047548}
   invdsy: {fileID: 7237761973073092811}
   canchangediag: 1
@@ -3832,7 +3582,7 @@ MonoBehaviour:
   door: {fileID: 1580047547}
   f_button: {fileID: 2082919026}
   checl: first_door
-  door_num: door_3
+  door_num: door_2
   lreturn: {fileID: 195984277}
   inp_transpy: {fileID: 1580047549}
 --- !u!212 &1580047551
@@ -3894,12 +3644,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1580047547}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 23.44, y: -34.86, z: 0}
+  m_LocalPosition: {x: 20.45, y: -34.86, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children:
   - {fileID: 2082919027}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1616723370
 GameObject:
@@ -4252,7 +4002,7 @@ MonoBehaviour:
   clue_panel: {fileID: 979434733}
   highlighter_panel: {fileID: 787369722}
   dialogue_panel: {fileID: 1429774806}
-  press_g_panel: {fileID: 1943617337}
+  press_g_panel: {fileID: 1992141575}
   freeze_prompt_panel: {fileID: 1361553353}
   panel: {fileID: 1429774808}
   freeze_image: {fileID: 1243593378}
@@ -4275,6 +4025,7 @@ MonoBehaviour:
   clue_text: {fileID: 394083970}
   dcheck: {fileID: 888231758}
   lreturn: {fileID: 195984277}
+  slevel_backend: {fileID: 0}
   dtrigger: {fileID: 1880291885}
   has_antonym: 1
   has_explain: 1
@@ -4393,7 +4144,7 @@ MonoBehaviour:
   dialogue_panel: {fileID: 1429774806}
   invisi_button: {fileID: 2016104137}
   g_text: {fileID: 501481831}
-  traverse_text: {fileID: 1943617337}
+  traverse_text: {fileID: 1992141575}
   dialogue:
     sentences:
     - Hello junifer
@@ -4410,6 +4161,7 @@ MonoBehaviour:
     result_name: 
     name: Elaina
   dialogue_Manager: {fileID: 995939244}
+  slevel_backend: {fileID: 0}
   pmech: {fileID: 1814305329}
 --- !u!224 &1880291886
 RectTransform:
@@ -4507,101 +4259,6 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1927710810}
-  m_CullTransparentMesh: 1
---- !u!1 &1943617337
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1943617338}
-  - component: {fileID: 1943617341}
-  - component: {fileID: 1943617340}
-  - component: {fileID: 1943617339}
-  m_Layer: 5
-  m_Name: two_prompts
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!224 &1943617338
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1943617337}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1429774807}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 407.91003, y: -104.31}
-  m_SizeDelta: {x: 344.942, y: 38.265}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1943617339
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1943617337}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
-  m_EffectDistance: {x: 2, y: -1}
-  m_UseGraphicAlpha: 1
---- !u!114 &1943617340
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1943617337}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.9874805, g: 1, b: 0, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 12800000, guid: c2cff028cda29384f89c7883e2c3c6ea, type: 3}
-    m_FontSize: 30
-    m_FontStyle: 1
-    m_BestFit: 0
-    m_MinSize: 2
-    m_MaxSize: 40
-    m_Alignment: 4
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: B [Back] G[Proceed]
---- !u!222 &1943617341
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1943617337}
   m_CullTransparentMesh: 1
 --- !u!1 &1969044516
 GameObject:
@@ -4808,6 +4465,101 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1992141575
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1992141576}
+  - component: {fileID: 1992141579}
+  - component: {fileID: 1992141578}
+  - component: {fileID: 1992141577}
+  m_Layer: 5
+  m_Name: two_prompts
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1992141576
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1992141575}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1429774807}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 407.91003, y: -104.31}
+  m_SizeDelta: {x: 344.942, y: 38.265}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1992141577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1992141575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
+  m_EffectDistance: {x: 2, y: -1}
+  m_UseGraphicAlpha: 1
+--- !u!114 &1992141578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1992141575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.9874805, g: 1, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: c2cff028cda29384f89c7883e2c3c6ea, type: 3}
+    m_FontSize: 30
+    m_FontStyle: 1
+    m_BestFit: 0
+    m_MinSize: 2
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: B [Back] G[Proceed]
+--- !u!222 &1992141579
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1992141575}
+  m_CullTransparentMesh: 1
 --- !u!1 &2006406356
 GameObject:
   m_ObjectHideFlags: 0
@@ -8660,70 +8412,69 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sentences:
-  - You find Mina amongst more knocked-out thugs .
-  - Mina!
-  - Mina's delighted to see you, but you could tell she was tired .
-  - Oh ... Elaina ... Sorry ...
-  - Dangit ... what did I tell you ? Are you alright ?
-  - "It's not my fault ... some heinous fiend\u2019s been sending 'em after me ..."
-  - Besides , it's not like it's anything I can't walk off ~
-  - These guys did an atrocious job at trying to get me anyway .
-  - "* sigh * \n"
-  - "At least knowing you , you\u2019re still a good enough person to not kill them
-    \u2026\r"
+  - So you're happy here ?
+  - Surprisingly, yes actually .
+  - Been a lot more cheerful since they kicked me out .
+  - Was it that boring back home ?
+  - With how my own sisters are ?
+  - It shouldn't, but trust me...
+  - ...you'd go insane if you were around those three 24/7 for eternity .
+  - That place is nothing but a half-hearted facade .
+  - "You\u2019ll be anything but vivacious ."
   choices:
-  - Did they really do such a horrible job? (horrible)
-  - Getting attacked regularly seems pretty brutal though (brutal)
-  - "Whoever's sending them must be some evil lord\u2026 (evil)"
+  - Do we really bring you that much joy? (joyful)
+  - Were you always this energetic (energetic)
+  - "It\u2019s nice to see you so lively~ (lively)\r"
   results:
-  - "Yep, I\u2019m not sure if I can blame \u2018em really."
-  - "Whoever\u2019s doing this should know what I\u2019m capable of now\u2026"
-  - "Yet they keep sending in this\u2026 cannon fodder."
+  - "It\u2019s hard to explain really~"
+  - "You people are so much more\u2026 genuine."
+  - "Didn\u2019t really care for you lot till I decided to actually take a look."
+  - Curiosity may have killed the cat but it gave the fox life~
   - That was the correct answer!
-  - "Can\u2019t say it is though~"
-  - I appreciate the exercise!
-  - "You\u2019re really something else aren\u2019t ya?"
+  - Kinda?
   - That was the incorrect answer. Try again.
-  - "I think your imagination\u2019s getting the better of ya~"
+  - Really? My sisters called it so unbecoming of a kami
   - That was the incorrect answer. Try again.
   remarks:
   - Correct
-  - Incorrect
+  - Incorect
   - Incorrect
   clues:
-  - heinous
-  - good
+  - happy
+  - cheerful
+  - boring
   clue_type:
+  - synonym
   - synonym
   - antonym
   names:
-  - 
   - Elaina
-  - 
-  - Mina
+  - Fox
+  - Fox
   - Elaina
-  - Mina
-  - Mina
-  - Mina
-  - Elaina
-  - Elaina
+  - Fox
+  - Fox
+  - Fox
+  - Fox
+  - Fox
   names_result:
-  - Mina
-  - Mina
-  - Mina
+  - Fox
+  - Fox
+  - Fox
+  - Fox
   - 
-  - Mina
-  - Mina
-  - Elaina
+  - Fox
   - 
-  - Mina
+  - Fox
   - 
-  result_stopper: 030000000700000009000000
+  result_stopper: 040000000600000008000000
   dtrigger: {fileID: 1880291885}
   pmech: {fileID: 1814305329}
   answer: relieved!
   context_no: 0
   dcheck: {fileID: 888231758}
+  slevel_backend: {fileID: 0}
+  sub_level_name: 
   mult: 5
 --- !u!114 &1007564714534547115
 MonoBehaviour:
@@ -8751,7 +8502,7 @@ MonoBehaviour:
   return_scnd_char_y_rot: 0
   camdest: {fileID: 398638468193488862}
   playerdest: {fileID: 5334363829152864345}
-  second_char: {fileID: 8883835414974525880}
+  second_char: {fileID: 1712123154190947497}
   samp: first_door
   door_num: door_1
   subscrpt: {fileID: 1007564714534547114}
@@ -8761,6 +8512,108 @@ MonoBehaviour:
   c2d: {fileID: 5334363829152864340}
   pmove: {fileID: 5334363829152864336}
   call_person: 0
+--- !u!212 &1712123154190947496
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1712123154190947497}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 7
+  m_Sprite: {fileID: 21300000, guid: 45818b5e421ec0d4e94e13aa0dbfbd67, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.64, y: 0.64}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!1 &1712123154190947497
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1712123154190947499}
+  - component: {fileID: 1712123154190947496}
+  - component: {fileID: 1712123154190947498}
+  m_Layer: 0
+  m_Name: Fox_idle_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!95 &1712123154190947498
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1712123154190947497}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7dd381288a1cb52479a822d189efdb7b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!4 &1712123154190947499
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1712123154190947497}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 13.998, y: -34.736, z: 0}
+  m_LocalScale: {x: 3, y: 3, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2002695054888836369
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9285,108 +9138,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4258639911797ee4fbac3c087eb25477, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!212 &8883835414974525862
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8883835414974525880}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 7
-  m_Sprite: {fileID: 21300000, guid: 6bcdc81ee1df9364fb9b24092399c111, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 0.64, y: 0.64}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!4 &8883835414974525863
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8883835414974525880}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 13.816, y: -34.742, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &8883835414974525880
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8883835414974525863}
-  - component: {fileID: 8883835414974525862}
-  - component: {fileID: 8883835414974525881}
-  m_Layer: 0
-  m_Name: Mina
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!95 &8883835414974525881
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8883835414974525880}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 1189838412ac4a441b572f5ca0275113, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!95 &9013446306517990250
 Animator:
   serializedVersion: 3

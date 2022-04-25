@@ -14437,6 +14437,7 @@ MonoBehaviour:
   clue_text: {fileID: 794936475}
   dcheck: {fileID: 37001804}
   lreturn: {fileID: 1176567194}
+  slevel_backend: {fileID: 0}
   dtrigger: {fileID: 5964338167536592338}
   has_antonym: 0
   has_explain: 0
@@ -17104,6 +17105,8 @@ MonoBehaviour:
   answer: calmed
   context_no: 0
   dcheck: {fileID: 37001804}
+  slevel_backend: {fileID: 0}
+  sub_level_name: 
   mult: 5
 --- !u!114 &1016988639
 MonoBehaviour:
@@ -17669,6 +17672,8 @@ MonoBehaviour:
   answer: satisfied!
   context_no: 0
   dcheck: {fileID: 37001804}
+  slevel_backend: {fileID: 0}
+  sub_level_name: 
   mult: 5
 --- !u!114 &1102547174
 MonoBehaviour:
@@ -18304,6 +18309,7 @@ MonoBehaviour:
   fourthperson: {fileID: 0}
   dialogue_panel: {fileID: 5964338167528885885}
   invisi_button: {fileID: 5964338168752471358}
+  slevel_backend: {fileID: 0}
   c2d: {fileID: 1831273402}
   pmove: {fileID: 1831273406}
   finish_level: {fileID: 488438980}
@@ -23453,6 +23459,8 @@ MonoBehaviour:
   answer: 
   context_no: 0
   dcheck: {fileID: 0}
+  slevel_backend: {fileID: 0}
+  sub_level_name: 
   mult: 0
 --- !u!1 &489639078281007749
 GameObject:
@@ -23603,6 +23611,8 @@ MonoBehaviour:
   answer: relieved!
   context_no: 0
   dcheck: {fileID: 37001804}
+  slevel_backend: {fileID: 0}
+  sub_level_name: 
   mult: 3
 --- !u!114 &1072641671365501637
 MonoBehaviour:
@@ -23944,7 +23954,7 @@ MonoBehaviour:
     there."
   - "So I\u2019ve brought you here to relive a few\u2026 modified pieces of your
     past."
-  - "This doesn\u2019t sound ethical\u2026but it also doesn\u2019t surprise me...\r\n"
+  - "This doesn\u2019t sound ethical\u2026But somehow I\u2019m  not surprised\u2026\n"
   - "These events were \u201Cmodified\u201D by altering the conversations you had
     with these people..."
   - "..to make use of the words I\u2019m going to teach you. For this purpose, I\u2019ll
@@ -24269,8 +24279,8 @@ MonoBehaviour:
     result_name: 
     name: Elaina
   dialogue_Manager: {fileID: 5964338169378564250}
+  slevel_backend: {fileID: 0}
   pmech: {fileID: 413066109}
-  can_traverse: 1
 --- !u!224 &5964338167536592339
 RectTransform:
   m_ObjectHideFlags: 0

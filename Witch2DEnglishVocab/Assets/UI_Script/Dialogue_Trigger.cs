@@ -8,8 +8,8 @@ public class Dialogue_Trigger : MonoBehaviour
     [SerializeField] private GameObject dialogue_panel, invisi_button, g_text, traverse_text ;
     [SerializeField] private Dialogue dialogue;
     [SerializeField] private Dialogue_Manager dialogue_Manager;
+    [SerializeField] private sublevel_backend slevel_backend;
     
-
     [SerializeField] private Panel_Mechanic pmech;
     private bool can_traverse = false;
     private int stop_at = 0;
@@ -315,6 +315,11 @@ public class Dialogue_Trigger : MonoBehaviour
         button_select = num_button;
         string remark = dialogue.get_remark(num_button);
         counter = 0;
+
+        string message = "Player selected \"" + dialogue.get_clues(num_button) + "\" choice\n";
+        string res_msg = "Result is \"" + remark + "\"\n\n";
+        slevel_backend.append_file_log(message);
+        slevel_backend.append_file_log(res_msg);
         if (remark.Equals("Correct")) {
             is_correct = true;
         }
@@ -329,6 +334,7 @@ public class Dialogue_Trigger : MonoBehaviour
             start = dialogue.get_stopper(num_button - 1) + 1; 
             end = dialogue.get_num_results() - 1;
         }
+
         multiple = end - start + 1;
         Debug.Log("start " + start + " end " + end);
         dialogue_Manager.set_start_end(start, end);

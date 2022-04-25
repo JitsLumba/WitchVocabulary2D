@@ -6,6 +6,7 @@ public class level_return : MonoBehaviour
 {
     [SerializeField] private GameObject camera, player, secondperson, thirdperson, fourthperson, dialogue_panel, invisi_button;
 
+    [SerializeField] private sublevel_backend slevel_backend;
     [SerializeField] private CharacterController2D c2d ;
     [SerializeField] private PlayerMovement pmove ;
     [SerializeField] private finished_level_check finish_level ;
@@ -44,6 +45,7 @@ public class level_return : MonoBehaviour
         door_lists.Add(door_n);
     }
     public void start_return() {
+        slevel_backend.end_level();
         add_door(this.door_return_name);
         finish_level.completed_count();
         StartCoroutine(interval());
