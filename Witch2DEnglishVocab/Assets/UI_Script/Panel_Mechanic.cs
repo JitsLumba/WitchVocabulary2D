@@ -42,6 +42,8 @@ public class Panel_Mechanic : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Z))
         {
+            string direct = slevel_backend.get_dir();
+            Debug.Log(direct + " LANS");
             freeze_or_not();
 
         }

@@ -257,20 +257,23 @@ public class Dialogue_Trigger : MonoBehaviour
         
         
         dialogue.clear_sentences();
+      
         dialogue.add_remarks(remarks);
         dialogue.add_dialogues(sentences, names);
         dialogue.add_result_dialogues(results, name_res);
+       
         dialogue_panel.SetActive(true);
         invisi_button.SetActive(true);
         choice_list.Clear();
+      
         for (int i = 0; i < choices.Count; i++) {
             choice_list.Add(choices[i]);
         }
         dialogue_Manager.set_choices(choices);
         dialogue_Manager.set_mode(1);
-        Debug.Log("CLEAR");
+        
         this.dialogue_Manager.StartDialogue(dialogue);
-        Debug.Log("HELLO " + dialogue.get_clue_num());
+       
     }
     
     public void set_trigger()

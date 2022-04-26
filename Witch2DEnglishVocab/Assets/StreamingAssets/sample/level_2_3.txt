@@ -1,0 +1,19 @@
+Backend for sub-level: level_2_3
+
+Player selected word: "difficult" with the synonym highlighter
+Result is "Correct"
+
+Player selected word: "ease" with the antonym highlighter
+Result is "Correct"
+
+
+Results:
+
+Number of times gotten correct: 2
+Number of times gotten incorrect: 0
+Number of times gotten close: 0
+
+Player selected "I know how to remove that difficulty! (to complicate)" choice
+Result is "Correct"
+
+Time: 51 seconds

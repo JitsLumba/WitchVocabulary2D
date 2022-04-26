@@ -1,0 +1,19 @@
+Backend for sub-level: level_6_3
+
+Player selected word: "yield" with the synonym highlighter
+Result is "Correct"
+
+Player selected word: "resisting" with the antonym highlighter
+Result is "Correct"
+
+
+Results:
+
+Number of times gotten correct: 2
+Number of times gotten incorrect: 0
+Number of times gotten close: 0
+
+Player selected "It’s not like you to submit to them.(submit)" choice
+Result is "Correct"
+
+Time: 15 seconds

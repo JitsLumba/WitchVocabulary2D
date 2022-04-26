@@ -30,10 +30,12 @@ public class Sub_Level_Script : MonoBehaviour
     }
     public void initialize_file_backend() {
         slevel_backend.write_file_log(sub_level_name);
+       
     }
     public void set_definition() {
        dcheck.clear_lists();
        dcheck.set_answer(clues, clue_type);
+    
     }
     public void set_dialogues() {
         pmech.set_can_freeze(true);
@@ -44,7 +46,7 @@ public class Sub_Level_Script : MonoBehaviour
         dtrigger.clues_add(clues, clue_type);
         dtrigger.set_dialogue_stoppers(result_stopper);
         dtrigger.change_dial_vals(sentences, names, choices, results, remarks, names_result);
-        
+       
     }
     
 }

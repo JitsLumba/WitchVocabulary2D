@@ -15,4 +15,8 @@ Results:
 Number of times gotten correct: 3
 Number of times gotten incorrect: 0
 Number of times gotten close: 0
-time: 17 seconds
+
+Player selected "I will try again when she is not noisy anymore.(noisy)" choice
+Result is "Correct"
+
+Time: 13 seconds

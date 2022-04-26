@@ -1,0 +1,20 @@
+Backend for sub-level: level_5_3
+
+Player selected word: "unrestrainable" with the synonym highlighter
+Result is "Correct"
+
+Player selected word: "composed" with the antonym highlighter
+Result is "Correct"
+
+
+Results:
+
+Number of times gotten correct: 2
+Number of times gotten incorrect: 0
+Number of times gotten close: 0
+
+Player selected "She is no longer uncontrollable.(uncontrollable)
+" choice
+Result is "Correct"
+
+Time: 27 seconds

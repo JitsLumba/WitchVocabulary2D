@@ -1,0 +1,19 @@
+Backend for sub-level: level_4_3
+
+Player selected word: "combative" with the synonym highlighter
+Result is "Correct"
+
+Player selected word: "aggressive" with the synonym highlighter
+Result is "Correct"
+
+
+Results:
+
+Number of times gotten correct: 2
+Number of times gotten incorrect: 0
+Number of times gotten close: 0
+
+Player selected "I’ll talk to her about her hostility against you. (hostile)" choice
+Result is "Correct"
+
+Time: 15 seconds

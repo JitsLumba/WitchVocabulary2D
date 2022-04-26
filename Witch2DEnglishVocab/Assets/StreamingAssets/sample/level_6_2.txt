@@ -1,0 +1,25 @@
+Backend for sub-level: level_6_2
+
+Player selected word: "acknowledgement" with the example highlighter
+Result is "Correct"
+
+Player selected word: "responsibility" with the example highlighter
+Result is "Incorrect"
+
+Player selected word: "accordance" with the example highlighter
+Result is "Correct"
+
+Player selected word: "ignore" with the antonym highlighter
+Result is "Correct"
+
+
+Results:
+
+Number of times gotten correct: 3
+Number of times gotten incorrect: 1
+Number of times gotten close: 0
+
+Player selected "They should stick with the agreement on the contract(agree)" choice
+Result is "Correct"
+
+Time: 25 seconds

@@ -1,5 +1,8 @@
 Backend for sub-level: level_5_1
 
+Player selected word: "Iroha" with the synonym highlighter
+Result is "Incorrect"
+
 Player selected word: "orderly" with the antonym highlighter
 Result is "Correct"
 
@@ -13,15 +16,10 @@ Result is "Correct"
 Results:
 
 Number of times gotten correct: 3
-Number of times gotten incorrect: 0
+Number of times gotten incorrect: 1
 Number of times gotten close: 0
-Player selected "orderly" choice
-Result is "Incorrect"
 
-Player selected "rowdy" choice
-Result is "Kinda Correct"
-
-Player selected "rough" choice
+Player selected "They are a chaotic bunch…(chaotic)" choice
 Result is "Correct"
 
-Time: 31 seconds
+Time: 24 seconds

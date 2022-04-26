@@ -1,0 +1,19 @@
+Backend for sub-level: level_4_2
+
+Player selected word: "disagreement" with the synonym highlighter
+Result is "Correct"
+
+Player selected word: "agreement" with the antonym highlighter
+Result is "Correct"
+
+
+Results:
+
+Number of times gotten correct: 2
+Number of times gotten incorrect: 0
+Number of times gotten close: 0
+
+Player selected "You’re not against my taste of cream cheese on pizza anymore? (oppose)" choice
+Result is "Correct"
+
+Time: 13 seconds

@@ -7,7 +7,7 @@ public class sublevel_backend : MonoBehaviour
     // Start is called before the first frame update
     
     private System.DateTime timeStart;
-    private string dir;
+    private string dir = "";
     void Start()
     {
         
@@ -21,10 +21,16 @@ public class sublevel_backend : MonoBehaviour
     public void write_file_log(string file_name) {
         dir = Application.streamingAssetsPath + "/sample/" + file_name + ".txt";
          File.WriteAllText(dir, "Backend for sub-level: " + file_name + "\n\n");
+        
         timeStart = System.DateTime.UtcNow;
+        Debug.Log("WROTE " + dir);
 
     }
+    public string get_dir() {
+        return dir;
+    }
     public void append_file_log(string text) {
+        
         File.AppendAllText(dir, text);
     }
     public void end_level() {
