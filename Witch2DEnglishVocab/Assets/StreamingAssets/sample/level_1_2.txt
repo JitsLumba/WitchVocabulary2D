@@ -1,8 +1,5 @@
 Backend for sub-level: level_1_2
 
-Player selected word: "hungry" with the synonym highlighter
-Result is "Incorrect"
-
 Player selected word: "please" with the synonym highlighter
 Result is "Correct"
 
@@ -13,10 +10,10 @@ Result is "Correct"
 Results:
 
 Number of times gotten correct: 2
-Number of times gotten incorrect: 1
+Number of times gotten incorrect: 0
 Number of times gotten close: 0
 
 Player selected "Give her some food (to satisfy)" choice
 Result is "Correct"
 
-Time: 21 seconds
+Time: 16 seconds

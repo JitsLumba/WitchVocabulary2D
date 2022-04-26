@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class finished_level_check : MonoBehaviour
 {
     // Start is called before the first frame update
-    [SerializeField] private GameObject player, door, result_panel, f_button;
+    [SerializeField] private GameObject player, door, result_panel, f_button, lock_door, open_door;
     [SerializeField] private Text result_text;
     [SerializeField] private Witch_Scene_Manager wscenemanager ;
 
@@ -38,6 +38,11 @@ public class finished_level_check : MonoBehaviour
     }
     public void completed_count() {
         this.counter++;
+
+        if (counter == needed_complete) {
+            lock_door.SetActive(false);
+            open_door.SetActive(true);
+        }
     }
     public void complete_check() {
         string result_n = "";

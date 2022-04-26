@@ -16,4 +16,4 @@ Number of times gotten close: 0
 Player selected "Use a healing spell (to relieve)" choice
 Result is "Correct"
 
-Time: 13 seconds
+Time: 11 seconds
