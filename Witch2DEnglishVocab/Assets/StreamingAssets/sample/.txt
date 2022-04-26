@@ -1,0 +1,19 @@
+Backend for sub-level: 
+
+Player selected word: "settle" with the synonym highlighter
+Result is "Correct"
+
+Player selected word: "calm" with the synonym highlighter
+Result is "Correct"
+
+
+Results:
+
+Number of times gotten correct: 2
+Number of times gotten incorrect: 0
+Number of times gotten close: 0
+
+Player selected "Comfort her (to soothe)" choice
+Result is "Correct"
+
+Time: 17 seconds

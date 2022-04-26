@@ -13,13 +13,7 @@ Number of times gotten correct: 2
 Number of times gotten incorrect: 0
 Number of times gotten close: 0
 
-Player selected "Comfort her (to soothe)" choice
-Result is "Kinda correct"
-
-Player selected "Give her some food (to satisfy)" choice
-Result is "Incorrect"
-
 Player selected "Use a healing spell (to relieve)" choice
 Result is "Correct"
 
-Time: 17 seconds
+Time: 13 seconds
