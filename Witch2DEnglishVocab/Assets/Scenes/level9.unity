@@ -3380,11 +3380,11 @@ MonoBehaviour:
   - Mina
   - 
   result_stopper: 03000000090000000d000000
-  dtrigger: {fileID: 0}
-  pmech: {fileID: 0}
+  dtrigger: {fileID: 462349266}
+  pmech: {fileID: 2032214513}
   answer: relieved!
   context_no: 0
-  dcheck: {fileID: 0}
+  dcheck: {fileID: 679031591}
   slevel_backend: {fileID: 1250131138}
   sub_level_name: level_9_3
   mult: 6
@@ -3417,10 +3417,10 @@ MonoBehaviour:
   second_char: {fileID: 8883835414974525880}
   samp: first_door
   door_num: door_3
-  subscrpt: {fileID: 0}
+  subscrpt: {fileID: 1190498233}
   invdsy: {fileID: 7237761973073092811}
   canchangediag: 1
-  lreturn: {fileID: 0}
+  lreturn: {fileID: 142147456}
   c2d: {fileID: 5334363829152864340}
   pmove: {fileID: 5334363829152864336}
   call_person: 0
@@ -3438,12 +3438,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   camera: {fileID: 398638468193488862}
   player: {fileID: 5334363829152864345}
-  door: {fileID: 0}
-  f_button: {fileID: 0}
+  door: {fileID: 1190498230}
+  f_button: {fileID: 1166175204}
   checl: first_door
   door_num: door_3
-  lreturn: {fileID: 0}
-  inp_transpy: {fileID: 0}
+  lreturn: {fileID: 142147456}
+  inp_transpy: {fileID: 1190498234}
 --- !u!1 &1216878552
 GameObject:
   m_ObjectHideFlags: 0

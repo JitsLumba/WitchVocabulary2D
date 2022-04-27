@@ -407,17 +407,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dea03a2259af3443b77ff93587d9bb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camera: {fileID: 0}
-  player: {fileID: 0}
-  secondperson: {fileID: 0}
-  thirdperson: {fileID: 0}
-  fourthperson: {fileID: 0}
+  camera: {fileID: 398638468193488862}
+  player: {fileID: 5334363829152864345}
+  secondperson: {fileID: 289680617787608049}
+  thirdperson: {fileID: 289680617787608049}
+  fourthperson: {fileID: 289680617787608049}
   dialogue_panel: {fileID: 19626195}
   invisi_button: {fileID: 1159788322}
-  slevel_backend: {fileID: 0}
-  c2d: {fileID: 0}
-  pmove: {fileID: 0}
-  finish_level: {fileID: 0}
+  slevel_backend: {fileID: 2056934658}
+  c2d: {fileID: 5334363829152864340}
+  pmove: {fileID: 5334363829152864336}
+  finish_level: {fileID: 762593820}
 --- !u!4 &221162056
 Transform:
   m_ObjectHideFlags: 0
@@ -524,6 +524,9 @@ GameObject:
   m_Component:
   - component: {fileID: 255523557}
   - component: {fileID: 255523556}
+  - component: {fileID: 255523560}
+  - component: {fileID: 255523559}
+  - component: {fileID: 255523558}
   m_Layer: 0
   m_Name: First_Memory_Door
   m_TagString: Untagged
@@ -595,8 +598,146 @@ Transform:
   m_Children:
   - {fileID: 1195124717}
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &255523558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 255523555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: baa8037f1210cae428199553c65de089, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sentences:
+  - 'Hey Mina ! I heard the news about the fake doctor you have taken care of . '
+  - You have done well with exposing his lies .
+  - Yeah , you should have seen his addlepated face when his wrongdoings were exposed
+    .
+  - What does his face look like at that time ?
+  - 'His face looked mindless at that time . '
+  - His thoughtless confession exposed his lies when the decisive evidence was shown
+    in his face !
+  - Shows how much he is !
+  choices:
+  - He looks so confused(confused)
+  - The nonsensical doctor got what he deserved(nonsense)
+  - He is so unaware(unaware)
+  results:
+  - He is so confused, he does not know what to say anymore.
+  - Well he did have some counter arguments.
+  - "But unfortunately, every argument he makes is just used against him\u2026"
+  - Consider him finished at that point.
+  - That is almost the correct answer. Try again.
+  - He deserved it for being a nonsensical doctor.
+  - Yeah! He will definitely pay for the patients he has deceived.
+  - I am gonna multiply his punishment by a hundred-fold!
+  - That is the correct answer!
+  - He was unaware of what would happen to him with his lies exposed.
+  - 'Actually, I think he has an idea of it. '
+  - "But it\u2019s more so that he could not imagine it."
+  - That is the incorrect answer. Try again.
+  remarks:
+  - Kinda Correct
+  - Correct
+  - Incorrect
+  clues:
+  - mindless
+  - thoughtless
+  clue_type:
+  - synonym
+  - synonym
+  names:
+  - Elaina
+  - Elaina
+  - Mina
+  - Elaina
+  - Mina
+  - Mina
+  - Mina
+  names_result:
+  - Elaina
+  - Mina
+  - Mina
+  - Mina
+  - 
+  - Elaina
+  - Mina
+  - Mina
+  - 
+  - 
+  - Elaina
+  - Yuichi
+  - 
+  - 
+  result_stopper: 04000000080000000c000000
+  dtrigger: {fileID: 784315633}
+  pmech: {fileID: 287995974}
+  answer: relieved!
+  context_no: 0
+  dcheck: {fileID: 1373309310}
+  slevel_backend: {fileID: 2056934658}
+  sub_level_name: level_12_1
+  mult: 5
+--- !u!114 &255523559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 255523555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcaf63ed26c747045a2c766d1e1723dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camera_x: 42.15
+  camera_y: -34.92
+  player_x: 40.13
+  player_y: -34.74
+  player_rot_y: 0
+  player_return_rot_y: 0
+  second_char_x_transf: 41.68
+  second_char_y_rot: 180
+  return_camera_x: 21.79
+  return_player_x: 17.69
+  return_scnd_char_x_transf: 14.3
+  return_scnd_char_y_rot: 0
+  camdest: {fileID: 398638468193488862}
+  playerdest: {fileID: 5334363829152864345}
+  second_char: {fileID: 8883835414974525880}
+  samp: first_door
+  door_num: door_1
+  subscrpt: {fileID: 255523558}
+  invdsy: {fileID: 7237761973073092811}
+  canchangediag: 1
+  lreturn: {fileID: 221162055}
+  c2d: {fileID: 5334363829152864340}
+  pmove: {fileID: 5334363829152864336}
+  call_person: 0
+--- !u!114 &255523560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 255523555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c39e6f5c70f77da459ee6107062a7b5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camera: {fileID: 398638468193488862}
+  player: {fileID: 5334363829152864345}
+  door: {fileID: 255523555}
+  f_button: {fileID: 1195124716}
+  checl: first_door
+  door_num: door_1
+  lreturn: {fileID: 221162055}
+  inp_transpy: {fileID: 255523559}
 --- !u!1 &280699419
 GameObject:
   m_ObjectHideFlags: 0
@@ -827,7 +968,7 @@ MonoBehaviour:
   clue_text: {fileID: 291603935}
   dcheck: {fileID: 1373309310}
   lreturn: {fileID: 221162055}
-  slevel_backend: {fileID: 0}
+  slevel_backend: {fileID: 2056934658}
   dtrigger: {fileID: 784315633}
   has_antonym: 1
   has_explain: 1
@@ -1026,7 +1167,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &365637853
 GameObject:
@@ -1166,7 +1307,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &410568592
 GameObject:
@@ -1534,7 +1675,7 @@ Transform:
   m_Children:
   - {fileID: 2006406357}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &607657938
 GameObject:
@@ -1897,14 +2038,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b6d0239f5763664e86f22f4ccef41a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 5334363829152864345}
   door: {fileID: 762593819}
-  result_panel: {fileID: 0}
+  result_panel: {fileID: 1177257392}
   f_button: {fileID: 1373884124}
   lock_door: {fileID: 1575245833}
   open_door: {fileID: 766256781}
-  result_text: {fileID: 0}
-  wscenemanager: {fileID: 0}
+  result_text: {fileID: 1246726173}
+  wscenemanager: {fileID: 386342922}
   needed_complete: 3
 --- !u!4 &762593821
 Transform:
@@ -1921,7 +2062,7 @@ Transform:
   - {fileID: 1575245835}
   - {fileID: 1373884126}
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &766256781
 GameObject:
@@ -2054,7 +2195,7 @@ MonoBehaviour:
     result_name: 
     name: Elaina
   dialogue_Manager: {fileID: 1355417667}
-  slevel_backend: {fileID: 0}
+  slevel_backend: {fileID: 2056934658}
   pmech: {fileID: 287995974}
 --- !u!224 &784315634
 RectTransform:
@@ -2164,6 +2305,9 @@ GameObject:
   m_Component:
   - component: {fileID: 886495030}
   - component: {fileID: 886495029}
+  - component: {fileID: 886495033}
+  - component: {fileID: 886495032}
+  - component: {fileID: 886495031}
   m_Layer: 0
   m_Name: Second_Memory_Door
   m_TagString: Untagged
@@ -2235,117 +2379,105 @@ Transform:
   m_Children:
   - {fileID: 252367117}
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &914805272
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 914805277}
-  - component: {fileID: 914805276}
-  - component: {fileID: 914805275}
-  - component: {fileID: 914805274}
-  - component: {fileID: 914805273}
-  m_Layer: 0
-  m_Name: Third_Door
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &914805273
+--- !u!114 &886495031
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 914805272}
+  m_GameObject: {fileID: 886495028}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: baa8037f1210cae428199553c65de089, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sentences:
-  - "Hey Elaina \u2026"
-  - "Ah hey Mina . What\u2019s up ? "
-  - "I have been thinking on apologizing with Iroha on person , but \u2026"
-  - Thinking on how to apologize to her is too addlepated .
-  - 'What do you mean by that? '
-  - "By addlepated I mean it is so puzzling \u2026"
-  - "I am not clear with what I should say to her\u2026"
+  - 'Absolutely not !  '
+  - Do you know how that addlepated maid is ignorant ...
+  - ... of how I feel about that task she gave!?
+  - What about the task she gave ?
+  - "She didn\u2019t tell you !? Her unmindfulness shows no bounds \u2026"
+  - ... such as her inattentiveness to detail ...
+  - "... in one of the quest destinations she made me go\u2026\r\n"
+  - "Jeez \u2026 I got injured so badly in the aftermath \u2026"
+  - If only she is informed that no one , not even the bravest warriors wants to
+    go to that place !
   choices:
-  - "Is there something that doesn\u2019t make any sense?(nonsensical)"
-  - "If it\u2019s confusing, I can help you(confusing)"
-  - Are you unaware of what will Iroha feel?(unaware)
+  - "Strange\u2026why is she unaware of it?(unaware)"
+  - Maybe she is confused about this?(confused)
+  - "This doesn\u2019t make any sense\u2026(nonsensical)"
   results:
-  - "Is there something that doesn\u2019t make any sense?"
-  - Maybe...
-  - "I am just feeling things that make my brain overheat\u2026"
-  - I hate thinking!
-  - That was almost the correct answer. Try again.
-  - "If it\u2019s confusing to say your words to Iroha, then I will help you sort
-    things out."
-  - "Elaina \u2026"
-  - "Thank you\u2026I will be asking for your help with this\u2026"
-  - "You\u2019re welcome!"
-  - That was the correct answer!
-  - Are you unaware of what Iroha will feel when you are gonna apologize?
-  - No, I definitely know how she feels.
-  - "But I just can\u2019t face her at the moment\u2026"
+  - "That\u2019s strange\u2026why is she unaware of the dangers?"
+  - "I think I need to talk to her about this\u2026"
+  - Now we are talking!
+  - "You should let her know of this or it\u2019s not gonna end well!"
+  - That is the correct answer!
+  - "Perhaps she is confused about this\u2026"
+  - "No! There\u2019s no way the intelligent Iroha would be confused about this!"
+  - Even she should have heard about the stories of fallen warriors in that domain!
+  - That was the incorrect answer. Try again.
+  - "This doesn\u2019t make any sense\u2026"
+  - Which? My story or her request?
+  - "Ah! H-her request is the one that doesn\u2019t make any sense\u2026"
+  - "Hmph, as long as you understand\u2026"
   - That was the incorrect answer. Try again.
   remarks:
-  - Kinda Correct
   - Correct
   - Incorrect
+  - Incorrect
   clues:
-  - puzzling
-  - clear
+  - ignorant
+  - informed
+  - unmindfulness
+  - inattentiveness
   clue_type:
-  - definition
+  - synonym
   - antonym
+  - synonym
+  - example
   names:
   - Mina
-  - Elaina
   - Mina
   - Mina
   - Elaina
+  - Mina
+  - Mina
+  - Mina
   - Mina
   - Mina
   names_result:
   - Elaina
-  - Mina
+  - Elaina
   - Mina
   - Mina
   - 
   - Elaina
   - Mina
   - Mina
-  - Elaina
   - 
   - Elaina
   - Mina
+  - Elaina
   - Mina
   - 
-  result_stopper: 04000000090000000d000000
-  dtrigger: {fileID: 0}
-  pmech: {fileID: 0}
+  result_stopper: 04000000080000000d000000
+  dtrigger: {fileID: 784315633}
+  pmech: {fileID: 287995974}
   answer: relieved!
   context_no: 0
-  dcheck: {fileID: 0}
+  dcheck: {fileID: 1373309310}
   slevel_backend: {fileID: 2056934658}
-  sub_level_name: level_12_3
-  mult: 4
---- !u!114 &914805274
+  sub_level_name: level_12_2
+  mult: 6
+--- !u!114 &886495032
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 914805272}
+  m_GameObject: {fileID: 886495028}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bcaf63ed26c747045a2c766d1e1723dc, type: 3}
@@ -2360,28 +2492,28 @@ MonoBehaviour:
   second_char_x_transf: 41.68
   second_char_y_rot: 180
   return_camera_x: 21.79
-  return_player_x: 23.55
+  return_player_x: 20.45
   return_scnd_char_x_transf: 14.3
   return_scnd_char_y_rot: 0
   camdest: {fileID: 398638468193488862}
   playerdest: {fileID: 5334363829152864345}
   second_char: {fileID: 8883835414974525880}
   samp: first_door
-  door_num: door_3
-  subscrpt: {fileID: 914805273}
+  door_num: door_2
+  subscrpt: {fileID: 886495031}
   invdsy: {fileID: 7237761973073092811}
   canchangediag: 1
-  lreturn: {fileID: 0}
+  lreturn: {fileID: 221162055}
   c2d: {fileID: 5334363829152864340}
   pmove: {fileID: 5334363829152864336}
   call_person: 0
---- !u!114 &914805275
+--- !u!114 &886495033
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 914805272}
+  m_GameObject: {fileID: 886495028}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c39e6f5c70f77da459ee6107062a7b5b, type: 3}
@@ -2389,78 +2521,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   camera: {fileID: 398638468193488862}
   player: {fileID: 5334363829152864345}
-  door: {fileID: 914805272}
-  f_button: {fileID: 1976913462}
+  door: {fileID: 886495028}
+  f_button: {fileID: 252367116}
   checl: first_door
-  door_num: door_3
-  lreturn: {fileID: 0}
-  inp_transpy: {fileID: 914805274}
---- !u!212 &914805276
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 914805272}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 8a26d60fb45014bcd9bb392106f7c98b, type: 3}
-  m_Color: {r: 1, g: 0.5655966, b: 0.07924521, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 0.22, y: 0.33}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!4 &914805277
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 914805272}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 23.44, y: -34.87, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 1}
-  m_Children:
-  - {fileID: 1976913463}
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  door_num: door_2
+  lreturn: {fileID: 221162055}
+  inp_transpy: {fileID: 886495032}
 --- !u!1 &934626999
 GameObject:
   m_ObjectHideFlags: 0
@@ -2541,7 +2607,7 @@ Transform:
   m_LocalScale: {x: 5.1945, y: 4.473619, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &957635459
 GameObject:
@@ -2584,7 +2650,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1009575631
 GameObject:
@@ -2825,7 +2891,7 @@ RectTransform:
   - {fileID: 1009575635}
   - {fileID: 1667168788}
   m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -3853,90 +3919,8 @@ Transform:
   m_LocalScale: {x: 5.1945, y: 4.473619, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1459766027
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1459766028}
-  - component: {fileID: 1459766029}
-  m_Layer: 0
-  m_Name: F_Key (3)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &1459766028
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1459766027}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.25, z: 0}
-  m_LocalScale: {x: 0.037499998, y: 0.037499998, z: 1}
-  m_Children: []
-  m_Father: {fileID: 5400894358496902789}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &1459766029
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1459766027}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 10
-  m_Sprite: {fileID: 21300000, guid: 3ab9ba0acd06fc84b9384a2b93f5d9c3, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
 --- !u!1 &1465856359
 GameObject:
   m_ObjectHideFlags: 0
@@ -4267,238 +4251,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 762593821}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1580047547
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1580047552}
-  - component: {fileID: 1580047551}
-  - component: {fileID: 1580047550}
-  - component: {fileID: 1580047549}
-  - component: {fileID: 1580047548}
-  m_Layer: 0
-  m_Name: Second_Door
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1580047548
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1580047547}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baa8037f1210cae428199553c65de089, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sentences:
-  - 'Absolutely not !  '
-  - Do you know how that addlepated maid is ignorant ...
-  - ... of how I feel about that task she gave!?
-  - What about the task she gave ?
-  - "She didn\u2019t tell you !? Her unmindfulness shows no bounds \u2026"
-  - ... such as her inattentiveness to detail ...
-  - "... in one of the quest destinations she made me go\u2026\r\n"
-  - "Jeez \u2026 I got injured so badly in the aftermath \u2026"
-  - If only she is informed that no one , not even the bravest warriors wants to
-    go to that place !
-  choices:
-  - "Strange\u2026why is she unaware of it?(unaware)"
-  - Maybe she is confused about this?(confused)
-  - "This doesn\u2019t make any sense\u2026(nonsensical)"
-  results:
-  - "That\u2019s strange\u2026why is she unaware of the dangers?"
-  - "I think I need to talk to her about this\u2026"
-  - Now we are talking!
-  - "You should let her know of this or it\u2019s not gonna end well!"
-  - That is the correct answer!
-  - "Perhaps she is confused about this\u2026"
-  - "No! There\u2019s no way the intelligent Iroha would be confused about this!"
-  - Even she should have heard about the stories of fallen warriors in that domain!
-  - That was the incorrect answer. Try again.
-  - "This doesn\u2019t make any sense\u2026"
-  - Which? My story or her request?
-  - "Ah! H-her request is the one that doesn\u2019t make any sense\u2026"
-  - "Hmph, as long as you understand\u2026"
-  - That was the incorrect answer. Try again.
-  remarks:
-  - Correct
-  - Incorrect
-  - Incorrect
-  clues:
-  - ignorant
-  - informed
-  - unmindfulness
-  - inattentiveness
-  clue_type:
-  - synonym
-  - antonym
-  - synonym
-  - example
-  names:
-  - Mina
-  - Mina
-  - Mina
-  - Elaina
-  - Mina
-  - Mina
-  - Mina
-  - Mina
-  - Mina
-  names_result:
-  - Elaina
-  - Elaina
-  - Mina
-  - Mina
-  - 
-  - Elaina
-  - Mina
-  - Mina
-  - 
-  - Elaina
-  - Mina
-  - Elaina
-  - Mina
-  - 
-  result_stopper: 04000000080000000d000000
-  dtrigger: {fileID: 0}
-  pmech: {fileID: 0}
-  answer: relieved!
-  context_no: 0
-  dcheck: {fileID: 0}
-  slevel_backend: {fileID: 2056934658}
-  sub_level_name: level_12_2
-  mult: 6
---- !u!114 &1580047549
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1580047547}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bcaf63ed26c747045a2c766d1e1723dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  camera_x: 42.15
-  camera_y: -34.92
-  player_x: 40.13
-  player_y: -34.74
-  player_rot_y: 0
-  player_return_rot_y: 0
-  second_char_x_transf: 41.68
-  second_char_y_rot: 180
-  return_camera_x: 21.79
-  return_player_x: 20.45
-  return_scnd_char_x_transf: 14.3
-  return_scnd_char_y_rot: 0
-  camdest: {fileID: 398638468193488862}
-  playerdest: {fileID: 5334363829152864345}
-  second_char: {fileID: 8883835414974525880}
-  samp: first_door
-  door_num: door_2
-  subscrpt: {fileID: 1580047548}
-  invdsy: {fileID: 7237761973073092811}
-  canchangediag: 1
-  lreturn: {fileID: 0}
-  c2d: {fileID: 5334363829152864340}
-  pmove: {fileID: 5334363829152864336}
-  call_person: 0
---- !u!114 &1580047550
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1580047547}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c39e6f5c70f77da459ee6107062a7b5b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  camera: {fileID: 398638468193488862}
-  player: {fileID: 5334363829152864345}
-  door: {fileID: 1580047547}
-  f_button: {fileID: 2082919026}
-  checl: first_door
-  door_num: door_2
-  lreturn: {fileID: 0}
-  inp_transpy: {fileID: 1580047549}
---- !u!212 &1580047551
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1580047547}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 8a26d60fb45014bcd9bb392106f7c98b, type: 3}
-  m_Color: {r: 1, g: 0.5655966, b: 0.07924521, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 0.22, y: 0.33}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!4 &1580047552
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1580047547}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 20.45, y: -34.86, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 1}
-  m_Children:
-  - {fileID: 2082919027}
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1587177805
 GameObject:
@@ -4988,7 +4740,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1729932524
 GameObject:
@@ -5158,6 +4910,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1840532044}
   - component: {fileID: 1840532043}
+  - component: {fileID: 1840532047}
+  - component: {fileID: 1840532046}
+  - component: {fileID: 1840532045}
   m_Layer: 0
   m_Name: Third_Memory_Door
   m_TagString: Untagged
@@ -5229,90 +4984,146 @@ Transform:
   m_Children:
   - {fileID: 1264043169}
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1848171033
-GameObject:
+--- !u!114 &1840532045
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1848171034}
-  - component: {fileID: 1848171035}
-  m_Layer: 0
-  m_Name: F_Key
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &1848171034
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1848171033}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.3, z: 0}
-  m_LocalScale: {x: 0.06, y: 0.06, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1007564714534547113}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &1848171035
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1848171033}
+  m_GameObject: {fileID: 1840532042}
   m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 10
-  m_Sprite: {fileID: 21300000, guid: 3ab9ba0acd06fc84b9384a2b93f5d9c3, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: baa8037f1210cae428199553c65de089, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sentences:
+  - "Hey Elaina \u2026"
+  - "Ah hey Mina . What\u2019s up ? "
+  - "I have been thinking on apologizing with Iroha on person , but \u2026"
+  - Thinking on how to apologize to her is too addlepated .
+  - 'What do you mean by that? '
+  - "By addlepated I mean it is so puzzling \u2026"
+  - "I am not clear with what I should say to her\u2026"
+  choices:
+  - "Is there something that doesn\u2019t make any sense?(nonsensical)"
+  - "If it\u2019s confusing, I can help you(confusing)"
+  - Are you unaware of what will Iroha feel?(unaware)
+  results:
+  - "Is there something that doesn\u2019t make any sense?"
+  - Maybe...
+  - "I am just feeling things that make my brain overheat\u2026"
+  - I hate thinking!
+  - That was almost the correct answer. Try again.
+  - "If it\u2019s confusing to say your words to Iroha, then I will help you sort
+    things out."
+  - "Elaina \u2026"
+  - "Thank you\u2026I will be asking for your help with this\u2026"
+  - "You\u2019re welcome!"
+  - That was the correct answer!
+  - Are you unaware of what Iroha will feel when you are gonna apologize?
+  - No, I definitely know how she feels.
+  - "But I just can\u2019t face her at the moment\u2026"
+  - That was the incorrect answer. Try again.
+  remarks:
+  - Kinda Correct
+  - Correct
+  - Incorrect
+  clues:
+  - puzzling
+  - clear
+  clue_type:
+  - definition
+  - antonym
+  names:
+  - Mina
+  - Elaina
+  - Mina
+  - Mina
+  - Elaina
+  - Mina
+  - Mina
+  names_result:
+  - Elaina
+  - Mina
+  - Mina
+  - Mina
+  - 
+  - Elaina
+  - Mina
+  - Mina
+  - Elaina
+  - 
+  - Elaina
+  - Mina
+  - Mina
+  - 
+  result_stopper: 04000000090000000d000000
+  dtrigger: {fileID: 784315633}
+  pmech: {fileID: 287995974}
+  answer: relieved!
+  context_no: 0
+  dcheck: {fileID: 1373309310}
+  slevel_backend: {fileID: 2056934658}
+  sub_level_name: level_12_3
+  mult: 4
+--- !u!114 &1840532046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1840532042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcaf63ed26c747045a2c766d1e1723dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camera_x: 42.15
+  camera_y: -34.92
+  player_x: 40.13
+  player_y: -34.74
+  player_rot_y: 0
+  player_return_rot_y: 0
+  second_char_x_transf: 41.68
+  second_char_y_rot: 180
+  return_camera_x: 21.79
+  return_player_x: 23.55
+  return_scnd_char_x_transf: 14.3
+  return_scnd_char_y_rot: 0
+  camdest: {fileID: 398638468193488862}
+  playerdest: {fileID: 5334363829152864345}
+  second_char: {fileID: 8883835414974525880}
+  samp: first_door
+  door_num: door_3
+  subscrpt: {fileID: 1840532045}
+  invdsy: {fileID: 7237761973073092811}
+  canchangediag: 1
+  lreturn: {fileID: 221162055}
+  c2d: {fileID: 5334363829152864340}
+  pmove: {fileID: 5334363829152864336}
+  call_person: 0
+--- !u!114 &1840532047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1840532042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c39e6f5c70f77da459ee6107062a7b5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camera: {fileID: 398638468193488862}
+  player: {fileID: 5334363829152864345}
+  door: {fileID: 1840532042}
+  f_button: {fileID: 1264043168}
+  checl: first_door
+  door_num: door_3
+  lreturn: {fileID: 221162055}
+  inp_transpy: {fileID: 1840532046}
 --- !u!1 &1859248029
 GameObject:
   m_ObjectHideFlags: 0
@@ -5399,7 +5210,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Rambunctious
+  m_Text: Addlepated
 --- !u!222 &1859248033
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5621,88 +5432,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1927680644}
   m_CullTransparentMesh: 1
---- !u!1 &1976913462
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1976913463}
-  - component: {fileID: 1976913464}
-  m_Layer: 0
-  m_Name: F_Key (2)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &1976913463
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1976913462}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.3, z: 0}
-  m_LocalScale: {x: 0.06, y: 0.06, z: 1}
-  m_Children: []
-  m_Father: {fileID: 914805277}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &1976913464
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1976913462}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 10
-  m_Sprite: {fileID: 21300000, guid: 3ab9ba0acd06fc84b9384a2b93f5d9c3, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
 --- !u!1 &2006406356
 GameObject:
   m_ObjectHideFlags: 0
@@ -8989,90 +8718,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2082919026
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2082919027}
-  - component: {fileID: 2082919028}
-  m_Layer: 0
-  m_Name: F_Key (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &2082919027
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2082919026}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.3, z: 0}
-  m_LocalScale: {x: 0.06, y: 0.06, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1580047552}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &2082919028
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2082919026}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 10
-  m_Sprite: {fileID: 21300000, guid: 3ab9ba0acd06fc84b9384a2b93f5d9c3, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
 --- !u!1 &2102977041
 GameObject:
   m_ObjectHideFlags: 0
@@ -9224,7 +8871,7 @@ Transform:
   m_Children:
   - {fileID: 1515648507}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &289680617787608049
 GameObject:
@@ -9328,230 +8975,6 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 398638468193488862}
   m_Enabled: 1
---- !u!212 &1007564714534547110
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1007564714534547111}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 8a26d60fb45014bcd9bb392106f7c98b, type: 3}
-  m_Color: {r: 1, g: 0.5655966, b: 0.07924521, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 0.22, y: 0.33}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!1 &1007564714534547111
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1007564714534547113}
-  - component: {fileID: 1007564714534547110}
-  - component: {fileID: 1007564714534547112}
-  - component: {fileID: 1007564714534547115}
-  - component: {fileID: 1007564714534547114}
-  m_Layer: 0
-  m_Name: First_Door
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1007564714534547112
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1007564714534547111}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c39e6f5c70f77da459ee6107062a7b5b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  camera: {fileID: 398638468193488862}
-  player: {fileID: 5334363829152864345}
-  door: {fileID: 1007564714534547111}
-  f_button: {fileID: 1848171033}
-  checl: first_door
-  door_num: door_1
-  lreturn: {fileID: 0}
-  inp_transpy: {fileID: 1007564714534547115}
---- !u!4 &1007564714534547113
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1007564714534547111}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 17.701008, y: -34.87, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 1}
-  m_Children:
-  - {fileID: 1848171034}
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1007564714534547114
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1007564714534547111}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baa8037f1210cae428199553c65de089, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sentences:
-  - 'Hey Mina ! I heard the news about the fake doctor you have taken care of . '
-  - You have done well with exposing his lies .
-  - Yeah , you should have seen his addlepated face when his wrongdoings were exposed
-    .
-  - What does his face look like at that time ?
-  - 'His face looked mindless at that time . '
-  - His thoughtless confession exposed his lies when the decisive evidence was shown
-    in his face !
-  - Shows how much he is !
-  choices:
-  - He looks so confused(confused)
-  - The nonsensical doctor got what he deserved(nonsense)
-  - He is so unaware(unaware)
-  results:
-  - He is so confused, he does not know what to say anymore.
-  - Well he did have some counter arguments.
-  - "But unfortunately, every argument he makes is just used against him\u2026"
-  - Consider him finished at that point.
-  - That is almost the correct answer. Try again.
-  - He deserved it for being a nonsensical doctor.
-  - Yeah! He will definitely pay for the patients he has deceived.
-  - I am gonna multiply his punishment by a hundred-fold!
-  - That is the correct answer!
-  - He was unaware of what would happen to him with his lies exposed.
-  - 'Actually, I think he has an idea of it. '
-  - "But it\u2019s more so that he could not imagine it."
-  - That is the incorrect answer. Try again.
-  remarks:
-  - Kinda Correct
-  - Correct
-  - Incorrect
-  clues:
-  - mindless
-  - thoughtless
-  clue_type:
-  - synonym
-  - synonym
-  names:
-  - Elaina
-  - Elaina
-  - Mina
-  - Elaina
-  - Mina
-  - Mina
-  - Mina
-  names_result:
-  - Elaina
-  - Mina
-  - Mina
-  - Mina
-  - 
-  - Elaina
-  - Mina
-  - Mina
-  - 
-  - 
-  - Elaina
-  - Yuichi
-  - 
-  - 
-  result_stopper: 04000000080000000c000000
-  dtrigger: {fileID: 0}
-  pmech: {fileID: 0}
-  answer: relieved!
-  context_no: 0
-  dcheck: {fileID: 0}
-  slevel_backend: {fileID: 2056934658}
-  sub_level_name: level_12_1
-  mult: 5
---- !u!114 &1007564714534547115
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1007564714534547111}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bcaf63ed26c747045a2c766d1e1723dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  camera_x: 42.15
-  camera_y: -34.92
-  player_x: 40.13
-  player_y: -34.74
-  player_rot_y: 0
-  player_return_rot_y: 0
-  second_char_x_transf: 41.68
-  second_char_y_rot: 180
-  return_camera_x: 21.79
-  return_player_x: 17.69
-  return_scnd_char_x_transf: 14.3
-  return_scnd_char_y_rot: 0
-  camdest: {fileID: 398638468193488862}
-  playerdest: {fileID: 5334363829152864345}
-  second_char: {fileID: 8883835414974525880}
-  samp: first_door
-  door_num: door_1
-  subscrpt: {fileID: 1007564714534547114}
-  invdsy: {fileID: 7237761973073092811}
-  canchangediag: 1
-  lreturn: {fileID: 0}
-  c2d: {fileID: 5334363829152864340}
-  pmove: {fileID: 5334363829152864336}
-  call_person: 0
 --- !u!212 &2002695054888836369
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9891,7 +9314,7 @@ Transform:
   - {fileID: 5334363828684214586}
   - {fileID: 5334363828724554578}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5334363829152864345
 GameObject:
@@ -9911,111 +9334,6 @@ GameObject:
   - component: {fileID: 5334363829152864337}
   m_Layer: 6
   m_Name: Player
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &5400894358496902786
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5400894358496902791}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b6d0239f5763664e86f22f4ccef41a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 5334363829152864345}
-  door: {fileID: 5400894358496902791}
-  result_panel: {fileID: 0}
-  f_button: {fileID: 1459766027}
-  lock_door: {fileID: 0}
-  open_door: {fileID: 0}
-  result_text: {fileID: 0}
-  wscenemanager: {fileID: 386342922}
-  needed_complete: 3
---- !u!212 &5400894358496902788
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5400894358496902791}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 8a26d60fb45014bcd9bb392106f7c98b, type: 3}
-  m_Color: {r: 0.3622641, g: 1, b: 0.5492218, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 0.22, y: 0.33}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!4 &5400894358496902789
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5400894358496902791}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 26.42, y: -34.37, z: 0}
-  m_LocalScale: {x: 8, y: 8, z: 1}
-  m_Children:
-  - {fileID: 1459766028}
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &5400894358496902791
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5400894358496902789}
-  - component: {fileID: 5400894358496902788}
-  - component: {fileID: 5400894358496902786}
-  m_Layer: 0
-  m_Name: Goal_Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10064,7 +9382,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7237761973073092811
 MonoBehaviour:

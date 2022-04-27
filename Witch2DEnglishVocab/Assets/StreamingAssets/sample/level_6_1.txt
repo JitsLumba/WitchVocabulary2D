@@ -3,9 +3,6 @@ Backend for sub-level: level_6_1
 Player selected word: "rejected" with the antonym highlighter
 Result is "Correct"
 
-Player selected word: "approve" with the antonym highlighter
-Result is "Close..."
-
 Player selected word: "approve" with the synonym highlighter
 Result is "Correct"
 
@@ -14,9 +11,12 @@ Results:
 
 Number of times gotten correct: 2
 Number of times gotten incorrect: 0
-Number of times gotten close: 1
+Number of times gotten close: 0
+
+Player selected "I can’t believe he did not submit(submit)" choice
+Result is "Incorrect"
 
 Player selected "I can’t believe he did not accept(accept)" choice
 Result is "Correct"
 
-Time: 13 seconds
+Time: 19 seconds

@@ -1,0 +1,19 @@
+Backend for sub-level: level_7_3
+
+Player selected word: "lethargic" with the definition highlighter
+Result is "Correct"
+
+Player selected word: "limp" with the synonym highlighter
+Result is "Correct"
+
+
+Results:
+
+Number of times gotten correct: 2
+Number of times gotten incorrect: 0
+Number of times gotten close: 0
+
+Player selected "Guess you really can’t get lazy in a situation like this (Lazy)" choice
+Result is "Correct"
+
+Time: 21 seconds

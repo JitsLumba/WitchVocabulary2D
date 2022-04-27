@@ -10,11 +10,15 @@ public class Question_Dialogue_Trigger : MonoBehaviour
     [SerializeField] private Question_Dialogue_Manager question_manager;
     [SerializeField] private Question_Panel_Mechanic qpanel_mech;
     [SerializeField] private question_next_level qnext_level;
-    [SerializeField] private tutorial_image_show tut_img_show;
+  
     [SerializeField] private cloze_test_backend cbackend;
     [TextArea(3, 10)]
     [SerializeField] private List<string> tutorial_cloze_diag ;
     [SerializeField] private List<string> tutorial_cloze_speaker;
+    [TextArea(3, 10)]
+
+    [SerializeField] private List<string> tutorial_end_diag;
+    [SerializeField] private List<string> end_speaker_diag ;
     private List<string> choices, clues, clue_typing;
     private string orig_question = "", orig_speaker = "";
     private bool canproc = true;
@@ -29,14 +33,14 @@ public class Question_Dialogue_Trigger : MonoBehaviour
     private string play_name = "Elaina";
     private string highlight_question = "";
     private int counter = 0, tut_counter = 0;
-    private int correct = 0, kinda_correct = 0, incorrect = 0;
+    private int correct = 0, kinda_correct = 0, incorrect = 0, end_counter = 0;
     string end_words = "Well done my student. You have finally completed all the trials!";
     void Start()
     {
         choices = new List<string>();
         clues = new List<string>();
         clue_typing = new List<string>();
-        tut_img_show.set_is_not_on_dialogue(false);
+        
         tutorial_trigger_dialogue();
     }
     void clear_lists()
@@ -50,7 +54,7 @@ public class Question_Dialogue_Trigger : MonoBehaviour
         canproc = false;
         clear_lists();
         qpanel_mech.set_can_freeze(true);
-        tut_img_show.set_is_not_on_dialogue(false);
+        
 
         add_definitions();
         qpanel_mech.set_clue_number(clues.Count);
@@ -115,8 +119,19 @@ public class Question_Dialogue_Trigger : MonoBehaviour
             {
                 //go to the next level or not
                 //natsuiro
+                end_counter++;
+                int max = tutorial_end_diag.Count;
 
-                qnext_level.next_level_notify();
+
+                if (end_counter == max) {
+                    qnext_level.next_level_notify();
+                }
+                else {
+                    string diag = tutorial_end_diag[end_counter];
+                    string talker = end_speaker_diag[end_counter];
+
+                    new_dialogue(diag, talker);
+                }
             }
             else
             {
@@ -193,7 +208,7 @@ public class Question_Dialogue_Trigger : MonoBehaviour
                 qpanel_mech.set_highlighter_panel_active(activate);
 
             }
-            tut_img_show.show_img_sequence();
+            
         }
 
     }
@@ -288,10 +303,11 @@ public class Question_Dialogue_Trigger : MonoBehaviour
         cbackend.append_file_log(kinda_correct_message);
         cbackend.append_file_log(incorrect_message);
         cbackend.end_test();
-        string talker = "Sensei";
+        string diag = tutorial_end_diag[end_counter];
+        string talker = end_speaker_diag[end_counter];
         canproc = true;
         set_has_finished(true);
-        new_dialogue(end_words, talker);
+        new_dialogue(diag, talker);
     }
     void set_has_finished(bool fin)
     {

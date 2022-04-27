@@ -16,4 +16,4 @@ Number of times gotten close: 0
 Player selected "It’s not like you to submit to them.(submit)" choice
 Result is "Correct"
 
-Time: 15 seconds
+Time: 25 seconds

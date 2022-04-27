@@ -2390,7 +2390,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 5334363829152864345}
   door: {fileID: 668827833}
-  result_panel: {fileID: 456929599}
+  result_panel: {fileID: 330653142}
   f_button: {fileID: 456929599}
   lock_door: {fileID: 570963746}
   open_door: {fileID: 1259468505}
