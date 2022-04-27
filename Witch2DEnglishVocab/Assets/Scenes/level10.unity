@@ -207,7 +207,7 @@ Transform:
   m_Children:
   - {fileID: 115639590}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6154391
 MonoBehaviour:
@@ -224,14 +224,13 @@ MonoBehaviour:
   sentences:
   - Compared to back home , your towns are so much more vivacious !
   - You have towns in ... wherever you lived ?
-  - Yep~
-  - The stories make the place sound all spiritual ...
-  - ... but really it's just a bunch of Kami drinking themselves to undeath .
-  - A - ah ...
+  - Yep ~ the stories make the place sound all spiritual but really it's just a bunch
+    of Kami drinking themselves to undeath .
+  - A-ah ...
   - All Elaina can muster up is a dull smile at her stories .
   - I know that sounds great and all , but believe me when I say that's ...
-  - ... Really all they do , it seems it is cheerful ...
-  - "... but that dies off pretty quickly if you\u2019re not one of them\r .\n"
+  - "... Really all they do , it seems it is cheerful , but that dies off pretty
+    quickly if you\u2019re not one of them ."
   choices:
   - This is so normal though, does it bring you that much joy? (joyful)
   - "They should be more energetic (energetic)\t"
@@ -259,11 +258,8 @@ MonoBehaviour:
   - Fox
   - Elaina
   - Fox
-  - Fox
-  - Fox
   - Elaina
   - 
-  - Fox
   - Fox
   - Fox
   names_result:
@@ -1905,7 +1901,7 @@ RectTransform:
   - {fileID: 841429329}
   - {fileID: 1823913849}
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1998,7 +1994,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Rambunctious
+  m_Text: Vivacious
 --- !u!222 &809972126
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2546,7 +2542,7 @@ Transform:
   m_LocalScale: {x: 5.1945, y: 4.473619, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &938393140
 GameObject:
@@ -3331,7 +3327,7 @@ Transform:
   m_LocalScale: {x: 5.1945, y: 4.473619, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1365717308
 GameObject:
@@ -3630,7 +3626,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1585515760
 GameObject:
@@ -4011,7 +4007,7 @@ Transform:
   m_Children:
   - {fileID: 1004551556}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1655578607
 MonoBehaviour:
@@ -4031,8 +4027,8 @@ MonoBehaviour:
   - Been a lot more cheerful since they kicked me out .
   - Was it that boring back home ?
   - With how my own sisters are ?
-  - It shouldn't, but trust me...
-  - ...you'd go insane if you were around those three 24/7 for eternity .
+  - It shouldn't , but trust me , you'd go insane if you were around those three
+    24/7 for eternity .
   - That place is nothing but a half-hearted facade .
   - "You\u2019ll be anything but vivacious ."
   choices:
@@ -4047,7 +4043,7 @@ MonoBehaviour:
   - That was the correct answer!
   - Kinda?
   - That was the incorrect answer. Try again.
-  - Really? My sisters called it so unbecoming of a kami
+  - Really? My sisters called it so unbecoming of a kami.
   - That was the incorrect answer. Try again.
   remarks:
   - Correct
@@ -4066,7 +4062,6 @@ MonoBehaviour:
   - Fox
   - Fox
   - Elaina
-  - Fox
   - Fox
   - Fox
   - Fox
@@ -4294,134 +4289,7 @@ Transform:
   - {fileID: 883628609}
   - {fileID: 1071560722}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1726696482
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1726696484}
-  - component: {fileID: 1726696483}
-  m_Layer: 0
-  m_Name: BGM
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!82 &1726696483
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1726696482}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: b07bd51e77405934693ce2e4716fb78f, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 0.199
-  m_Pitch: 1
-  Loop: 1
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
---- !u!4 &1726696484
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1726696482}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 19.113922, y: -36.473938, z: -3.4427118}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1823913848
 GameObject:
@@ -4596,6 +4464,133 @@ RectTransform:
   m_AnchoredPosition: {x: 467.1, y: -64.707}
   m_SizeDelta: {x: 344.942, y: 38.265}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1876273649
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1876273651}
+  - component: {fileID: 1876273650}
+  m_Layer: 0
+  m_Name: BGM
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &1876273650
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1876273649}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 189d29133f3f5ad4681d4d5f15b25c35, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.15
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &1876273651
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1876273649}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 639.47455, y: 344.8455, z: -30.781725}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1878151369
 GameObject:
   m_ObjectHideFlags: 0
@@ -4948,7 +4943,7 @@ Transform:
   m_Children:
   - {fileID: 1365717309}
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1912649393
 MonoBehaviour:
@@ -4963,19 +4958,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sentences:
-  - You and your newfound friend run into someone ...
-  - ... who seems to be down on his luck .
+  - You and your newfound friend run into someone who seems to be down on his luck
+    .
   - What's up with that guy ?
   - He's all ... lifeless ...
-  - 'Ah ... '
-  - "Well you could say it's the other side of the coin that is human society\t\u2026"
-  - "The side of us that\u2019s a lot less\u2026 vivacious ..."
-  - "... is a lot less \u2026 a side that is a lot less jolly ."
+  - "Ah ... well you could say it's the other side of the coin that is human society
+    \u2026"
+  - "The side of us that\u2019s a lot less \u2026 vivacious , is a lot less \u2026
+    a side that is a lot less jolly ."
   - Eh ?
-  - He's just one of many really , all bright and bouncy ...
-  - "... chasing promises of glory\r ."
+  - He's just one of many really , all bright and bouncy , chasing promises of glory
+    .
   - Only to be played for fools at the end .
-  - ...
+  - :...
   choices:
   - "Sucks all the joy out of you, seeing this\u2026 (joyful)"
   - "Sights like these really do drain you\u2026 (energetic)"
@@ -4995,20 +4990,18 @@ MonoBehaviour:
   clues:
   - lifeless
   - jolly
+  - bouncy
   clue_type:
   - antonym
   - definition
+  - synonym
   names:
   - 
-  - 
   - Fox
   - Fox
   - Elaina
   - Elaina
-  - Elaian
-  - Elaina
   - Fox
-  - Elaina
   - Elaina
   - Elaina
   - Fox
@@ -8766,7 +8759,7 @@ Transform:
   m_Children:
   - {fileID: 1515648507}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &289680617787608049
 GameObject:

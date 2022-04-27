@@ -1,0 +1,25 @@
+Backend for sub-level: level_13_3
+
+Player selected word: "trouble" with the antonym highlighter
+Result is "Correct"
+
+Player selected word: "friendships" with the synonym highlighter
+Result is "Correct"
+
+Player selected word: "bitterness" with the antonym highlighter
+Result is "Correct"
+
+Player selected word: "unity" with the synonym highlighter
+Result is "Correct"
+
+
+Results:
+
+Number of times gotten correct: 4
+Number of times gotten incorrect: 0
+Number of times gotten close: 0
+
+Player selected "I’ve… brought harmony to those around me (harmony)" choice
+Result is "Correct"
+
+Time: 24 seconds

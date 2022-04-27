@@ -1,0 +1,28 @@
+Backend for sub-level: level_9_2
+
+Player selected word: "vile" with the definition highlighter
+Result is "Correct"
+
+Player selected word: "wicked" with the synonym highlighter
+Result is "Correct"
+
+
+Results:
+
+Number of times gotten correct: 2
+Number of times gotten incorrect: 0
+Number of times gotten close: 0
+
+Player selected "You’re pretty horrible at this kind of stuff… (horrible)" choice
+Result is "Incorrect"
+
+Player selected "Getting brutal’s just gonna get you into more trouble (brutal)" choice
+Result is "Incorrect"
+
+Player selected "You’re pretty horrible at this kind of stuff… (horrible)" choice
+Result is "Incorrect"
+
+Player selected "I stand corrected, I think the evil lord here is you… (evil)" choice
+Result is "Correct"
+
+Time: 34 seconds

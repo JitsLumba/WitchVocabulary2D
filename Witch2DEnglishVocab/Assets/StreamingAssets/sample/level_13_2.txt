@@ -1,0 +1,22 @@
+Backend for sub-level: level_13_2
+
+Player selected word: "understanding" with the synonym highlighter
+Result is "Correct"
+
+Player selected word: "distanced" with the antonym highlighter
+Result is "Correct"
+
+Player selected word: "reunited" with the synonym highlighter
+Result is "Correct"
+
+
+Results:
+
+Number of times gotten correct: 3
+Number of times gotten incorrect: 0
+Number of times gotten close: 0
+
+Player selected "Reconciliation… I’m glad you’re back Mina… (reconcile)" choice
+Result is "Correct"
+
+Time: 28 seconds

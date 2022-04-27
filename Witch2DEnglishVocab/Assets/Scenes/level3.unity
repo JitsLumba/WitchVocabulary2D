@@ -15307,9 +15307,9 @@ MonoBehaviour:
   - Why ? What are they ?
   - Literally just extra overtime .
   - "Unpaid too , who wouldn\u2019t be against that ?"
-  - "\u201C Just \u201D ? "
-  - Nobody would find extra unpaid work like that acceptable !
-  - "Yeah \u2026 we\u2019ve been objecting to it since he gave them to us"
+  - "\u201C Just \u201D ? Nobody would find extra unpaid work like that acceptable
+    !"
+  - "Yeah \u2026 we\u2019ve been objecting to it since he gave them to us ."
   choices:
   - "This sounds like an unpleasant situation for both parties\u2026 (pleasant)"
   - "I don\u2019t even work here and I can\u2019t agree with that (agreeable)"
@@ -15326,7 +15326,7 @@ MonoBehaviour:
   - "I\u2019m pretty sure most bosses are like that though\u2026"
   - That was unfortunately the incorrect answer, try again.
   remarks:
-  - Kinda Correct
+  - Incorrect
   - Correct
   - Incorrect
   clues:
@@ -15344,9 +15344,7 @@ MonoBehaviour:
   - Elaina
   - Yuichi
   - Yuichi
-  - Yuichi
   - Elaina
-  - Yuichi
   - Yuichi
   names_result:
   - Yuichi
@@ -15647,7 +15645,7 @@ MonoBehaviour:
   - "Like they\u2019ve never met another human being, ugh\u2026"
   - That was the correct answer!
   remarks:
-  - Kinda correct
+  - Incorrect
   - Incorrect
   - Correct
   clues:
@@ -15914,7 +15912,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sentences:
-  - Elaina ? Do you need something ?
+  - Elaina ? You need something ?
   - Nah , just visiting again ~
   - "Well , I just finished another job , so I guess I\u2019ve got time to chat ."
   - "I never would\u2019ve taken you for a mechanic though \u2026"
@@ -15927,10 +15925,9 @@ MonoBehaviour:
   - Why do you still do it ?
   - "It\u2019s a passion I found out I had some time ago, long after I left the village
     ."
-  - Being able to build and fix machinery , ...
-  - ... and little breaks like these , ...
-  - ... really makes the experience a lot more refreshing for me compared to others
-    .
+  - Being able to build and fix machinery ,
+  - And little breaks like these, really makes the experience a lot more refreshing
+    for me compared to others .
   choices:
   - "You\u2019re quite the gracious worker aren\u2019t you? (gracious)"
   - "I\u2019m sure it\u2019s as pleasant for the others as it is for you~ (pleasant)"
@@ -15946,7 +15943,7 @@ MonoBehaviour:
   - "Yep, though I can\u2019t help but think I could be more..."
   - That was unfortunately the incorrect answer, try again
   remarks:
-  - Kinda Correct
+  - Incorrect
   - Correct
   - Incorrect
   clues:
@@ -15969,7 +15966,6 @@ MonoBehaviour:
   - Elaina
   - Yuichi
   - Elaina
-  - Yuichi
   - Yuichi
   - Yuichi
   - Yuichi

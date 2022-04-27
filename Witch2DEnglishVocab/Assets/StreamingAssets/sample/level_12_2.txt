@@ -1,0 +1,25 @@
+Backend for sub-level: level_12_2
+
+Player selected word: "ignorant" with the synonym highlighter
+Result is "Correct"
+
+Player selected word: "unmindfulness" with the synonym highlighter
+Result is "Correct"
+
+Player selected word: "inattentiveness" with the definition highlighter
+Result is "Close..."
+
+Player selected word: "inattentiveness" with the example highlighter
+Result is "Correct"
+
+
+Results:
+
+Number of times gotten correct: 3
+Number of times gotten incorrect: 0
+Number of times gotten close: 1
+
+Player selected "Strange…why is she unaware of it?(unaware)" choice
+Result is "Correct"
+
+Time: 20 seconds

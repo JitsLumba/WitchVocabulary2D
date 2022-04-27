@@ -85,8 +85,9 @@ public class tutorial_dialogue_level_1 : MonoBehaviour
                 this.set_arrow_active(false);
             }
             if (is_on_conf_diag) {
+                
                 if (conf_mult == confirm_counter) {
-                    if (has_confirmed) {
+                  
                         this.set_can_g(false);
                          enable_movement();
                         
@@ -94,28 +95,24 @@ public class tutorial_dialogue_level_1 : MonoBehaviour
                         tut_dtrigger.panel_mechanic_dialogue_pane_active(false);
                         tut_dist_trigger.set_can_interact(true);
 
-                    }
-                    else {
-                      
-                        tut_dtrigger.panel_mech_vocabulary_panel_switch(false);
-                        is_on_conf_diag = false;
-                        next_dialogue();
-                    }
+                  
+                    
                     set_is_on_conf_diag(false);
 
                     confirm_counter = 0;
                 }
                 else {
 
-                    
+                    confirm_counter++;
                     int conf_num = conf_start + confirm_counter;
                     if (has_confirmation) {
                         on_confirm_effects(conf_num);
                     }
                     
                     tut_dtrigger.confirm_trigger_dialogue(conf_num);
-                    confirm_counter++;
+                    
                 }
+                Debug.Log("COUNTERS " + conf_mult + " vs confirm_counter " + confirm_counter);
             }
             else if (is_after_conf) {
                 if (after_confirm_counter == after_confirm_max) {
@@ -137,7 +134,7 @@ public class tutorial_dialogue_level_1 : MonoBehaviour
             }
             else {
                 bool after_choose = tut_dtrigger.get_after_choose();
-
+                Debug.Log("CONFIRM_COUNTER " + confirm_counter);
             if (after_choose) {
                 bool is_correct = tut_dtrigger.get_is_correct();
                 if (is_correct) {
@@ -474,7 +471,7 @@ public class tutorial_dialogue_level_1 : MonoBehaviour
     }
     public void yes_or_no_select(int num) {
         this.show_yes_or_no_choice_activate(false);
-        conf_start = num * conf_mult;
+        conf_start = 0;
         this.set_can_g(true);
         this.set_is_on_conf_diag(true);
         if (num == 0) {
@@ -482,13 +479,18 @@ public class tutorial_dialogue_level_1 : MonoBehaviour
             if (has_confirmation) {
                 on_confirm_effects(num);
             }
+            tut_dtrigger.confirm_trigger_dialogue(conf_start);
+            Debug.Log("CONFIRMED " + is_on_conf_diag);
         }
         else {
             counter = num_go_back;
             tut_dtrigger.set_normal_counter(counter);
+            tut_dtrigger.panel_mech_vocabulary_panel_switch(false);
+            is_on_conf_diag = false;
+            next_dialogue();
         }
-        confirm_counter++;
-        tut_dtrigger.confirm_trigger_dialogue(conf_start);
+        
+        
     }
     void set_can_g(bool can) {
         can_g = can;

@@ -923,7 +923,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Rambunctious
+  m_Text: Rapprochement
 --- !u!222 &407662325
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3919,15 +3919,13 @@ MonoBehaviour:
   - I just wanted to celebrate my finding a new job is all ~
   - Really ?
   - Yep , your new guild officer is standing right in front of ya ~
-  - Nice ! Glad to see you got yourself out of that feud
-  - Thanks Elaina .
-  - " I\u2019m just relieved that I\u2019m finally reaching some level of rapprochement
-    with my employment ."
+  - Nice ! Glad to see you got yourself out of that feud .
+  - "Thanks Elaina .  I\u2019m just relieved that I\u2019m finally reaching some
+    level of rapprochement with my employment ."
   - "It\u2019s great really , it\u2019s like me finally resolving another ridiculous
     incident \u2026"
-  - "Man \u2026 "
-  - Would you believe my last job was the only one that I spent more than 2 years
-    in?
+  - "Man \u2026 would you believe my last job was the only one that I spent more
+    than 2 years in ?"
   - "Uuuuh \u2026"
   choices:
   - W-well, were you able to reconcile with your old bosses at the estate? (reconcile)
@@ -3969,8 +3967,6 @@ MonoBehaviour:
   - Iroha
   - Elaina
   - Iroha
-  - Iroha
-  - Elaina
   - Iroha
   - Iroha
   - Elaina
@@ -5201,23 +5197,22 @@ MonoBehaviour:
   - "Yeah \u2026 you\u2019re right , but I\u2019ve had a lot of time to think since
     \u2026"
   - Since ?
-  - 'I spoke to Iroha yesterday ...
-
-'
-  - "... we\u2019ve reached an understanding I guess you can call it\r ."
+  - "I spoke to Iroha yesterday , we\u2019ve reached an understanding , I guess you
+    can call it ."
   - Oh really ?
-  - "Who would\u2019ve thought she\u2019d end up in the guild ?"
-  - "But someone of her talents , I guess it should\u2019ve been obvious \u2026\r\n"
+  - "Who would\u2019ve thought she\u2019d end up in the guild ? But someone of her
+    talents , I guess it should\u2019ve been obvious \u2026"
   - :...
   - Would you believe it though ?
   - "I never once thought how far I\u2019ve gotten from all of you \u2026"
-  - 'Following my darn justice without a care in the world ...
-
-'
+  - "Following my darn justice without a care in the world , I was so distanced from
+    you lot \u2026"
+  - "Heh , it wasn\u2019t until she bear hugged me that I realized \u2026"
+  - "I\u2019m finally reunited with the people I care about \u2026 properly \u2026"
   - "... I was so distanced from you lot\r ."
   - "Heh , it wasn\u2019t until she bear hugged me that I realized \u2026"
   - "I\u2019m finally reunited with the people I care about \u2026 properly \u2026 "
-  - Elaina starts sniffling
+  - Elaina starts sniffling .
   choices:
   - "Reconciliation\u2026 I\u2019m glad you\u2019re back Mina\u2026 (reconcile)"
   - "We can finally work in harmony again\u2026 (harmony)"
@@ -5230,7 +5225,7 @@ MonoBehaviour:
   - That was unfortunately the incorrect answer, try again
   - "You could say that\u2026"
   - Especially since I answer to her now~
-  - Mina starts laughing to herself, you also join in.
+  - Mina starts laughing to herself. Elaina joins in the laughter as well.
   - That was unfortunately the incorrect answer, try again
   remarks:
   - Correct
@@ -5239,8 +5234,10 @@ MonoBehaviour:
   clues:
   - distanced
   - understanding
+  - reunited
   clue_type:
   - antonym
+  - synonym
   - synonym
   names:
   - 
@@ -5252,11 +5249,11 @@ MonoBehaviour:
   - Mina
   - Elaina
   - Mina
+  - Elaina
   - Mina
   - Elaina
   - Mina
   - Mina
-  - Elaina
   - Mina
   - Mina
   - Mina

@@ -176,7 +176,7 @@ Transform:
   - {fileID: 2045123581}
   - {fileID: 1901683058}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &31676048
 GameObject:
@@ -622,7 +622,7 @@ Transform:
   m_Children:
   - {fileID: 724838300}
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &233621204
 MonoBehaviour:
@@ -637,12 +637,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sentences:
-  - Say Yuichi ...
-  - ... do you have any advice when condemning difficult people in conversations
+  - Say Yuichi , do you have any advice when condemning difficult people in conversations
     ?
   - Advice for reproaching them huh ?
-  - Well first off you need to know what is worth detesting from them .
-  - Analyze their characters and the situation you are in .
+  - Well first off you need to know what is worth detesting in them .
+  - Analyze their characters and the situation you are in.
   - Then go for the attack that will make them remember their wrongdoings in shame
     .
   choices:
@@ -671,7 +670,6 @@ MonoBehaviour:
   - definition
   - synonym
   names:
-  - Elaina
   - Elaina
   - Yuichi
   - Yuichi
@@ -856,7 +854,7 @@ RectTransform:
   - {fileID: 522500512}
   - {fileID: 68291686}
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1086,7 +1084,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &386342921
 GameObject:
@@ -1301,7 +1299,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Rambunctious
+  m_Text: Reproach
 --- !u!222 &508467641
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2162,7 +2160,7 @@ Transform:
   m_Children:
   - {fileID: 1726563873}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &797694211
 MonoBehaviour:
@@ -2178,11 +2176,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sentences:
   - Hey Yuichi ! How is your day at work ?
-  - Feeling in good spirits today .
+  - "Feelin\u2019 in good spirits today !"
   - Why is that ?
   - Remember my boss ? He just got reproached by his superior today !
-  - His way of reproaching such as lecturing and rebuking his selfish ways...
-  - ... has made him remorseful of his ways !
+  - "He got reproached so bad it was like being lectured by your teacher in school
+    !\r"
+  - Or even like being rebuked by your own parents !
+  - It actually made him feel remorse !
   - He has finally accepted our request to ease our work times after that !
   choices:
   - He got shamed(shamed)
@@ -2191,14 +2191,13 @@ MonoBehaviour:
   results:
   - He sure got shamed and learned his lesson.
   - "You can say that. But for learning his lesson\u2026"
-  - "\u2026that has yet to be seen for he is currently going through evaluation."
+  - "\u2026that\u2019s get to be seen given he\u2019s in the middle of evaluation."
   - That was almost the correct answer. Try again.
-  - "What karma\u2026he deserved every scolding he received from his supervisor."
-  - 'Right!? '
-  - Ah you should his blue face that he does not want to show towards his supervisor!
+  - "What karma\u2026he deserved all the scolding he received from his supervisor."
+  - Right!? Ah you should have seen his face when he got called over!
   - "It\u2019s so satisfying to look at!"
   - That was the correct answer!
-  - Heh, he finally got his wrongdoings criticized.
+  - "Heh, he finally got properly criticized for all the trash he\u2019d been spouting."
   - He sure did. Well I just hope his ways are changed after that.
   - That was the close answer. Try again.
   remarks:
@@ -2206,8 +2205,8 @@ MonoBehaviour:
   - Correct
   - Kinda correct
   clues:
-  - lecturing
-  - rebuking
+  - lectured
+  - rebuked
   clue_type:
   - example
   - example
@@ -2215,6 +2214,7 @@ MonoBehaviour:
   - Elaina
   - Yuichi
   - Elaina
+  - Yuichi
   - Yuichi
   - Yuichi
   - Yuichi
@@ -2230,9 +2230,8 @@ MonoBehaviour:
   - 
   - Elaina
   - Yuichi
-  - Yuichi
   - 
-  result_stopper: 03000000080000000b000000
+  result_stopper: 03000000070000000b000000
   dtrigger: {fileID: 2031704341}
   pmech: {fileID: 1426370055}
   answer: relieved!
@@ -4322,9 +4321,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1726563872
+--- !u!1 &1712637251
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4332,90 +4331,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1726563873}
-  - component: {fileID: 1726563874}
-  m_Layer: 0
-  m_Name: F_Key (3)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1726563873
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1726563872}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.55, z: 0}
-  m_LocalScale: {x: 0.089753576, y: 0.11200634, z: 1}
-  m_Children: []
-  m_Father: {fileID: 797694210}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &1726563874
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1726563872}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 10
-  m_Sprite: {fileID: 21300000, guid: 3ab9ba0acd06fc84b9384a2b93f5d9c3, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!1 &1726696482
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1726696484}
-  - component: {fileID: 1726696483}
+  - component: {fileID: 1712637253}
+  - component: {fileID: 1712637252}
   m_Layer: 0
   m_Name: BGM
   m_TagString: Untagged
@@ -4423,19 +4340,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!82 &1726696483
+--- !u!82 &1712637252
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1726696482}
+  m_GameObject: {fileID: 1712637251}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: b07bd51e77405934693ce2e4716fb78f, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 9ecd69ffe99d9ed419013f5f21e97eda, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.199
+  m_Volume: 0.105
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -4519,20 +4436,102 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!4 &1726696484
+--- !u!4 &1712637253
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1726696482}
+  m_GameObject: {fileID: 1712637251}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 19.113922, y: -36.473938, z: -3.4427118}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1726563872
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1726563873}
+  - component: {fileID: 1726563874}
+  m_Layer: 0
+  m_Name: F_Key (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1726563873
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1726563872}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.55, z: 0}
+  m_LocalScale: {x: 0.089753576, y: 0.11200634, z: 1}
+  m_Children: []
+  m_Father: {fileID: 797694210}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &1726563874
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1726563872}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 10
+  m_Sprite: {fileID: 21300000, guid: 3ab9ba0acd06fc84b9384a2b93f5d9c3, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &1901190185
 GameObject:
   m_ObjectHideFlags: 0
@@ -4774,7 +4773,7 @@ Transform:
   m_LocalScale: {x: 5.1945, y: 4.473619, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2006406356
 GameObject:
@@ -8522,7 +8521,7 @@ Transform:
   m_Children:
   - {fileID: 1071837400}
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2067084206
 MonoBehaviour:
@@ -8595,18 +8594,18 @@ MonoBehaviour:
   sentences:
   - Ah good sales and good vibes !
   - "Hey Yuichi ! What\u2019s with the happy face ?"
-  - 'Heh, just recently I got a call from my manager . '
-  - "My boss\u2019s supervisor reproached the customers ..."
-  - ... who were not sticking with the contract .
-  - He humiliated them a lot for all the broken contracts ...
-  - ... and made them actually pay monthly payments for my furniture .
+  - 'Heh , just recently I got a call from my manager . '
+  - "My boss\u2019s supervisor reproached the customers who were not sticking with
+    the contract ."
+  - He humiliated them for all the broken contracts and made them actually pay monthly
+    payments for my machines .
   - "He doesn\u2019t honor those who refuses to stick with the contract that was
     given to them ."
-  - "Wow Yuichi \u2026 your supervisor \u2026"
+  - "Wow Yuichi \u2026your supervisor \u2026"
   choices:
-  - "He held nothing with shaming them\u2026(shame)"
-  - "He held nothing with scolding them\u2026(scold)"
-  - "He held nothing with criticizing them\u2026(criticize)"
+  - "He held nothing back with shaming them\u2026(shame)"
+  - "He held nothing back with scolding them\u2026(scold)"
+  - "He held nothing back with criticizing them\u2026(criticize)"
   results:
   - But of course. They broke the contract after all.
   - It is only natural that they will get their just desserts.
@@ -8630,8 +8629,6 @@ MonoBehaviour:
   names:
   - Yuichi
   - Elaina
-  - Yuichi
-  - Yuichi
   - Yuichi
   - Yuichi
   - Yuichi
@@ -8759,7 +8756,7 @@ Transform:
   m_Children:
   - {fileID: 1515648507}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2146340465
 GameObject:
@@ -8841,7 +8838,7 @@ Transform:
   m_LocalScale: {x: 5.1945, y: 4.473619, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &289680617787608049
 GameObject:

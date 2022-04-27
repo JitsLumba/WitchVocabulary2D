@@ -16,7 +16,13 @@ Number of times gotten correct: 3
 Number of times gotten incorrect: 0
 Number of times gotten close: 0
 
+Player selected "I wonder when they’ll butt heads next… (to oppose)" choice
+Result is "Incorrect"
+
+Player selected "I wonder how this hostility even started… (to be hostile)" choice
+Result is "Incorrect"
+
 Player selected "How far will they go for the sake of one-upping the other? (to dislike)" choice
 Result is "Correct"
 
-Time: 13 seconds
+Time: 29 seconds

@@ -7379,7 +7379,7 @@ MonoBehaviour:
   remarks:
   - Incorrect
   - Correct
-  - Kinda correct
+  - Incorrect
   clues:
   - loathe
   - bitterness
@@ -8301,8 +8301,8 @@ MonoBehaviour:
   - That was unfortunately the incorrect answer, try again
   remarks:
   - Correct
-  - Kinda Correct
-  - Kinda correct
+  - Incorrect
+  - Incorrect
   clues:
   - agreement
   - disagreement
@@ -9764,11 +9764,13 @@ MonoBehaviour:
   - Eh ? She seemed the same last time I saw her .
   - "I know she\u2019s always really combative but this is taking it a little too
     far ..."
-  - "Feels like actual animosity...\r"
+  - "Feels like actual animosity ...\r"
   choices:
   - "You didn\u2019t beat her in some kind of competition did you? (oppose)"
-  - Strange for her to dislike you... (dislike)
-  - "I\u2019ll talk to her about her hostility against you. (hostile)"
+  - "It\u2019s weird to hear her act that way, but I\u2019m sure it\u2019ll pass
+    (dislike)"
+  - "I\u2019ll need to speak to her to find out what this is all about before it
+    gets out of hand\u2026 (hostile)\r"
   results:
   - "Nope, first time I\u2019ve seen her in years"
   - That was unfortunately the incorrect answer, try again
@@ -9779,7 +9781,7 @@ MonoBehaviour:
   - "Thanks, I\u2019d appreciate that..."
   - That was the correct answer!
   remarks:
-  - Kinda Correct
+  - Incorrect
   - Incorrect
   - Correct
   clues:
@@ -16095,14 +16097,13 @@ MonoBehaviour:
   - Impressive work my student! You are doing very well, and that's what I like!
   - And for that, I will teach you a new kind of magic for this level!
   - And that is the Example highlighter!
+  - Iroha really is a sharp thinker who teaches unfamiliar words through examples.
   - Now, to test your knowledge with examples, here's something you will have to
     try out!
   - Find the example context clue of the word "resentment"
   - '" Jake''s resentment towards his brother such as his anger towards him is growing
     fast . "'
   names:
-  - Sensei
-  - Sensei
   - Sensei
   - Sensei
   - Sensei

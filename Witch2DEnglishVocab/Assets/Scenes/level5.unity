@@ -732,20 +732,20 @@ MonoBehaviour:
   sentences:
   - "Sigh \u2026"
   - "Iroha ? What\u2019s wrong ?"
-  - 'I am thinking of quitting my job. '
-  - "This maid service isn\u2019t worth my time anymore."
-  - Why is that?
-  - "It\u2019s because of that rambunctious family who never knows how to be orderly
+  - "I think I\u2019m about to get laid off my job \u2026"
+  - "I don\u2019t think I\u2019m cut out for the \u201Cmaid\u201D part of my work
     ."
-  - We had an argument that goes like this .
-  - "\u201C\u2018 You rambunctious lot do not know how to treat me with respect !
+  - Why's that?
+  - "It\u2019s because of that rambunctious family\u2019s children who never know
+    how to be orderly ."
+  - We had an argument that went like this .
+  - "\u201C\u2018You rambunctious lot don\u2019t know how to treat me with respect!\u201D\r"
+  - "\u201C Rambunctious ? What does that mean ? Is that one of your nerd words ?
     \u201D"
-  - " \u201CRambunctious ? What does that mean ? \""
-  - "\" Is that one of your nerd words that is lame ? \u201D Said one of their kids
-    . "
-  - "\u201C By rambunctious I mean you guys are rough and rowdy ! \u201D"
-  - "\u201C I had enough of every one of you ! \u201D"
-  - ... and after that we had endless arguments that frustrated me .
+  - " \u201CThat\u2019s so lame ! \""
+  - "\" When I say rambunctious\u2026 I mean you guys are rough and rowdy ! \u201D "
+  - "\u201C I had enough of you lot ! \u201D and after that just \u2026 endless arguments
+    with the kids and staff ..."
   - "Iroha \u2026"
   choices:
   - "They are a chaotic bunch\u2026(chaotic)"
@@ -753,16 +753,16 @@ MonoBehaviour:
   - "They are a noisy bunch\u2026(noisy)"
   results:
   - "I am sorry to hear that you worked with an unorderly family\u2026"
-  - "It\u2019s alright...I am currently away from them. "
-  - "I need to reset my mind before I go crazy from this mess\u2026"
+  - "It\u2019s alright...I think the matriarch gets how I feel."
+  - "I need to rest my head before this drives me crazy\u2026"
   - That was the correct answer!
   - I am sorry to hear that you experienced an uncontrollable bunch.
   - "They are not exactly uncontrollable I have to say\u2026"
-  - "It's just that\u2026they are not disciplined\u2026"
+  - "Just that\u2026they\u2019re not disciplined\u2026"
   - That was almost the correct answer. Try again.
   - "I am sorry to hear that you experienced a noisy bunch\u2026"
-  - "Sigh\u2026it\u2019s okay\u2026"
-  - "At least the other neighbors did not hear our arguments\u2026"
+  - "Sigh\u2026it\u2019s okay\u2026At least the other neighbors did not hear our
+    arguments\u2026"
   - That was the incorrect answer. Try again.
   remarks:
   - Correct
@@ -789,7 +789,6 @@ MonoBehaviour:
   - Iroha
   - Iroha
   - Iroha
-  - Iroha
   - Elaina
   names_result:
   - Elaina
@@ -801,7 +800,6 @@ MonoBehaviour:
   - Iroha
   - 
   - Elaina
-  - Iroha
   - Iroha
   - 
   result_stopper: 03000000070000000b000000
@@ -3241,12 +3239,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sentences:
   - "How\u2019s the situation with Mina so far Elaina ?"
-  - "For starters \u2026"
-  - "Let\u2019s just say she became loud mouthed in objection towards what I have
-    explained towards her."
-  - "I guess it\u2019s not easy to talk to a rambunctious person \u2026"
-  - Her rambunctious ways such as screaming , shouting , and being loud is not very
-    easy to quiet her .
+  - "For starters \u2026 let\u2019s just say she got rather \u2026 loud mouthed in
+    objecting against my explanation ."
+  - "I guess it\u2019s not easy to talk to a rambunctious person ."
+  - "Her rambunctious ways like screaming , shouting , and just being a loud jerk
+    \u2026 it\u2019s not very easy to quiet her ."
   - "If only I can reach out to her heart \u2026"
   choices:
   - "I wonder why she is uncontrollable\u2026(uncontrollable)"
@@ -3258,12 +3255,13 @@ MonoBehaviour:
   - That was almost the correct answer. Try again.
   - "Well it\u2019s not gonna be easy since she is chaotic.\t"
   - Yes I know, but I refuse to back down from this.
-  - She is my friend who helped me a lot back then.
+  - "She\u2019s my friend, we\u2019ve been through too much for her to throw it all
+    away."
   - That was the incorrect answer. Try again.
-  - Perhaps I will try again when she is not noisy anymore.
-  - I will be trying a different approach of talking to her.
-  - 'Thank you. '
-  - I am not sure on how to handle her but perhaps I can give you some advice.
+  - "Perhaps I\u2019ll try again when she\u2019s not being all noisy."
+  - "I\u2019ll see if I can try a different approach in talking to her."
+  - "Thank you. I\u2019m not sure on how to handle her but perhaps I can give you
+    some advice."
   - "I am afraid that won\u2019t do since I want to talk to you about something."
   - Eh?
   - That was the correct answer!
@@ -3282,7 +3280,6 @@ MonoBehaviour:
   names:
   - Iroha
   - Elaina
-  - Elaina
   - Iroha
   - Iroha
   - Iroha
@@ -3296,7 +3293,6 @@ MonoBehaviour:
   - 
   - Elaina
   - Elaina
-  - Iroha
   - Iroha
   - Elaina
   - Iroha
@@ -4993,15 +4989,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sentences:
   - I have tried talking to Mina again, Iroha .
-  - Oh . What happened by then ?
-  - It seemed she became composed and wanted to apologize to you in person .
-  - "That\u2019s a surprise . The rambunctious Mina rarely apologize ."
-  - How did you talk to that unrestrainable person?
-  - "Well it goes like this \u2026"
-  - Elaina explained what happened to Iroha.
-  - "Thank goodness, perhaps I shall be at ease for now.\r"
+  - Oh . What happened then ?
+  - "Seems like she\u2019s composed herself,  she said she wanted to apologize to
+    you in person ."
+  - "That\u2019s a surprise . The rambunctious Mina never shows weakness ."
+  - How did you talk to that unrestrainable person ?
+  - "Well it went like this\u2026"
+  - Elaina explained what happened to Iroha .
+  - "Thank goodness, perhaps I can ease up for now \u2026."
   choices:
-  - "She is no longer uncontrollable.\r(uncontrollable)\n"
+  - "She is no longer uncontrollable.\r(uncontrollable)"
   - She is no longer noisy.(noisy)
   - She is no longer unorderly.(unorderly)
   results:
@@ -5012,7 +5009,7 @@ MonoBehaviour:
   - I guess her being noisy is gone now.
   - You could say that.
   - "But I don\u2019t think it\u2019s her character to be not noisy."
-  - Oh yeah, she is still the rough one in her adventures.
+  - Oh yeah, she is still likes being the rough one in her adventures.
   - That was the incorrect answer. Try again.
   - I think she will be a good girl and will not be unorderly anymore.
   - I do hope. Her apology is something I have yet to see.

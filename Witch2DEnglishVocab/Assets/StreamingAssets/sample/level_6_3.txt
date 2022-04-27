@@ -13,7 +13,13 @@ Number of times gotten correct: 2
 Number of times gotten incorrect: 0
 Number of times gotten close: 0
 
+Player selected "It’s not like you to agree with them.(agree)" choice
+Result is "Kinda correct"
+
+Player selected "It’s not like you to accept their needs.(accept)" choice
+Result is "Kinda Correct"
+
 Player selected "It’s not like you to submit to them.(submit)" choice
 Result is "Correct"
 
-Time: 25 seconds
+Time: 37 seconds

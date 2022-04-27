@@ -123,6 +123,133 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &3890272
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3890274}
+  - component: {fileID: 3890273}
+  m_Layer: 0
+  m_Name: BGM
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &3890273
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3890272}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: bd851ab7748ddea4b879222c2225f384, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.091
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &3890274
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3890272}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 19.113922, y: -36.473938, z: -3.4427118}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 18
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &18887728
 GameObject:
   m_ObjectHideFlags: 0
@@ -409,7 +536,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   camera: {fileID: 398638468193488862}
   player: {fileID: 5334363829152864345}
-  secondperson: {fileID: 289680617787608049}
+  secondperson: {fileID: 8883835414974525880}
   thirdperson: {fileID: 289680617787608049}
   fourthperson: {fileID: 289680617787608049}
   dialogue_panel: {fileID: 19626195}
@@ -598,7 +725,7 @@ Transform:
   m_Children:
   - {fileID: 1195124717}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &255523558
 MonoBehaviour:
@@ -613,35 +740,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sentences:
-  - 'Hey Mina ! I heard the news about the fake doctor you have taken care of . '
-  - You have done well with exposing his lies .
-  - Yeah , you should have seen his addlepated face when his wrongdoings were exposed
-    .
-  - What does his face look like at that time ?
-  - 'His face looked mindless at that time . '
+  - "Hey Mina ! I heard the news about the fake doctor you\u2019ve taken care of
+    . "
+  - You did good exposing his lies .
+  - "Yeah! You should\u2019ve seen his addlepated face when his wrongdoings were
+    exposed ."
+  - "Really ? What\u2019d he look like ?"
+  - 'Mindless , weirdly enough . '
   - His thoughtless confession exposed his lies when the decisive evidence was shown
     in his face !
-  - Shows how much he is !
   choices:
   - He looks so confused(confused)
   - The nonsensical doctor got what he deserved(nonsense)
   - He is so unaware(unaware)
   results:
-  - He is so confused, he does not know what to say anymore.
+  - "He was so confused, he didn\u2019t know what to say anymore."
   - Well he did have some counter arguments.
   - "But unfortunately, every argument he makes is just used against him\u2026"
   - Consider him finished at that point.
-  - That is almost the correct answer. Try again.
+  - That was the incorrect answer. Try again.
   - He deserved it for being a nonsensical doctor.
-  - Yeah! He will definitely pay for the patients he has deceived.
-  - I am gonna multiply his punishment by a hundred-fold!
+  - "Yeah! He\u2019ll definitely pay for the patients he\u2019s deceived."
+  - I am gonna multiply his punishment a hundred-fold!
   - That is the correct answer!
   - He was unaware of what would happen to him with his lies exposed.
   - 'Actually, I think he has an idea of it. '
-  - "But it\u2019s more so that he could not imagine it."
+  - "But I think he just didn\u2019t imagine it\u2019d actually happen!"
   - That is the incorrect answer. Try again.
   remarks:
-  - Kinda Correct
+  - Incorrect
   - Correct
   - Incorrect
   clues:
@@ -657,7 +784,6 @@ MonoBehaviour:
   - Elaina
   - Mina
   - Mina
-  - Mina
   names_result:
   - Elaina
   - Mina
@@ -668,10 +794,9 @@ MonoBehaviour:
   - Mina
   - Mina
   - 
-  - 
   - Elaina
-  - Yuichi
-  - 
+  - Mina
+  - Mina
   - 
   result_stopper: 04000000080000000c000000
   dtrigger: {fileID: 784315633}
@@ -1167,7 +1292,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &365637853
 GameObject:
@@ -2062,7 +2187,7 @@ Transform:
   - {fileID: 1575245835}
   - {fileID: 1373884126}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &766256781
 GameObject:
@@ -2379,7 +2504,7 @@ Transform:
   m_Children:
   - {fileID: 252367117}
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &886495031
 MonoBehaviour:
@@ -2394,29 +2519,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sentences:
-  - 'Absolutely not !  '
-  - Do you know how that addlepated maid is ignorant ...
-  - ... of how I feel about that task she gave!?
-  - What about the task she gave ?
-  - "She didn\u2019t tell you !? Her unmindfulness shows no bounds \u2026"
-  - ... such as her inattentiveness to detail ...
-  - "... in one of the quest destinations she made me go\u2026\r\n"
-  - "Jeez \u2026 I got injured so badly in the aftermath \u2026"
-  - If only she is informed that no one , not even the bravest warriors wants to
-    go to that place !
+  - "Elaina tried to explain Iroha\u2019s situation to Mina ."
+  - Absolutely not ! Do you know how that addlepated maid was ignorant of how I felt
+    about that job she gave !?
+  - She gave you a job ?
+  - "She didn\u2019t tell you !? Her unmindfulness knows no bounds \u2026"
+  - "\u2026 like her inattentiveness to detail in one of the job locations she made
+    me go to \u2026"
+  - "Jeez \u2026 I got hurt so badly in the aftermath \u2026"
+  - "If only she bloody told me that nobody , not even the very bravest would go
+    there \u2026"
   choices:
   - "Strange\u2026why is she unaware of it?(unaware)"
   - Maybe she is confused about this?(confused)
   - "This doesn\u2019t make any sense\u2026(nonsensical)"
   results:
-  - "That\u2019s strange\u2026why is she unaware of the dangers?"
+  - "That\u2019s strange\u2026why would she be unaware of the danger?"
   - "I think I need to talk to her about this\u2026"
-  - Now we are talking!
+  - Yeah, you go do that.
   - "You should let her know of this or it\u2019s not gonna end well!"
   - That is the correct answer!
-  - "Perhaps she is confused about this\u2026"
-  - "No! There\u2019s no way the intelligent Iroha would be confused about this!"
-  - Even she should have heard about the stories of fallen warriors in that domain!
+  - Would she be confused about this?
+  - "No! That girl\u2019s way too smart for her own good sometimes!"
+  - Even she should have heard about the stories of fallen warriors in that place!
   - That was the incorrect answer. Try again.
   - "This doesn\u2019t make any sense\u2026"
   - Which? My story or her request?
@@ -2429,20 +2554,16 @@ MonoBehaviour:
   - Incorrect
   clues:
   - ignorant
-  - informed
   - unmindfulness
   - inattentiveness
   clue_type:
   - synonym
-  - antonym
   - synonym
   - example
   names:
-  - Mina
-  - Mina
+  - 
   - Mina
   - Elaina
-  - Mina
   - Mina
   - Mina
   - Mina
@@ -2607,7 +2728,7 @@ Transform:
   m_LocalScale: {x: 5.1945, y: 4.473619, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &957635459
 GameObject:
@@ -2891,7 +3012,7 @@ RectTransform:
   - {fileID: 1009575635}
   - {fileID: 1667168788}
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -3919,7 +4040,7 @@ Transform:
   m_LocalScale: {x: 5.1945, y: 4.473619, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1465856359
 GameObject:
@@ -4615,133 +4736,6 @@ RectTransform:
   m_AnchoredPosition: {x: -0.0026855469, y: 0.0014648438}
   m_SizeDelta: {x: 0.0018310547, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &1726696482
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1726696484}
-  - component: {fileID: 1726696483}
-  m_Layer: 0
-  m_Name: BGM
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!82 &1726696483
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1726696482}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: b07bd51e77405934693ce2e4716fb78f, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 0.199
-  m_Pitch: 1
-  Loop: 1
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
---- !u!4 &1726696484
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1726696482}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 19.113922, y: -36.473938, z: -3.4427118}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1729932524
 GameObject:
   m_ObjectHideFlags: 0
@@ -4984,7 +4978,7 @@ Transform:
   m_Children:
   - {fileID: 1264043169}
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1840532045
 MonoBehaviour:
@@ -5000,8 +4994,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sentences:
   - "Hey Elaina \u2026"
-  - "Ah hey Mina . What\u2019s up ? "
-  - "I have been thinking on apologizing with Iroha on person , but \u2026"
+  - "What\u2019s up Mina ? "
+  - "I\u2019ve been thinking on apologizing with Iroha on person , but \u2026"
   - Thinking on how to apologize to her is too addlepated .
   - 'What do you mean by that? '
   - "By addlepated I mean it is so puzzling \u2026"
@@ -5014,13 +5008,13 @@ MonoBehaviour:
   - "Is there something that doesn\u2019t make any sense?"
   - Maybe...
   - "I am just feeling things that make my brain overheat\u2026"
-  - I hate thinking!
+  - Ugh, I hate thinking!
   - That was almost the correct answer. Try again.
   - "If it\u2019s confusing to say your words to Iroha, then I will help you sort
     things out."
   - "Elaina \u2026"
-  - "Thank you\u2026I will be asking for your help with this\u2026"
-  - "You\u2019re welcome!"
+  - "N-no, I have to do this myself\u2026 "
+  - "I\u2019m the one that\u2019s been pushing her away for so long."
   - That was the correct answer!
   - Are you unaware of what Iroha will feel when you are gonna apologize?
   - No, I definitely know how she feels.
@@ -5053,7 +5047,7 @@ MonoBehaviour:
   - Elaina
   - Mina
   - Mina
-  - Elaina
+  - Mina
   - 
   - Elaina
   - Mina
@@ -8718,7 +8712,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2102977041
 GameObject:
@@ -8871,7 +8865,7 @@ Transform:
   m_Children:
   - {fileID: 1515648507}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &289680617787608049
 GameObject:

@@ -16,4 +16,4 @@ Number of times gotten close: 0
 Player selected "Give her some food (to satisfy)" choice
 Result is "Correct"
 
-Time: 16 seconds
+Time: 1 seconds

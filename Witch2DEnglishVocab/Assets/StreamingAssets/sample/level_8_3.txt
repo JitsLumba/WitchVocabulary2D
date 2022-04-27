@@ -1,8 +1,5 @@
 Backend for sub-level: level_8_3
 
-Player selected word: "ill-tempered" with the synonym highlighter
-Result is "Close..."
-
 Player selected word: "ill-tempered" with the definition highlighter
 Result is "Correct"
 
@@ -14,9 +11,9 @@ Results:
 
 Number of times gotten correct: 2
 Number of times gotten incorrect: 0
-Number of times gotten close: 1
+Number of times gotten close: 0
 
 Player selected "They’re.. really mean to their own sister (Mean)" choice
 Result is "Correct"
 
-Time: 22 seconds
+Time: 23 seconds

@@ -1,5 +1,14 @@
 Backend for sub-level: level_8_1
 
+Player selected word: "like" with the example highlighter
+Result is "Incorrect"
+
+Player selected word: "nasty" with the synonym highlighter
+Result is "Close..."
+
+Player selected word: "nasty" with the definition highlighter
+Result is "Close..."
+
 Player selected word: "nasty" with the example highlighter
 Result is "Correct"
 
@@ -10,16 +19,10 @@ Result is "Correct"
 Results:
 
 Number of times gotten correct: 2
-Number of times gotten incorrect: 0
-Number of times gotten close: 0
-
-Player selected "They’re pretty harsh though (Harsh)" choice
-Result is "Incorrect"
-
-Player selected "They don’t seem like they’d be patient with us (Impatient)" choice
-Result is "Incorect"
+Number of times gotten incorrect: 1
+Number of times gotten close: 2
 
 Player selected "Are they just permanently early morning grumpy  (Grumpy)" choice
 Result is "Correct"
 
-Time: 35 seconds
+Time: 25 seconds

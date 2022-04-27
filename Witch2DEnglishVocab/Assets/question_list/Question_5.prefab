@@ -43,13 +43,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e5cf0b98a3e71d48b6a74857b0bee7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  main_script: An unrestrainable and not composed person is a rambunctious person
-    which means they are __o___t____
-  highlighted_word: An <color=#09FF00>unrestrainable</color> and not <color=#FB7E4F>composed</color>
-    person is a rambunctious person which means they are ____o____ .
+  main_script: An unrestrainable and rambunctious person is not calm, which means
+    they are _______
+  highlighted_word: An <color=#09FF00>unrestrainable</color> and rambunctious person
+    is not <color=#FB7E4F>calm</color>, which means they are _______
   speaker: Sensei
   clues:
-  - composed
+  - calm,
   - unrestrainable
   type_clue:
   - antonym
@@ -63,7 +63,7 @@ MonoBehaviour:
   - Kinda Correct
   - Correct
   remarks:
-  - That is incorrect. A rambunctious person is an uncontrollable person
-  - That is almost the correct answer. A rambunctious person is an uncontrollable
-    person
+  - "That is incorrect. A rambunctious person is very unruly and uncontrollable\r."
+  - That is almost the correct answer. A rambunctious person is one who is very unhinged
+    and uncontrollable.
   - Correct my student. A rambunctious person is an uncontrollable person!

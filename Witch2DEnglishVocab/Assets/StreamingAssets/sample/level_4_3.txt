@@ -1,9 +1,9 @@
 Backend for sub-level: level_4_3
 
-Player selected word: "combative" with the synonym highlighter
+Player selected word: "aggressive" with the synonym highlighter
 Result is "Correct"
 
-Player selected word: "aggressive" with the synonym highlighter
+Player selected word: "combative" with the synonym highlighter
 Result is "Correct"
 
 
@@ -13,7 +13,13 @@ Number of times gotten correct: 2
 Number of times gotten incorrect: 0
 Number of times gotten close: 0
 
-Player selected "I’ll talk to her about her hostility against you. (hostile)" choice
+Player selected "You didn’t beat her in some kind of competition did you? (oppose)" choice
+Result is "Incorrect"
+
+Player selected "It’s weird to hear her act that way, but I’m sure it’ll pass (dislike)" choice
+Result is "Incorrect"
+
+Player selected "I’ll need to speak to her to find out what this is all about before it gets out of hand… (hostile)" choice
 Result is "Correct"
 
-Time: 15 seconds
+Time: 23 seconds

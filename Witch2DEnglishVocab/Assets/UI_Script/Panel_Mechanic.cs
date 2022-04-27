@@ -324,8 +324,8 @@ public class Panel_Mechanic : MonoBehaviour
         for (int i = 0; i < list_num; i++) {
             string answer = dcheck.get_answer(i);
             string clue = dcheck.get_clue(i);
-     
-        if (answer.Equals(highlighted_word))
+        string lowered = highlighted_word.ToLower();
+        if (answer.Equals(lowered))
         {
             
            

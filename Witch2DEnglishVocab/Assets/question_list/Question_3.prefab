@@ -43,17 +43,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e5cf0b98a3e71d48b6a74857b0bee7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  main_script: Standards that bosses expect to be congenial with no objections means
-    to be __a___ and acceptable towards all .
-  highlighted_word: Standards that bosses expect to be congenial with no <color=#FB7E4F>objections</color>
-    means to be __a___ and <color=#FFA0D2>acceptable</color> towards all .
+  main_script: Work standards that bosses consider congenial with no objections should
+    be ___a___ and fair towards all .
+  highlighted_word: Work standards that bosses expect to be congenial with no <color=#FB7E4F>objections</color>
+    should be ___a___ and <color=#FFA0D2>fair</color> towards all .
   speaker: Sensei
   clues:
   - objections
-  - acceptable
+  - fair
   type_clue:
   - antonym
-  - definition
+  - synonym
   choices:
   - agreeable
   - sociable

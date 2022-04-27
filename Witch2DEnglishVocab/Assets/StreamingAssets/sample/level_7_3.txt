@@ -13,7 +13,13 @@ Number of times gotten correct: 2
 Number of times gotten incorrect: 0
 Number of times gotten close: 0
 
+Player selected "If they’re helping you why are you so tired (Tired)" choice
+Result is "Incorrect"
+
+Player selected "Really… you can’t go around this place with your guard down like that… (Weak)" choice
+Result is "Incorrect"
+
 Player selected "Guess you really can’t get lazy in a situation like this (Lazy)" choice
 Result is "Correct"
 
-Time: 21 seconds
+Time: 36 seconds

@@ -43,25 +43,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e5cf0b98a3e71d48b6a74857b0bee7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  main_script: Reproaching such as rebuking and lecturing are acts of __i___.
-  highlighted_word: Reproaching such as <color=#CE64FF>rebuking</color> and <color=#CE64FF>lecturing</color>
-    are acts of __i___.
+  main_script: Rapprochement is an act of ___o___ which leads to friendship and unity
+    between people.
+  highlighted_word: Rapprochement is an act of ___o___ which leads to <color=#09FF00>friendship</color>
+    and <color=#09FF00>unity</color> between people.
   speaker: Sensei
   clues:
-  - rebuking
-  - lecturing
+  - friendship
+  - unity
   type_clue:
-  - example
-  - example
+  - synonym
+  - synonym
   choices:
-  - criticizing
-  - shaming
-  - scolding
+  - settlement
+  - harmony
+  - reconciliation
   results:
-  - Incorrect
   - Kinda Correct
   - Correct
+  - Kinda correct.
   remarks:
-  - Incorrect, my student. Reproaching here means to scold.
-  - That is almost correct. Reproaching here means to scold.
-  - Correct, my student! Reproaching here means to scold.
+  - That is almost correct. Rapprochement here means harmony towards one another.
+  - Correct, my student! Rapprochement here means harmony towards one another.
+  - That is almost correct. Rapprochement here means harmony towards one another.

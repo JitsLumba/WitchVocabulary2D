@@ -1,0 +1,19 @@
+Backend for sub-level: level_11_3
+
+Player selected word: "humiliated" with the synonym highlighter
+Result is "Correct"
+
+Player selected word: "honor" with the antonym highlighter
+Result is "Correct"
+
+
+Results:
+
+Number of times gotten correct: 2
+Number of times gotten incorrect: 0
+Number of times gotten close: 0
+
+Player selected "He held nothing back with shaming them…(shame)" choice
+Result is "Correct"
+
+Time: 24 seconds

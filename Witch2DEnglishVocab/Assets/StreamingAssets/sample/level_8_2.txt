@@ -1,22 +1,25 @@
 Backend for sub-level: level_8_2
 
-Player selected word: "kind" with the antonym highlighter
-Result is "Correct"
+Player selected word: "irritable" with the antonym highlighter
+Result is "Close..."
 
-Player selected word: "." with the synonym highlighter
-Result is "Incorrect"
+Player selected word: "irritable" with the definition highlighter
+Result is "Close..."
 
 Player selected word: "irritable" with the synonym highlighter
+Result is "Correct"
+
+Player selected word: "kind" with the antonym highlighter
 Result is "Correct"
 
 
 Results:
 
 Number of times gotten correct: 2
-Number of times gotten incorrect: 1
-Number of times gotten close: 0
+Number of times gotten incorrect: 0
+Number of times gotten close: 2
 
 Player selected "They can be more harsh? (Harsh)" choice
 Result is "Correct"
 
-Time: 23 seconds
+Time: 51 seconds

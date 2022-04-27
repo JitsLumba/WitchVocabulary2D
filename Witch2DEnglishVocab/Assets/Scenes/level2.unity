@@ -629,8 +629,8 @@ MonoBehaviour:
   - "Still \u2026"
   choices:
   - "I understand that you\u2019re irritated but\u2026 (irritate)"
-  - You are making things worse! (worsen)
-  - You are complicating things! (complicate)
+  - "You\u2019ll be making things worse! (worsen)"
+  - "You don\u2019t know what you\u2019re doing\u2026 (complicate)"
   results:
   - "You\u2019d also be attracting more danger to yourself.."
   - "Like other gang members, or even the local guards\u2026"
@@ -706,7 +706,7 @@ MonoBehaviour:
   second_char_y_rot: 0
   return_camera_x: -0.16
   return_player_x: -0.44
-  return_scnd_char_x_transf: -62.97
+  return_scnd_char_x_transf: -8.05
   return_scnd_char_y_rot: 0
   camdest: {fileID: 4294687184866853893}
   playerdest: {fileID: 201767530}
@@ -1637,15 +1637,14 @@ MonoBehaviour:
   - "Oh , Mina , what\u2019s up? You\u2019re usually better than this * smug *"
   - 'Heh , shut up ~ '
   - Just a little joke ~ heehee ~
-  - "If you\u2019re wondering , I can\u2019t seem to follow up my swings the way
-    I normally do ..."
-  - "I think the chipped edge is exacerbating my swinging\u2026\n"
+  - "If you\u2019re wondering, I can\u2019t seem to follow up my swings the way I
+    normally do, I think the chipped edge is exacerbating my swinging\u2026"
   - "It\u2019s pretty difficult to swing when the blade doesn\u2019t cut the way
     it should \u2026"
-  - "\rMaybe it\u2019ll ease up if I keep going at it \u2026"
+  - "Maybe it\u2019ll ease up if I keep going at it \u2026"
   choices:
   - "Looks like you\u2019re gonna have a hard time with jobs now\u2026 (to worsen)"
-  - I know how to remove that difficulty! (to complicate)
+  - "Or\u2026 you could just smoothen out the chip (to complicate)"
   - "That looks like a pain to swing with\u2026 (to irritate)"
   results:
   - Oh come on, have a little more confidence in me, will you?
@@ -1658,7 +1657,7 @@ MonoBehaviour:
   - "It\u2019s getting better\u2026"
   - That was unfortunately the incorrect answer, try again
   remarks:
-  - Kinda Correct
+  - Incorrect
   - Correct
   - Incorrect
   clues:
@@ -1673,7 +1672,6 @@ MonoBehaviour:
   - Elaina
   - Mina
   - Elaina
-  - Mina
   - Mina
   - Mina
   - Mina
@@ -18572,14 +18570,12 @@ MonoBehaviour:
   after_confirm_dialogues:
   - Ah, and one more thing!
   - I knew you forgot something again.
-  - Since you have more than one highlighter now...
-  - "...the dialogue in the events you\u2019re about to relive may have both synonyms
-    and antonyms of the linked word."
+  - "Since you have more than one highlighter now, the dialogue in the events you\u2019re
+    about to relive may have both synonyms and antonyms of the linked word"
   - So best get used to switching highlighters~
   after_confirm_names:
   - Sensei
   - Elaina
-  - Sensei
   - Sensei
   - Sensei
   dialogue_counters: 0500000007000000090000000a000000
@@ -19811,14 +19807,14 @@ MonoBehaviour:
   - "Mina ? What\u2019s up ?"
   - "Keep your wits about you when you\u2019re around here alright ?"
   - "Why ? What\u2019s going on ?"
-  - I heard there was a fake doctor in town .
+  - Heard there was a fake doctor in town .
   - Fake doctor ?
   - Exactly how it sounds .
   - "The guy parades around claiming to have assuaged whatever\u2019s bothering the
-    local folks ."
-  - "But it\u2019s all lies ! You can confirm it with the people residing here !"
-  - "Whatever\u2019s happening to them gets exacerbated instead of being relieved
-    !"
+    local folk ."
+  - "But it\u2019s all lies ! "
+  - "Talk to anyone who\u2019s met the guy , whatever\u2019s happening to them gets
+    exacerbated instead of relieved !"
   choices:
   - "Shouldn\u2019t the people at large be real angry with him?(to irritate)"
   - "He made the problem more difficult to handle\u2026 (to complicate)"
@@ -19835,7 +19831,7 @@ MonoBehaviour:
   - That was the correct answer!
   remarks:
   - Incorrect
-  - Kinda correct
+  - Incorrect
   - Correct
   clues:
   - assuaged
@@ -20167,8 +20163,7 @@ MonoBehaviour:
   - Perfect!
   - "As you can see, the icon in the upper left of the screen changed to show which
     highlighter magic you\u2019re currently invoking."
-  - "You can also click the icon to switch highlighters. Now, let\u2019s give this
-    a try~"
+  - "Now, let\u2019s give this a try~"
   - "I\u2019ll link the word \u201Centhusiastic\u201D to you, and try to find it\u2019s
     antonym in the following piece of dialogue."
   - "\u201C The Fox was enthusiastic about seeing the outside world , but her sisters

@@ -43,26 +43,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e5cf0b98a3e71d48b6a74857b0bee7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  main_script: Vivacious people are similar to happy and cheerful people. They are
-    the type to be ___ly
-  highlighted_word: Vivacious people are similar to <color=#09FF00>happy</color>
-    and <color=#09FF00>cheerful people</color>. They are the type to be ___ly
+  main_script: Reproaching such as rebuking and lecturing are acts of __i___.
+  highlighted_word: Reproaching such as <color=#CE64FF>rebuking</color> and <color=#CE64FF>lecturing</color>
+    are acts of __i___.
   speaker: Sensei
   clues:
-  - happy
-  - cheerful
+  - rebuking
+  - lecturing
   type_clue:
-  - synonym
-  - synonym
+  - example
+  - example
   choices:
-  - energetic
-  - lively
-  - jolly
+  - criticizing
+  - shaming
+  - scolding
   results:
   - Incorrect
   - Kinda Correct
   - Correct
   remarks:
-  - Incorrect, my student. Vivacious people means jolly people here.
-  - That is almost correct. Vivacious people means jolly people here.
-  - Correct my student! Vivacious people means jolly people here.
+  - Incorrect, my student. Reproaching here means to scold.
+  - That is almost correct. Reproaching here means to scold.
+  - Correct, my student! Reproaching here means to scold.

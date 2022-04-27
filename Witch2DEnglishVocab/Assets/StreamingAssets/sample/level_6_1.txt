@@ -13,10 +13,7 @@ Number of times gotten correct: 2
 Number of times gotten incorrect: 0
 Number of times gotten close: 0
 
-Player selected "I can’t believe he did not submit(submit)" choice
-Result is "Incorrect"
-
 Player selected "I can’t believe he did not accept(accept)" choice
 Result is "Correct"
 
-Time: 19 seconds
+Time: 11 seconds

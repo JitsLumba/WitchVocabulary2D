@@ -16,7 +16,16 @@ Number of times gotten correct: 3
 Number of times gotten incorrect: 0
 Number of times gotten close: 0
 
+Player selected "You’re quite the gracious worker aren’t you? (gracious)" choice
+Result is "Incorrect"
+
+Player selected "Sounds like you really enjoy the job (enjoyable)" choice
+Result is "Incorrect"
+
+Player selected "You’re quite the gracious worker aren’t you? (gracious)" choice
+Result is "Incorrect"
+
 Player selected "I’m sure it’s as pleasant for the others as it is for you~ (pleasant)" choice
 Result is "Correct"
 
-Time: 22 seconds
+Time: 34 seconds

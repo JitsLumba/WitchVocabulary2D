@@ -1,0 +1,25 @@
+Backend for sub-level: level_11_2
+
+Player selected word: "detesting" with the synonym highlighter
+Result is "Close..."
+
+Player selected word: "detesting" with the definition highlighter
+Result is "Correct"
+
+Player selected word: "condemning" with the synonym highlighter
+Result is "Correct"
+
+Player selected word: "attack" with the synonym highlighter
+Result is "Correct"
+
+
+Results:
+
+Number of times gotten correct: 3
+Number of times gotten incorrect: 0
+Number of times gotten close: 1
+
+Player selected "Ah so that’s how I should criticize them?(Criticize)" choice
+Result is "Correct"
+
+Time: 21 seconds

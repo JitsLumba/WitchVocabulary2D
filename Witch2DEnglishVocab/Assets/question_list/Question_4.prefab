@@ -44,9 +44,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   main_script: Feelings of animosity such as fury , conflict , and need for fighting
-    are what makes one ______-e the other .
+    are what makes one ______e the other .
   highlighted_word: Feelings of animosity such as <color=#CE64FF>fury</color> , <color=#CE64FF>conflict</color>
-    , and need for <color=#CE64FF>fighting</color> are what makes one ______-e the
+    , and need for <color=#CE64FF>fighting</color> are what makes one ______e the
     other .
   speaker: Sensei
   clues:

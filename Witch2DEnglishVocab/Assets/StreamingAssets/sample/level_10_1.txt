@@ -1,0 +1,25 @@
+Backend for sub-level: level_10_1
+
+Player selected word: "boring" with the antonym highlighter
+Result is "Correct"
+
+Player selected word: "cheerful" with the synonym highlighter
+Result is "Correct"
+
+Player selected word: "happy" with the synonym highlighter
+Result is "Correct"
+
+
+Results:
+
+Number of times gotten correct: 3
+Number of times gotten incorrect: 0
+Number of times gotten close: 0
+
+Player selected "It’s nice to see you so lively~ (lively)" choice
+Result is "Incorrect"
+
+Player selected "Do we really bring you that much joy? (joyful)" choice
+Result is "Correct"
+
+Time: 29 seconds

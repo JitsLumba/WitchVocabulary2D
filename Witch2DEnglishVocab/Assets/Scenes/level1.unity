@@ -15727,15 +15727,10 @@ MonoBehaviour:
   arrow_pic: {fileID: 972818937}
   confirm_dialogues:
   - Seems simple enough, yes.
-  - "Good, now, I\u2019ll be linking new words to your highlighter as you move forward
-    in this little training exercise..."
-  - ...so do pay attention to the top of your screen.
-  - "I\u2019ll be linking the word \u201CAssuage\u201D to your Highlighter now. Good
-    luck!"
-  - Hmm....I am not getting it yet.
-  - I need to have your instructions repeated to be clear.
-  - Very well.
-  - Will repeat these instructions from the modified conversations part.
+  - "Good, now, I\u2019ll be linking new words to your Highlighter as you move forward
+    in this little training exercise, so do pay attention to the top of your screen"
+  - "I\u2019ll be linking the word \u201CAssuage\u201D to your Highlighter now, Good
+    Luck!"
   confirm_names:
   - Elaina
   - Sensei
@@ -15749,7 +15744,7 @@ MonoBehaviour:
   - "Ah, Elaina, I\u2019ve neglected to mention, you\u2019ll need to perform this
     process 3 times before I can link your next word."
   - "Therefore I\u2019ve locked the green door you will be using to progress to the
-    next level."
+    next level\r."
   - "You\u2019ll also need to select the best meaning of the word at the end of each
     event depending on context."
   - Is there anything else you forgot to tell me?
@@ -15761,9 +15756,9 @@ MonoBehaviour:
   - Sensei
   - Elaina
   dialogue_counters: 090000000c0000001300000017000000190000001b000000
-  after_counters: 03000000
+  after_counters: 02000000
   num_go_back: 6
-  conf_mult: 4
+  conf_mult: 2
   has_confirmation: 1
   tutorial_num: 1
 --- !u!224 &701299324
@@ -22940,7 +22935,7 @@ MonoBehaviour:
   - "A human ? To be discovered like this \u2026"
   - Eh ?
   - "No matter \u2026 I\u2019ve simply scraped myself on a rock when I tripped \u2026"
-  - "I need something to assuage this wound of mine\u2026"
+  - "I need something to assuage this wound of mine \u2026"
   - Human , might you have something to ease my wound ?
   - "This wound must be dampened if I am to continue on \u2026"
   choices:
@@ -22949,8 +22944,7 @@ MonoBehaviour:
   - Comfort her (to soothe)
   results:
   - Well, lucky for you Miss Fox, I know conjury healing magic!
-  - "How fortunate for me to have crossed paths with you\u2026Thank you, I shall
-    not forget this..."
+  - "How fortunate for me to have crossed paths with you\u2026"
   - Thank you, I shall not forget this...
   - That was the correct answer!
   - I have a snack here, you want some, Miss Fox?
@@ -22962,7 +22956,7 @@ MonoBehaviour:
   remarks:
   - Correct
   - Incorrect
-  - Kinda correct
+  - Incorrect
   clues:
   - ease
   - dampened
@@ -23404,21 +23398,18 @@ MonoBehaviour:
     past."
   - "This doesn\u2019t sound ethical\u2026But somehow I\u2019m  not surprised\u2026\n"
   - "These events were \u201Cmodified\u201D by altering the conversations you had
-    with these people..."
-  - "..to make use of the words I\u2019m going to teach you. For this purpose, I\u2019ll
-    have to teach you 2 new types of magic."
+    with these people to make use of the words I\u2019m going to teach you "
+  - "For this purpose, I\u2019ll have to teach you 2 new types of magic."
   - "These magics are called \u201CFreeze\u201D and \u201CHighlighter\u201D"
   - With freeze magic, you can freeze any piece of dialogue in order to analyze it.
-    To use this magic, press the Z button...
-  - ...or click on the stopwatch button on the top left of the screen.
-  - "You\u2019ll know a piece of dialogue is frozen when the box of text turns blue.
-    You can cancel Freeze by pressing Z again."
+  - "You\u2019ll know a piece of dialogue is frozen when the box of text turns blue\r."
+  - You can cancel Freeze by pressing Z again.
   - Try it now.
   - Perfect!
   - "I assume you saw the word \u201CTry\u201D in my dialogue highlighted with green?"
   - This is the Highlighter magic, since it is naturally linked to Freeze, it automatically
     activates alongside Freeze.
-  - This magic imparts knowledge of a word to its user when used to select words
+  - This magic imparts knowledge of a word to its user when used to SELECT words
     that are relevant to a certain linked word.
   - There are different kinds of highlighters, each one gives different types of
     knowledge.
@@ -23472,13 +23463,10 @@ MonoBehaviour:
   - "Ah, I\u2019ve forgotten to mention."
   - This Highlighter magic will not always work, since it is linked first to a word
     you want to gain knowledge of.
-  - So results may vary from strong knowledge gained, to weak knowledge gained...
-  - ...and to no knowledge gained depending on what word you select in the choices.
-  - You can also use the two directional buttons to go forward or backward in a dialogue.
+  - So results may vary from strong knowledge gained, to weak knowledge gained, to
+    no knowledge gained depending on what word you SELECT in the dialogue.
   - I assume this is all clear?
   after_names:
-  - Sensei
-  - Sensei
   - Sensei
   - Sensei
   - Sensei
@@ -24665,8 +24653,7 @@ MonoBehaviour:
   - Comfort her (to soothe)
   results:
   - Maybe some healing magic will get you back on your feet!
-  - ...
-  - The Fox looks at you with questioning eyes.
+  - "\u2026 (she looks at you with questioning eyes)"
   - "(Oh\u2026 I can\u2019t use magic to heal emotional damage\u2026)"
   - That was unfortunately the incorrect answer, try again
   - I have a snack here, you want some, Miss Fox?
@@ -24678,7 +24665,7 @@ MonoBehaviour:
   - "(is this\u2026 kindness?)"
   - That was the correct answer!
   remarks:
-  - Kinda correct
+  - Incorrect
   - Incorrect
   - Correct
   clues:
@@ -24698,20 +24685,17 @@ MonoBehaviour:
   names_result:
   - Elaina
   - Fox
-  - 
   - Elaina
   - 
   - Elaina
   - Fox
-  - Elaina
-  - 
   - 
   - 
   - Fox
   - Fox
   - Fox
   - 
-  result_stopper: 04000000070000000c000000
+  result_stopper: 03000000060000000b000000
   dtrigger: {fileID: 5964338167536592338}
   pmech: {fileID: 413066109}
   answer: satisfied!
@@ -24809,7 +24793,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sentences:
-  - You notice a fox sitting on the ground, slumped over.
+  - You notice a fox sitting on the ground , slumped over.
   - "Miss Fox ! What\u2019s wrong ?"
   - "Ah \u2026 human \u2026 I have not eaten in some time \u2026 I \u2026 seem to
     be close to collapsing from this hunger \u2026"

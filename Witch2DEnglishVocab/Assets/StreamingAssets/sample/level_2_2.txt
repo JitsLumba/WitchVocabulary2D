@@ -19,4 +19,4 @@ Number of times gotten close: 1
 Player selected "I understand that you’re irritated but… (irritate)" choice
 Result is "Correct"
 
-Time: 11 seconds
+Time: 13 seconds

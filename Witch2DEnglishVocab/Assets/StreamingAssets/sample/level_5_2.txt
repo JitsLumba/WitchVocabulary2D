@@ -16,7 +16,13 @@ Number of times gotten correct: 3
 Number of times gotten incorrect: 0
 Number of times gotten close: 0
 
+Player selected "It’s not easy since she is chaotic(chaotic)" choice
+Result is "Incorrect"
+
+Player selected "I wonder why she is uncontrollable…(uncontrollable)" choice
+Result is "Kinda Correct"
+
 Player selected "I will try again when she is not noisy anymore.(noisy)" choice
 Result is "Correct"
 
-Time: 13 seconds
+Time: 34 seconds

@@ -16,13 +16,13 @@ Number of times gotten correct: 3
 Number of times gotten incorrect: 0
 Number of times gotten close: 0
 
-Player selected "Weird to see such an unpleasant bunch… (pleasant)" choice
-Result is "Kinda correct"
-
 Player selected "Maybe you’re not being agreeable? (agreeable)" choice
+Result is "Incorrect"
+
+Player selected "Weird to see such an unpleasant bunch… (pleasant)" choice
 Result is "Incorrect"
 
 Player selected "Everyone else in town seemed to be a lot more sociable… (sociable)" choice
 Result is "Correct"
 
-Time: 38 seconds
+Time: 39 seconds

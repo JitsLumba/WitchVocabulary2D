@@ -1,0 +1,25 @@
+Backend for sub-level: level_10_2
+
+Player selected word: "dull" with the antonym highlighter
+Result is "Correct"
+
+Player selected word: "cheerful" with the example highlighter
+Result is "Correct"
+
+
+Results:
+
+Number of times gotten correct: 2
+Number of times gotten incorrect: 0
+Number of times gotten close: 0
+
+Player selected "This is so normal though, does it bring you that much joy? (joyful)" choice
+Result is "Incorrect"
+
+Player selected "They should be more energetic (energetic)	" choice
+Result is "Incorrect"
+
+Player selected "Were the residents there not very lively? (lively)" choice
+Result is "Correct"
+
+Time: 36 seconds

@@ -43,26 +43,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e5cf0b98a3e71d48b6a74857b0bee7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  main_script: Atrocious people are vile beings who will do wicked and _____l acts
-    towards their victims.
-  highlighted_word: Atrocious people are <color=#FFA0D2>vile</color> beings who will
-    do <color=#09FF00>wicked</color> and  _____l acts towards their victims.
+  main_script: Vivacious people are similar to happy and cheerful people. They are
+    the type to be ___ly
+  highlighted_word: Vivacious people are similar to <color=#09FF00>happy</color>
+    and <color=#09FF00>cheerful people</color>. They are the type to be ___ly
   speaker: Sensei
   clues:
-  - vile
-  - wicked
+  - happy
+  - cheerful
   type_clue:
-  - definition
+  - synonym
   - synonym
   choices:
-  - horrible
-  - evil
-  - brutal
+  - energetic
+  - lively
+  - jolly
   results:
   - Incorrect
+  - Kinda Correct
   - Correct
-  - Incorrect
   remarks:
-  - Incorrect, my student. Atrocious people means evil people here.
-  - Correct, my student! Atrocious people means evil people here.
-  - Incorrect, my student. Atrocious people means evil people here.
+  - Incorrect, my student. Vivacious people means jolly people here.
+  - That is almost correct. Vivacious people means jolly people here.
+  - Correct my student! Vivacious people means jolly people here.

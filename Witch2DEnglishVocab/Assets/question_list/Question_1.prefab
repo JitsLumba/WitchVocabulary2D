@@ -43,10 +43,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e5cf0b98a3e71d48b6a74857b0bee7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  main_script: A wounded person getting assuaged by a bandage feels _____-d while
+  main_script: A wounded person getting assuaged by a bandage feels _____d while
     feeling at ease because bandages dampens their pain.
-  highlighted_word: A wounded person getting assuaged by a bandage feels _____-d
-    while feeling at <color=#09FF00>ease</color> because bandages <color=#09FF00>dampens</color>
+  highlighted_word: A wounded person getting assuaged by a bandage feels _____d while
+    feeling at <color=#09FF00>ease</color> because bandages <color=#09FF00>dampens</color>
     their pain.
   speaker: Sensei
   clues:

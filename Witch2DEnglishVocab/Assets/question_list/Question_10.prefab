@@ -43,27 +43,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e5cf0b98a3e71d48b6a74857b0bee7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  main_script: Bosses acquiesce to their worker's request when they approved it and
-    sees no room for rejecting their plea. This act is to __e__.
-  highlighted_word: Bosses acquiesce to their worker's request when they <color=#09FF00>approved</color>
-    it and sees no room for <color=#FB7E4F>rejecting</color> their plea. This act
-    is to __e__.
+  main_script: Atrocious people are vile beings who will do wicked and _____l acts
+    towards their victims.
+  highlighted_word: Atrocious people are <color=#FFA0D2>vile</color> beings who will
+    do <color=#09FF00>wicked</color> and  _____l acts towards their victims.
   speaker: Sensei
   clues:
-  - approved
-  - rejecting
+  - vile
+  - wicked
   type_clue:
+  - definition
   - synonym
-  - antonym
   choices:
-  - accept
-  - agree
-  - submit
+  - horrible
+  - evil
+  - brutal
   results:
+  - Incorrect
   - Correct
-  - Kinda Correct
   - Incorrect
   remarks:
-  - Correct, my student. To acquiesce here means to accept.
-  - That is almost correct. To acquiesce here means to accept.
-  - Incorrect, my student. To acquiesce here means to accept.
+  - Incorrect, my student. Atrocious people means evil people here.
+  - Correct, my student! Atrocious people means evil people here.
+  - Incorrect, my student. Atrocious people means evil people here.

@@ -43,26 +43,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e5cf0b98a3e71d48b6a74857b0bee7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  main_script: A lackadaisical person feels __e__ when they are not lively and listless
-    appearing.
-  highlighted_word: A lackadaisical person feels __e__ when they are not <color=#FB7E4F>lively</color>
-    and <color=#09FF00>listless</color> appearing.
+  main_script: Situations that are addlepated means they are puzzling, not clear
+    and _____si____.
+  highlighted_word: Situations that are addlepated means they are <color=#09FF00>puzzling</color>,
+    not <color=#FB7E4F>clear</color> and _____si____.
   speaker: Sensei
   clues:
-  - lively
-  - listless
+  - puzzling,
+  - clear
   type_clue:
-  - antonym
   - synonym
+  - antonym
   choices:
-  - tired
-  - lazy
-  - weak
+  - nonsensical
+  - confusing
+  - unaware
   results:
+  - Incorrect
   - Correct
   - Incorrect
-  - Incorrect
   remarks:
-  - Correct, my student. A lackadaisical person means they are feeling tired.
-  - Incorrect, my student. A lackadaisical person means they are feeling tired.
-  - Incorrect, my student. A lackadaisical person means they are feeling tired.
+  - Incorrect my student. The addlepated situation here means it is confusing.
+  - Correct my student. The Addlepated situation here means it is confusing.
+  - Incorrect my student. The Addlepated situation here means it is confusing.
