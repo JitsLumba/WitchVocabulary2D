@@ -43,10 +43,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e5cf0b98a3e71d48b6a74857b0bee7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  main_script: Ornery people who are ill-tempered and _a__ are not pleasant to deal
+  main_script: Ornery people who are ill-tempered and ____ are not pleasant to deal
     with.
   highlighted_word: Ornery people who are <color=#FFA0D2>ill-tempered</color> and
-    _a__ are not <color=#FB7E4F>pleasant</color> to deal with.
+    ____ are not <color=#FB7E4F>pleasant</color> to deal with.
   speaker: Sensei
   clues:
   - ill-tempered

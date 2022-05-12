@@ -43,13 +43,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e5cf0b98a3e71d48b6a74857b0bee7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  main_script: A lackadaisical person feels ____ when they are listless and not lively.
+  main_script: A lackadaisical person feels ____ when they are listless and not lively
+    .
   highlighted_word: A lackadaisical person feels ____ when they are <color=#09FF00>listless</color>
-    and not <color=#FB7E4F>lively</color>.
+    and not <color=#FB7E4F>lively</color> .
   speaker: Sensei
   clues:
   - listless
-  - lively.
+  - lively
   type_clue:
   - synonym
   - antonym

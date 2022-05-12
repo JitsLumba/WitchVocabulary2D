@@ -43,9 +43,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e5cf0b98a3e71d48b6a74857b0bee7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  main_script: To acquiesce means to ____e__ which include acts such as accordance
+  main_script: To acquiesce means to ____e_ which include acts such as accordance
     and acknowledgement towards something.
-  highlighted_word: To acquiesce means to ____e__ which include acts such as <color=#CE64FF>accordance</color>
+  highlighted_word: To acquiesce means to ____e_ which include acts such as <color=#CE64FF>accordance</color>
     and <color=#CE64FF>acknowledgement</color> towards something.
   speaker: Sensei
   clues:

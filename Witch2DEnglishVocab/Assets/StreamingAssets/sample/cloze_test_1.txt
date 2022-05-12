@@ -1,2 +1,5 @@
 Backend for cloze test: cloze_test_1
 
+Player has quitted
+
+Time: 3 seconds

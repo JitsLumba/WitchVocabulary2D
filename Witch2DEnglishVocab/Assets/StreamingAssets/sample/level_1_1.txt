@@ -1,9 +1,21 @@
 Backend for sub-level: level_1_1
 
-Player selected word: "ease" with the synonym highlighter
-Result is "Correct"
+Player paused the game
+
+Time: 2 seconds
+
+Player unpaused game
+
+Player paused the game
+
+Time: 6 seconds
+
+Player unpaused game
 
 Player selected word: "dampened" with the synonym highlighter
+Result is "Correct"
+
+Player selected word: "ease" with the synonym highlighter
 Result is "Correct"
 
 
@@ -16,4 +28,4 @@ Number of times gotten close: 0
 Player selected "Use a healing spell (to relieve)" choice
 Result is "Correct"
 
-Time: 11 seconds
+Time: 20 seconds
