@@ -20,7 +20,7 @@ public class title_screen_function : MonoBehaviour
             close_tutorial_panel();
         }
     }
-    void close_tutorial_panel() {
+    public void close_tutorial_panel() {
         has_tutorial_panel_on = false;
         set_tutorial_panel_active(false);
         set_main_panel_active(true);
