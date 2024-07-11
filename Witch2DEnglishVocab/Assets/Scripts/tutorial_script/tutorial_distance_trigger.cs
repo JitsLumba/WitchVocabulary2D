@@ -16,19 +16,14 @@ public class tutorial_distance_trigger : MonoBehaviour
     void Start()
     {
         if (has_tutorial) {
-            start_sequence();
+            //start_sequence();
         }
     }
 
     // Update is called once per frame
     void Update()
     {
-        float player_x_dist = player.transform.position.x, tutor_x_dist = tutor_talker.transform.position.x;
-        float diff = player_x_dist - tutor_x_dist;
-        if (diff >= -1.0f && diff <= 1.0f && Input.GetKeyDown(KeyCode.F) && can_interact) {
-            
-            start_sequence();
-        }
+        
     }
     public void set_can_interact(bool interact) {
         can_interact = interact;
@@ -38,7 +33,8 @@ public class tutorial_distance_trigger : MonoBehaviour
             tut_adapt.switch_empty_tutorials(negate_interact);
         }
     }
-    void start_sequence() {
+    public void start_sequence() {
+        //sequence to start the game by disabling character movement
         set_can_interact(false);
         disable_movement();
         tut_script.send_scripts();

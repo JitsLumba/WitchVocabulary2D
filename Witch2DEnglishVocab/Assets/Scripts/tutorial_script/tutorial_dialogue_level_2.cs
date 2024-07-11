@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class tutorial_dialogue_level_2 : MonoBehaviour
 {
+    //DOESN'T CONNECT TO THE TRANSPORT DOOR
+    //Description of the script: This tutorial is meant for instant demos in tutorial
     // Start is called before the first frame update
     [SerializeField] private tutorial_dialogue_trigger tut_dtrigger ;
-
-    [SerializeField] private tutorial_character_transport tut_char_transp ;
+    [SerializeField] private tutorial_dialogue_manager tut_dmanager ;
+    
     [SerializeField] private tutorial_distance_trigger tut_dist_trigger ;
     [SerializeField] private GameObject tut_dtrigger_empty ;
     [SerializeField] private GameObject tut_level_1_empty ;
@@ -64,7 +66,7 @@ public class tutorial_dialogue_level_2 : MonoBehaviour
         result_dialogue = new List<string>();
         special_numbers_list = new List<int>();
     }
-
+     
     // Update is called once per frame
     void Update()
     {
@@ -128,6 +130,50 @@ public class tutorial_dialogue_level_2 : MonoBehaviour
             this.change_highlighter_trigger();
         }
         
+    }
+    void initialize_tutorial_sequence() {
+        
+        
+        //THIS HERE IS THE START OF THE TUTORIAL SEQUENCE
+
+        /*
+        tut_dmanager.initialize_all_lists();
+        disable_movement();
+        tut_def_check.set_values(tut_script.get_answer(), tut_script.get_type_clue());
+        change_active_of_tutorial_diag_trigger(true);
+        List<string> result_diags = new List<string>();
+       
+        for (int i = 0; i < tut_script.get_size_of_result_dialogue(); i++) {
+            result_diags.Add(tut_script.get_result_dialogue(i));
+            
+        }
+        store_result_diag(result_diags, tut_script.get_result_name());
+        List<string> after_diags = new List<string>();
+        List<string> after_names = new List<string>();
+        for (int i = 0; i < tut_script.get_after_dialogue_size(); i++) {
+            after_diags.Add(tut_script.get_after_dialogue_sentence(i));
+            after_names.Add(tut_script.get_after_name(i));
+        }
+        
+        store_after_diag(after_diags, after_names);
+        List<string> initial_dialogue = new List<string>();
+        List<string> initial_names = new List<string>();
+
+        for (int i = 0; i < tut_script.get_initial_dialogue_size(); i++) {
+            initial_dialogue.Add(tut_script.get_initial_dialogue_sentence(i));
+            initial_names.Add(tut_script.get_initial_name(i));
+        }
+        initialize_dialogue(initial_dialogue, initial_names);*/
+
+
+        /*
+        
+        tu_adapt.set_tut_diag_trigger_empty_active(true);
+        tu_adapt.activate_tutorial_empty(true);
+        tu_adapt.store_result_diag(result_dialogues, result_name);
+        tu_adapt.store_after_diag(after_dialogue, after_names);
+        tu_adapt.initialize_dialogue(dialogues, names);
+        */
     }
     public void after_choose_effects() {
         for (int i = 0; i < after_counters.Count; i++) {
@@ -455,14 +501,15 @@ public class tutorial_dialogue_level_2 : MonoBehaviour
         max_count = dialogue.Count ;
         tut_dtrigger.set_panel_mech_can_z(false);
         tut_dtrigger.set_after_choose(false);
-        tut_dtrigger.set_is_correct(false);
+       
         this.set_can_z(false);
       
        
         //main dialogue codes
         tut_dtrigger.set_can_f(false);
         tut_dtrigger.set_can_g(true);
-        tut_dtrigger.initialize_dialogue(dialogue, names);
+        tut_dtrigger.initialize_dialogue_values(dialogue.Count);
+        tut_dmanager.start_dialogue(dialogue, names);
         tut_dtrigger.panel_mechanic_dialogue_pane_active(true);
         
         /*tut_panel_mech.set_can_tab(false);

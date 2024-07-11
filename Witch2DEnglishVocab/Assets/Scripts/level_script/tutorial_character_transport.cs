@@ -38,10 +38,12 @@ public class tutorial_character_transport : MonoBehaviour
         }
     }
     void play_dialogues_on_door() {
+        //initializes a dialogue after clearing the tutorial
         tut_adapt.switch_empty_tutorials(true);
         tut_adapt.play_dialogues_on_door();
     }
     public void transport() {
+        //transports the character to the position of memory doors
         this.camera.transform.position = new Vector3(camera_x_pos, this.camera.transform.position.y, this.camera.transform.position.z);
         this.sensei.transform.position = new Vector3(sensei_x_pos, sensei.transform.position.y, sensei.transform.position.z);
 

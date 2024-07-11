@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class tutorial_dialogue_manager : MonoBehaviour
 {
     // Start is called before the first frame update
-    
+    //CHANGE THIS TO GET FROM TUTORIAL SCRIPT AS MODEL
     [SerializeField] private GameObject dialogue_box;
     [SerializeField] private Text dialogue_text, name_text;
     
@@ -15,6 +15,17 @@ public class tutorial_dialogue_manager : MonoBehaviour
     private List<string> dialogue_list, names_list, result_dialogues , after_dialogues , after_names, confirm_diag, confirm_name, after_confirm_diag, after_confirm_name ;
     void Start()
     {
+        /*dialogue_list = new List<string>();
+        names_list = new List<string>();
+        result_dialogues = new List<string>();
+        after_dialogues = new List<string>();
+        after_names = new List<string>();
+        confirm_diag = new List<string>();
+        confirm_name = new List<string>();
+        after_confirm_diag = new List<string>();
+        after_confirm_name = new List<string>();*/
+    }
+    public void initialize_all_lists() {
         dialogue_list = new List<string>();
         names_list = new List<string>();
         result_dialogues = new List<string>();
@@ -25,7 +36,6 @@ public class tutorial_dialogue_manager : MonoBehaviour
         after_confirm_diag = new List<string>();
         after_confirm_name = new List<string>();
     }
-
     // Update is called once per frame
     void Update()
     {
@@ -51,7 +61,7 @@ public class tutorial_dialogue_manager : MonoBehaviour
         after_confirm_diag.Clear();
         after_confirm_name.Clear();
     }
-    void add_result_dialogues(List<string> res_diag) {
+    public void add_result_dialogues(List<string> res_diag) {
         for (int i = 0; i < res_diag.Count; i++) {
             result_dialogues.Add(res_diag[i]);
         }
@@ -106,6 +116,7 @@ public class tutorial_dialogue_manager : MonoBehaviour
         set_active_dialogue_box(true);
     }
     public void next_dialogue(int count) {
+        Debug.Log("WHY WOULD IT " + count);
         string name = names_list[count];
         string dialogue = dialogue_list[count];
         set_dialogue_boxes(dialogue, name);
@@ -117,6 +128,7 @@ public class tutorial_dialogue_manager : MonoBehaviour
         set_dialogue_boxes(dialogue, name);
     }
     public void next_after_confirm(int count) {
+        //this prints out the after confirm dialogues
         string name = after_confirm_name[count];
         string dialogue = after_confirm_diag[count];
         set_dialogue_boxes(dialogue, name);

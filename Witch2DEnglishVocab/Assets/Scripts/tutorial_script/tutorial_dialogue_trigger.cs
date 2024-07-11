@@ -44,6 +44,7 @@ public class tutorial_dialogue_trigger : MonoBehaviour
         }
        
     }
+    
     public void panel_mechanic_dialogue_pane_active(bool active) {
         tut_panel_mech.set_dialogue_active(active);
     }
@@ -133,9 +134,7 @@ public class tutorial_dialogue_trigger : MonoBehaviour
     public void set_after_choose(bool choose) {
         after_choose = choose;
     }
-    public void set_is_correct(bool correct) {
-
-    }
+    
     public bool get_after_choose() {
         return after_choose;
     }
@@ -156,9 +155,9 @@ public class tutorial_dialogue_trigger : MonoBehaviour
     }
     
     public void next_dialogue() {
-        
+        Debug.Log("TUTORIAL_NEXT DIALOGUE + " + max_count + " NOW COUNTER IS " + counter);
         if (max_count > counter) {
-            
+            Debug.Log("HELLO MAX COUNT");
             is_marked = tut_img_show.return_is_on_marked_diag(counter);
             
             counter++;
@@ -188,11 +187,19 @@ public class tutorial_dialogue_trigger : MonoBehaviour
     public void store_result_diag(List<string> result_diag , string speaker) {
         tut_diag_manager.initialize_result_dialogues(result_diag, speaker);
     }
+    public void initialize_after_diag_numbers(int diag_count) {
+        after_counter = 0;
+        after_counter_max = diag_count;
+    }
     public void store_after_diag(List<string> aft_diag, List<string> aft_name) {
         after_counter = 0;
         after_counter_max = aft_diag.Count;
 
         tut_diag_manager.initialize_after_dialogues(aft_diag, aft_name);
+    }
+    public void initialize_conirm_dialogue_numbers(int conf_diag_count) {
+        confirm_counter = 0;
+        after_counter_max = conf_diag_count;
     }
     public void confirmation_dialogue(List<string> conf_diag, List<string> conf_name) {
         confirm_counter = 0;
@@ -200,21 +207,17 @@ public class tutorial_dialogue_trigger : MonoBehaviour
         tut_diag_manager.confirmation_dialogue(conf_diag, conf_name);
     }
    
-    public void initialize_dialogue(List<string> dialogue, List<string> names) {
+    public void initialize_dialogue_values(int diag_count) {
         
         tut_img_show.set_is_not_on_dialogue(false);
-        tut_panel_mech.set_can_tab(false);
-        tut_panel_mech.set_can_f(false);
-        tut_panel_mech.set_can_a(false);
-        tut_panel_mech.set_can_d(false);
-        tut_panel_mech.set_counter(0);
+        
         is_active = true;
        is_marked = false;
         cango = true;
         is_correct = false;
         counter = 1;
-        max_count = dialogue.Count ;
-        tut_diag_manager.start_dialogue(dialogue, names);
+        max_count = diag_count;
+        
 
     }
     public void change_context_highlighter() {
@@ -245,6 +248,7 @@ public class tutorial_dialogue_trigger : MonoBehaviour
         tut_diag_manager.next_confirm(counter);
     }
     public void after_confirm_trigger_dialogue(int counter) {
+        //after confirm dialogue printing
         tut_diag_manager.next_after_confirm(counter);
     }
     public void initialize_after_confirm_diag(List<string> dialogues, List<string> names) {

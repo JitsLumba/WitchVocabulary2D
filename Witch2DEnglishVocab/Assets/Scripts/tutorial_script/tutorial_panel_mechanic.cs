@@ -316,6 +316,7 @@ public class tutorial_panel_mechanic : MonoBehaviour
     }
     public void compare_answers()
     {
+        //gets the answer and definition type to compare answers
         bool not_found = true, can_choice = false, is_not_close = true;
         Debug.Log("WAHAT ABOUT " + current_type);
         string show_res = "";

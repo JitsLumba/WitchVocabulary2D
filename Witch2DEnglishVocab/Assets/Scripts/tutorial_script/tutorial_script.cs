@@ -36,6 +36,39 @@ public class tutorial_script : MonoBehaviour
     {
         
     }
+    public string get_answer() {
+        return answer;
+    }
+    public string get_type_clue() {
+        return type_clue;
+    }
+    public string get_result_dialogue(int i) {
+        return result_dialogues[i];
+    }
+    public string get_result_name() {
+        return result_name;
+    }
+    public int get_size_of_result_dialogue() {
+        return result_dialogues.Count;
+    }
+    public int get_after_dialogue_size() {
+        return after_dialogue.Count;
+    }
+    public string get_after_dialogue_sentence(int i) {
+        return after_dialogue[i];
+    }
+    public string get_after_name(int i) {
+        return after_names[i];
+    }
+    public int get_initial_dialogue_size() {
+        return dialogues.Count;
+    }
+    public string get_initial_dialogue_sentence(int i) {
+        return dialogues[i];
+    }
+    public string get_initial_name(int i) {
+        return names[i];
+    }
     public void send_scripts() {
         
         tut_def_check.set_values(answer, type_clue);
