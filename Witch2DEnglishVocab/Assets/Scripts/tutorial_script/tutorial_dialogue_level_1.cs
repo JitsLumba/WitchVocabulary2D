@@ -158,6 +158,7 @@ public class tutorial_dialogue_level_1 : MonoBehaviour
                     Debug.Log("AFTER_CHOOSE TRUE ");
                     bool is_correct = tut_dtrigger.get_is_correct();
                     if (is_correct) {
+                        
                         Debug.Log("AFTER CHOOSE IS_CORRECT IS TRUE");
                         if (after_counter == after_counter_max) {
                             //before the yes or no selection
@@ -196,6 +197,7 @@ public class tutorial_dialogue_level_1 : MonoBehaviour
                 else {
                     Debug.Log("THIS ONE IS THE LAST DIALOGUE");
                     //last dialogue
+                    this.set_can_f(false);
                     tut_dtrigger.set_panel_mech_can_a(true);
                     tut_panel_mech.set_can_freeze(true);
                     tut_dtrigger.set_panel_mech_can_d(true);
@@ -215,6 +217,7 @@ public class tutorial_dialogue_level_1 : MonoBehaviour
             
         }
         if (Input.GetKeyDown(KeyCode.Z) && can_z) {
+            
             freeze_tutorial_sequence();
         }
         if (Input.GetKeyDown(KeyCode.F) && can_f) {
@@ -363,11 +366,13 @@ public class tutorial_dialogue_level_1 : MonoBehaviour
         Debug.Log("FREEZE HER UP");
         if (can_z) {
             if (is_on_freeze_demo) {
-              
+                
                 freeze_demo_only();
+                Debug.Log("CAN I CHECK F DEMO" + can_f);
             }
             else {
-                Debug.Log("WOAH FREEZER WOW");
+                
+                this.set_can_f(!can_f);
                 tut_dtrigger.freeze_or_defreeze();
             }
         }
@@ -399,6 +404,7 @@ public class tutorial_dialogue_level_1 : MonoBehaviour
         
         Debug.Log("WONSERSs ");
         tut_dtrigger.show_me_now();
+        set_can_f(false);
         this.set_can_tab(false);
         tut_dtrigger.set_panel_mech_can_d(false);
         tut_dtrigger.set_panel_mech_can_a(false);
@@ -443,6 +449,7 @@ public class tutorial_dialogue_level_1 : MonoBehaviour
             else if (i == 1) {
                 //if it's on the freeze demo
                 //stops the player from pressing g so that they will do demo
+                Debug.Log("CAN I CHECK F 1" + can_f);
                 set_can_g(false);
         
                 tut_dtrigger.set_panel_mech_can_z(true);
@@ -454,9 +461,11 @@ public class tutorial_dialogue_level_1 : MonoBehaviour
 
             }
             else if (i == 2) {
+                Debug.Log("CAN I CHECK F 2" + can_f);
                 tut_panel_mech.change_highlighter_panel_active(true);
             }
             else if (i == 3) {
+                Debug.Log("CAN I CHECK F 3 " + can_f);
                 this.clue_panel.SetActive(true);
                 this.is_clue_panel_active = true;
             }
@@ -464,21 +473,25 @@ public class tutorial_dialogue_level_1 : MonoBehaviour
             
                 tut_panel_mech.change_vocab_text("Humorous");
                 tut_panel_mech.change_vocab_panel_active(true);
+                Debug.Log("CAN I CHECK F 4 " + can_f);
             }
             else {
                 //if it's getting synonyms
+                
                 set_can_g(false);
+                
                 tut_dtrigger.reset_highlighter();
+                
                 tut_dtrigger.set_panel_mech_can_z(true);
                 set_can_z(true);
-                this.set_can_f(true);
-            
+                
+                
                 tut_dtrigger.set_panel_mech_can_z(true);
                 tut_panel_mech.set_can_freeze(true);
                 this.set_can_g(false);
                 tut_dtrigger.set_panel_mech_can_a(true);
                 tut_dtrigger.set_panel_mech_can_d(true);
-            
+                Debug.Log("WHY IS THIS F " + can_f);
            
         
             }
@@ -510,7 +523,7 @@ public class tutorial_dialogue_level_1 : MonoBehaviour
                 
                 tut_dtrigger.reset_highlighter();
                 tut_panel_mech.change_freeze_panel_active(true);
-                this.set_can_f(true);
+                
                 set_can_g(false);
                 set_can_z(true);
                 this.set_can_tab(true);

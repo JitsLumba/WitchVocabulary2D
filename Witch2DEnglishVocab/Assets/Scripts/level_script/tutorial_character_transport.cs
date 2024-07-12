@@ -11,7 +11,7 @@ public class tutorial_character_transport : MonoBehaviour
 
     [SerializeField] private float camera_x_pos, player_x_pos, sensei_x_pos;
 
-    private bool can_enter = false;
+    private bool can_enter = false, not_yet_interacted = true;
     void Start()
     {
         
@@ -32,7 +32,8 @@ public class tutorial_character_transport : MonoBehaviour
             can_enter = false;
         }
 
-        if (Input.GetKeyDown(KeyCode.F) && can_enter) {
+        if (Input.GetKeyDown(KeyCode.F) && can_enter && not_yet_interacted) {
+            not_yet_interacted = false;
             switch_movement(false);
             play_dialogues_on_door();
         }

@@ -107,8 +107,8 @@ public class sublevel_backend : MonoBehaviour
 	}
     public void write_file_log(string file_name) {
         dir = Application.streamingAssetsPath + "/sample/" + file_name + ".txt";
-         File.WriteAllText(dir, "Backend for sub-level: " + file_name + "\n\n");
-         time_num = 0;
+        File.WriteAllText(dir, "Backend for sub-level: " + file_name + "\n\n");
+        time_num = 0;
         is_on_door = true;
         timeStart = System.DateTime.UtcNow;
         Debug.Log("WROTE " + dir);

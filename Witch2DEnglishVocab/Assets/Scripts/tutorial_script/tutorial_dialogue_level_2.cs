@@ -7,10 +7,13 @@ public class tutorial_dialogue_level_2 : MonoBehaviour
     //DOESN'T CONNECT TO THE TRANSPORT DOOR
     //Description of the script: This tutorial is meant for instant demos in tutorial
     // Start is called before the first frame update
+
+    [SerializeField] private tutorial_script tut_script;
     [SerializeField] private tutorial_dialogue_trigger tut_dtrigger ;
     [SerializeField] private tutorial_dialogue_manager tut_dmanager ;
+    [SerializeField] private tutorial_definition_check tut_def_check;
     
-    [SerializeField] private tutorial_distance_trigger tut_dist_trigger ;
+    
     [SerializeField] private GameObject tut_dtrigger_empty ;
     [SerializeField] private GameObject tut_level_1_empty ;
     [SerializeField] private GameObject clue_panel ;
@@ -26,8 +29,7 @@ public class tutorial_dialogue_level_2 : MonoBehaviour
     [SerializeField] private bool has_confirmation = true;
     [SerializeField] private int tutorial_num ;
     [SerializeField] private string sample_word, vocab_word;
-    private List<string> result_dialogue;
-    private List<int> special_numbers_list;
+   
     private int counter = 1;
     private int after_counter = 0;
     private int hello_world = 0;
@@ -63,10 +65,9 @@ public class tutorial_dialogue_level_2 : MonoBehaviour
 
         //pink
         //FF0FAB
-        result_dialogue = new List<string>();
-        special_numbers_list = new List<int>();
+        initialize_tutorial_sequence();
     }
-     
+    
     // Update is called once per frame
     void Update()
     {
@@ -77,6 +78,7 @@ public class tutorial_dialogue_level_2 : MonoBehaviour
             if (after_choose) {
                 bool is_correct = tut_dtrigger.get_is_correct();
                 if (is_correct) {
+                    
                     if (after_counter == after_counter_max) {
                         Debug.Log("CORREC");
                         this.set_can_g(false);
@@ -89,7 +91,7 @@ public class tutorial_dialogue_level_2 : MonoBehaviour
 
                         
                  
-                        tut_dist_trigger.set_can_interact(true);
+                      
                         
                     }
                     else {
@@ -107,6 +109,7 @@ public class tutorial_dialogue_level_2 : MonoBehaviour
                         tut_dtrigger.set_panel_mech_can_freeze(true);
                         tut_dtrigger.set_panel_mech_can_d(true);
                         tut_dtrigger.set_panel_mech_can_tab(true);
+                        this.set_can_f(false);
                         this.set_can_tab(true);
                         this.set_can_z(true);
                         this.set_can_g(false);
@@ -131,14 +134,29 @@ public class tutorial_dialogue_level_2 : MonoBehaviour
         }
         
     }
+    void movement_activator(bool activate) {
+        //disables character movement
+        CharacterController2D charsub2d;
+        PlayerMovement pmovement ;
+        GameObject player_search = GameObject.Find("Player");
+        if (player_search != null) {
+            
+            charsub2d = player_search.GetComponent<CharacterController2D>();
+            pmovement = player_search.GetComponent<PlayerMovement>();
+            charsub2d.enabled = activate;
+            pmovement.enabled = activate;
+        }
+        /*play_move.enabled = false;
+        controller_character.enabled = false;*/
+    }
     void initialize_tutorial_sequence() {
         
         
         //THIS HERE IS THE START OF THE TUTORIAL SEQUENCE
 
-        /*
+        
         tut_dmanager.initialize_all_lists();
-        disable_movement();
+        movement_activator(false);
         tut_def_check.set_values(tut_script.get_answer(), tut_script.get_type_clue());
         change_active_of_tutorial_diag_trigger(true);
         List<string> result_diags = new List<string>();
@@ -163,7 +181,7 @@ public class tutorial_dialogue_level_2 : MonoBehaviour
             initial_dialogue.Add(tut_script.get_initial_dialogue_sentence(i));
             initial_names.Add(tut_script.get_initial_name(i));
         }
-        initialize_dialogue(initial_dialogue, initial_names);*/
+        initialize_dialogue(initial_dialogue, initial_names);
 
 
         /*
@@ -246,11 +264,12 @@ public class tutorial_dialogue_level_2 : MonoBehaviour
         Debug.Log("FREEZE HER UP");
         if (can_z) {
             if (is_on_freeze_demo) {
-              
+                
                 freeze_demo_only();
             }
             else {
                 Debug.Log("WOAH FREEZER WOW");
+                set_can_f(!can_f);
                 tut_dtrigger.freeze_or_defreeze();
             }
         }
@@ -279,7 +298,7 @@ public class tutorial_dialogue_level_2 : MonoBehaviour
         //tut_panel_mech.key_actives(activate);
     }
     void check_answer() {
-        
+        this.set_can_f(false);
         tut_dtrigger.set_panel_mech_can_tab(false);
         this.set_can_tab(false);
         tut_dtrigger.set_panel_mech_can_d(false);
@@ -299,14 +318,14 @@ public class tutorial_dialogue_level_2 : MonoBehaviour
             counter++;
             if (max_count == counter) {
                 check_if_on_diag_counter();
-            this.set_can_f(true);
-            this.set_can_tab(true);
-            this.set_can_z(true);
-            tut_dtrigger.set_panel_mech_can_z(true);
-            tut_dtrigger.set_panel_mech_can_a(true);
-            tut_dtrigger.set_panel_mech_can_d(true);
-            tut_dtrigger.panel_mech_change_vocab_word(sample_word);
-            tut_dtrigger.panel_mech_vocabulary_panel_switch(true);
+                this.set_can_f(false);
+                this.set_can_tab(true);
+                this.set_can_z(true);
+                tut_dtrigger.set_panel_mech_can_z(true);
+                tut_dtrigger.set_panel_mech_can_a(true);
+                tut_dtrigger.set_panel_mech_can_d(true);
+                tut_dtrigger.panel_mech_change_vocab_word(sample_word);
+                tut_dtrigger.panel_mech_vocabulary_panel_switch(true);
             }
             
             
@@ -328,11 +347,12 @@ public class tutorial_dialogue_level_2 : MonoBehaviour
     void tutorial_link(int i) {
         if (tutorial_num == 1) {
             if (i == 0) {
+            Debug.Log("SHOULD I SAY SOMETHING? 0");
             tut_dtrigger.panel_mech_freeze_button_switch(true);
         }
         else if (i == 1) {
             //if it's on the freeze demo
-           
+            Debug.Log("SHOULD I SAY SOMETHING?");
             set_can_g(false);
         
             tut_dtrigger.set_panel_mech_can_z(true);
@@ -344,13 +364,16 @@ public class tutorial_dialogue_level_2 : MonoBehaviour
 
         }
         else if (i == 2) {
+            Debug.Log("SHOULD I SAY SOMETHING? 1");
             tut_dtrigger.panel_mech_highlighter_button_switch(true);
         }
         else if (i == 3) {
+            Debug.Log("SHOULD I SAY SOMETHING? 2");
             tut_dtrigger.panel_mech_change_vocab_word("Humorous");
             tut_dtrigger.panel_mech_vocabulary_panel_switch(true);
         }
         else {
+            Debug.Log("SHOULD I SAY SOMETHING? 3");
             //if it's getting synonyms
             set_can_g(false);
         
@@ -455,14 +478,14 @@ public class tutorial_dialogue_level_2 : MonoBehaviour
     }
     public void store_result_diag(List<string> result_diag , string speaker) {
         //storing of result dialogues
-        tut_dtrigger.store_result_diag(result_diag, speaker);
+        tut_dmanager.initialize_result_dialogues(result_diag, speaker);
         //tut_diag_manager.initialize_result_dialogues(result_diag, speaker);
     }
     public void store_after_diag(List<string> aft_diag, List<string> aft_name) {
         //storing of dialogues after the result
         after_counter_max = aft_diag.Count;
-
-        tut_dtrigger.store_after_diag(aft_diag, aft_name);
+        tut_dtrigger.initialize_after_diag_numbers(after_counter_max);
+        tut_dmanager.initialize_after_dialogues(aft_diag, aft_name);
         /*after_counter = 0;
         after_counter_max = aft_diag.Count;
         tut_diag_manager.initialize_after_dialogues(aft_diag, aft_name);*/
