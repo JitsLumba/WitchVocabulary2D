@@ -4129,60 +4129,6 @@ Transform:
   m_Father: {fileID: 1758481478}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &682653888
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 682653890}
-  - component: {fileID: 682653889}
-  m_Layer: 5
-  m_Name: tutorial_adapter
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &682653889
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 682653888}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c4c9e0ca534b79498a4da5a20f1acf3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tut_dialogue_level_1: {fileID: 755685049}
-  tut_dialogue_level_2: {fileID: 1273172672}
-  tut_diag_trigger_empty: {fileID: 1192842868}
-  tut_diag_lvl_1: {fileID: 755685048}
-  tut_diag_lvl_2: {fileID: 1273172671}
-  level_type: 2
---- !u!224 &682653890
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 682653888}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1758481478}
-  m_RootOrder: 25
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &687450990
 GameObject:
   m_ObjectHideFlags: 0
@@ -4642,98 +4588,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 736490911}
   m_CullTransparentMesh: 1
---- !u!1 &755685048
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 755685050}
-  - component: {fileID: 755685049}
-  m_Layer: 5
-  m_Name: tutorial_level1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &755685049
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 755685048}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7184b222bd28bd40a1c565f9147dbbd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tut_dtrigger: {fileID: 1192842869}
-  tut_char_transp: {fileID: 2104057217}
-  tut_dist_trigger: {fileID: 289680617787608050}
-  tut_dtrigger_empty: {fileID: 1192842868}
-  tut_level_1_empty: {fileID: 755685048}
-  clue_panel: {fileID: 878291505}
-  freeze_panel: {fileID: 704939971}
-  highlighter_panel: {fileID: 1230746704}
-  yes_or_no_panel: {fileID: 550159900}
-  arrow_pic: {fileID: 383042559}
-  confirm_dialogues:
-  - Seems simple enough, yes.
-  - "Good, now, I\u2019ll be linking new words to your highlighter as you move forward
-    in this little training exercise..."
-  - ...so do pay attention to the top of your screen.
-  - Hmm....I am not getting it yet.
-  - I need to have your instructions repeated to be clear.
-  - Very well.
-  confirm_names:
-  - Elaina
-  - Sensei
-  - Sensei
-  - Elaina
-  - Elaina
-  - Sensei
-  after_confirm_dialogues:
-  - Ah, and one more thing!
-  - I knew you forgot something again.
-  - Since you have more than one highlighter now...
-  - "...the dialogue in the events you\u2019re about to relive may have both synonyms
-    and antonyms of the linked word."
-  - So best get used to switching highlighters~
-  after_confirm_names:
-  - Sensei
-  - Elaina
-  - Sensei
-  - Sensei
-  - Sensei
-  dialogue_counters: 0500000007000000090000000a000000
-  after_counters: 02000000
-  num_go_back: 6
-  conf_mult: 3
-  has_confirmation: 0
-  tutorial_num: 2
---- !u!224 &755685050
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 755685048}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1758481478}
-  m_RootOrder: 23
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &798478637
 GameObject:
   m_ObjectHideFlags: 0
@@ -7622,7 +7476,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1273172672
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7635,9 +7489,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b87cf7a6ba110f4e86d19c758c6592c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tut_script: {fileID: 289680617787608051}
   tut_dtrigger: {fileID: 1192842869}
-  tut_char_transp: {fileID: 2104057217}
-  tut_dist_trigger: {fileID: 289680617787608050}
+  tut_dmanager: {fileID: 1025694412}
+  tut_def_check: {fileID: 607842866}
   tut_dtrigger_empty: {fileID: 1192842868}
   tut_level_1_empty: {fileID: 1273172671}
   clue_panel: {fileID: 878291505}
@@ -7665,7 +7520,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1758481478}
-  m_RootOrder: 24
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -10917,9 +10772,7 @@ RectTransform:
   - {fileID: 1523862464}
   - {fileID: 550159903}
   - {fileID: 383042562}
-  - {fileID: 755685050}
   - {fileID: 1273172673}
-  - {fileID: 682653890}
   m_Father: {fileID: 0}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -15803,7 +15656,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37b5f79b50d72bc408448fd310b8ba94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tut_adapt: {fileID: 682653889}
+  tut_adapt: {fileID: 0}
   F_key_obj: {fileID: 1515648505}
   player: {fileID: 5334363829152864345}
   door: {fileID: 2104057216}
@@ -16077,7 +15930,7 @@ MonoBehaviour:
   player: {fileID: 5334363829152864345}
   tutor_talker: {fileID: 289680617787608049}
   tut_script: {fileID: 289680617787608051}
-  tut_adapt: {fileID: 682653889}
+  tut_adapt: {fileID: 0}
   has_tutorial: 1
 --- !u!114 &289680617787608051
 MonoBehaviour:
@@ -16091,7 +15944,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d5665a54db99de4d853c18098d2ba1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tu_adapt: {fileID: 682653889}
+  tu_adapt: {fileID: 0}
   tut_def_check: {fileID: 607842866}
   dialogues:
   - Impressive work my student! You are doing very well, and that's what I like!

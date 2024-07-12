@@ -8,52 +8,52 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/title_screen.unity
     guid: 39c0d97b4834a9d498ac999075f61401
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/level1.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/level2.unity
     guid: 2db871f7e982ba9409b429ff661e3658
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/level3.unity
     guid: b30068d1fe8ea774e8070d37fcd837eb
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/level4.unity
     guid: 5401ca70c2bcd0c4387bb5d902d2f322
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/final_test.unity
     guid: 5b4b64d26fe25684fbe695e6bdfe2ca5
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/level5.unity
     guid: 1cd7763b546f69d49a0f99cc7a1c60b3
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/level6.unity
     guid: 727863469cb06474ebccc006a4566b84
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/level7.unity
     guid: 53d0b980dfa9f974a9ca111a0ca387d3
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/level8.unity
     guid: 486a243ea9a0ab94c81bba933c40277d
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/final_test_2.unity
     guid: ee272f850dee686438ba8db7d10f6fdb
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/level9.unity
     guid: 3d6011f176825934e8560bdf27f971a8
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/level10.unity
     guid: d6ab0c12a5162e9488fd00412b10d93f
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/level11.unity
     guid: e39dad0ee1f609140ab60bf161172d0e
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/level12.unity
     guid: 8b235d4e3c630294db2c1089dc9c1cec
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/level13.unity
     guid: 517a8d1a36cb2854bb0c1bcc314a0d51
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/final_test_3.unity
     guid: 70928ebdf51dc1d4f968836ca011de42
   m_configObjects: {}
