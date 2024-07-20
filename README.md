@@ -4,7 +4,12 @@ The Wandering Vocabulary Traveler is a 2D adventure serious game designed for pl
 # Installation
 The Wandering Vocabulary Traveler requires Windows OS to run.
 
-Steps to Run
+# Team Members
+1. Jitsu Lumba
+2. Dennis Lu
+3. Ryan De Veyra
+   
+# Steps to Run
 1. Unzip the ``thesis_game`` zip file
 2. Open ``Witch2DEnglishVocab.exe``
 
