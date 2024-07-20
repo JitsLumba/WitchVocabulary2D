@@ -16,10 +16,7 @@ Number of times gotten close: 0
 Player selected "You really didn’t like the extra on that pizza (dislike)" choice
 Result is "Incorrect"
 
-Player selected "You were really against my tastes back then (hostile)" choice
-Result is "Incorrect"
-
 Player selected "You’re not against my taste of cream cheese on pizza anymore? (oppose)" choice
 Result is "Correct"
 
-Time: 30 seconds
+Time: 29 seconds
