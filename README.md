@@ -35,3 +35,7 @@ The Wandering Vocabulary Traveler requires Windows OS to run.
 ```
 Game developed for the purpose to reach the thesis requirement during undergraduate. 
 ```
+
+# Gameplay Trailer
+[![Despair Shooter Trailer](https://github.com/JitsLumba/WitchVocabulary2D/blob/revised_tutorial/wandering_witch_trailer_pic.png)](https://www.youtube.com/watch?v=Y5gdooBmE0M)
+
