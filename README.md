@@ -2,9 +2,9 @@
 The Wandering Vocabulary Traveler is a 2D adventure serious game designed for players to learn unfamiliar vocabulary. The game will have game mechanics focusing on Schema Theory with Communicative Language Teaching (CLT) and context clues. The story will involve a wandering traveler who loves treasure hunting in every city she travels. Each city is named after an unfamiliar word that the traveler must discover what that word means to obtain a treasure locked behind a magical gate that requires badges to unlock the door that contains a treasure, which will be the main task of each city. The badges can be acquired through completing subtasks which are the definitions of that unfamiliar word.
 
 # Screenshots
-[![Screenshot_1](https://github.com/JitsLumba/WitchVocabulary2D/blob/revised_tutorial/witch_vocabulary_screenshot_1.png)]
-[![Screenshot_1](https://github.com/JitsLumba/WitchVocabulary2D/blob/revised_tutorial/witch_vocabulary_screenshot_2.png)]
-[![Screenshot_1](https://github.com/JitsLumba/WitchVocabulary2D/blob/revised_tutorial/witch_vocabulary_screenshot_3.png)]
+![Screenshot_1](https://github.com/JitsLumba/WitchVocabulary2D/blob/revised_tutorial/witch_vocabulary_screenshot_1.png)
+![Screenshot_2](https://github.com/JitsLumba/WitchVocabulary2D/blob/revised_tutorial/witch_vocabulary_screenshot_2.png)
+![Screenshot_3](https://github.com/JitsLumba/WitchVocabulary2D/blob/revised_tutorial/witch_vocabulary_screenshot_3.png)
 
 # Installation
 The Wandering Vocabulary Traveler requires Windows OS to run.
