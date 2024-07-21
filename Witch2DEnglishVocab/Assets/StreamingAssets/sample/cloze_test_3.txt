@@ -1,9 +1,9 @@
 Backend for cloze test: cloze_test_3
 
-Player selected word: "friendly" with the definition highlighter
+Player selected word: "rude" with the antonym highlighter
 Result is "Correct"
 
-Player selected word: "rude" with the antonym highlighter
+Player selected word: "friendly" with the definition highlighter
 Result is "Correct"
 
 
@@ -12,3 +12,109 @@ Results:
 Number of times gotten correct: 2
 Number of times gotten incorrect: 0
 Number of times gotten close: 0
+Player selected "sociable" choice
+Result is: Correct
+
+Question time taken: 12 seconds
+
+Player selected word: "wicked" with the synonym highlighter
+Result is "Correct"
+
+Player selected word: "vile" with the synonym highlighter
+Result is "Close..."
+
+Player selected word: "vile" with the definition highlighter
+Result is "Correct"
+
+
+Results:
+
+Number of times gotten correct: 2
+Number of times gotten incorrect: 0
+Number of times gotten close: 1
+Player selected "evil" choice
+Result is: Correct
+
+Question time taken: 18 seconds
+
+Player selected word: "happy" with the example highlighter
+Result is "Close..."
+
+Player selected word: "happy" with the synonym highlighter
+Result is "Correct"
+
+Player selected word: "cheerful" with the synonym highlighter
+Result is "Correct"
+
+
+Results:
+
+Number of times gotten correct: 2
+Number of times gotten incorrect: 0
+Number of times gotten close: 1
+Player selected "jolly" choice
+Result is: Correct
+
+Question time taken: 19 seconds
+
+Player selected word: "rebuking" with the example highlighter
+Result is "Correct"
+
+Player selected word: "lecturing" with the example highlighter
+Result is "Correct"
+
+
+Results:
+
+Number of times gotten correct: 2
+Number of times gotten incorrect: 0
+Number of times gotten close: 0
+Player selected "criticizing" choice
+Result is: Incorrect
+
+Question time taken: 8 seconds
+
+Player selected word: "puzzling," with the definition highlighter
+Result is "Close..."
+
+Player selected word: "puzzling," with the synonym highlighter
+Result is "Correct"
+
+Player selected word: "clear" with the antonym highlighter
+Result is "Correct"
+
+
+Results:
+
+Number of times gotten correct: 2
+Number of times gotten incorrect: 0
+Number of times gotten close: 1
+Player selected "nonsensical" choice
+Result is: Incorrect
+
+Question time taken: 15 seconds
+
+Player selected word: "friendship" with the synonym highlighter
+Result is "Correct"
+
+Player selected word: "unity" with the synonym highlighter
+Result is "Correct"
+
+
+Results:
+
+Number of times gotten correct: 2
+Number of times gotten incorrect: 0
+Number of times gotten close: 0
+Player selected "harmony" choice
+Result is: Correct
+
+Question time taken: 17 seconds
+
+Results:
+
+No. of correct: 4
+No. of kinda correct: 0
+No. of incorrect: 2
+
+Total Time: 48 seconds

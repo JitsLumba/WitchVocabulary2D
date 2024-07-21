@@ -6,9 +6,6 @@ Result is "Correct"
 Player selected word: "unmindfulness" with the synonym highlighter
 Result is "Correct"
 
-Player selected word: "inattentiveness" with the definition highlighter
-Result is "Close..."
-
 Player selected word: "inattentiveness" with the example highlighter
 Result is "Correct"
 
@@ -17,9 +14,12 @@ Results:
 
 Number of times gotten correct: 3
 Number of times gotten incorrect: 0
-Number of times gotten close: 1
+Number of times gotten close: 0
+
+Player selected "This doesn’t make any sense…(nonsensical)" choice
+Result is "Incorrect"
 
 Player selected "Strange…why is she unaware of it?(unaware)" choice
 Result is "Correct"
 
-Time: 20 seconds
+Time: 35 seconds

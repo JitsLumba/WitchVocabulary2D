@@ -1,9 +1,9 @@
 Backend for sub-level: level_2_1
 
-Player selected word: "relieved" with the antonym highlighter
+Player selected word: "assuaged" with the antonym highlighter
 Result is "Correct"
 
-Player selected word: "assuaged" with the antonym highlighter
+Player selected word: "relieved" with the antonym highlighter
 Result is "Correct"
 
 
@@ -16,4 +16,4 @@ Number of times gotten close: 0
 Player selected "He made their pain worse… (to worsen)" choice
 Result is "Correct"
 
-Time: 35 seconds
+Time: 31 seconds

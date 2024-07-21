@@ -1,18 +1,12 @@
 Backend for sub-level: level_4_1
 
+Player selected word: "loathe" with the example highlighter
+Result is "Correct"
+
 Player selected word: "bitterness" with the example highlighter
 Result is "Correct"
 
 Player selected word: "hatred" with the example highlighter
-Result is "Correct"
-
-Player selected word: "loathe" with the synonym highlighter
-Result is "Close..."
-
-Player selected word: "loathe" with the definition highlighter
-Result is "Close..."
-
-Player selected word: "loathe" with the example highlighter
 Result is "Correct"
 
 
@@ -20,12 +14,9 @@ Results:
 
 Number of times gotten correct: 3
 Number of times gotten incorrect: 0
-Number of times gotten close: 2
-
-Player selected "I wonder how this hostility even started… (to be hostile)" choice
-Result is "Incorrect"
+Number of times gotten close: 0
 
 Player selected "How far will they go for the sake of one-upping the other? (to dislike)" choice
 Result is "Correct"
 
-Time: 52 seconds
+Time: 25 seconds

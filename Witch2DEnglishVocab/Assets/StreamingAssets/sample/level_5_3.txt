@@ -16,14 +16,7 @@ Number of times gotten correct: 2
 Number of times gotten incorrect: 0
 Number of times gotten close: 1
 
-Player selected "She is no longer unorderly.(unorderly)" choice
-Result is "Kinda correct"
-
-Player selected "She is no longer noisy.(noisy)" choice
-Result is "Incorrect"
-
-Player selected "She is no longer uncontrollable.(uncontrollable)
-" choice
+Player selected "She is no longer uncontrollable.(uncontrollable)" choice
 Result is "Correct"
 
-Time: 39 seconds
+Time: 22 seconds

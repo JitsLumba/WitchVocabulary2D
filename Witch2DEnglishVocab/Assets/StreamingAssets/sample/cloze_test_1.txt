@@ -1,9 +1,9 @@
 Backend for cloze test: cloze_test_1
 
-Player selected word: "dampens" with the synonym highlighter
+Player selected word: "ease" with the synonym highlighter
 Result is "Correct"
 
-Player selected word: "ease" with the synonym highlighter
+Player selected word: "dampens" with the synonym highlighter
 Result is "Correct"
 
 
@@ -12,10 +12,10 @@ Results:
 Number of times gotten correct: 2
 Number of times gotten incorrect: 0
 Number of times gotten close: 0
-Player selected "Relieved" choice
-Result is: Correct
+Player selected "Satisfied" choice
+Result is: Incorrect
 
-Question time taken: 24 seconds
+Question time taken: 11 seconds
 
 Player selected word: "assuaging" with the antonym highlighter
 Result is "Correct"
@@ -32,13 +32,7 @@ Number of times gotten close: 0
 Player selected "worsens" choice
 Result is: Correct
 
-Question time taken: 15 seconds
-
-Player selected word: "objections" with the definition highlighter
-Result is "Close..."
-
-Player selected word: "objections" with the synonym highlighter
-Result is "Close..."
+Question time taken: 11 seconds
 
 Player selected word: "objections" with the antonym highlighter
 Result is "Correct"
@@ -54,11 +48,11 @@ Results:
 
 Number of times gotten correct: 2
 Number of times gotten incorrect: 0
-Number of times gotten close: 3
+Number of times gotten close: 1
 Player selected "agreeable" choice
 Result is: Correct
 
-Question time taken: 21 seconds
+Question time taken: 24 seconds
 
 Player selected word: "fury" with the example highlighter
 Result is "Correct"
@@ -75,10 +69,10 @@ Results:
 Number of times gotten correct: 3
 Number of times gotten incorrect: 0
 Number of times gotten close: 0
-Player selected "hostile" choice
-Result is: Incorrect
+Player selected "dislike" choice
+Result is: Correct
 
-Question time taken: 15 seconds
+Question time taken: 13 seconds
 
 Results:
 
@@ -86,4 +80,4 @@ No. of correct: 3
 No. of kinda correct: 0
 No. of incorrect: 1
 
-Total Time: 32 seconds
+Total Time: 14 seconds

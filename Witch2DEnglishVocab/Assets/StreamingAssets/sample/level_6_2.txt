@@ -1,12 +1,12 @@
 Backend for sub-level: level_6_2
 
-Player selected word: "accordance" with the example highlighter
+Player selected word: "oppose" with the antonym highlighter
 Result is "Correct"
 
 Player selected word: "acknowledgement" with the example highlighter
 Result is "Correct"
 
-Player selected word: "oppose" with the antonym highlighter
+Player selected word: "accordance" with the example highlighter
 Result is "Correct"
 
 
@@ -19,4 +19,4 @@ Number of times gotten close: 0
 Player selected "They should stick with the agreement on the contract(agree)" choice
 Result is "Correct"
 
-Time: 22 seconds
+Time: 38 seconds

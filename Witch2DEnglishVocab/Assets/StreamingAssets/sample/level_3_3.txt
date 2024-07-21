@@ -3,10 +3,19 @@ Backend for sub-level: level_3_3
 Player selected word: "against" with the antonym highlighter
 Result is "Correct"
 
-Player selected word: "acceptable" with the definition highlighter
-Result is "Correct"
+Player selected word: "objecting" with the synonym highlighter
+Result is "Close..."
+
+Player selected word: "objecting" with the definition highlighter
+Result is "Close..."
 
 Player selected word: "objecting" with the antonym highlighter
+Result is "Correct"
+
+Player selected word: "acceptable" with the synonym highlighter
+Result is "Close..."
+
+Player selected word: "acceptable" with the definition highlighter
 Result is "Correct"
 
 
@@ -14,15 +23,9 @@ Results:
 
 Number of times gotten correct: 3
 Number of times gotten incorrect: 0
-Number of times gotten close: 0
-
-Player selected "This sounds like an unpleasant situation for both parties… (pleasant)" choice
-Result is "Incorrect"
-
-Player selected "Doesn’t sound very sociable (sociable)" choice
-Result is "Incorrect"
+Number of times gotten close: 3
 
 Player selected "I don’t even work here and I can’t agree with that (agreeable)" choice
 Result is "Correct"
 
-Time: 33 seconds
+Time: 40 seconds

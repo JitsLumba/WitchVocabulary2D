@@ -1,12 +1,18 @@
 Backend for sub-level: level_5_2
 
+Player selected word: "loud" with the synonym highlighter
+Result is "Close..."
+
+Player selected word: "loud" with the definition highlighter
+Result is "Close..."
+
+Player selected word: "loud" with the example highlighter
+Result is "Correct"
+
 Player selected word: "screaming" with the example highlighter
 Result is "Correct"
 
 Player selected word: "shouting" with the example highlighter
-Result is "Correct"
-
-Player selected word: "loud" with the example highlighter
 Result is "Correct"
 
 
@@ -14,10 +20,7 @@ Results:
 
 Number of times gotten correct: 3
 Number of times gotten incorrect: 0
-Number of times gotten close: 0
-
-Player selected "It’s not easy since she is chaotic(chaotic)" choice
-Result is "Incorrect"
+Number of times gotten close: 2
 
 Player selected "I wonder why she is uncontrollable…(uncontrollable)" choice
 Result is "Kinda Correct"
@@ -25,4 +28,4 @@ Result is "Kinda Correct"
 Player selected "I will try again when she is not noisy anymore.(noisy)" choice
 Result is "Correct"
 
-Time: 34 seconds
+Time: 2 seconds

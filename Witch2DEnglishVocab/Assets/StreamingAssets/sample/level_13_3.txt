@@ -22,4 +22,4 @@ Number of times gotten close: 0
 Player selected "I’ve… brought harmony to those around me (harmony)" choice
 Result is "Correct"
 
-Time: 24 seconds
+Time: 56 seconds

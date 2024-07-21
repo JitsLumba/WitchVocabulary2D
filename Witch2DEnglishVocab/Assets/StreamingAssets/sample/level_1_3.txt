@@ -16,4 +16,4 @@ Number of times gotten close: 0
 Player selected "Comfort her (to soothe)" choice
 Result is "Correct"
 
-Time: 14 seconds
+Time: 16 seconds

@@ -1,8 +1,5 @@
 Backend for sub-level: level_2_2
 
-Player selected word: "annoying" with the antonym highlighter
-Result is "Close..."
-
 Player selected word: "annoying" with the synonym highlighter
 Result is "Correct"
 
@@ -14,9 +11,9 @@ Results:
 
 Number of times gotten correct: 2
 Number of times gotten incorrect: 0
-Number of times gotten close: 1
+Number of times gotten close: 0
 
 Player selected "I understand that you’re irritated but… (irritate)" choice
 Result is "Correct"
 
-Time: 13 seconds
+Time: 17 seconds

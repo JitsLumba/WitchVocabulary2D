@@ -1,9 +1,12 @@
 Backend for sub-level: level_2_3
 
-Player selected word: "ease" with the antonym highlighter
-Result is "Correct"
+Player selected word: "difficult" with the antonym highlighter
+Result is "Close..."
 
 Player selected word: "difficult" with the synonym highlighter
+Result is "Correct"
+
+Player selected word: "ease" with the antonym highlighter
 Result is "Correct"
 
 
@@ -11,13 +14,7 @@ Results:
 
 Number of times gotten correct: 2
 Number of times gotten incorrect: 0
-Number of times gotten close: 0
-
-Player selected "Looks like you’re gonna have a hard time with jobs now… (to worsen)" choice
-Result is "Incorrect"
-
-Player selected "That looks like a pain to swing with… (to irritate)" choice
-Result is "Incorrect"
+Number of times gotten close: 1
 
 Player selected "Or… you could just smoothen out the chip (to complicate)" choice
 Result is "Correct"

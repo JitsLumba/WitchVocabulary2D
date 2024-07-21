@@ -1,9 +1,15 @@
 Backend for sub-level: level_7_1
 
-Player selected word: "lively" with the antonym highlighter
-Result is "Correct"
+Player selected word: "exhausted" with the synonym highlighter
+Result is "Close..."
 
 Player selected word: "exhausted" with the definition highlighter
+Result is "Correct"
+
+Player selected word: "lively" with the example highlighter
+Result is "Close..."
+
+Player selected word: "lively" with the antonym highlighter
 Result is "Correct"
 
 
@@ -11,12 +17,9 @@ Results:
 
 Number of times gotten correct: 2
 Number of times gotten incorrect: 0
-Number of times gotten close: 0
-
-Player selected "Getting lazy after all these years? (Lazy)" choice
-Result is "Incorrect"
+Number of times gotten close: 2
 
 Player selected "It’s rare to see you so tired (Tired)" choice
 Result is "Correct"
 
-Time: 32 seconds
+Time: 29 seconds

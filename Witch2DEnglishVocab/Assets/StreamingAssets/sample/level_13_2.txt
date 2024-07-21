@@ -19,4 +19,4 @@ Number of times gotten close: 0
 Player selected "Reconciliation… I’m glad you’re back Mina… (reconcile)" choice
 Result is "Correct"
 
-Time: 28 seconds
+Time: 58 seconds

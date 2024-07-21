@@ -3,6 +3,12 @@ Backend for sub-level: level_13_1
 Player selected word: "feud" with the antonym highlighter
 Result is "Correct"
 
+Player selected word: "resolving" with the synonym highlighter
+Result is "Close..."
+
+Player selected word: "resolving" with the definition highlighter
+Result is "Close..."
+
 Player selected word: "resolving" with the example highlighter
 Result is "Correct"
 
@@ -11,9 +17,9 @@ Results:
 
 Number of times gotten correct: 2
 Number of times gotten incorrect: 0
-Number of times gotten close: 0
+Number of times gotten close: 2
 
 Player selected "A-ah… at least you’ve settled this little issue of yours~ But… (settlement)" choice
 Result is "Correct"
 
-Time: 20 seconds
+Time: 36 seconds

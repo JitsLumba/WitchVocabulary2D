@@ -16,4 +16,4 @@ Number of times gotten close: 0
 Player selected "If it’s confusing, I can help you(confusing)" choice
 Result is "Correct"
 
-Time: 18 seconds
+Time: 21 seconds

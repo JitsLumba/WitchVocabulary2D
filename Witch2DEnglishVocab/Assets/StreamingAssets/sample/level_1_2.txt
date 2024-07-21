@@ -1,17 +1,19 @@
 Backend for sub-level: level_1_2
 
-Player paused the game
+Player selected word: "please" with the synonym highlighter
+Result is "Correct"
 
-Time: 3 seconds
+Player selected word: "delight" with the synonym highlighter
+Result is "Correct"
 
-Player unpaused game
 
-Player paused the game
+Results:
 
-Time: 0 seconds
+Number of times gotten correct: 2
+Number of times gotten incorrect: 0
+Number of times gotten close: 0
 
-Player unpaused game
+Player selected "Give her some food (to satisfy)" choice
+Result is "Correct"
 
-Player has quitted
-
-Time: 4 seconds
+Time: 20 seconds

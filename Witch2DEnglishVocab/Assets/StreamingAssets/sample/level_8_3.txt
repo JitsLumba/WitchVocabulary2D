@@ -1,5 +1,8 @@
 Backend for sub-level: level_8_3
 
+Player selected word: "ill-tempered" with the synonym highlighter
+Result is "Close..."
+
 Player selected word: "ill-tempered" with the definition highlighter
 Result is "Correct"
 
@@ -11,9 +14,15 @@ Results:
 
 Number of times gotten correct: 2
 Number of times gotten incorrect: 0
-Number of times gotten close: 0
+Number of times gotten close: 1
+
+Player selected "Have they always been so grumpy? (Grumpy)" choice
+Result is "Kinda correct"
+
+Player selected "That still seems rather harsh though… (Harsh)" choice
+Result is "Kinda Correct"
 
 Player selected "They’re.. really mean to their own sister (Mean)" choice
 Result is "Correct"
 
-Time: 23 seconds
+Time: 44 seconds

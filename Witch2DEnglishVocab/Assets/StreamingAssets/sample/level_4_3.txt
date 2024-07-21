@@ -16,4 +16,4 @@ Number of times gotten close: 0
 Player selected "I’ll need to speak to her to find out what this is all about before it gets out of hand… (hostile)" choice
 Result is "Correct"
 
-Time: 21 seconds
+Time: 17 seconds

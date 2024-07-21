@@ -1,19 +1,10 @@
 Backend for cloze test: cloze_test_2
 
-Player paused the game
-
-Time: 3 seconds
-
-Player unpaused game
-
-Player paused the game
-
-Time: 5 seconds
-
-Player unpaused game
-
 Player selected word: "calm" with the antonym highlighter
 Result is "Correct"
+
+Player selected word: "unrestrainable" with the definition highlighter
+Result is "Close..."
 
 Player selected word: "unrestrainable" with the synonym highlighter
 Result is "Correct"
@@ -23,11 +14,11 @@ Results:
 
 Number of times gotten correct: 2
 Number of times gotten incorrect: 0
-Number of times gotten close: 0
-Player selected "uncontrollable" choice
-Result is: Correct
+Number of times gotten close: 1
+Player selected "chaotic" choice
+Result is: Kinda Correct
 
-Question time taken: 13 seconds
+Question time taken: 25 seconds
 
 Player selected word: "accordance" with the example highlighter
 Result is "Correct"
@@ -44,19 +35,7 @@ Number of times gotten close: 0
 Player selected "agree" choice
 Result is: Correct
 
-Question time taken: 9 seconds
-
-Player paused the game
-
-Time: 27 seconds
-
-Player unpaused game
-
-Player paused the game
-
-Time: 1 seconds
-
-Player unpaused game
+Question time taken: 35 seconds
 
 Player selected word: "ill-tempered" with the definition highlighter
 Result is "Correct"
@@ -73,10 +52,16 @@ Number of times gotten close: 0
 Player selected "mean" choice
 Result is: Correct
 
-Question time taken: 13 seconds
+Question time taken: 20 seconds
+
+Player selected word: "listless" with the definition highlighter
+Result is "Close..."
 
 Player selected word: "listless" with the synonym highlighter
 Result is "Correct"
+
+Player selected word: "lively" with the synonym highlighter
+Result is "Close..."
 
 Player selected word: "lively" with the antonym highlighter
 Result is "Correct"
@@ -86,16 +71,16 @@ Results:
 
 Number of times gotten correct: 2
 Number of times gotten incorrect: 0
-Number of times gotten close: 0
+Number of times gotten close: 2
 Player selected "tired" choice
 Result is: Correct
 
-Question time taken: 9 seconds
+Question time taken: 16 seconds
 
 Results:
 
-No. of correct: 4
-No. of kinda correct: 0
+No. of correct: 3
+No. of kinda correct: 1
 No. of incorrect: 0
 
-Total Time: 57 seconds
+Total Time: 49 seconds

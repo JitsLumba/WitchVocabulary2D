@@ -1,5 +1,22 @@
 Backend for sub-level: level_3_1
 
-Player has quitted
+Player selected word: "neighborly" with the synonym highlighter
+Result is "Correct"
 
-Time: 0 seconds
+Player selected word: "rude" with the antonym highlighter
+Result is "Correct"
+
+Player selected word: "friendly" with the definition highlighter
+Result is "Correct"
+
+
+Results:
+
+Number of times gotten correct: 3
+Number of times gotten incorrect: 0
+Number of times gotten close: 0
+
+Player selected "Everyone else in town seemed to be a lot more sociable… (sociable)" choice
+Result is "Correct"
+
+Time: 36 seconds

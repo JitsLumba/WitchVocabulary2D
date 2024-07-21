@@ -13,7 +13,10 @@ Number of times gotten correct: 2
 Number of times gotten incorrect: 0
 Number of times gotten close: 0
 
+Player selected "He held nothing back with criticizing them…(criticize)" choice
+Result is "Kinda correct"
+
 Player selected "He held nothing back with shaming them…(shame)" choice
 Result is "Correct"
 
-Time: 24 seconds
+Time: 31 seconds

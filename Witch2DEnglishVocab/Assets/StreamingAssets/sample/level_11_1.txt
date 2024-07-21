@@ -1,5 +1,8 @@
 Backend for sub-level: level_11_1
 
+Player selected word: "lectured" with the definition highlighter
+Result is "Close..."
+
 Player selected word: "lectured" with the example highlighter
 Result is "Correct"
 
@@ -11,9 +14,9 @@ Results:
 
 Number of times gotten correct: 2
 Number of times gotten incorrect: 0
-Number of times gotten close: 0
+Number of times gotten close: 1
 
 Player selected "He deserved that scolding.(scold)" choice
 Result is "Correct"
 
-Time: 17 seconds
+Time: 21 seconds

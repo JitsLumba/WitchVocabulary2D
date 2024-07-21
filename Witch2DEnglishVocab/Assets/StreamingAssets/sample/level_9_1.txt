@@ -1,8 +1,5 @@
 Backend for sub-level: level_9_1
 
-Player selected word: "heinous" with the antonym highlighter
-Result is "Close..."
-
 Player selected word: "heinous" with the synonym highlighter
 Result is "Correct"
 
@@ -14,10 +11,7 @@ Results:
 
 Number of times gotten correct: 2
 Number of times gotten incorrect: 0
-Number of times gotten close: 1
-
-Player selected "Getting attacked regularly seems pretty brutal though (brutal)" choice
-Result is "Incorrect"
+Number of times gotten close: 0
 
 Player selected "Whoever's sending them must be some evil lord… (evil)" choice
 Result is "Incorrect"
@@ -25,4 +19,4 @@ Result is "Incorrect"
 Player selected "Did they really do such a horrible job? (horrible)" choice
 Result is "Correct"
 
-Time: 45 seconds
+Time: 26 seconds

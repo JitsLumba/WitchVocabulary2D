@@ -3,8 +3,17 @@ Backend for sub-level: level_10_3
 Player selected word: "lifeless" with the antonym highlighter
 Result is "Correct"
 
+Player selected word: "jolly" with the synonym highlighter
+Result is "Close..."
+
 Player selected word: "jolly" with the definition highlighter
 Result is "Correct"
+
+Player selected word: "bright" with the synonym highlighter
+Result is "Incorrect"
+
+Player selected word: "down" with the antonym highlighter
+Result is "Incorrect"
 
 Player selected word: "bouncy" with the synonym highlighter
 Result is "Correct"
@@ -13,11 +22,8 @@ Result is "Correct"
 Results:
 
 Number of times gotten correct: 3
-Number of times gotten incorrect: 0
-Number of times gotten close: 0
-
-Player selected "Sucks all the joy out of you, seeing this… (joyful)" choice
-Result is "Incorrect"
+Number of times gotten incorrect: 2
+Number of times gotten close: 1
 
 Player selected "Sights like these really do drain you… (energetic)" choice
 Result is "Incorrect"
@@ -25,4 +31,4 @@ Result is "Incorrect"
 Player selected "The life’s practically been sucked out of them… (lively)" choice
 Result is "Correct"
 
-Time: 39 seconds
+Time: 22 seconds

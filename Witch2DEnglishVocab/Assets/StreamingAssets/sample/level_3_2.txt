@@ -1,12 +1,15 @@
 Backend for sub-level: level_3_2
 
-Player selected word: "rough" with the antonym highlighter
-Result is "Correct"
-
 Player selected word: "cruel" with the antonym highlighter
 Result is "Correct"
 
+Player selected word: "refreshing" with the definition highlighter
+Result is "Close..."
+
 Player selected word: "refreshing" with the synonym highlighter
+Result is "Correct"
+
+Player selected word: "rough" with the antonym highlighter
 Result is "Correct"
 
 
@@ -14,18 +17,9 @@ Results:
 
 Number of times gotten correct: 3
 Number of times gotten incorrect: 0
-Number of times gotten close: 0
-
-Player selected "You’re quite the gracious worker aren’t you? (gracious)" choice
-Result is "Incorrect"
-
-Player selected "Sounds like you really enjoy the job (enjoyable)" choice
-Result is "Incorrect"
-
-Player selected "You’re quite the gracious worker aren’t you? (gracious)" choice
-Result is "Incorrect"
+Number of times gotten close: 1
 
 Player selected "I’m sure it’s as pleasant for the others as it is for you~ (pleasant)" choice
 Result is "Correct"
 
-Time: 34 seconds
+Time: 38 seconds

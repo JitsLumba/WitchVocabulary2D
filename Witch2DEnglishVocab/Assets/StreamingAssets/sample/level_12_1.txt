@@ -16,4 +16,4 @@ Number of times gotten close: 0
 Player selected "The nonsensical doctor got what he deserved(nonsense)" choice
 Result is "Correct"
 
-Time: 12 seconds
+Time: 21 seconds
